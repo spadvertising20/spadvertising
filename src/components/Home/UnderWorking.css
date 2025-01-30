@@ -1,0 +1,26 @@
+.under-working{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.under-working-con{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.under-working-con img{
+    padding-top: 5rem;
+    width: 40vw;
+}
+
+@media (max-width: 768px){
+    .under-working-con img{
+        width: 80vw;
+    }
+    
+}

@@ -1,0 +1,201 @@
+.global {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+}
+
+.about-me {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6rem;
+
+
+}
+
+.global-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: linear-gradient(to left, #00c2f3, #005eda);
+}
+
+.about-me h3 {
+    color: white;
+}
+
+.about-me-con {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+
+}
+
+.about-me-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-me-box img {
+    width: 30vw;
+    height: 25vw;
+    top: 5vw;
+    border-radius: 2rem;
+    position: relative;
+    animation: fadein 3s;
+}
+
+.about-details {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.about-details button:hover {
+    position: relative;
+    bottom: 10px;
+    box-shadow: 0px 10px 20px #a0c8ff;
+}
+
+.about-details h3 {
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+
+}
+
+.about-details h1 {
+    font-family: 'poppins', sans-serif;
+    font-weight: 700;
+    color: white;
+
+}
+
+.about-details h1 {
+    font-size: 30px;
+
+    color: orange;
+    margin-bottom: 5rem;
+
+}
+
+.team-image {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-image-con {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.team-1 {
+    max-width: 25rem;
+    border-radius: 10px;
+}
+
+.team-2 {
+    max-width: 25rem;
+    border-radius: 10px;
+}
+
+.team-3 {
+    max-width: 25rem;
+    border-radius: 10px;
+}
+
+@media (max-width:1224px) {
+    .team-1 {
+        max-width: 30vw;
+        border-radius: 10px;
+    }
+    
+    .team-2 {
+        max-width: 30vw;
+        border-radius: 10px;
+    }
+    
+    .team-3 {
+        max-width: 30vw;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width:768px) {
+    .about-me-box img {
+        width: 40vw;
+        height: 40vw;
+        top: 5vw;
+    }
+
+    .about-me {
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+        height: 25rem;
+    }
+
+    .about-details {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-details h1 {
+        font-size: 18px;
+    }
+
+    .about-details p {
+        font-size: 18px;
+        color: orange;
+        margin-bottom: 5rem;
+    }
+
+    .about-image {
+        gap: 1rem;
+    }
+
+    .team-1 {
+        max-width: 100%;
+    }
+
+    .team-2 {
+        display: none;
+    }
+
+    .team-3 {
+        display: none;
+    }
+
+    .blur-image {
+        width: 90%;
+        position: absolute;
+        z-index: -1;
+
+    }
+
+    .about-details button {
+        font-size: 10px;
+        padding: 10px;
+        width: 100px;
+    }
+
+
+}

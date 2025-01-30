@@ -1,0 +1,470 @@
+.portfolio {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.img-back {
+    width: 100%;
+    
+    height: 40rem;
+    background-image: linear-gradient(to left, #00c2f3, #005eda);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12rem;
+    gap: 60px;
+}
+.img-back-con{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-back img {
+    width: 40%;
+    border-radius: 10px;
+    
+}
+
+.portfolio-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+    padding-top: 8rem;
+}
+
+.port-text {
+    width: 60%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.portfolio-heading h3 {
+    color: white;
+}
+
+.portfolio-heading h1 {
+    font-size: 50px;
+    font-style: normal;
+    color: orange;
+}
+
+.portfolio-heading p {
+    font-size: 18px;
+    color: white;
+    font-style: italic;
+}
+
+.portfolio-heading img {
+    margin-top: 60px;
+    width: 40%;
+}
+
+.portfolio-con {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    gap: 50px;
+    padding-bottom: 5rem;
+    padding-top: 8rem;
+}
+
+.port-services {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.port-services1 {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 10px gainsboro;
+    padding: 10px;
+    border-radius: 10px;
+    flex-direction: row;
+    flex-direction: row-reverse;
+}
+
+.port-img {
+    width: 100%;
+    height: 30vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.port-img:hover {
+    background-color: white;
+}
+
+.port-img .ul {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: .3s;
+    text-align: center;
+}
+
+.ul p {
+    font-size: 25px;
+}
+
+.port-img:hover .ul {
+    display: block;
+}
+
+
+
+.port-img div{
+
+    width: 100%;
+    transition: .3s;
+
+}
+
+.port-img:hover img {
+    width: 120%;
+    opacity: 20%;
+}
+
+.port-details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.port-details p {
+    font-weight: 500;
+    font-size: 25px;
+
+}
+
+.portfolio-dm {
+    position: relative;
+    width: 20%;
+    height: 20%;
+}
+
+.fort-footer {
+    width: 100%;
+    background-image: linear-gradient(to left, #00ccff, #265AA5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.fort-footer-con {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 2rem;
+
+}
+
+.fort-footer-con p {
+    padding-right: 30px;
+    color: white;
+}
+
+.fort-footer-con button {
+    width: 300px;
+    padding: 10px;
+    border-radius: 100px;
+    border: solid 2px white;
+    background: white;
+    color: black;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.fort-footer-con button:hover {
+    border: solid 2px white;
+    background: none;
+    color: white;
+}
+
+
+
+.fort-share-btn button {
+    width: 150px;
+    padding: 18px;
+    border-radius: 100px;
+    border: solid 1px white;
+    background: none;
+}
+
+.fort-cover {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.video {
+    width: 60rem;
+    border-radius: 10px;
+    box-shadow: 0px 15px 40px;
+}
+
+.port-slider {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    gap: 2rem;
+    color: black;
+
+
+}
+
+.fort-footer-con button img {
+    width: 50px;
+    position: absolute;
+    left: 90px;
+}
+
+.portfolio-slider {
+    width: 90%;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.port-slider h2 {
+
+    font-weight: 700;
+}
+
+.port-slider img {
+    width: 98%; /* Image will scale relative to the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 500px; /* Set a max width to limit size */
+    height: 390px; /* Set a max height to limit size */
+    border-radius: 10px; /* Rounded corners */
+    object-fit: cover; /* Ensures the image covers the specified dimensions without distortion */
+}
+
+
+.port-slider iframe {
+    width: 24rem;
+    height: 14rem;
+    border-radius: 10px;
+}
+
+.youtube-video {
+    width: 90%;
+    display: block;
+    border-radius: 20px;
+}
+
+.portfolio-slider-website {
+    width: 90%;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.portfolio-slider-website .website-con {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-slider-website img {
+    width: 100%;
+    height: 14vw;
+    position: relative;
+    border-radius: 10px;
+}
+
+.website-absolute {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    transition: 1s;
+}
+
+.website-absolute p {
+    z-index: 10;
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: 100%;
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.website-absolute:hover p {
+    background-color: rgba(31, 31, 31, 0.692);
+    display: flex;
+
+}
+
+.website-absolute div {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.website-absolute:hover div {
+
+    display: flex;
+
+}
+
+.website-absolute img {
+    width: 25rem;
+    height: 12rem;
+    z-index: 10;
+
+}
+
+
+@media (max-width:768px) {
+
+
+
+    .portfolio-heading h1 {
+        font-size: 30px;
+    }
+
+    .portfolio-heading {
+        padding-top: 7rem;
+    }
+
+    .port-services {
+        width: 80vw;
+    }
+
+    .port-img {
+        width: 100%;
+        height: 0%;
+    }
+
+    .img-back {
+        height: 32rem;
+    }
+
+    .img-back img {
+        width: 80%;
+    }
+
+    .port-img .ul p {
+        font-size: 18px;
+    }
+
+    .fort-footer-con button {
+        width: 180px;
+        padding: 14px;
+        font-size: 18px;
+
+    }
+
+    .fort-footer-con {
+        text-align: center;
+    }
+
+    .fort-footer-con p {
+        padding-right: 0px;
+    }
+
+    .port-text {
+        width: 90%;
+    }
+
+    .port-slider img {
+        width: 40vw;
+        height: 38vw;
+    }
+
+    .fort-cover {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .fort-cover iframe {
+        width: 90vw;
+        height: 50vw;
+    }
+
+    .youtube-video {
+        width: 85%;
+
+    }
+
+    .youtube-video iframe {
+        width: 40vw;
+        height: 30vw;
+    }
+
+    .fort-footer {
+        padding-top: 0rem;
+    }
+
+    .portfolio-slider-website img {
+
+        height: 20vw;
+    }
+}
+
+@media (max-width:425px) {
+    .port-slider img {
+        width: 88vw;
+        height: 70vw;
+    }
+
+    .youtube-video iframe {
+        width: 84vw;
+        height: 50vw;
+    }
+
+    .portfolio-slider-website img {
+        height: 45vw;
+    }
+
+}

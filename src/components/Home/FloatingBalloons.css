@@ -1,0 +1,12 @@
+.float{
+
+    bottom: 200px;
+    
+
+}
+@media (max-width:768px) {
+    .float{
+        bottom: 200px;
+        position: relative;
+    }
+}

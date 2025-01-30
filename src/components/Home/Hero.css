@@ -1,0 +1,695 @@
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to left, #00c2f3, #005eda);
+  overflow: hidden;
+}
+
+.shadow-effect {
+  position: absolute;
+  z-index: 10;
+  width: 80%;
+  height: 100%;
+  right: 0;
+  /* box-shadow: inset -50px -50px 30px rgb(255, 255, 255); */
+  border-radius: 90px;
+}
+
+.hero-con {
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: red; */
+  overflow: hidden;
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-radius: 100px;
+  padding-left: 10px;
+}
+
+.hero-content {
+  width: 50%;
+  /* display: flex;
+  flex-direction: column;
+  gap: 10px; */
+  /* background-color: green; */
+}
+
+.hero-content h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 45px;
+  font-weight: 650;
+color:#8ae8ff;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: white;
+}
+
+.hero-content button {
+  width: 220px;
+  height: 60px;
+  z-index: 10;
+  padding-left: 30px;
+  position: relative;
+  border-radius: 100px;
+  border: 3px solid white;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  font-size: 18px;
+  transition: .1s;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px gray;
+
+}
+
+.hero-content button:hover {
+  color: rgb(255, 255, 255);
+}
+
+.btn-hover {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-color: #0864ae;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  transition: .2s;
+  z-index: -10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:active .btn-hover {
+  background-color: black;
+  z-index: -10;
+}
+
+button:hover .btn-hover {
+  width: 380px;
+  height: 380px;
+  top: -163px;
+  right: -145px;
+}
+
+.btn-hover img {
+  width: 18px;
+}
+
+
+.round {
+  transform: rotate(45deg);
+  /* background-color: pink; */
+  padding: 100px;
+  overflow: hidden;
+  position: absolute;
+  top: -290px;
+  right: -660px;
+}
+
+.round-con {
+  width: 900px;
+  height: 900px;
+  /* background-color: yellow; */
+  animation: round 18s infinite;
+  border-radius: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.round-ele1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.round-ele1 img {
+  width: 300px;
+  height: 300px;
+  border-radius: 500px;
+}
+
+.round-ele2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.round-ele2 img {
+  width: 300px;
+  height: 300px;
+  border-radius: 500px;
+}
+
+.img-rotate1 {
+  transform: rotate(45deg);
+}
+
+.img-rotate2 {
+  transform: rotate(135deg);
+}
+
+.img-rotate3 {
+  transform: rotate(-45deg);
+}
+
+.img-rotate4 {
+  transform: rotate(-135deg);
+}
+
+.hero-box {
+  width: 23vw;
+  height: 23vw;
+  /* background-color: blue; */
+  border-radius: 1000px;
+}
+
+@keyframes round {
+
+  0%,
+  20% {
+    transform: rotate(0deg);
+  }
+
+  25%,
+  45% {
+    transform: rotate(-90deg);
+  }
+
+  50%,
+  70% {
+    transform: rotate(-180deg);
+  }
+
+  75%,
+  95% {
+    transform: rotate(-270deg);
+  }
+
+  100%,
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.typing-effect {
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 5px;
+  font-size: 45px;
+  display: inline-block;
+  position: relative;
+
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: white;
+  }
+}
+
+.typing-effect::after {
+  content: "";
+  /* Initial text */
+  animation: typing 18s infinite, change-text 18s infinite, blink-caret 0.7s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  border-width: 0 5px 0 0;
+}
+
+
+/* Typing effect */
+@keyframes typing {
+
+  0%,
+  20% {
+    width: 100%;
+  }
+
+  21%,
+  22% {
+    width: 0%;
+  }
+
+  25%,
+  45% {
+    width: 100%;
+  }
+
+  46%,
+  46% {
+    width: 0%;
+  }
+
+  50%,
+  70% {
+    width: 100%;
+  }
+
+  71%,
+  72% {
+    width: 0%;
+  }
+
+  75%,
+  95% {
+    width: 100%;
+  }
+
+  96%,
+  97% {
+    width: 0%;
+  }
+
+  100%,
+  100% {
+    width: 100%;
+  }
+}
+
+/* Changing text */
+@keyframes change-text {
+
+  0%,
+  20% {
+    content: "Designing Services";
+  }
+
+  25%,
+  45% {
+    content: "Outdoor Advertising";
+  }
+
+  50%,
+  70% {
+    content: "Digital Marketing";
+  }
+
+  75%,
+  95% {
+    content: "SEO Optimization";
+  }
+
+  100%,
+  100% {
+    content: "Designing Services";
+  }
+}
+
+/* hero background imag */
+
+
+.hero-anim-bg {
+  position: relative;
+}
+
+.services-con {
+  position: absolute;
+  width: 40vw;
+  left: -4vw;
+  top: -5vw;
+  z-index: -100;
+  /* animation: circlecon 18s infinite linear; */
+}
+
+.services-con img {
+  position: absolute;
+  width: 38vw;
+  top: -70px;
+  left: -50px;
+
+}
+
+@keyframes circlecon {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hero-anim-img {
+  width: 430px;
+  z-index: 0;
+  position: relative;
+}
+
+
+@media (max-width:1440px) {
+  .round {
+
+    top: -300px;
+    right: -700px;
+  }
+}
+
+@media (max-width:1250px) {
+  .round {
+
+    top: -280px;
+    right: -775px;
+  }
+}
+
+
+
+@media (max-width:1024px) {
+  .round-ele1 img {
+    width: 28vw;
+    height: 28vw;
+    border-radius: 500px;
+  }
+
+  .hero-box {
+    width: 28vw;
+    height: 28vw;
+    /* background-color: blue; */
+    border-radius: 1000px;
+  }
+
+  .round-ele2 img {
+    width: 28vw;
+    height: 28vw;
+    border-radius: 500px;
+  }
+
+  .round {
+
+    top: -230px;
+    right: -800px;
+  }
+
+  .hero-anim-img {
+    width: 35vw;
+  }
+}
+
+@media (max-width:900px) {
+  .round {
+
+    top: -230px;
+    right: -850px;
+  }
+}
+
+@media (max-width:768px) {
+  .hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .typing-effect {
+    font-size: 31px;
+    font-weight: 700;
+  }
+
+  .hero {
+    background-image: linear-gradient(to bottom, #21d3ff, #005eda);
+  }
+
+  /* .typing-con {
+  font-weight: 600;
+  font-size: 10px;
+} */
+  .hero-content h1,
+  p {
+    text-align: center;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-con {
+    width: 90%;
+
+  }
+
+  .hero-content button {
+    width: 210px;
+    font-size: 17px;
+
+  }
+
+  .hero-con {
+    flex-direction: column-reverse;
+  }
+
+  .round {
+
+    top: -730px;
+    right: -280px;
+  }
+
+  /* .hero {
+
+    background-image: linear-gradient(to top, #00ccff, #006aff);
+
+  } */
+  .services-con {
+    position: absolute;
+    width: 75vw;
+    left: -8vw;
+    top: -10vw;
+    z-index: -100;
+  }
+
+  .hero-content h1 {
+    font-size: 35px;
+  }
+
+  .hero-anim-img {
+    width: 60vw;
+  }
+
+  .shadow-effect {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 41vh;
+    top: 0;
+    box-shadow: inset -0px -0px 10px 10px rgba(255, 255, 255, 0);
+    border-radius: 90px;
+  }
+
+  .img-rotate1 {
+    transform: rotate(135deg);
+  }
+
+  .img-rotate2 {
+    transform: rotate(-120deg);
+  }
+
+  .img-rotate3 {
+    transform: rotate(45deg);
+  }
+
+  .img-rotate4 {
+    transform: rotate(-40deg);
+  }
+
+  .round-ele1 img {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 500px;
+  }
+
+  .hero-box {
+    width: 40vw;
+    height: 40vw;
+    /* background-color: blue; */
+    border-radius: 1000px;
+  }
+
+  .round-ele2 img {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 500px;
+  }
+
+  .hero-con {
+
+    margin-top: 1rem;
+
+  }
+
+  @keyframes change-text {
+
+    0%,
+    20% {
+      content: "SEO Optimization";
+    }
+
+    25%,
+    45% {
+      content: "Designing Services ";
+    }
+
+    50%,
+    70% {
+      content: "Outdoor Advertising";
+    }
+
+    75%,
+    95% {
+      content: "Digital Marketing";
+    }
+
+    100%,
+    100% {
+      content: "SEO Optimization";
+    }
+  }
+
+}
+
+@media (max-width:660px) {
+  .round {
+
+    top: -770px;
+    right: -310px;
+  }
+}
+
+@media (max-width:615px) {
+  .round {
+
+    top: -800px;
+    right: -330px;
+  }
+}
+
+@media (max-width:550px) {
+  .round {
+
+    top: -830px;
+    right: -350px;
+  }
+}
+
+@media (max-width:485px) {
+  .hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .services-con {
+    position: absolute;
+    width: 90vw;
+    left: -10vw;
+    top: -10vw;
+    z-index: -100;
+    display: none;
+  }
+
+  .hero-content h1,
+  p {
+    text-align: center;
+  }
+
+  .hero-con {
+    flex-direction: column-reverse;
+  }
+
+  .round {
+
+    top: -830px;
+    right: -380px;
+  }
+
+  .hero-content h1 {
+    font-size: 35px;
+  }
+
+  .hero-anim-img {
+    width: 70vw;
+    position: relative;
+    right: 10px;
+  }
+
+  .shadow-effect {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 41vh;
+    top: 0;
+    box-shadow: inset -0px -0px 10px 10px rgba(255, 255, 255, 0);
+    border-radius: 90px;
+  }
+
+  .img-rotate1 {
+    transform: rotate(135deg);
+  }
+
+  .img-rotate2 {
+    transform: rotate(-120deg);
+  }
+
+  .img-rotate3 {
+    transform: rotate(45deg);
+  }
+
+  .img-rotate4 {
+    transform: rotate(-45deg);
+  }
+
+  .round-ele1 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 500px;
+  }
+
+  .hero-box {
+    width: 200px;
+    height: 200px;
+    /* background-color: blue; */
+    border-radius: 1000px;
+  }
+
+  .round-ele2 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 500px;
+  }
+
+  .hero-con {
+
+    margin-top: 2rem;
+
+  }
+
+}
+
+@media (max-width:410px) {
+  .round {
+
+    top: -860px;
+    right: -385px;
+  }
+}
