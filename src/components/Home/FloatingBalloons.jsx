@@ -14,7 +14,7 @@ const FloatingBalloons = () => {
 
   return (
     <>
-      {showBalloons && (
+      {/* {showBalloons && (
         <div className='float'
           style={{
             position: 'absolute',
@@ -54,7 +54,7 @@ const FloatingBalloons = () => {
             />
           ))}
         </div>
-      )}
+      )} */}
     </>
   );
 };

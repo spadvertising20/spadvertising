@@ -1,4 +1,4 @@
-.service{
+.service {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -6,61 +6,67 @@
     padding-bottom: 2rem;
     flex-direction: column;
 }
-.service-con{
+
+.service-con {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     width: 90%;
     max-width: 1200px;
-    margin-top: 6rem;
     gap: 80px;
+    margin-top: 4rem;
 }
 
-.service-para{
+.service-para {
     font-size: 10px;
     color: red;
 }
 
-.service-box{
+.service-box {
     width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-max-width: 1200px;
- margin-top: 6rem;
+    max-width: 1200px;
+    margin-top: 6rem;
 }
-.service-box-con{
+
+.service-box-con {
     width: 100%;
-   
+
     background-image: linear-gradient(to right, #00c2f3, #005eda);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.service-left{
+
+.service-left {
     width: 50vw;
     color: #265AA5;
     display: flex;
     flex-direction: column;
     gap: 14px;
-    
+
 }
-.service-left h1{
+
+.service-left h1 {
     font-weight: 500;
     font-size: 45px;
     font-weight: 300;
-    color:  white;
+    color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.service-left p{
+
+.service-left p {
     font-weight: 400;
     font-size: 20px;
-    color:  white;
+    color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.service-left button{
+
+.service-left button {
     width: 150px;
     padding: 10px;
     border-radius: 10px;
@@ -69,39 +75,32 @@ max-width: 1200px;
     color: white;
     font-size: 18px;
 }
-.service-right{
+
+.service-right {
     width: 50vw;
 }
-.service-right img{
+
+.service-right img {
     width: 38rem;
     border-radius: 5px;
 }
 
-.service .ul{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-    list-style: none;
-    margin-top: 100px;
-}
-.service-con button{
+
+.service-con button {
     width: 200px;
     padding: 20px;
     border-radius: 50px;
     border: hidden;
     font-size: 20px;
     box-shadow: 0px 5px 10px #a0c8ff;
-    background-color:#265AA5;
+    background-color: #265AA5;
     transition: .3s;
     bottom: 0px;
     cursor: pointer;
     color: white;
 }
 
-.topic-align1{
+.topic-align1 {
     align-items: center;
     flex-direction: row;
     display: flex;
@@ -111,41 +110,131 @@ max-width: 1200px;
     box-shadow: 0 0 10px gainsboro;
     border-radius: 5px;
     padding: 20px;
-    
+
 }
-.topic-left{
+
+.topic-left {
     width: 30rem;
 }
-.topic-left p{
+
+.topic-left p {
     color: gray;
 
-    
-}
-.topic-align1 img{
-    width: 30rem;
+
 }
 
-.topic-align2{
-    flex-direction:row;
+.topic-align1 img {
+    width: 40vw;
+    border: 5px solid black;
+  
 }
+
+.topic-align2 {
+    flex-direction: row;
+}
+
+.society-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.society-con p {
+    color: gray;
+    font-size: 16px;
+    text-align: center;
+    padding: 18px;
+}
+
+.align2 {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.align1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.align3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.align2 table {
+    width: 40vw; /* Responsive width */
+    border-collapse: collapse; /* Remove space between cells */
+    text-align: center; /* Center-align text */
+    font-family: Arial, sans-serif; /* Use a clean font */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure rounded corners are visible */
+    margin: 20px auto; /* Center the table */
+}
+
+.align2 th,
+.align2 td {
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 7px; /* Add padding for better spacing */
+}
+
+.align2 th {
+    background-color: #f8f9fa; /* Light gray background for headers */
+    font-weight: bold; /* Bold header text */
+    color: #333; /* Darker text color for headers */
+}
+
+.align2 tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for rows */
+}
+
+.align2 tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+
+.align4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.align3 h1{
+    color: #00c2f3;
+    text-decoration: underline;
+}
+.align3 p{
+    color: #265AA5;
+}
+
 
 @media (max-width:768px) {
-    
-    .service-box{
+
+    .service-box {
         flex-direction: column;
     }
-    .service-left{
+
+    .service-left {
         width: 100%;
         color: #265AA5;
         align-items: center;
     }
-    .service-right{
+
+    .service-right {
         width: 90vw;
     }
-    .service-right img{
+
+    .service-right img {
         width: 90vw;
     }
-    .topic-align1{
+
+    .topic-align1 {
         flex-direction: column;
         display: flex;
         justify-content: center;
@@ -155,11 +244,12 @@ max-width: 1200px;
         border-radius: 10px;
         padding-top: 30px;
     }
-    
-    #topic-align2{
+
+    #topic-align2 {
         flex-direction: column-reverse;
     }
-    .topic-left{
+
+    .topic-left {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -168,16 +258,48 @@ max-width: 1200px;
         text-align: center;
         gap: 10px;
     }
-    .topic-align1 img{
+
+    .topic-align1 img {
         width: 75vw;
     }
-    .service-left h1{
-        font-size:35px;
-        text-align: center;
-        
-    }
-    
-    .topic-left h1{
+
+    .service-left h1 {
         font-size: 35px;
+        text-align: center;
+
+    }
+
+    .topic-left h1 {
+        font-size: 35px;
+    }
+
+    .align2 {
+        flex-direction: column-reverse;
+
+    }
+
+    .align2 table {
+        width: 90vw;
+    }
+
+    .align1 {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .align2 table {
+        width: 90vw; /* Increase width for smaller screens */
+        font-size: 14px; /* Reduce font size for better fit */
+    }
+
+    .align2 th,
+    .align2 td {
+        padding: 8px; /* Reduce padding for smaller screens */
+    }
+    .society-con p {
+       
+        font-size: 14px;
+       
     }
 }

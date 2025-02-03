@@ -32,7 +32,7 @@ const Blog2 = () => {
         <div className="articles">
           <div className="latest-article">
             {blogData
-              .slice(0, 3) // Limit to the first 6 items
+              .slice(0, 4) // Limit to the first 6 items
               .reverse() // Reverse the order of objects
               .map((article, index) => (
                 <div className="article-box" key={index}>

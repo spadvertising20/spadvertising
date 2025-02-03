@@ -17,6 +17,7 @@ import digital_marketing_img6 from "../../assets/Blog/digital-marketing-img6.jpg
 import digital_marketing_img7 from "../../assets/Blog/digital-marketing-img7.jpg";
 import digital_marketing_img8 from "../../assets/Blog/digital-marketing-img8.jpg";
 import digital_marketing_img9 from "../../assets/Blog/digital-marketing-img9.jpg";
+import digital_marketing_img10 from "../../assets/Blog/digital-marketing-img10.jpg";
 import { CiFacebook } from "react-icons/ci";
 import { IoLogoInstagram } from "react-icons/io5";
 import { CiLinkedin } from "react-icons/ci";
@@ -124,6 +125,16 @@ const Articles = [
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
   },
+  {
+    img: digital_marketing_img10,
+    date: "January 31, 2025",
+    title: "Outdoor Advertising: What It Is, Benefits, and Why It Matters",
+    link: "/Blog/Benefits-of-Outdoor-Advertising",
+    facebook: <CiFacebook className="blog-icon" />,
+    instagram: <IoLogoInstagram className="blog-icon" />,
+    linkedin: <CiLinkedin className="blog-icon" />,
+    writer: "BY ADMIN",
+  },
   
 ];
 
@@ -136,7 +147,6 @@ const Blog = () => {
   const handleInputChange = (e) => {
     const userInput = e.target.value;
     setQuery(userInput);
-    // Filter suggestions
   };
 
   return (
@@ -189,7 +199,7 @@ const Blog = () => {
       <div className="articles-con">
         <div className="articles">
           <div className="latest-article">
-            {Articles.slice(3, 10) // Limit to the first 6 items
+            {Articles.slice(4, 10) // Limit to the first 6 items
               .reverse() // Reverse the order of objects
               .map((article, index) => (
                 <div className="article-box" key={index}>

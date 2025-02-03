@@ -35,6 +35,7 @@ import InfluencerMarketing from "./components/Blog/Blogs/InfluencerMarketing.jsx
 import LoadScrollTop from "./components/Home/LoadScrollTop.jsx";
 import SocialMediaMarketing from "./components/Blog/Blogs/SocialMediaMarketing.jsx";
 import SocietyBranding from "./components/Services/SocietyBranding.jsx";
+import BenefitsOutdoorAdvertising from "./components/Blog/Blogs/BenefitsOutdoorAdvertising.jsx";
 
 
 function App() {
@@ -71,6 +72,7 @@ function App() {
           <Route path="/Event-Promotion-in-Raipur" element={<EventPromotion />} />
           <Route path="/Audio-Visuals-in-Raipur" element={<AudioVisuals />} />
           <Route path="/Society-Branding-in-Raipur" element={<SocietyBranding />} />
+         
 
           {/* Blog Routes */}
           <Route path="/Blog" element={<Blog />} />
@@ -82,8 +84,9 @@ function App() {
           <Route path="/Blog/Holiday-Sales-Strategies" element={<HolidaySalesStrategies />} />
           <Route path="/Blog/Advertising-Tools-and-Techniques" element={<ImproveOnlineAdvertising />} />
           <Route path="/Blog/What-is-Digital-Marketing" element={<WhatIsDigitalMarketing />} />
-          <Route path="/Blog/Influencer-Marketing" element={<InfluencerMarketing />} />]
-          <Route path="/Blog/Social-Media-Marketing" element={<SocialMediaMarketing />} />]
+          <Route path="/Blog/Influencer-Marketing" element={<InfluencerMarketing />} />
+          <Route path="/Blog/Social-Media-Marketing" element={<SocialMediaMarketing />} />
+          <Route path="/Blog/Benefits-of-Outdoor-Advertising" element={<BenefitsOutdoorAdvertising />} />
           
           <Route path="/Portfolio" element={<Portfolio />} />
           <Route path="*" element={<UnderWorking />} />

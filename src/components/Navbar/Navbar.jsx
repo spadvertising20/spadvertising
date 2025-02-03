@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./Navbar.css";  
-import bg_logo from "../../assets/Navbar/logo14.gif";
+import "./Navbar.css";
+import bg_logo from "../../assets/Navbar/logo.webp";
 import up_down from "../../assets/Navbar/up-down.svg";
 import { Link } from "react-router-dom";
 import { IoCloseOutline } from "react-icons/io5";
@@ -14,10 +14,12 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { IoMdArrowDropup } from "react-icons/io";
 import { LuMenu } from "react-icons/lu";
 import { AiFillHome } from "react-icons/ai";
-import flag_banner from '../../assets/Navbar/flag-banner.png'
+import flag_banner from "../../assets/Navbar/flag-banner.png";
 
 function Navbar() {
-  const [menu, setMenu] = useState(() => localStorage.getItem("menu") || "Home");
+  const [menu, setMenu] = useState(
+    () => localStorage.getItem("menu") || "Home"
+  );
 
   useEffect(() => {
     localStorage.setItem("menu", menu);
@@ -35,7 +37,7 @@ function Navbar() {
 
   return (
     <div className="navbar">
-    <div className="flag-banner">
+      {/* <div className="flag-banner">
     <img src={flag_banner} alt="" />
     <img src={flag_banner} alt="" />
     <img src={flag_banner} alt="" />
@@ -51,14 +53,15 @@ function Navbar() {
     <img src={flag_banner} alt="" />
 
       
-    </div>
+    </div> */}
+
       <div className="navbar-con">
         <div className="logo">
           <Link to={"/"}>
-            
             <img src={bg_logo} alt="" />
           </Link>
         </div>
+
         <div className="menu">
           <ul className={`navbar-menu ${menubtn ? "active" : ""}`}>
             <Link to={"/"} className={menu === "Home" ? "active" : "deactive"}>
@@ -85,7 +88,7 @@ function Navbar() {
                   <li>Digital Marketing</li>
                 </Link>
                 <Link to={"/Society-Branding-in-Raipur"}>
-                  <li>Society Brandibg</li>
+                  <li>Society Branding</li>
                 </Link>
                 <Link to={"/Designing-Services-in-Raipur"}>
                   <li>Designing Services</li>
@@ -102,8 +105,6 @@ function Navbar() {
                 <Link to={"/Print-Media-in-Raipur"}>
                   <li>Print Media</li>
                 </Link>
-                
-                
               </ul>
             </div>
             <Link
@@ -126,6 +127,7 @@ function Navbar() {
             </Link>
           </ul>
         </div>
+
         <div className="cart">
           <Link to={"/Contact"} className={menu === "Contact" ? "active1" : ""}>
             <button>Contact Us</button>
@@ -192,6 +194,12 @@ function Navbar() {
                         to={"/Digital-Marketing-in-Raipur"}
                       >
                         <p>Digital Marketing</p>{" "}
+                      </Link>
+                      <Link
+                        onClick={menuslider}
+                        to={"/Society-Branding-in-Raipur"}
+                      >
+                        <p>Society Branding</p>{" "}
                       </Link>
                       <Link
                         onClick={menuslider}
