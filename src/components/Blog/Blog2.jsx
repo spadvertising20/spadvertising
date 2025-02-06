@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { StoreContext } from "../Context Provider/StoreProvider";
-import SnowfallEffect from "../Home/FloatingBalloons";
 import { GrInstagram } from "react-icons/gr";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
@@ -18,7 +17,6 @@ const Blog2 = () => {
 
   return (
     <div className="blog">
-      <SnowfallEffect />
       <Helmet>
         <title>Blog: SP Advertising</title>
         <meta
@@ -37,7 +35,7 @@ const Blog2 = () => {
               .map((article, index) => (
                 <div className="article-box" key={index}>
                   <Link to={article.link} className="img-text">
-                    <img src={article.img} alt={article.title} />
+                    <img src={article.img} alt={article.alt} />
                     <div className="date-category">{article.date}</div>
                     <h3>{article.title}</h3>
                     <p className="blog-arrow-con">Read more</p>

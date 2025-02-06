@@ -7,12 +7,11 @@ import team_img2 from "../../assets/AboutMe/about-imge2.jpg";
 import team_img3 from "../../assets/AboutMe/about-imge3.jpg";
 import NeedHelp from "../Needhelp/NeedHelp";
 import OurValues from "./OurValues";
-import FloatingBalloons from "../Home/FloatingBalloons";
 
 function AboutMe() {
   return (
     <div className="global">
-      <FloatingBalloons/>
+     
       <Helmet>
         <title>About Us | SP Advertising</title>
         <meta

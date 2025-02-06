@@ -14,7 +14,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { IoMdArrowDropup } from "react-icons/io";
 import { LuMenu } from "react-icons/lu";
 import { AiFillHome } from "react-icons/ai";
-import flag_banner from "../../assets/Navbar/flag-banner.png";
+// import flag_banner from "../../assets/Navbar/flag-banner.png";
 
 function Navbar() {
   const [menu, setMenu] = useState(

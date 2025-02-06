@@ -8,6 +8,7 @@ import AnimationHero from "./Hero";
 import HomeBlog from "./Blog";
 import HomeClients from "./Clients";
 import './Homepage.css';
+import FAQ from "./FAQ";
 
 function Homepage() {
   return (
@@ -18,6 +19,7 @@ function Homepage() {
       <HomeAbout />
       <HomeClients />
       <HomeBlog />
+      <FAQ/>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Services.css";
 import { Helmet } from "react-helmet";
 import brand from "../../assets/Services/BrandingStrategy/brand.png";
@@ -6,14 +6,26 @@ import { Link } from "react-router-dom";
 import Communications_Strategy from "../../assets/Services/BrandingStrategy/Communications-Strategy.jpg";
 import Creative_Campaigns from "../../assets/Services/BrandingStrategy/Creative_Campaigns.jpg";
 import Corporate from "../../assets/Services/BrandingStrategy/Corporate.jpg";
-import FloatingBalloons from "../Home/FloatingBalloons";
 
 function BrandingStrategy() {
+
+useEffect(() => {
+      document.title = "Best Branding & Stradegy agency in Raipur | Branding & Stradegy services";
+  
+      document
+        .querySelector("meta[name='description']")
+        ?.setAttribute("content", "Grow your brand with our branding and strategy agency. Offering corporate branding, rebranding, and strategic consulting to define and grow your identity.");
+  
+      document
+        .querySelector("meta[name='keywords']")
+        ?.setAttribute("content", "Branding and strategy agency, Creative Branding Solutions, Strategic Marketing Agency, Brand Identity Development,	Corporate Branding Services in Raipur, Strategic Brand Consulting, Brand Positioning Agency in Raipur, Rebranding and Marketing Experts, Integrated Branding Strategies");
+    }, []);
+
   return (
     <div className="service">
      
       <div className="service-box-con">
-      <FloatingBalloons />
+    
         <div className="service-box">
           <div className="service-left">
             <h1>Branding Strategy</h1>
@@ -30,20 +42,6 @@ function BrandingStrategy() {
           </div>
         </div>
       </div>
-      <Helmet>
-        <title>
-          Best Branding & Stradegy agency in Raipur | Branding & Stradegy
-          services
-        </title>
-        <meta
-          name="description"
-          content="Grow your brand with our branding and strategy agency. Offering corporate branding, rebranding, and strategic consulting to define and grow your identity."
-        />
-        <meta
-          name="keywords"
-          content="Branding and strategy agency, Creative Branding Solutions, Strategic Marketing Agency, Brand Identity Development,	Corporate Branding Services in Raipur, Strategic Brand Consulting, Brand Positioning Agency in Raipur, Rebranding and Marketing Experts, Integrated Branding Strategies"
-        />
-      </Helmet>
       <div className="service-con">
         <div className="ul">
           <div className="topic-align1">

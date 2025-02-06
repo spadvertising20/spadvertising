@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Services.css";
 import { Helmet } from "react-helmet";
 import outdoor_img1 from "../../assets/Services/AudioVisuals/AudioVisuals.png";
@@ -7,27 +7,26 @@ import showcase1 from "../../assets/Services/AudioVisuals/AudioVisuals3.jpg";
 import showcase2 from "../../assets/Services/AudioVisuals/AudioVisuals4.jpg";
 import outdoor_img2 from "../../assets/Services/AudioVisuals/AudioVisuals1.jpg";
 import gantry from "../../assets/Services/AudioVisuals/AudioVisuals2.jpg";
-import FloatingBalloons from "../Home/FloatingBalloons";
 
 export default function AudioVisuals() {
+
+  useEffect(() => {
+      document.title = "Best Video Visuals service in Raipur | Video Visuals | SP Advertising";
+  
+      document
+        .querySelector("meta[name='description']")
+        ?.setAttribute("content", "Experience the best video visuals service in Raipur, delivering stunning, high-quality visuals for events, promotions, and creative projects.");
+  
+      document
+        .querySelector("meta[name='keywords']")
+        ?.setAttribute("content", "Video Visuals Service, High-Quality Visuals, Raipur Video Services, Event Visuals, Promotional Visuals, Creative Video Solutions, Video Production Raipur, Professional Visuals, Stunning Video Graphics,");
+    }, []);
+
   return (
     <div className="service">
-      <Helmet>
-        <title>
-          Best Video Visuals service in Raipur |Video Visuals | SP Advertising
-        </title>
-        <meta
-          name="description"
-          content="Experience the best video visuals service in Raipur, delivering stunning, high-quality visuals for events, promotions, and creative projects."
-        />
-        <meta
-          name="keywords"
-          content="Video Visuals Service, High-Quality Visuals, Raipur Video Services, Event Visuals, Promotional Visuals, Creative Video Solutions, Video Production Raipur, Professional Visuals, Stunning Video Graphics,"
-        />
-      </Helmet>
       
       <div className="service-box-con">
-      <FloatingBalloons />
+    
         <div className="service-box">
           <div className="service-left">
             <h1>Audio Visuals</h1>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Services.css";
 import { Helmet } from "react-helmet";
 import print from "../../assets/Services/PrintMedia/print.png";
@@ -8,14 +8,27 @@ import Newspaper_Ads from "../../assets/Services/PrintMedia/Newspaper-Ads.jpg";
 import Pamphlet from "../../assets/Services/PrintMedia/Pamphlet.jpg";
 import inshop from "../../assets/Services/PrintMedia/inshop.png";
 import inshop3 from "../../assets/Services/BrandingStrategy/inshop3.jpg";
-import FloatingBalloons  from "../Home/FloatingBalloons";
 
 function PrintMedia() {
+
+
+  useEffect(() => {
+    document.title = "Best Print Media company in Raipur | Print Media services";
+
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute("content", "Boost your brand with our print media agency. Offering brochure printing, custom posters, and high-quality print ads for impactful campaigns. Contact us today!");
+
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute("content", "Print Media agency,	Print Advertising Services, Custom Print Media Solutions, Professional Printing Agency,	Brochure Printing Services in Raipur, Flyer Design and Printing in Raipur, High-Quality Print Ads, Custom Poster Printing, Corporate Printing Solutions");
+  }, []);
+
   return (
     <div className="service">
       
       <div className="service-box-con">
-      <FloatingBalloons />
+   
         <div className="service-box">
           <div className="service-left">
             <h1>Print Media</h1>
@@ -31,17 +44,6 @@ function PrintMedia() {
           </div>
         </div>
       </div>
-      <Helmet>
-        <title>Best Print Media company in Raipur | Print Media services</title>
-        <meta
-          name="description"
-          content="Boost your brand with our print media agency. Offering brochure printing, custom posters, and high-quality print ads for impactful campaigns. Contact us today!"
-        />
-        <meta
-          name="keywords"
-          content=" Print Media agency,	Print Advertising Services, Custom Print Media Solutions, Professional Printing Agency,	Brochure Printing Services in Raipur, Flyer Design and Printing in Raipur, High-Quality Print Ads, Custom Poster Printing, Corporate Printing Solutions"
-        />
-      </Helmet>
       <div className="service-con">
         
         <div className="ul">

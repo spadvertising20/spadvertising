@@ -22,7 +22,6 @@ import client14 from "../../assets/WelcomePage/client14.png";
 import client15 from "../../assets/WelcomePage/client15.webp";
 import client16 from "../../assets/WelcomePage/client16.jpg";
 import client17 from "../../assets/WelcomePage/client17.webp";
-import FloatingBalloons from "../Home/FloatingBalloons";
 
 function WelcomePage() {
   const settings = {
@@ -54,7 +53,7 @@ function WelcomePage() {
 
   return (
     <div className="welcome" id="welcome">
-    <FloatingBalloons />
+   
          
       <Helmet>
         <title>Our Clients in Raipur: Success Stories and Testimonials</title>

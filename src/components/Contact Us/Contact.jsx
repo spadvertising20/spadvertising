@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import { Helmet } from "react-helmet";
-import FloatingBalloons from "../Home/FloatingBalloons";
 
 function Contact() {
   const [result, setResult] = useState("");
@@ -40,7 +39,7 @@ function Contact() {
 
   return (
     <div className="contact" id="contact">
-      <FloatingBalloons />
+     
       <Helmet>
         <title>Contact SP Advertising | Leading Advertising Agency in Raipur</title>
         <meta

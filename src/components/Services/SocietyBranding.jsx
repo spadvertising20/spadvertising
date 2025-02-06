@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Services.css";
 import outdoor_img1 from "../../assets/Services/OutdoorAdvertising/outdoor-img1.png";
 import { Link } from "react-router-dom";
@@ -6,7 +6,6 @@ import showcase1 from "../../assets/Services/OutdoorAdvertising/showcase1.webp";
 import showcase2 from "../../assets/Services/OutdoorAdvertising/showcase2.webp";
 import outdoor_img2 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising5.jpg";
 import gantry from "../../assets/Services/OutdoorAdvertising/gantry.jpg";
-import FloatingBalloons from "../Home/FloatingBalloons";
 import { Helmet } from "react-helmet";
 import SocietyBrandingImg1 from "../../assets/Services/SocietyBranding/SHRISHTI PLAZO.jpg";
 import SocietyBrandingImg2 from "../../assets/Services/SocietyBranding/ASHOKA HEIGHTS.jpg";
@@ -20,24 +19,24 @@ import SocietyBrandingImg9 from "../../assets/Services/SocietyBranding/VIP KARIS
 import SocietyBrandingImg10 from "../../assets/Services/SocietyBranding/GREEN MEADOWS.jpg";
 
 function SocietyBranding() {
+
+  useEffect(() => {
+    document.title = " Best Society Branding company in Raipur | Society Branding services";
+
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute("content", "Boost your brand with expert outdoor advertising. From billboards to hoardings, we create impactful campaigns that drive results. Contact us today!");
+
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute("content", "outdoor advertising agency,	 Outdoor advertising services, Outdoor advertising agency in Raipur, Billboard advertising solutions,	outdoor advertising companies, billboard advertising companies, outdoor billboard companies, billboard ad companies, out of home advertising companies");
+  }, []);
+
   return (
     <div className="service">
-      <Helmet>
-        <title>
-          Best Society Branding company in Raipur | Society Branding services
-        </title>
-        <meta
-          name="description"
-          content="Boost your brand with expert outdoor advertising. From billboards to hoardings, we create impactful campaigns that drive results. Contact us today!"
-        />
-        <meta
-          name="keywords"
-          content=" outdoor advertising agency,	 Outdoor advertising services, Outdoor advertising agency in Raipur, Billboard advertising solutions,	outdoor advertising companies, billboard advertising companies, outdoor billboard companies, billboard ad companies, out of home advertising companies"
-        />
-      </Helmet>
 
       <div className="service-box-con">
-        <FloatingBalloons />
+
         <div className="service-box">
           <div className="service-left">
             <h1>Society Branding</h1>

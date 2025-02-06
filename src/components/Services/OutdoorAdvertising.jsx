@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Services.css";
 import outdoor_img1 from "../../assets/Services/OutdoorAdvertising/outdoor-img1.png";
 import { Link } from "react-router-dom";
@@ -6,28 +6,27 @@ import showcase1 from "../../assets/Services/OutdoorAdvertising/showcase1.webp";
 import showcase2 from "../../assets/Services/OutdoorAdvertising/showcase2.webp";
 import outdoor_img2 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising5.jpg";
 import gantry from "../../assets/Services/OutdoorAdvertising/gantry.jpg";
-import FloatingBalloons from "../Home/FloatingBalloons";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 function OutdoorAdvertising() {
+
+    useEffect(() => {
+      document.title = "Best Outdoor Advertising company in Raipur | Outdoor Advertising services";
+  
+      document
+        .querySelector("meta[name='description']")
+        ?.setAttribute("content", "Boost your brand with expert outdoor advertising. From billboards to hoardings, we create impactful campaigns that drive results. Contact us today!");
+  
+      document
+        .querySelector("meta[name='keywords']")
+        ?.setAttribute("content", "outdoor advertising agency, Outdoor advertising services, Outdoor advertising agency in Raipur, Billboard advertising solutions, outdoor advertising companies, billboard advertising companies, outdoor billboard companies, billboard ad companies, out of home advertising companies");
+    }, []);
+
   return (
     <div className="service">
-      <Helmet>
-      <title>
-      Best Outdoor Advertising company in Raipur | Outdoor Advertising services
-        </title>
-        <meta
-          name="description"
-          content="Boost your brand with expert outdoor advertising. From billboards to hoardings, we create impactful campaigns that drive results. Contact us today!"
-        />
-        <meta
-          name="keywords"
-          content=" outdoor advertising agency,	 Outdoor advertising services, Outdoor advertising agency in Raipur, Billboard advertising solutions,	outdoor advertising companies, billboard advertising companies, outdoor billboard companies, billboard ad companies, out of home advertising companies"
-        />
-      </Helmet>
-     
+      
+
       <div className="service-box-con">
-      <FloatingBalloons/>
         <div className="service-box">
           <div className="service-left">
             <h1>Outdoor Advertising</h1>
@@ -62,11 +61,19 @@ function OutdoorAdvertising() {
                 impact on the go.
               </p>
             </div>
-            <img src={showcase1} alt=" Outdoor advertising services" data-aos="zoom-in" />
+            <img
+              src={showcase1}
+              alt=" Outdoor advertising services"
+              data-aos="zoom-in"
+            />
           </div>
 
           <div className="topic-align1">
-            <img src={outdoor_img2} alt="Outdoor advertising near me" data-aos="zoom-in" />
+            <img
+              src={outdoor_img2}
+              alt="Outdoor advertising near me"
+              data-aos="zoom-in"
+            />
             <div className="topic-left" data-aos="fade-right">
               <h1>Hoardings</h1>
               <p>
@@ -91,11 +98,19 @@ function OutdoorAdvertising() {
                 of both drivers and pedestrians in high-traffic areas.
               </p>
             </div>
-            <img src={gantry} alt="Billboard advertising solutions" data-aos="zoom-in" />
+            <img
+              src={gantry}
+              alt="Billboard advertising solutions"
+              data-aos="zoom-in"
+            />
           </div>
 
           <div className="topic-align1">
-            <img src={showcase2} alt="Outdoor Advertising agency" data-aos="zoom-in" />
+            <img
+              src={showcase2}
+              alt="Outdoor Advertising agency"
+              data-aos="zoom-in"
+            />
             <div className="topic-left" data-aos="fade-right">
               <h1>Pole Kiosk</h1>
               <p>

@@ -1,32 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Services.css";
 import { Link } from "react-router-dom";
 import event from "../../assets/Services/EventPromotion/event.png";
 import Corporate_Event from "../../assets/Services/EventPromotion/Corporate-Event.jpg";
 import mall from "../../assets/Services/EventPromotion/mall.png";
-import FloatingBalloons from "../Home/FloatingBalloons";
 import { Helmet } from "react-helmet";
 
 function EventPromotion() {
+
+  useEffect(() => {
+    document.title = "Best Event Promotion company in Raipur | Event Promotion services";
+
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute("content", "Boost your event's success with our event promotion company. We offer corporate event branding, live marketing, customized campaigns for impactful experiences.");
+
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute("content", "Event promotion company,	event marketing services, professional event promotion, event advertising agency,	Affordable event promotion strategies,  Event promotion agency near me, Event promotion company in Raipur, Best event marketing services in Raipur, Event advertising and marketing in Raipur");
+  }, []);
+
   return (
     <div className="service">
        
-      <Helmet>
-      <title>
-      Best Event Promotion company in Raipur | Event Promotion services
-        </title>
-        <meta
-          name="description"
-          content="Boost your event's success with our event promotion company. We offer corporate event branding, live marketing, customized campaigns for impactful experiences."
-        />
-        <meta
-          name="keywords"
-          content="Event promotion company,	event marketing services, professional event promotion, event advertising agency,	Affordable event promotion strategies,  Event promotion agency near me, Event promotion company in Raipur, Best event marketing services in Raipur, Event advertising and marketing in Raipur"
-        />
-      </Helmet>
      
       <div className="service-box-con">
-      <FloatingBalloons />
+     
         <div className="service-box">
           <div className="service-left">
             <h1>Event Promotion</h1>

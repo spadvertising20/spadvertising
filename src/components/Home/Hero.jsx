@@ -9,12 +9,10 @@ import hero_bg from "../../assets/Home/hero_bg.png";
 import img_bg from "../../assets/Home/bg.png";
 import { Link } from "react-router-dom";
 import right_arrow from "../../assets/Home/right-arrow.png";
-import FloatingBalloons from "../Home/FloatingBalloons";
 
 export default function AnimationHero() {
   return (
     <div className="hero">
-    <FloatingBalloons/>
       <div className="hero-con">
         <div className="shadow-effect"></div> 
         <div className="hero-content">

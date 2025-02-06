@@ -1,32 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Services.css";
 import design from "../../assets/Services/DesigningServices/design.png";
 import { Link } from "react-router-dom";
 import packaging_img from "../../assets/Services/DesigningServices/packaging-img.jpg";
 import packaging_img2 from "../../assets/Services/DesigningServices/creative-design3.jpg";
 import packaging_img1 from "../../assets/Services/DesigningServices/creative-design8.jpg";
-import FloatingBalloons from "../Home/FloatingBalloons";
 import { Helmet } from "react-helmet";
 
 function DesigningServices() {
+
+  useEffect(() => {
+        document.title = "Best Designing services in Raipur | Designing services";
+    
+        document
+          .querySelector("meta[name='description']")
+          ?.setAttribute("content", "Elevate your business with top branding services! From creative solutions to tailored strategies, we help you grow and stand out. Contact us today!");
+    
+        document
+          .querySelector("meta[name='keywords']")
+          ?.setAttribute("content", "Creative Designing Services,Graphic Design Services in raipur, Creative Agency in raipur, Web Design Company in raipur, creative logo design, creative flyer design, creative brochure design, creative poster design, creative i logo design");
+      }, []);
+
   return (
     <div className="service">
-       <Helmet>
-      <title>
-      Best Designing services in Raipur | Designing services
-        </title>
-        <meta
-          name="description"
-          content="Elevate your business with top branding services! From creative solutions to tailored strategies, we help you grow and stand out. Contact us today!"
-        />
-        <meta
-          name="keywords"
-          content="Creative Designing Services,Graphic Design Services in raipur, Creative Agency in raipur, Web Design Company in raipur, creative logo design, creative flyer design, creative brochure design, creative poster design, creative i logo design"
-        />
-      </Helmet>
   
       <div className="service-box-con">
-      <FloatingBalloons/>
+      
         <div className="service-box">
           <div className="service-left">
             <h1>Designing Services</h1>

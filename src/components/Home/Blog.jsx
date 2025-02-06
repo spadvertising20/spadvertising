@@ -4,6 +4,10 @@ import digital_marketing_img1 from "../../assets/Blog/digital-marketing-img9.jpg
 import digital_marketing_img2 from "../../assets/Blog/digital-marketing-img8.jpg";
 import digital_marketing_img3 from "../../assets/Blog/digital-marketing-img7.jpg";
 import { Link } from "react-router-dom";
+import { SlCalender } from "react-icons/sl";
+import { FaArrowRight } from "react-icons/fa6";
+
+
 
 export default function HomeBlog() {
   const blogs = [
@@ -13,6 +17,7 @@ export default function HomeBlog() {
       title: "Social Media Marketing: Best Practices for Engaging Your Audience.",
       image: digital_marketing_img1,
       link: "https://spadvertising.in/Blog",
+      category: "Social Media",
     },
     {
       id: "1",
@@ -20,6 +25,7 @@ export default function HomeBlog() {
       title:"Influencer Marketing: Driving Success and Growth in 2025.",
       image: digital_marketing_img2,
       link: "https://spadvertising.in/Blog",
+      category: "Influencer Marketing"
     },
     {
       id: "1",
@@ -27,6 +33,7 @@ export default function HomeBlog() {
       title: "What is Digital Marketing? Types, Examples and Benefits.",
       image: digital_marketing_img3,
       link: "https://spadvertising.in/Blog",
+      category: "Digital Marketing"
     },
   ];
 
@@ -41,11 +48,10 @@ export default function HomeBlog() {
         <div className="homeblog-article">
           <div className="homeblog-article-title">
             <div className="homeblog-article-title-con">
-              <h1>Browse Our Content On Growth Marketing</h1>
+              <h1>Latest Insights
+              </h1>
               <p>
-                Explore our blog for actionable growth marketing tips,
-                strategies, tools, and trends to elevate your business and
-                achieve success.
+              Discover the latest trends, strategies, and insights in digital marketing to help grow your business.
               </p>
             </div>
           </div>
@@ -53,11 +59,14 @@ export default function HomeBlog() {
         <div className="homeblog-main">
           {blogs.map((blog) => (
             <div key={blog.id} className="homeblog-main-con">
+              <div className="">
+                <div className="category-tag">{blog.category}</div>
               <img src={blog.image} alt="" />
+              </div>
               <div className="homeblog-main-details">
-                <p>{blog.date_and_Category}</p>
+                <p><SlCalender />{blog.date_and_Category}</p>
                 <h2 className="">{blog.title}</h2><br />
-                <Link to={blog.link}>Read More</Link>
+                <Link className="Link" to={blog.link}>Read More<FaArrowRight/></Link>
               </div>
             </div>
           ))}

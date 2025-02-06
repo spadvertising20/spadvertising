@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Services.css";
 import { Link } from "react-router-dom";
 import digital_marketing_img from "../../assets/Services/DigitalMarketing/digital-marketing-img.jpg";
@@ -6,28 +6,40 @@ import digital_marketing_img1 from "../../assets/Services/DigitalMarketing/digit
 import digital_marketing_img2 from "../../assets/Services/DigitalMarketing/digital-marketing-img2.jpg";
 import digital_marketing_img3 from "../../assets/Services/DigitalMarketing/digital-marketing-img3.jpg";
 import digital_marketing_img4 from "../../assets/Services/DigitalMarketing/digital-marketing-img4.jpg";
-import FloatingBalloons from "../Home/FloatingBalloons";
 import { Helmet } from "react-helmet";
 
 function DigitalMarketing() {
+
+    useEffect(() => {
+          document.title = "Best Digital Marketing agency in Raipur | Digital Marketing services";
+      
+          document
+            .querySelector("meta[name='description']")
+            ?.setAttribute("content", "Top digital marketing agency in Raipur offering expert services in SEO, social media marketing, website development and digital solutions in Chhattisgarh");
+      
+          document
+            .querySelector("meta[name='keywords']")
+            ?.setAttribute("content", "digital marketing agency, digital marketing company, best digital marketing agency, digital marketing agency near me, digital marketing company, digital marketing services, digital marketing near me, digital marketing agency near me, best digital marketing agencies");
+        }, []);
+
   return (
     <div className="service">
        <Helmet>
       <title>
-      Best Digital Marketing agency in Raipur | Digital Marketing services
+      
         </title>
         <meta
           name="description"
-          content="Top digital marketing agency in Raipur offering expert services in SEO, social media marketing, website development and digital solutions in Chhattisgarh"
+          content=""
         />
         <meta
           name="keywords"
-          content="digital marketing agency, digital marketing company, best digital marketing agency, digital marketing agency near me, digital marketing company, digital marketing services, digital marketing near me, digital marketing agency near me, best digital marketing agencies"
+          content=""
         />
       </Helmet>
       
       <div className="service-box-con">
-      <FloatingBalloons/>
+  
         <div className="service-box">
           <div className="service-left">
             <h1>Digital Marketing</h1>

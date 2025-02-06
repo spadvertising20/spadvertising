@@ -76,7 +76,6 @@ import homepageImage3 from "../../assets/Portfolio/homepage3.png";
 import homepageImage4 from "../../assets/Portfolio/homepage4.png";
 
 import external_link from "../../assets/Portfolio/external-link.png";
-import FloatingBalloons from "../Home/FloatingBalloons";
 
 function Portfolio() {
   function SampleNextArrow(props) {
@@ -240,6 +239,44 @@ function Portfolio() {
       },
     ],
   };
+  const settings6 = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    centerPadding: "60px",
+    slidesToScroll: 1,
+    autoplay: true,
+    pauseOnHover: true,
+    autoplaySpeed: 100,
+    speed: 5000,
+    cssEase: "linear",
+    rtl: false,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+          pauseOnHover: false,
+          speed: 5000,
+          cssEase: "linear",
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+    ],
+  };
 
   return (
     <div className="portfolio">
@@ -257,7 +294,6 @@ function Portfolio() {
       </Helmet>
       
       <div className="img-back">
-      <FloatingBalloons />
         <div className="img-back-con">
           <div className="portfolio-heading">
 
@@ -379,7 +415,7 @@ function Portfolio() {
       </div>
       <div className="port-slider">
         <h2>Creative Designs</h2>
-        <Slider {...settings2} className="portfolio-slider">
+        <Slider {...settings3} className="portfolio-slider">
           <div>
             <img
               src={design1}
@@ -446,7 +482,7 @@ function Portfolio() {
       </div>
       <div className="port-slider">
         <h2>Print Media</h2>
-        <Slider {...settings2} className="portfolio-slider">
+        <Slider {...settings4} className="portfolio-slider">
           <div>
             <img
               src={print_img2}
@@ -468,7 +504,7 @@ function Portfolio() {
       </div>
       <div className="port-slider">
         <h2>In-shop Branding</h2>
-        <Slider {...settings2} className="portfolio-slider">
+        <Slider {...settings5} className="portfolio-slider">
           <div>
             <img
               src={inshop1}
@@ -532,7 +568,7 @@ function Portfolio() {
       </div>
       <div className="port-slider">
         <h2>Event Promotion</h2>
-        <Slider {...settings3} className="portfolio-slider">
+        <Slider {...settings6} className="portfolio-slider">
           <div>
             <img
               src={event_promotion1}

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Blog.css";
 import { Link, Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -27,7 +27,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { StoreContext } from "../Context Provider/StoreProvider";
-import FloatingBalloons from "../Home/FloatingBalloons";
+import { SlCalender } from "react-icons/sl";
 
 const Articles = [
   {
@@ -36,10 +36,12 @@ const Articles = [
 
     title: "How to Conduct Effective Keyword Research for 2025-26",
     link: "/Blog/Keyword-Research",
-    writer: "BY ADMIN",
+   
     facebook: <CiFacebook className="blog-icon" />,
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
+    writer: "BY ADMIN",
+    altTag: "Digital Marketing Blog"
   },
   {
     img: digital_marketing_img2,
@@ -51,39 +53,46 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
+    altTag: "Social Media Marketing"
   },
   {
     img: digital_marketing_img3,
     date: "January 03, 2025",
 
-    title: "Why Content is Still King in SEO: How to Create High-Quality, Search-Friendly Content",
+    title:
+      "Why Content is Still King in SEO: How to Create High-Quality, Search-Friendly Content",
     link: "/Blog/High-Quality-Content",
     facebook: <CiFacebook className="blog-icon" />,
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
+    altTag: "digital marketer,"
   },
   {
     img: digital_marketing_img4,
     date: "January 06, 2025",
 
-    title: "How Can Businesses Prepare for Emerging Trends in the Next Decade of Digital Marketing?",
+    title:
+      "How Can Businesses Prepare for Emerging Trends in the Next Decade of Digital Marketing?",
     link: "/Blog/Businesses-Prepare-for-Emerging-Trends",
     facebook: <CiFacebook className="blog-icon" />,
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
+    altTag: "best digital marketing agency"
   },
   {
     img: digital_marketing_img5,
     date: "January 08, 2025",
 
-    title: "Holiday Sales Strategies: Essential Tips to Increase Business Sales",
+    title:
+      "Holiday Sales Strategies: Essential Tips to Increase Business Sales",
     link: "/Blog/Holiday-Sales-Strategies",
     facebook: <CiFacebook className="blog-icon" />,
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
+    altTag: "types of digital marketing"
   },
   {
     img: digital_marketing_img6,
@@ -94,6 +103,7 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
+    altTag: "content marketers"
   },
   {
     img: digital_marketing_img7,
@@ -104,6 +114,7 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
+    altTag: "performance marketers"
   },
   {
     img: digital_marketing_img8,
@@ -114,6 +125,7 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
+    altTag: "digital marketing examples"
   },
   {
     img: digital_marketing_img9,
@@ -124,6 +136,7 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
+    altTag: "google marketing digital"
   },
   {
     img: digital_marketing_img10,
@@ -134,8 +147,8 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
+    altTag: "hubspot digital marketing course"
   },
-  
 ];
 
 const Blog = () => {
@@ -149,22 +162,26 @@ const Blog = () => {
     setQuery(userInput);
   };
 
+   useEffect(() => {
+      document.title = "Best Digital Marketing Blog by SP Advertising Agency in Raipur";
+  
+      document
+        .querySelector("meta[name='description']")
+        ?.setAttribute("content", "Explore the best digital marketing blog by SP Advertising Agency in Raipur! Get expert tips on SEO, social media, PPC, and content marketing to grow your business online.");
+  
+      document
+        .querySelector("meta[name='keywords']")
+        ?.setAttribute("content", "Digital Marketing Blog, Social Media Marketing, digital marketer, best digital marketing agency, types of digital marketing, types of digital marketing, content marketers, performance marketers, digital marketing examples");
+    }, []);
+    
+
   return (
     <div className="blog">
-  
-      <Helmet>
-        <title>Blog: SP Advertising</title>
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-      </Helmet>
 
-      
-    
       <div className="new-update">
-      <FloatingBalloons />
         <div className="headline-up">
           <h3>Blog</h3>
-          
+
           <div className="blog-item">
             <div className="headline">
               <div className="headline-con">
@@ -189,7 +206,7 @@ const Blog = () => {
             </div>
 
             <div className="update-image">
-              <img src={update_image} alt="Branding" />
+              <img src={update_image} alt="Digital Marketing Blog" />
             </div>
           </div>
         </div>
@@ -208,8 +225,8 @@ const Blog = () => {
                     to={article.link}
                     className="img-text"
                   >
-                    <img src={article.img} alt={article.title} />
-                    <div className="date-category">{article.date}</div>
+                    <img src={article.img} alt={article.altTag} />
+                    <div className="text-cal"><SlCalender/><div className="date-category">{article.date}</div></div>
                     <h3>{article.title}</h3>
                     <div>
                       <p className="blog-arrow-con">Read more</p>

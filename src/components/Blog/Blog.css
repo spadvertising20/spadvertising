@@ -181,6 +181,13 @@
     border-radius: 0px 0px 0 0;
 
 }
+.text-cal{
+    color: gray;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    font-size: 16px;
+}
 
 .search-container {
     position: sticky;
@@ -288,7 +295,7 @@ p:hover .p-dot {
 
 .date-category {
     color: gray;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .search-box {
