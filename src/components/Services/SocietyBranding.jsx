@@ -21,15 +21,15 @@ import SocietyBrandingImg10 from "../../assets/Services/SocietyBranding/GREEN ME
 function SocietyBranding() {
 
   useEffect(() => {
-    document.title = " Best Society Branding company in Raipur | Society Branding services";
+    document.title = "Best Society Branding company in Raipur | Society Branding services";
 
     document
       .querySelector("meta[name='description']")
-      ?.setAttribute("content", "Boost your brand with expert outdoor advertising. From billboards to hoardings, we create impactful campaigns that drive results. Contact us today!");
+      ?.setAttribute("content", "Improve your brand visibility with our society branding services in Raipur. We cover all prime societies to help promote your business effectively.");
 
     document
       .querySelector("meta[name='keywords']")
-      ?.setAttribute("content", "outdoor advertising agency,	 Outdoor advertising services, Outdoor advertising agency in Raipur, Billboard advertising solutions,	outdoor advertising companies, billboard advertising companies, outdoor billboard companies, billboard ad companies, out of home advertising companies");
+      ?.setAttribute("content", "society branding, society branding in raipur, society branding company in raipur, society branding agency in raipur, outdoor company in chhattisgarh, society advertising in raipur, society promotion in raipur, society advertising, society promotion company in raipur");
   }, []);
 
   return (
@@ -51,7 +51,7 @@ function SocietyBranding() {
           <div className="service-right">
             <img
               src={outdoor_img1}
-              alt="Outdoor Advertising agency in Raipur"
+              alt="society branding"
             />
           </div>
         </div>
@@ -109,7 +109,7 @@ function SocietyBranding() {
               <div className="society-con">
                 <img
                   src={SocietyBrandingImg1}
-                  alt=" Outdoor advertising services"
+                  alt="society branding in raipur"
                   data-aos="zoom-in"
                 />
                 <p>
@@ -174,7 +174,7 @@ function SocietyBranding() {
               <div className="society-con">
                 <img
                   src={SocietyBrandingImg2}
-                  alt=" Outdoor advertising services"
+                  alt="society branding company in raipur"
                   data-aos="zoom-in"
                 />
                 <p>
@@ -242,7 +242,7 @@ function SocietyBranding() {
               <div className="society-con">
                 <img
                   src={SocietyBrandingImg3}
-                  alt=" Outdoor advertising services"
+                  alt="society branding agency in raipur"
                   data-aos="zoom-in"
                 />
                 <p>
@@ -310,7 +310,7 @@ function SocietyBranding() {
               <div className="society-con">
                 <img
                   src={SocietyBrandingImg4}
-                  alt=" Outdoor advertising services"
+                  alt="outdoor company in chhattisgarh"
                   data-aos="zoom-in"
                 />
                 <p>
@@ -377,7 +377,7 @@ function SocietyBranding() {
               <div className="society-con">
                 <img
                   src={SocietyBrandingImg5}
-                  alt=" Outdoor advertising services"
+                  alt="society advertising in raipur"
                   data-aos="zoom-in"
                 />
                 <p>
@@ -441,7 +441,7 @@ function SocietyBranding() {
               <div className="society-con">
                 <img
                   src={SocietyBrandingImg6}
-                  alt=" Outdoor advertising services"
+                  alt="society promotion in raipur"
                   data-aos="zoom-in"
                 />
                 <p>
@@ -505,7 +505,7 @@ function SocietyBranding() {
               <div className="society-con">
                 <img
                   src={SocietyBrandingImg7}
-                  alt=" Outdoor advertising services"
+                  alt="society advertising"
                   data-aos="zoom-in"
                 />
                 <p>
@@ -572,7 +572,7 @@ function SocietyBranding() {
               <div className="society-con">
                 <img
                   src={SocietyBrandingImg8}
-                  alt=" Outdoor advertising services"
+                  alt="society promotion company in raipur"
                   data-aos="zoom-in"
                 />
                 <p>
@@ -640,7 +640,7 @@ function SocietyBranding() {
               <div className="society-con">
                 <img
                   src={SocietyBrandingImg9}
-                  alt=" Outdoor advertising services"
+                  alt="society advertising agency in raipur"
                   data-aos="zoom-in"
                 />
                 <p>
@@ -705,7 +705,7 @@ function SocietyBranding() {
               <div className="society-con">
                 <img
                   src={SocietyBrandingImg10}
-                  alt=" Outdoor advertising services"
+                  alt="society hoarding in raipur"
                   data-aos="zoom-in"
                 />
                 <p>

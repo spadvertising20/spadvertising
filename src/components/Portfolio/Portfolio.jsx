@@ -515,28 +515,28 @@ function Portfolio() {
           <div>
             <img
               src={inshop2}
-              alt="In-Shop Branding in Raipur"
+              alt="In-Shop Branding company in Raipur"
               loading="lazy"
             />
           </div>
           <div>
             <img
               src={inshop3}
-              alt="In-Shop Branding in Raipur"
+              alt="In-Shop Branding agency in Raipur"
               loading="lazy"
             />
           </div>
           <div>
             <img
               src={inshop4}
-              alt="In-Shop Branding in Raipur"
+              alt="In-Shop Branding"
               loading="lazy"
             />
           </div>
           <div>
             <img
               src={inshop5}
-              alt="In-Shop Branding in Raipur"
+              alt="In-Shop advertising in Raipur"
               loading="lazy"
             />
           </div>
@@ -546,21 +546,21 @@ function Portfolio() {
           <div>
             <img
               src={inshop7}
-              alt="In-Shop Branding in Raipur"
+              alt="In-Shop promotion in Raipur"
               loading="lazy"
             />
           </div>
           <div>
             <img
               src={inshop8}
-              alt="In-Shop Branding in Raipur"
+              alt="In-Shop Branding company in chhattisgarh"
               loading="lazy"
             />
           </div>
           <div>
             <img
               src={inshop9}
-              alt="In-Shop Branding in Raipur"
+              alt="In-Shop advertising company"
               loading="lazy"
             />
           </div>
