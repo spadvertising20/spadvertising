@@ -30,7 +30,7 @@ import BusinessesPrepare from "./components/Blog/Blogs/BusinessesPrepare.jsx";
 import HolidaySalesStrategies from "./components/Blog/Blogs/HolidaySalesStrategies.jsx";
 import ImproveOnlineAdvertising from "./components/Blog/Blogs/ImproveOnlineAdvertising.jsx";
 import Blog2 from "./components/Blog/Blog2.jsx";
-import WhatIsDigitalMarketing from "./components/Blog/Blogs/WhatisDigitalMarketing.jsx";
+import WhatIsDigitalMarketing from "./components/Blog/Blogs/WhatIsDigitalMarketing.jsx";
 import InfluencerMarketing from "./components/Blog/Blogs/InfluencerMarketing.jsx";
 import LoadScrollTop from "./components/Home/LoadScrollTop.jsx";
 import SocialMediaMarketing from "./components/Blog/Blogs/SocialMediaMarketing.jsx";
