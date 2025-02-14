@@ -19,7 +19,7 @@ function Homepage() {
       <HomeAbout />
       <HomeClients />
       <HomeBlog />
-      <FAQ/>
+      {/* <FAQ/> */}
     </div>
   );
 }
