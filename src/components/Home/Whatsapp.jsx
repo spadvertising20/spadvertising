@@ -1,6 +1,6 @@
 import React from 'react'
 import whatsapp from '../../assets/Navbar/watsapp.png';
-import './whatsapp.css'
+import './Whatsapp.css'
 
 export default function Whatsapp() {
   return (
