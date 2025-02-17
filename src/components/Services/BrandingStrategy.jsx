@@ -8,24 +8,28 @@ import Creative_Campaigns from "../../assets/Services/BrandingStrategy/Creative_
 import Corporate from "../../assets/Services/BrandingStrategy/Corporate.jpg";
 
 function BrandingStrategy() {
+  useEffect(() => {
+    document.title =
+      "Best Branding & Stradegy agency in Raipur | Branding & Stradegy services";
 
-useEffect(() => {
-      document.title = "Best Branding & Stradegy agency in Raipur | Branding & Stradegy services";
-  
-      document
-        .querySelector("meta[name='description']")
-        ?.setAttribute("content", "Grow your brand with our branding and strategy agency. Offering corporate branding, rebranding, and strategic consulting to define and grow your identity.");
-  
-      document
-        .querySelector("meta[name='keywords']")
-        ?.setAttribute("content", "Branding and strategy agency, Creative Branding Solutions, Strategic Marketing Agency, Brand Identity Development,	Corporate Branding Services in Raipur, Strategic Brand Consulting, Brand Positioning Agency in Raipur, Rebranding and Marketing Experts, Integrated Branding Strategies");
-    }, []);
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute(
+        "content",
+        "Grow your brand with our branding and strategy agency. Offering corporate branding, rebranding, and strategic consulting to define and grow your identity."
+      );
+
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute(
+        "content",
+        "Branding and strategy agency, Creative Branding Solutions, Strategic Marketing Agency, Brand Identity Development,	Corporate Branding Services in Raipur, Strategic Brand Consulting, Brand Positioning Agency in Raipur, Rebranding and Marketing Experts, Integrated Branding Strategies"
+      );
+  }, []);
 
   return (
     <div className="service">
-     
       <div className="service-box-con">
-    
         <div className="service-box">
           <div className="service-left">
             <h1>Branding Strategy</h1>
@@ -38,7 +42,7 @@ useEffect(() => {
             </Link>
           </div>
           <div className="service-right">
-            <img src={brand} alt="Branding Strategy in Raipur" />
+            <img loading="lazy" src={brand} alt="Branding Strategy in Raipur" />
           </div>
         </div>
       </div>
@@ -46,6 +50,7 @@ useEffect(() => {
         <div className="ul">
           <div className="topic-align1">
             <img
+              loading="lazy"
               src={Communications_Strategy}
               alt="Communications Strategy in Raipur"
               data-aos="zoom-in"
@@ -80,6 +85,7 @@ useEffect(() => {
               </p>
             </div>
             <img
+              loading="lazy"
               src={Creative_Campaigns}
               alt="Creative 360 Campaigns in Raipur"
               data-aos="zoom-in"
@@ -88,6 +94,7 @@ useEffect(() => {
 
           <div className="topic-align1">
             <img
+              loading="lazy"
               src={Corporate}
               alt="Corporate and Brand Identity in Raipur"
               data-aos="zoom-in"

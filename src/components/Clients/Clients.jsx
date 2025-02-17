@@ -53,11 +53,9 @@ function WelcomePage() {
 
   return (
     <div className="welcome" id="welcome">
-   
-         
       <Helmet>
         <title>Our Clients in Raipur: Success Stories and Testimonials</title>
-        
+
         <meta
           name="description"
           content="Discover our clients' success stories in Raipur. Read testimonials and case studies showcasing our partnerships and the positive experiences we've created together."
@@ -67,9 +65,9 @@ function WelcomePage() {
           content=" Our clients, client testimonials Raipur, client portfolio Raipur, client success stories Raipur, satisfied clients Raipur, client feedback Raipur, client case studies Raipur, client partnerships Raipur, client experiences Raipur"
         />
       </Helmet>
-      
+
       <h1>WELCOME TO SP ADVERTISING</h1>
-      
+
       <br />
       <div className="welcome-con">
         <div className="welcome-box">
@@ -105,55 +103,70 @@ function WelcomePage() {
           <h2>Our Clients</h2>
           <Slider {...settings} className="logo-slider">
             <div>
-              <img src={client1} alt="" />
+              <img loading="lazy" src={client1} alt="" />
             </div>
             <div>
-              <img src={client2} alt="" />
+              <img loading="lazy" src={client2} alt="" />
             </div>
             <div>
-              <img src={client3} alt="" />
+              <img loading="lazy" src={client3} alt="" />
             </div>
             <div>
-              <img src={client4} alt="" />
+              <img loading="lazy" src={client4} alt="" />
             </div>
             <div>
-              <img src={client5} alt="" />
+              <img loading="lazy" src={client5} alt="" />
             </div>
             <div>
-              <img className="img-visible" src={client6} alt="" />
+              <img
+                loading="lazy"
+                className="img-visible"
+                src={client6}
+                alt=""
+              />
             </div>
             <div>
-              <img className="img-visible" src={client7} alt="" />
+              <img
+                loading="lazy"
+                className="img-visible"
+                src={client7}
+                alt=""
+              />
             </div>
             <div>
-              <img src={client8} alt="" />
+              <img loading="lazy" src={client8} alt="" />
             </div>
             <div>
-              <img src={client9} alt="" />
+              <img loading="lazy" src={client9} alt="" />
             </div>
             <div>
-              <img src={client10} alt="" />
+              <img loading="lazy" src={client10} alt="" />
             </div>
             <div>
-              <img src={client11} alt="" />
+              <img loading="lazy" src={client11} alt="" />
             </div>
             <div>
-              <img src={client12} alt="" />
+              <img loading="lazy" src={client12} alt="" />
             </div>
             <div>
-              <img src={client13} alt="" />
+              <img loading="lazy" src={client13} alt="" />
             </div>
             <div>
-              <img src={client14} alt="" />
+              <img loading="lazy" src={client14} alt="" />
             </div>
             <div>
-              <img className="img-visible" src={client15} alt="" />
+              <img
+                loading="lazy"
+                className="img-visible"
+                src={client15}
+                alt=""
+              />
             </div>
             <div>
-              <img src={client16} alt="" />
+              <img loading="lazy" src={client16} alt="" />
             </div>
             <div>
-              <img src={client17} alt="" />
+              <img loading="lazy" src={client17} alt="" />
             </div>
           </Slider>
         </div>

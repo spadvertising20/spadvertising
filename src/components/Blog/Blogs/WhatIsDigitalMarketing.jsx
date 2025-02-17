@@ -21,7 +21,7 @@ import { StoreContext } from "../../Context Provider/StoreProvider";
 
 const Contents = [
   {
-    heading:  `Introduction`,
+    heading: `Introduction`,
     description: `In the fast-paced digital age, traditional marketing methods are no longer sufficient to capture audience attention. Enter digital marketing – a revolutionary way for businesses to connect with their target audience, enhance brand visibility, and drive sales. But what exactly is digital marketing, and why is it a game-changer in 2025?
 
 `,
@@ -32,18 +32,18 @@ const Contents = [
   },
 
   {
-    heading:  `What is Digital Marketing?`,
+    heading: `What is Digital Marketing?`,
     description: `Digital marketing is the practice of leveraging digital channels such as websites, search engines, social media, email, and mobile apps to promote products, services, or brands. Unlike traditional marketing, it allows businesses to measure real-time results and target specific demographics with precision.`,
   },
 
   {
-    heading:  `Types of Digital Marketing`,
+    heading: `Types of Digital Marketing`,
     description: `Digital marketing consists of various strategies tailored to different goals and audiences. Below are some of the most impactful types:
 `,
   },
-  
+
   {
-    sub_heading:  `1. Search Engine Optimization (SEO)`,
+    sub_heading: `1. Search Engine Optimization (SEO)`,
     description: `Search Engine Optimization involves optimizing your website to rank higher on search engine results pages (SERPs). This improves visibility and drives organic traffic.
 
 `,
@@ -56,7 +56,7 @@ const Contents = [
   },
 
   {
-    sub_heading:  `2. Pay-Per-Click Advertising (PPC)`,
+    sub_heading: `2. Pay-Per-Click Advertising (PPC)`,
     description: `Pay-Per-Click Advertising is a paid strategy where advertisers pay a fee each time their ad is clicked.
 
 
@@ -70,7 +70,7 @@ const Contents = [
     description: `Benefits: Immediate results and highly targeted audience reach. `,
   },
   {
-    sub_heading:  `3. Social Media Marketing (SMM)`,
+    sub_heading: `3. Social Media Marketing (SMM)`,
     description: `Social Media Marketing uses platforms like Instagram, Facebook, and LinkedIn to engage audiences and promote content.
 
 `,
@@ -85,7 +85,7 @@ const Contents = [
   },
 
   {
-    sub_heading:  `4. Content Marketing`,
+    sub_heading: `4. Content Marketing`,
     description: `Content Marketing focuses on creating valuable content to attract and retain an audience.
 
 `,
@@ -99,7 +99,7 @@ const Contents = [
   },
 
   {
-    sub_heading:  `5. Email Marketing`,
+    sub_heading: `5. Email Marketing`,
     description: `Email Marketing involves sending newsletters, promotions, or personalized messages to a list of subscribers.
 
 `,
@@ -115,7 +115,7 @@ const Contents = [
  `,
   },
   {
-    sub_heading:  `6. Affiliate Marketing`,
+    sub_heading: `6. Affiliate Marketing`,
     description: `Affiliate Marketing rewards affiliates for driving traffic or sales through their promotional efforts.
 
 `,
@@ -131,7 +131,7 @@ const Contents = [
  `,
   },
   {
-    sub_heading:  `7. Influencer Marketing strategy`,
+    sub_heading: `7. Influencer Marketing strategy`,
     description: `Influencer Marketing strategy involves partnering with influencers to promote products or services.
 
 `,
@@ -146,77 +146,76 @@ const Contents = [
  `,
   },
 
-
   {
-    heading:  `Examples of Digital Marketing`,
+    heading: `Examples of Digital Marketing`,
   },
   {
-    sub_heading:  `1.Nike's "You Can't Stop Us" Campaign: `,
+    sub_heading: `1.Nike's "You Can't Stop Us" Campaign: `,
     description: `Leveraging powerful storytelling through YouTube and social media.
 
 `,
   },
   {
-    sub_heading:  `2.Coca-Cola’s Personalized Emails:  `,
+    sub_heading: `2.Coca-Cola’s Personalized Emails:  `,
     description: `Sending custom offers based on consumer behavior.
 
 `,
   },
 
   {
-    sub_heading:  `3.Amazon’s Retargeting Ads: `,
+    sub_heading: `3.Amazon’s Retargeting Ads: `,
     description: `Using PPC to re-engage customers who browsed but didn’t purchase.
 
 `,
   },
   {
-    sub_heading:  `4.HubSpot’s Free Tools: `,
+    sub_heading: `4.HubSpot’s Free Tools: `,
     description: `Offering free CRM tools to attract and retain users.`,
   },
   {
-    sub_heading:  `5.Airbnb’s Instagram Content:`,
+    sub_heading: `5.Airbnb’s Instagram Content:`,
     description: ` Sharing user-generated content to boost authenticity and engagement.`,
   },
 
   {
-    heading: "Benefits of Digital Marketing"
+    heading: "Benefits of Digital Marketing",
   },
   {
-    sub_heading:  `1. Global Reach: `,
+    sub_heading: `1. Global Reach: `,
     description: ` Connect with audiences worldwide, breaking geographical barriers.`,
   },
   {
-    sub_heading:  `2. Cost-Effectiveness:  `,
+    sub_heading: `2. Cost-Effectiveness:  `,
     description: ` Achieve better results compared to traditional advertising methods. `,
   },
   {
-    sub_heading:  `3. Measurable Results: `,
+    sub_heading: `3. Measurable Results: `,
     description: `Tools like Google Analytics provide insights into campaign performance.`,
   },
   {
-    sub_heading:  `4. Improved Targeting: `,
+    sub_heading: `4. Improved Targeting: `,
     description: `Use data to personalize campaigns for specific demographics. `,
   },
 
   {
-    sub_heading:  `5. Enhanced Engagement:`,
+    sub_heading: `5. Enhanced Engagement:`,
     description: `Interact with customers through comments, shares, and direct messages.`,
   },
   {
-    sub_heading:  `6. Scalability: `,
+    sub_heading: `6. Scalability: `,
     description: `Adapt campaigns to fit businesses of any size.`,
   },
   {
-    sub_heading:  `7. Brand Authority:   `,
+    sub_heading: `7. Brand Authority:   `,
     description: `Establish credibility through content and consistent online presence.`,
   },
-  
+
   {
-    sub_heading:  `8. Real-Time Performance Metrics:`,
+    sub_heading: `8. Real-Time Performance Metrics:`,
     description: `  Optimize campaigns on the go based on live feedback.`,
   },
   {
-    heading:  `Conclusion`,
+    heading: `Conclusion`,
     description: `Digital marketing is no longer a luxury – it’s a necessity for businesses aiming to thrive in a highly competitive landscape. By understanding its types, leveraging real-life examples, and harnessing its benefits, businesses can achieve remarkable growth. Whether you’re a small business or a global enterprise, digital marketing opens doors to endless possibilities.`,
   },
   {
@@ -243,7 +242,7 @@ export default function WhatIsDigitalMarketing() {
           <p>{blogData[6]?.date}</p>
 
           <h1>{blogData[6]?.title}</h1>
-          <img src={blogData[6]?.img} alt="" />
+          <img loading="lazy" src={blogData[6]?.img} alt="" />
 
           <div className="keyword-research-content">
             <div className="blog-content">

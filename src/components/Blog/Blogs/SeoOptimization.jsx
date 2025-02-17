@@ -19,10 +19,8 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
 import { StoreContext } from "../../Context Provider/StoreProvider";
 
-
 const Articles = [
   {
-   
     date: `December 21, 2024`,
     category: `DIGITAL MARKETING`,
     title: `How to Conduct Effective Keyword Research for 2025`,
@@ -33,7 +31,6 @@ const Articles = [
     linkedin: <CiLinkedin className="blog-icon" />,
   },
   {
-
     date: `December 28, 2024`,
     category: `DIGITAL MARKETING`,
     title: `The Ultimate Guide to On-Page SEO: Best Practices and Tips`,
@@ -131,80 +128,78 @@ export default function SeoOptimization() {
 
   return (
     <section className="keyword-research">
-     <div className="keyword-research-con">
-             <div className="keyword-research-box">
-               <p>
-                 {blogData[1]?.date} 
-               </p>
-     
-               <h1>{blogData[1]?.title}</h1>
-               <img src={digital_marketing_img1} alt="" />
-               <div className="keyword-research-content">
-                 <div className="">
-                   {Contents.map((content, index) => (
-                     <div className="">
-                       <h1>{content.heading}</h1>
-                       <h2>{content.sub_heading}</h2>
-                       <p>{content.description}</p>
-                     </div>
-                   ))}
-                 </div>
-               </div>
-             </div>
-             <div className="search-container">
-               <input
-                 type="text"
-                 placeholder="Search..."
-                 value={query}
-                 onChange={handleInputChange}
-               />
-               <p className="blog-post-heading">Recent Posts</p>
-     
-               {query.trim() === ""
-                 ? blogData.map((article, index) => (
-                     <div className="title-gap">
-                       <Link to={`${article.link}`} key={index}>
-                         {article.title}
-                       </Link>
-                     </div>
-                   ))
-                 : blogData
-                     .filter((article) =>
-                       article.title.toLowerCase().includes(query.toLowerCase())
-                     )
-                     .map((filteredArticle, index) => (
-                       <div className="title-gap2">
-                         <Link to={`${filteredArticle.link}`}>
-                           {filteredArticle.title}
-                         </Link>
-                       </div>
-                     ))}
-     
-               <br />
-     
-               <div className="blog-icons2">
-                 <h2>Follow Us</h2>
-                 <div className="blog-icons2-con">
-                   <Link to={"https://www.instagram.com/spadvertisingrpr/"}>
-                     <GrInstagram />
-                   </Link>
-                   <Link to={"https://www.facebook.com/spadvertisingraipur"}>
-                     <FaFacebookF />
-                   </Link>
-                   <Link
-                     to={
-                       "https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
-                     }
-                   >
-                     <FaLinkedinIn />
-                   </Link>
-                   <Link to={"https://www.youtube.com/@spadvertising530"}>
-                     <IoLogoYoutube />
-                   </Link>
-                 </div>
-               </div>
-             </div>
-           </div>
+      <div className="keyword-research-con">
+        <div className="keyword-research-box">
+          <p>{blogData[1]?.date}</p>
+
+          <h1>{blogData[1]?.title}</h1>
+          <img loading="lazy" src={digital_marketing_img1} alt="" />
+          <div className="keyword-research-content">
+            <div className="">
+              {Contents.map((content, index) => (
+                <div className="">
+                  <h1>{content.heading}</h1>
+                  <h2>{content.sub_heading}</h2>
+                  <p>{content.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Search..."
+            value={query}
+            onChange={handleInputChange}
+          />
+          <p className="blog-post-heading">Recent Posts</p>
+
+          {query.trim() === ""
+            ? blogData.map((article, index) => (
+                <div className="title-gap">
+                  <Link to={`${article.link}`} key={index}>
+                    {article.title}
+                  </Link>
+                </div>
+              ))
+            : blogData
+                .filter((article) =>
+                  article.title.toLowerCase().includes(query.toLowerCase())
+                )
+                .map((filteredArticle, index) => (
+                  <div className="title-gap2">
+                    <Link to={`${filteredArticle.link}`}>
+                      {filteredArticle.title}
+                    </Link>
+                  </div>
+                ))}
+
+          <br />
+
+          <div className="blog-icons2">
+            <h2>Follow Us</h2>
+            <div className="blog-icons2-con">
+              <Link to={"https://www.instagram.com/spadvertisingrpr/"}>
+                <GrInstagram />
+              </Link>
+              <Link to={"https://www.facebook.com/spadvertisingraipur"}>
+                <FaFacebookF />
+              </Link>
+              <Link
+                to={
+                  "https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
+                }
+              >
+                <FaLinkedinIn />
+              </Link>
+              <Link to={"https://www.youtube.com/@spadvertising530"}>
+                <IoLogoYoutube />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

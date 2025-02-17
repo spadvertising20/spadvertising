@@ -32,7 +32,7 @@ function ScrollToTop() {
       {isVisible && (
         <div className="scroll-to-top">
           <button onClick={scrollToTop} className="scroll-button">
-            <img src={scroll} alt="" />
+            <img loading="lazy" src={scroll} alt="" />
           </button>
         </div>
       )}

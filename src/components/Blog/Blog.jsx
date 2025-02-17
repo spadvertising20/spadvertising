@@ -36,12 +36,12 @@ const Articles = [
 
     title: "How to Conduct Effective Keyword Research for 2025-26",
     link: "/Blog/Keyword-Research",
-   
+
     facebook: <CiFacebook className="blog-icon" />,
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
-    altTag: "Digital Marketing Blog"
+    altTag: "Digital Marketing Blog",
   },
   {
     img: digital_marketing_img2,
@@ -53,7 +53,7 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
-    altTag: "Social Media Marketing"
+    altTag: "Social Media Marketing",
   },
   {
     img: digital_marketing_img3,
@@ -66,7 +66,7 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
-    altTag: "digital marketer,"
+    altTag: "digital marketer,",
   },
   {
     img: digital_marketing_img4,
@@ -79,7 +79,7 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
-    altTag: "best digital marketing agency"
+    altTag: "best digital marketing agency",
   },
   {
     img: digital_marketing_img5,
@@ -92,7 +92,7 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
-    altTag: "types of digital marketing"
+    altTag: "types of digital marketing",
   },
   {
     img: digital_marketing_img6,
@@ -103,7 +103,7 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
-    altTag: "content marketers"
+    altTag: "content marketers",
   },
   {
     img: digital_marketing_img7,
@@ -114,7 +114,7 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
-    altTag: "performance marketers"
+    altTag: "performance marketers",
   },
   {
     img: digital_marketing_img8,
@@ -125,7 +125,7 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
-    altTag: "digital marketing examples"
+    altTag: "digital marketing examples",
   },
   {
     img: digital_marketing_img9,
@@ -136,7 +136,7 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
-    altTag: "google marketing digital"
+    altTag: "google marketing digital",
   },
   {
     img: digital_marketing_img10,
@@ -147,7 +147,7 @@ const Articles = [
     instagram: <IoLogoInstagram className="blog-icon" />,
     linkedin: <CiLinkedin className="blog-icon" />,
     writer: "BY ADMIN",
-    altTag: "hubspot digital marketing course"
+    altTag: "hubspot digital marketing course",
   },
 ];
 
@@ -162,22 +162,27 @@ const Blog = () => {
     setQuery(userInput);
   };
 
-   useEffect(() => {
-      document.title = "Best Digital Marketing Blog by SP Advertising Agency in Raipur";
-  
-      document
-        .querySelector("meta[name='description']")
-        ?.setAttribute("content", "Explore the best digital marketing blog by SP Advertising Agency in Raipur! Get expert tips on SEO, social media, PPC, and content marketing to grow your business online.");
-  
-      document
-        .querySelector("meta[name='keywords']")
-        ?.setAttribute("content", "Digital Marketing Blog, Social Media Marketing, digital marketer, best digital marketing agency, types of digital marketing, types of digital marketing, content marketers, performance marketers, digital marketing examples");
-    }, []);
-    
+  useEffect(() => {
+    document.title =
+      "Best Digital Marketing Blog by SP Advertising Agency in Raipur";
+
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute(
+        "content",
+        "Explore the best digital marketing blog by SP Advertising Agency in Raipur! Get expert tips on SEO, social media, PPC, and content marketing to grow your business online."
+      );
+
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute(
+        "content",
+        "Digital Marketing Blog, Social Media Marketing, digital marketer, best digital marketing agency, types of digital marketing, types of digital marketing, content marketers, performance marketers, digital marketing examples"
+      );
+  }, []);
 
   return (
     <div className="blog">
-
       <div className="new-update">
         <div className="headline-up">
           <h3>Blog</h3>
@@ -206,7 +211,11 @@ const Blog = () => {
             </div>
 
             <div className="update-image">
-              <img src={update_image} alt="Digital Marketing Blog" />
+              <img
+                loading="lazy"
+                src={update_image}
+                alt="Digital Marketing Blog"
+              />
             </div>
           </div>
         </div>
@@ -225,8 +234,15 @@ const Blog = () => {
                     to={article.link}
                     className="img-text"
                   >
-                    <img src={article.img} alt={article.altTag} />
-                    <div className="text-cal"><SlCalender/><div className="date-category">{article.date}</div></div>
+                    <img
+                      loading="lazy"
+                      src={article.img}
+                      alt={article.altTag}
+                    />
+                    <div className="text-cal">
+                      <SlCalender />
+                      <div className="date-category">{article.date}</div>
+                    </div>
                     <h3>{article.title}</h3>
                     <div>
                       <p className="blog-arrow-con">Read more</p>

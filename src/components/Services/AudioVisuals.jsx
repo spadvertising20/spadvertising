@@ -9,24 +9,28 @@ import outdoor_img2 from "../../assets/Services/AudioVisuals/AudioVisuals1.jpg";
 import gantry from "../../assets/Services/AudioVisuals/AudioVisuals2.jpg";
 
 export default function AudioVisuals() {
-
   useEffect(() => {
-      document.title = "Best Video Visuals service in Raipur | Video Visuals | SP Advertising";
-  
-      document
-        .querySelector("meta[name='description']")
-        ?.setAttribute("content", "Experience the best video visuals service in Raipur, delivering stunning, high-quality visuals for events, promotions, and creative projects.");
-  
-      document
-        .querySelector("meta[name='keywords']")
-        ?.setAttribute("content", "Video Visuals Service, High-Quality Visuals, Raipur Video Services, Event Visuals, Promotional Visuals, Creative Video Solutions, Video Production Raipur, Professional Visuals, Stunning Video Graphics,");
-    }, []);
+    document.title =
+      "Best Video Visuals service in Raipur | Video Visuals | SP Advertising";
+
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute(
+        "content",
+        "Experience the best video visuals service in Raipur, delivering stunning, high-quality visuals for events, promotions, and creative projects."
+      );
+
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute(
+        "content",
+        "Video Visuals Service, High-Quality Visuals, Raipur Video Services, Event Visuals, Promotional Visuals, Creative Video Solutions, Video Production Raipur, Professional Visuals, Stunning Video Graphics,"
+      );
+  }, []);
 
   return (
     <div className="service">
-      
       <div className="service-box-con">
-    
         <div className="service-box">
           <div className="service-left">
             <h1>Audio Visuals</h1>
@@ -39,11 +43,11 @@ export default function AudioVisuals() {
             </Link>
           </div>
           <div className="service-right">
-            <img src={outdoor_img1} alt="Audio " />
+            <img loading="lazy" src={outdoor_img1} alt="Audio " />
           </div>
         </div>
       </div>
-      
+
       <div className="service-con">
         <div className="ul">
           <div className="topic-align1" id="topic-align2">
@@ -60,11 +64,12 @@ export default function AudioVisuals() {
                 enhance viewer understanding.
               </p>
             </div>
-            <img src={showcase1} alt="  " data-aos="zoom-in" />
+            <img loading="lazy" src={showcase1} alt="  " data-aos="zoom-in" />
           </div>
 
           <div className="topic-align1">
             <img
+              loading="lazy"
               src={outdoor_img2}
               alt="Hoardings in Raipur"
               data-aos="zoom-in"
@@ -98,11 +103,12 @@ export default function AudioVisuals() {
                 awareness across mass media platforms.
               </p>
             </div>
-            <img src={gantry} alt="Gantry" data-aos="zoom-in" />
+            <img loading="lazy" src={gantry} alt="Gantry" data-aos="zoom-in" />
           </div>
 
           <div className="topic-align1">
             <img
+              loading="lazy"
               src={showcase2}
               alt="Pole Kiosk in Raipur"
               data-aos="zoom-in"

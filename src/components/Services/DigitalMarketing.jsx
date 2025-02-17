@@ -9,37 +9,34 @@ import digital_marketing_img4 from "../../assets/Services/DigitalMarketing/digit
 import { Helmet } from "react-helmet";
 
 function DigitalMarketing() {
+  useEffect(() => {
+    document.title =
+      "Best Digital Marketing agency in Raipur | Digital Marketing services";
 
-    useEffect(() => {
-          document.title = "Best Digital Marketing agency in Raipur | Digital Marketing services";
-      
-          document
-            .querySelector("meta[name='description']")
-            ?.setAttribute("content", "Top digital marketing agency in Raipur offering expert services in SEO, social media marketing, website development and digital solutions in Chhattisgarh");
-      
-          document
-            .querySelector("meta[name='keywords']")
-            ?.setAttribute("content", "digital marketing agency, digital marketing company, best digital marketing agency, digital marketing agency near me, digital marketing company, digital marketing services, digital marketing near me, digital marketing agency near me, best digital marketing agencies");
-        }, []);
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute(
+        "content",
+        "Top digital marketing agency in Raipur offering expert services in SEO, social media marketing, website development and digital solutions in Chhattisgarh"
+      );
+
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute(
+        "content",
+        "digital marketing agency, digital marketing company, best digital marketing agency, digital marketing agency near me, digital marketing company, digital marketing services, digital marketing near me, digital marketing agency near me, best digital marketing agencies"
+      );
+  }, []);
 
   return (
     <div className="service">
-       <Helmet>
-      <title>
-      
-        </title>
-        <meta
-          name="description"
-          content=""
-        />
-        <meta
-          name="keywords"
-          content=""
-        />
+      <Helmet>
+        <title></title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
       </Helmet>
-      
+
       <div className="service-box-con">
-  
         <div className="service-box">
           <div className="service-left">
             <h1>Digital Marketing</h1>
@@ -52,7 +49,11 @@ function DigitalMarketing() {
             </Link>
           </div>
           <div className="service-right">
-            <img src={digital_marketing_img} alt="digital marketers" />
+            <img
+              loading="lazy"
+              src={digital_marketing_img}
+              alt="digital marketers"
+            />
           </div>
         </div>
       </div>
@@ -71,6 +72,7 @@ function DigitalMarketing() {
               </p>
             </div>
             <img
+              loading="lazy"
               src={digital_marketing_img1}
               alt="digital marketing agency"
               data-aos="zoom-in"
@@ -79,6 +81,7 @@ function DigitalMarketing() {
 
           <div className="topic-align1">
             <img
+              loading="lazy"
               src={digital_marketing_img2}
               alt="digital marketing company"
               data-aos="zoom-in"
@@ -109,6 +112,7 @@ function DigitalMarketing() {
               </p>
             </div>
             <img
+              loading="lazy"
               src={digital_marketing_img3}
               alt="digital marketing services"
               data-aos="zoom-in"
@@ -117,6 +121,7 @@ function DigitalMarketing() {
 
           <div className="topic-align1">
             <img
+              loading="lazy"
               src={digital_marketing_img4}
               alt="digital marketing near me"
               data-aos="zoom-in"
@@ -124,12 +129,12 @@ function DigitalMarketing() {
             <div className="topic-left" data-aos="fade-right">
               <h1>Application Development</h1>
               <p>
-                SP Advertising delivers the best Application Development Services
-                to create innovative, high-performance applications tailored to
-                your business needs. Our commitment to excellence ensures you
-                receive the best Application Development Service, with custom
-                solutions that enhance functionality and user experience,
-                driving your success in the digital landscape.
+                SP Advertising delivers the best Application Development
+                Services to create innovative, high-performance applications
+                tailored to your business needs. Our commitment to excellence
+                ensures you receive the best Application Development Service,
+                with custom solutions that enhance functionality and user
+                experience, driving your success in the digital landscape.
               </p>
             </div>
           </div>

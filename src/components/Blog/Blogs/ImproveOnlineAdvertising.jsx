@@ -21,7 +21,7 @@ import { StoreContext } from "../../Context Provider/StoreProvider";
 
 const Contents = [
   {
-    heading:  `Introduction`,
+    heading: `Introduction`,
     description: `In today's digital landscape, improving online advertising is essential for any business looking to maximize its reach and impact. With the right online advertising tools, you can streamline your efforts, engage your audience more effectively, and ultimately drive better results for your campaigns. Understanding the available free tools for advertising campaigns can significantly enhance your marketing strategy and help you achieve your goals.
 
 
@@ -29,30 +29,30 @@ const Contents = [
   },
 
   {
-    heading:  `Understanding Online Advertising`,
+    heading: `Understanding Online Advertising`,
     description: `Online advertising encompasses various methods and strategies aimed at promoting products or services through digital platforms. This includes social media ads, search engine marketing, display ads, and email marketing. A well-planned online advertising campaign can boost brand visibility, drive website traffic, and increase conversions.
 
 
 `,
   },
   {
-    heading:  `Types of Online Advertising Campaigns`,
+    heading: `Types of Online Advertising Campaigns`,
     description: ` 
 
 `,
   },
   {
-    heading:  `Pay-Per-Click (PPC):`,
+    heading: `Pay-Per-Click (PPC):`,
   },
   {
-    sub_heading:  `Social Media Advertising:  `,
+    sub_heading: `Social Media Advertising:  `,
     description: `Utilizing platforms like Facebook, Instagram, and Twitter to promote content.
 
 
 `,
   },
   {
-    sub_heading:  `Email Marketing: `,
+    sub_heading: `Email Marketing: `,
     description: `Sending targeted ads via email to engage potential customers.
 `,
   },
@@ -69,53 +69,53 @@ const Contents = [
   },
 
   {
-    description:  `Enhanced return on investment (ROI)`,
+    description: `Enhanced return on investment (ROI)`,
   },
   {
-    description:  `Better audience targeting`,
+    description: `Better audience targeting`,
   },
   {
-    description:  `Increased click-through rates (CTR)`,
+    description: `Increased click-through rates (CTR)`,
   },
 
   {
-    heading:  `Higher conversion rates`,
+    heading: `Higher conversion rates`,
     description: `By employing specific advertising campaign tools, you can gather data, analyze campaign effectiveness, and make informed decisions that lead to sustainable growth.
 
 `,
   },
   {
-    sub_heading:  `Top Free Tools for Advertising Campaigns`,
+    sub_heading: `Top Free Tools for Advertising Campaigns`,
   },
 
   {
-    sub_heading:  `Google Analytics`,
+    sub_heading: `Google Analytics`,
     description: `One of the best free advertising tools available is Google Analytics. It helps you track website traffic, user behavior, and the effectiveness of your advertising efforts. You can measure bounce rates, average session durations, and other vital statistics that inform your campaigns.
 
 
 `,
   },
   {
-    sub_heading:  `Canva `,
+    sub_heading: `Canva `,
     description: `Creating visually appealing ads is crucial for success. Canva offers a user-friendly interface for designing graphics, social media posts, and promotional materials for your campaigns. Its free version has plenty of templates and features to get started.
 
 `,
   },
   {
-    sub_heading:  `Mailchimp`,
+    sub_heading: `Mailchimp`,
     description: `For those focusing on email marketing, Mailchimp provides a robust platform for creating and managing email campaigns. You can segment your audience, automate responses, and analyze your campaign’s performance using its free tier.
 
 
 `,
   },
   {
-    sub_heading:  `Buffer`,
+    sub_heading: `Buffer`,
     description: `This social media scheduling tool allows you to manage multiple accounts in one place. With Buffer, you can plan and schedule posts across different platforms, analyze engagement metrics, and track the effectiveness of your social media advertising efforts—all in one convenient dashboard.
 
 `,
   },
   {
-    sub_heading:  `Trello`,
+    sub_heading: `Trello`,
     description: `Trello acts as a project management tool, allowing you to organize your advertising campaigns visually. You can create boards, lists, and cards to plan tasks, set deadlines, and collaborate with team members.
 
 `,
@@ -127,25 +127,25 @@ const Contents = [
   },
 
   {
-    sub_heading:  `SEMrush`,
+    sub_heading: `SEMrush`,
     description: `SEMrush is an excellent tool for keyword research, competitor analysis, and SEO audits. While it has a paid version, it also offers a free trial, critical for improving advertising campaigns and content marketing strategies.
 
 `,
   },
   {
-    sub_heading:  `Hootsuite `,
+    sub_heading: `Hootsuite `,
     description: `Hootsuite helps manage your social media presence by allowing you to schedule posts, track mentions, and analyze engagement. It provides insights into your advertising performance on social media platforms.
 `,
   },
   {
-    sub_heading:  `AdEspresso `,
+    sub_heading: `AdEspresso `,
     description: `AdEspresso (by Hootsuite) is a great tool for creating, managing, and optimizing Facebook and Instagram ad campaigns. It offers a free trial, enabling users to improve their advertising performance through data-driven decision-making.
 
 
 `,
   },
   {
-    heading:  `Effective Campaign Management Tools `,
+    heading: `Effective Campaign Management Tools `,
     description: `Using campaign management tools is essential for coordinating your advertising efforts. These tools help streamline workflows, keep team members on the same page, and make the process more efficient. Here are some popular options:
 
 
@@ -153,40 +153,40 @@ const Contents = [
   },
 
   {
-    sub_heading:  `Asana: `,
+    sub_heading: `Asana: `,
     description: `For task management and tracking progress.
 
 `,
   },
   {
-    sub_heading:  `Basecamp:`,
+    sub_heading: `Basecamp:`,
     description: ` For team collaboration and project management.
 
 
 `,
   },
   {
-    sub_heading:  `Exclusive Sales for Subscribers: `,
+    sub_heading: `Exclusive Sales for Subscribers: `,
     description: `Reward loyal customers with exclusive deals for subscribing to your newsletter.
 
 `,
   },
 
   {
-    sub_heading:  `ClickUp: `,
+    sub_heading: `ClickUp: `,
     description: ` An all-in-one tool for managing tasks, docs, goals, and chat.
 
 `,
   },
   {
-    heading:  `Tips to Improve Advertising Performance`,
+    heading: `Tips to Improve Advertising Performance`,
     description: `Create unique hashtags and encourage customers to share their experiences.
 
 
 `,
   },
   {
-    sub_heading:  `Define Your Goals:`,
+    sub_heading: `Define Your Goals:`,
     description: ` Clearly outline what you want to achieve with your campaigns (traffic, leads, sales).
 
 
@@ -195,7 +195,7 @@ const Contents = [
   },
 
   {
-    sub_heading:  `Know Your Audience: `,
+    sub_heading: `Know Your Audience: `,
     description: `Utilize audience insights to target specific demographics that are more likely to convert.
 
 
@@ -203,7 +203,7 @@ const Contents = [
 `,
   },
   {
-    sub_heading:  `A/B Testing: `,
+    sub_heading: `A/B Testing: `,
     description: `Regularly test different versions of your ads for better performance.
 
 
@@ -211,7 +211,7 @@ const Contents = [
 `,
   },
   {
-    sub_heading:  `Monitor Analytics:`,
+    sub_heading: `Monitor Analytics:`,
     description: `Use tools like Google Analytics to track your campaigns and adjust strategies accordingly.
 
 
@@ -227,7 +227,7 @@ const Contents = [
   },
 
   {
-    heading:  `Conclusion`,
+    heading: `Conclusion`,
     description: `Improving online advertising doesn't have to be overwhelming, especially with the right free tools for advertising campaigns at your disposal. By utilizing essential online advertising tools, refining your approach with effective advertising campaign tools, and continuously analyzing performance, you can achieve significant improvements in your digital marketing efforts. For personalized guidance on how to best employ these tools, feel free to reach out or leave a comment below!
 
 
@@ -254,7 +254,7 @@ export default function ImproveOnlineAdvertising() {
           <p>{blogData[5]?.date}</p>
 
           <h1>{blogData[5]?.title}</h1>
-          <img src={blogData[5]?.img} alt="" />
+          <img loading="lazy" src={blogData[5]?.img} alt="" />
 
           <div className="keyword-research-content">
             <div className="blog-content">

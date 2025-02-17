@@ -35,17 +35,17 @@ function WhatWeDo() {
           <h2>High-Impact Services to take your business to the next level</h2>
           <p>
             Accelerate your business growth with tailored, high-impact services
-             to unlock new opportunities and maximize your brand's
-            success.
+            to unlock new opportunities and maximize your brand's success.
           </p>
         </div>
         <div className="whatwedo-box">
-          <div
-            
-            className="wwd-box"
-            data-aos="fade-up"
-          >
-            <img src={outdoor_ad1} alt="best digital marketing agencies" className="outdoor-image" />
+          <div className="wwd-box" data-aos="fade-up">
+            <img
+              loading="lazy"
+              src={outdoor_ad1}
+              alt="best digital marketing agencies"
+              className="outdoor-image"
+            />
             <h3>Outdoor Advertising</h3>
             <p className="desc1">
               Grow your brand with the best{" "}
@@ -58,48 +58,86 @@ function WhatWeDo() {
             </p>
             <div className="points">
               <div className="points-box">
-                <img src={blue_tick} alt="social marketing agency" />
+                <img
+                  loading="lazy"
+                  src={blue_tick}
+                  alt="social marketing agency"
+                />
                 <p>Mobile Hoarding</p>
               </div>
               <div className="points-box">
-                <img src={blue_tick} alt="top digital marketing agency" />
+                <img
+                  loading="lazy"
+                  src={blue_tick}
+                  alt="top digital marketing agency"
+                />
                 <p>Hoardings</p>
               </div>
               <div className="points-box">
-                <img src={blue_tick} alt="marketing agency digital" />
+                <img
+                  loading="lazy"
+                  src={blue_tick}
+                  alt="marketing agency digital"
+                />
                 <p>Gantry</p>
               </div>
               <div className="points-box">
-                <img src={blue_tick} alt="digital agency marketing" />
+                <img
+                  loading="lazy"
+                  src={blue_tick}
+                  alt="digital agency marketing"
+                />
                 <p>Pole Kiosk</p>
               </div>
             </div>
           </div>
           <div className="wwd-box" data-aos="fade-up">
-            <img src={digital_marketing} alt="best digital marketing firms" className="outdoor-image" />
+            <img
+              loading="lazy"
+              src={digital_marketing}
+              alt="best digital marketing firms"
+              className="outdoor-image"
+            />
             <h3>Digital Marketing</h3>
             <p className="desc1">
               Boost your business with a leading{" "}
               <a href="https://spadvertising.in/Digital-Marketing-in-Raipur">
                 digital marketing company
               </a>{" "}
-              in Raipur, that offers SEO, social media, and advertising solutions.
+              in Raipur, that offers SEO, social media, and advertising
+              solutions.
             </p>
             <div className="points">
               <div className="points-box">
-                <img src={purple_tick} alt="digital marketing advertising agency" />
+                <img
+                  loading="lazy"
+                  src={purple_tick}
+                  alt="digital marketing advertising agency"
+                />
                 <p>Website Development</p>
               </div>
               <div className="points-box">
-                <img src={purple_tick} alt="digital marketing and advertising agency" />
+                <img
+                  loading="lazy"
+                  src={purple_tick}
+                  alt="digital marketing and advertising agency"
+                />
                 <p>SEO / SEM Optimization</p>
               </div>
               <div className="points-box">
-                <img src={purple_tick} alt="biggest digital marketing agencies" />
+                <img
+                  loading="lazy"
+                  src={purple_tick}
+                  alt="biggest digital marketing agencies"
+                />
                 <p>Social Media Marketing</p>
               </div>
               <div className="points-box">
-                <img src={purple_tick} alt="top digital advertising agencies" />
+                <img
+                  loading="lazy"
+                  src={purple_tick}
+                  alt="top digital advertising agencies"
+                />
                 <p>Application Development</p>
               </div>
             </div>
@@ -109,27 +147,40 @@ function WhatWeDo() {
             className="wwd-box"
             data-aos="fade-up"
           >
-            <img src={design_thinking} alt="top digital ad agencies" className="outdoor-image" />
+            <img
+              loading="lazy"
+              src={design_thinking}
+              alt="top digital ad agencies"
+              className="outdoor-image"
+            />
             <h3>Designing Services</h3>
             <p className="desc1">
               Elevate your brand with a top{" "}
               <a href="https://spadvertising.in/Designing-Services-in-Raipur">
-              design services company
+                design services company
               </a>{" "}
               in Raipur, specializing in logos, graphics, and creative web
               designs.
             </p>
             <div className="points">
               <div className="points-box">
-                <img src={yellow_tick} alt="google ads agency" />
+                <img loading="lazy" src={yellow_tick} alt="google ads agency" />
                 <p>Packaging</p>
               </div>
               <div className="points-box">
-                <img src={yellow_tick} alt="digital advertising" />
+                <img
+                  loading="lazy"
+                  src={yellow_tick}
+                  alt="digital advertising"
+                />
                 <p>Creative Concepts</p>
               </div>
               <div className="points-box">
-                <img src={yellow_tick} alt="marketing agency near me" />
+                <img
+                  loading="lazy"
+                  src={yellow_tick}
+                  alt="marketing agency near me"
+                />
                 <p>Design & Artwork</p>
               </div>
             </div>
@@ -139,7 +190,12 @@ function WhatWeDo() {
             className="wwd-box"
             data-aos="fade-up"
           >
-            <img src={audio_visual} alt="advertising on linkedin" className="outdoor-image" />
+            <img
+              loading="lazy"
+              src={audio_visual}
+              alt="advertising on linkedin"
+              className="outdoor-image"
+            />
             <h3>Audio Visual</h3>
             <p className="desc1">
               Enhance your events with top-notch{" "}
@@ -151,19 +207,27 @@ function WhatWeDo() {
             </p>
             <div className="points">
               <div className="points-box">
-                <img src={lightblue_tick} alt="ad agency" />
+                <img loading="lazy" src={lightblue_tick} alt="ad agency" />
                 <p>Video Presentations</p>
               </div>
               <div className="points-box">
-                <img src={lightblue_tick} alt="add business to google maps" />
+                <img
+                  loading="lazy"
+                  src={lightblue_tick}
+                  alt="add business to google maps"
+                />
                 <p>Short Films / Documentary</p>
               </div>
               <div className="points-box">
-                <img src={lightblue_tick} alt="ad network" />
+                <img loading="lazy" src={lightblue_tick} alt="ad network" />
                 <p>Radio & TV Commercials</p>
               </div>
               <div className="points-box">
-                <img src={lightblue_tick} alt="advertising agency near me" />
+                <img
+                  loading="lazy"
+                  src={lightblue_tick}
+                  alt="advertising agency near me"
+                />
                 <p>Photography & Videography</p>
               </div>
             </div>
@@ -174,7 +238,12 @@ function WhatWeDo() {
             className="wwd-box"
             data-aos="fade-up"
           >
-            <img src={analysis} alt="creative agencies" className="outdoor-image" />
+            <img
+              loading="lazy"
+              src={analysis}
+              alt="creative agencies"
+              className="outdoor-image"
+            />
             <h3>Branding & Strategy</h3>
             <p className="desc1">
               Leading{" "}
@@ -186,15 +255,27 @@ function WhatWeDo() {
             </p>
             <div className="points">
               <div className="points-box">
-                <img src={orange_tick} alt="billboard companies" />
+                <img
+                  loading="lazy"
+                  src={orange_tick}
+                  alt="billboard companies"
+                />
                 <p>Communication Strategy</p>
               </div>
               <div className="points-box">
-                <img src={orange_tick} alt="digital marketing agency website" />
+                <img
+                  loading="lazy"
+                  src={orange_tick}
+                  alt="digital marketing agency website"
+                />
                 <p>Creative 360 Campaigns</p>
               </div>
               <div className="points-box">
-                <img src={orange_tick} alt="advertisement video maker" />
+                <img
+                  loading="lazy"
+                  src={orange_tick}
+                  alt="advertisement video maker"
+                />
                 <p>Corporate and Brand Identity</p>
               </div>
             </div>
@@ -204,7 +285,12 @@ function WhatWeDo() {
             className="wwd-box"
             data-aos="fade-up"
           >
-            <img src={print_media} alt="ad agencies near me" className="outdoor-image" />
+            <img
+              loading="lazy"
+              src={print_media}
+              alt="ad agencies near me"
+              className="outdoor-image"
+            />
             <h3>Print Media</h3>
             <p className="desc1">
               Promote your brand with a trusted{" "}
@@ -216,19 +302,27 @@ function WhatWeDo() {
             </p>
             <div className="points">
               <div className="points-box">
-                <img src={red_tick} alt="best advertising agencies" />
+                <img
+                  loading="lazy"
+                  src={red_tick}
+                  alt="best advertising agencies"
+                />
                 <p>News Paper Ads</p>
               </div>
               <div className="points-box">
-                <img src={red_tick} alt="ad company" />
+                <img loading="lazy" src={red_tick} alt="ad company" />
                 <p>Brochure</p>
               </div>
               <div className="points-box">
-                <img src={red_tick} alt="brand agencies" />
+                <img loading="lazy" src={red_tick} alt="brand agencies" />
                 <p>Pamphlet</p>
               </div>
               <div className="points-box">
-                <img src={red_tick} alt="top advertising agencies" />
+                <img
+                  loading="lazy"
+                  src={red_tick}
+                  alt="top advertising agencies"
+                />
                 <p>In-Shop Branding</p>
               </div>
             </div>

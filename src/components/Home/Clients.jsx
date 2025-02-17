@@ -29,41 +29,81 @@ export default function HomeClients() {
           </h1>
         </div>
 
-        <p className="home-clients-con-p">At SP Advertising, we create impactful ads that capture attention and deliver results. Our expert team is dedicated to ensuring every project’s success, whether for outdoor advertising or digital ads campaigns.</p>
+        <p className="home-clients-con-p">
+          At SP Advertising, we create impactful ads that capture attention and
+          deliver results. Our expert team is dedicated to ensuring every
+          project’s success, whether for outdoor advertising or digital ads
+          campaigns.
+        </p>
 
         <div className="home-clients-images">
-          <img src={client1} alt="outdoor advertising companies" />
+          <img
+            loading="lazy"
+            src={client1}
+            alt="outdoor advertising companies"
+          />
 
-          <img src={client2} alt="social media marketing agency near me" />
+          <img
+            loading="lazy"
+            src={client2}
+            alt="social media marketing agency near me"
+          />
 
-          <img src={client3} alt="digital marketing ads" />
+          <img loading="lazy" src={client3} alt="digital marketing ads" />
 
-          <img src={client4} alt="digital marketing advertising" />
-          <img className="img-visible" src={client7} alt="billboard advertising companies" />
-          <img src={client5} alt="best advertising" />
-          <img className="img-visible" src={client6} alt="ad makers" />
+          <img
+            loading="lazy"
+            src={client4}
+            alt="digital marketing advertising"
+          />
+          <img
+            loading="lazy"
+            className="img-visible"
+            src={client7}
+            alt="billboard advertising companies"
+          />
+          <img loading="lazy" src={client5} alt="best advertising" />
+          <img
+            loading="lazy"
+            className="img-visible"
+            src={client6}
+            alt="ad makers"
+          />
 
-          <img src={client8} alt="outdoor billboard companies" />
+          <img loading="lazy" src={client8} alt="outdoor billboard companies" />
 
-          <img src={client9} alt="advertising and marketing companies" />
+          <img
+            loading="lazy"
+            src={client9}
+            alt="advertising and marketing companies"
+          />
 
-          <img src={client10} alt="advertising on billboards" />
+          <img loading="lazy" src={client10} alt="advertising on billboards" />
 
-          <img src={client11} alt="top ad agencies" />
+          <img loading="lazy" src={client11} alt="top ad agencies" />
 
-          <img src={client12} alt="advertising firms near me" />
+          <img loading="lazy" src={client12} alt="advertising firms near me" />
 
-          <img src={client13} alt="construction advertisement" />
+          <img loading="lazy" src={client13} alt="construction advertisement" />
 
-          <img src={client14} alt="ad marketing agency" />
+          <img loading="lazy" src={client14} alt="ad marketing agency" />
 
-          <img className="img-visible" src={client15} alt="agency google ads" />
+          <img
+            loading="lazy"
+            className="img-visible"
+            src={client15}
+            alt="agency google ads"
+          />
 
-          <img src={client16} alt="brand advertising" />
+          <img loading="lazy" src={client16} alt="brand advertising" />
 
-          <img src={client17} alt="linkedin ads management" />
+          <img loading="lazy" src={client17} alt="linkedin ads management" />
         </div>
-        <Link to={'https://spadvertising.in/Clients'}><button type='button'  aria-label="Go to Portfolio">Explore more...</button></Link>
+        <Link to={"https://spadvertising.in/Clients"}>
+          <button type="button" aria-label="Go to Portfolio">
+            Explore more...
+          </button>
+        </Link>
       </div>
     </div>
   );

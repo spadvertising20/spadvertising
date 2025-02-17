@@ -14,7 +14,7 @@ export default function AnimationHero() {
   return (
     <div className="hero">
       <div className="hero-con">
-        <div className="shadow-effect"></div> 
+        <div className="shadow-effect"></div>
         <div className="hero-content">
           <h1>Empowering Your Brand with Strategic Advertising</h1>
           <h2 className="typing-effect"></h2>
@@ -28,14 +28,28 @@ export default function AnimationHero() {
             <button className="hero-btn">
               Get Services
               <div className="btn-hover">
-                <img src={right_arrow} alt="Digital Marketing in Raipur" />
+                <img
+                  loading="lazy"
+                  src={right_arrow}
+                  alt="Digital Marketing in Raipur"
+                />
               </div>
             </button>
           </Link>
         </div>
         <div className="hero-anim-bg">
-          <img src={img_bg} alt="Advertising in Raipur" className="services-con" />
-          <img src={hero_bg} alt="Creatives Designing Services in Raipur" className="hero-anim-img" />
+          <img
+            loading="lazy"
+            src={img_bg}
+            alt="Advertising in Raipur"
+            className="services-con"
+          />
+          <img
+            loading="lazy"
+            src={hero_bg}
+            alt="Creatives Designing Services in Raipur"
+            className="hero-anim-img"
+          />
         </div>
         <div className="hero-images">
           <div className="round">
@@ -43,6 +57,7 @@ export default function AnimationHero() {
               <div className="round-ele1">
                 <div className="hero-box">
                   <img
+                    loading="lazy"
                     src={hero_outdoor}
                     alt="Advertising agency near me"
                     className="img-rotate1"
@@ -50,6 +65,7 @@ export default function AnimationHero() {
                 </div>
                 <div className="hero-box">
                   <img
+                    loading="lazy"
                     src={hero_digital}
                     alt="Advertising agency jobs"
                     className="img-rotate2"
@@ -59,6 +75,7 @@ export default function AnimationHero() {
               <div className="round-ele2">
                 <div className="hero-box">
                   <img
+                    loading="lazy"
                     src={hero_design}
                     alt="Top Advertising agency in Raipur"
                     className="img-rotate3"
@@ -66,6 +83,7 @@ export default function AnimationHero() {
                 </div>
                 <div className="hero-box">
                   <img
+                    loading="lazy"
                     src={hero_event}
                     alt="Advertising agency in Raipur"
                     className="img-rotate4"

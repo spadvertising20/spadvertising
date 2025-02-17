@@ -8,24 +8,27 @@ import packaging_img1 from "../../assets/Services/DesigningServices/creative-des
 import { Helmet } from "react-helmet";
 
 function DesigningServices() {
-
   useEffect(() => {
-        document.title = "Best Designing services in Raipur | Designing services";
-    
-        document
-          .querySelector("meta[name='description']")
-          ?.setAttribute("content", "Elevate your business with top branding services! From creative solutions to tailored strategies, we help you grow and stand out. Contact us today!");
-    
-        document
-          .querySelector("meta[name='keywords']")
-          ?.setAttribute("content", "Creative Designing Services,Graphic Design Services in raipur, Creative Agency in raipur, Web Design Company in raipur, creative logo design, creative flyer design, creative brochure design, creative poster design, creative i logo design");
-      }, []);
+    document.title = "Best Designing services in Raipur | Designing services";
+
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute(
+        "content",
+        "Elevate your business with top branding services! From creative solutions to tailored strategies, we help you grow and stand out. Contact us today!"
+      );
+
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute(
+        "content",
+        "Creative Designing Services,Graphic Design Services in raipur, Creative Agency in raipur, Web Design Company in raipur, creative logo design, creative flyer design, creative brochure design, creative poster design, creative i logo design"
+      );
+  }, []);
 
   return (
     <div className="service">
-  
       <div className="service-box-con">
-      
         <div className="service-box">
           <div className="service-left">
             <h1>Designing Services</h1>
@@ -38,7 +41,7 @@ function DesigningServices() {
             </Link>
           </div>
           <div className="service-right">
-            <img src={design} alt="creative logo design" />
+            <img loading="lazy" src={design} alt="creative logo design" />
           </div>
         </div>
       </div>
@@ -57,6 +60,7 @@ function DesigningServices() {
               </p>
             </div>
             <img
+              loading="lazy"
               src={packaging_img}
               alt="creative web design"
               data-aos="zoom-in"
@@ -65,6 +69,7 @@ function DesigningServices() {
 
           <div className="topic-align1">
             <img
+              loading="lazy"
               src={packaging_img1}
               alt="creative flyer design"
               data-aos="zoom-in"
@@ -93,6 +98,7 @@ function DesigningServices() {
               </p>
             </div>
             <img
+              loading="lazy"
               src={packaging_img2}
               alt="creative brochure design"
               data-aos="zoom-in"

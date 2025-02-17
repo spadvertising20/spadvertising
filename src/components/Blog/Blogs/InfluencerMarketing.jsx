@@ -21,7 +21,7 @@ import { StoreContext } from "../../Context Provider/StoreProvider";
 
 const Contents = [
   {
-    heading:  `Introduction`,
+    heading: `Introduction`,
     description: `As the digital landscape continues to evolve, influencer marketing has emerged as one of the most impactful strategies for brands to connect with their audiences. Unlike traditional advertising, which often feels impersonal, influencer marketing leverages the trust and authenticity influencers have built with their followers.
 In 2025, this approach is not just about promoting products but fostering genuine relationships and creating value-driven content. In this article, we’ll explore the power of influencer marketing, its types, examples, and the key benefits it brings to businesses worldwide.
 
@@ -31,14 +31,14 @@ In 2025, this approach is not just about promoting products but fostering genuin
   },
 
   {
-    heading:  `What is Influencer Marketing?`,
+    heading: `What is Influencer Marketing?`,
     description: `Influencer marketing is a digital marketing strategy where brands collaborate with individuals who have a dedicated following on social media platforms. These influencers use their platforms to promote products or services, providing brands with a unique and credible voice in front of a targeted audience.
 Types of Influencer Marketing.
 
 `,
   },
   {
-    sub_heading:  `1. Social Media Influencers : `,
+    sub_heading: `1. Social Media Influencers : `,
     description: `  These are individuals with significant followings on platforms like Instagram, TikTok, and YouTube. Brands collaborate with them to create sponsored posts, reels, and videos.
 
 
@@ -50,9 +50,9 @@ Types of Influencer Marketing.
   {
     description: `Benefits: High engagement rates and visual appeal. `,
   },
-  
+
   {
-    sub_heading:  `2. Micro-Influencers :  `,
+    sub_heading: `2. Micro-Influencers :  `,
     description: `Micro-influencers have smaller, niche audiences but often enjoy higher engagement rates compared to celebrities.
 
 `,
@@ -64,7 +64,7 @@ Types of Influencer Marketing.
     description: `Benefits: Affordable and authentic connections with niche audiences. `,
   },
   {
-    sub_heading:  `3. Celebrity Endorsements :`,
+    sub_heading: `3. Celebrity Endorsements :`,
     description: `Celebrity influencers have massive reach and influence, making them ideal for global campaigns.
 
 
@@ -79,7 +79,7 @@ Types of Influencer Marketing.
   },
 
   {
-    sub_heading:  `4. Bloggers and Content Creators : `,
+    sub_heading: `4. Bloggers and Content Creators : `,
     description: ` Bloggers and creators produce long-form content, such as blog posts or YouTube videos, to provide in-depth insights about a brand.
 
 `,
@@ -92,7 +92,7 @@ Types of Influencer Marketing.
   },
 
   {
-    sub_heading:  `5. Nano-Influencers :`,
+    sub_heading: `5. Nano-Influencers :`,
     description: `With followers typically under 10,000, nano-influencers focus on building intimate and trust-based relationships.
 
 `,
@@ -106,21 +106,20 @@ Types of Influencer Marketing.
  `,
   },
 
-
   {
-    heading:  `Why Influencer Marketing Works`,
+    heading: `Why Influencer Marketing Works`,
     description: `This social media scheduling tool allows you to manage multiple accounts in one place. With Buffer, you can plan and schedule posts across different platforms, analyze engagement metrics, and track the effectiveness of your social media advertising efforts—all in one convenient dashboard.
 
 `,
   },
   {
-    sub_heading:  `1. Authenticity and Trust :`,
+    sub_heading: `1. Authenticity and Trust :`,
     description: `Audiences trust influencers because they offer relatable and genuine recommendations, unlike traditional ads.
 
 `,
   },
   {
-    sub_heading:  `2. Targeted Reach : `,
+    sub_heading: `2. Targeted Reach : `,
     description: `Influencers have a deep understanding of their audience demographics, allowing brands to connect with the right people.
 
 
@@ -128,46 +127,46 @@ Types of Influencer Marketing.
   },
 
   {
-    sub_heading:  `3. Higher Engagement Rates : `,
+    sub_heading: `3. Higher Engagement Rates : `,
     description: ` Posts from influencers often garner more likes, comments, and shares than branded content.
 
 `,
   },
   {
-    sub_heading:  `4. Cost-Effectiveness :`,
+    sub_heading: `4. Cost-Effectiveness :`,
     description: ` From nano to micro-influencers, businesses of all sizes can find affordable options to fit their budgets.
 
 
 `,
   },
   {
-    heading: "Examples of Successful Influencer Marketing in 2025"
+    heading: "Examples of Successful Influencer Marketing in 2025",
   },
   {
-    sub_heading:  `Nike’s Collaboration with Athletes:`,
+    sub_heading: `Nike’s Collaboration with Athletes:`,
     description: ` Partnering with young athletes to promote fitness gear on TikTok.
 `,
   },
   {
-    sub_heading:  `Glossier’s Nano-Influencer Program: `,
+    sub_heading: `Glossier’s Nano-Influencer Program: `,
     description: ` Partnering with young athletes to promote fitness gear on TikTok.
 Leveraging everyday users to showcase products on Instagram.
  `,
   },
   {
-    sub_heading:  `Apple’s Tech Bloggers Partnership:`,
+    sub_heading: `Apple’s Tech Bloggers Partnership:`,
     description: ` Using YouTube creators to demonstrate product features.
 `,
   },
   {
-    sub_heading:  `Starbucks’ Seasonal Campaigns: `,
+    sub_heading: `Starbucks’ Seasonal Campaigns: `,
     description: `Apple’s Tech Bloggers Partnership: Using YouTube creators to demonstrate product features.
  Engaging lifestyle influencers to feature their holiday drinks.
  `,
   },
 
   {
-    sub_heading:  `Amazon’s Affiliate Influencer Program:  `,
+    sub_heading: `Amazon’s Affiliate Influencer Program:  `,
     description: `Encouraging influencers to share product recommendations with affiliate links.
 
 
@@ -175,7 +174,7 @@ Leveraging everyday users to showcase products on Instagram.
 `,
   },
   {
-    heading:  `Benefits of Influencer Marketing in 2025`,
+    heading: `Benefits of Influencer Marketing in 2025`,
     description: `Using campaign management tools is essential for coordinating your advertising efforts. These tools help streamline workflows, keep team members on the same page, and make the process more efficient. Here are some popular options:
 
 
@@ -183,32 +182,32 @@ Leveraging everyday users to showcase products on Instagram.
   },
 
   {
-    sub_heading:  `1. Enhanced Brand Awareness: `,
+    sub_heading: `1. Enhanced Brand Awareness: `,
     description: ` Reach new audiences organically.`,
   },
   {
-    sub_heading:  `2. Boosted Credibility: `,
+    sub_heading: `2. Boosted Credibility: `,
     description: `Influencers lend their reputation to your brand.`,
   },
   {
-    sub_heading:  `3. Higher ROI: `,
+    sub_heading: `3. Higher ROI: `,
     description: `Increased sales and website traffic for every dollar spent.`,
   },
   {
-    sub_heading:  `4. Improved SEO: `,
+    sub_heading: `4. Improved SEO: `,
     description: `Collaborations that generate backlinks and drive organic traffic.`,
   },
   {
-    sub_heading:  `5. Creative Content:`,
+    sub_heading: `5. Creative Content:`,
     description: ` Access to influencer-created posts, videos, and stories.`,
   },
   {
-    sub_heading:  `6. Real-Time Insights: `,
+    sub_heading: `6. Real-Time Insights: `,
     description: `Track campaign performance using advanced analytics.`,
   },
 
   {
-    heading:  `Conclusion`,
+    heading: `Conclusion`,
     description: `Influencer marketing in 2025 has solidified its position as a cornerstone of digital marketing strategies. By leveraging the power of authentic connections and tailored content, brands can reach, engage, and convert their target audiences like never before. Whether you’re a small startup or a global enterprise, influencer marketing offers a scalable and impactful solution to achieve your business goals.`,
   },
   {
@@ -235,7 +234,7 @@ export default function InfluencerMarketing() {
           <p>{blogData[7]?.date}</p>
 
           <h1>{blogData[7]?.title}</h1>
-          <img src={blogData[7]?.img} alt="" />
+          <img loading="lazy" src={blogData[7]?.img} alt="" />
 
           <div className="keyword-research-content">
             <div className="blog-content">

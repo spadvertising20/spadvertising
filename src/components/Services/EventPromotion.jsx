@@ -7,25 +7,28 @@ import mall from "../../assets/Services/EventPromotion/mall.png";
 import { Helmet } from "react-helmet";
 
 function EventPromotion() {
-
   useEffect(() => {
-    document.title = "Best Event Promotion company in Raipur | Event Promotion services";
+    document.title =
+      "Best Event Promotion company in Raipur | Event Promotion services";
 
     document
       .querySelector("meta[name='description']")
-      ?.setAttribute("content", "Boost your event's success with our event promotion company. We offer corporate event branding, live marketing, customized campaigns for impactful experiences.");
+      ?.setAttribute(
+        "content",
+        "Boost your event's success with our event promotion company. We offer corporate event branding, live marketing, customized campaigns for impactful experiences."
+      );
 
     document
       .querySelector("meta[name='keywords']")
-      ?.setAttribute("content", "Event promotion company,	event marketing services, professional event promotion, event advertising agency,	Affordable event promotion strategies,  Event promotion agency near me, Event promotion company in Raipur, Best event marketing services in Raipur, Event advertising and marketing in Raipur");
+      ?.setAttribute(
+        "content",
+        "Event promotion company,	event marketing services, professional event promotion, event advertising agency,	Affordable event promotion strategies,  Event promotion agency near me, Event promotion company in Raipur, Best event marketing services in Raipur, Event advertising and marketing in Raipur"
+      );
   }, []);
 
   return (
     <div className="service">
-       
-     
       <div className="service-box-con">
-     
         <div className="service-box">
           <div className="service-left">
             <h1>Event Promotion</h1>
@@ -39,6 +42,7 @@ function EventPromotion() {
           </div>
           <div className="service-right">
             <img
+              loading="lazy"
               src={event}
               alt="Event Promotion in Raipur"
               data-aos="zoom-in"
@@ -51,6 +55,7 @@ function EventPromotion() {
         <div className="ul">
           <div className="topic-align1">
             <img
+              loading="lazy"
               src={Corporate_Event}
               alt="Corporate Event in Raipur"
               data-aos="zoom-in"
@@ -85,6 +90,7 @@ function EventPromotion() {
               </p>
             </div>
             <img
+              loading="lazy"
               src={mall}
               alt="Mall Activation in Raipur"
               data-aos="zoom-in"

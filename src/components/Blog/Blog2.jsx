@@ -35,7 +35,7 @@ const Blog2 = () => {
               .map((article, index) => (
                 <div className="article-box" key={index}>
                   <Link to={article.link} className="img-text">
-                    <img src={article.img} alt={article.alt} />
+                    <img loading="lazy" src={article.img} alt={article.alt} />
                     <div className="date-category">{article.date}</div>
                     <h3>{article.title}</h3>
                     <p className="blog-arrow-con">Read more</p>

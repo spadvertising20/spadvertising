@@ -38,19 +38,19 @@ function Navbar() {
   return (
     <div className="navbar">
       {/* <div className="flag-banner">
-    <img src={flag_banner} alt="" />
-    <img src={flag_banner} alt="" />
-    <img src={flag_banner} alt="" />
-    <img src={flag_banner} alt="" />
-    <img src={flag_banner} alt="" />
-    <img src={flag_banner} alt="" />
-    <img src={flag_banner} alt="" />
-    <img src={flag_banner} alt="" />
-    <img src={flag_banner} alt="" />
-    <img src={flag_banner} alt="" />
-    <img src={flag_banner} alt="" />
-    <img src={flag_banner} alt="" />
-    <img src={flag_banner} alt="" />
+    < img loading="lazy" src={flag_banner} alt="" />
+    < img loading="lazy" src={flag_banner} alt="" />
+    < img loading="lazy" src={flag_banner} alt="" />
+    < img loading="lazy" src={flag_banner} alt="" />
+    < img loading="lazy" src={flag_banner} alt="" />
+    < img loading="lazy" src={flag_banner} alt="" />
+    < img loading="lazy" src={flag_banner} alt="" />
+    < img loading="lazy" src={flag_banner} alt="" />
+    < img loading="lazy" src={flag_banner} alt="" />
+    < img loading="lazy" src={flag_banner} alt="" />
+    < img loading="lazy" src={flag_banner} alt="" />
+    < img loading="lazy" src={flag_banner} alt="" />
+    < img loading="lazy" src={flag_banner} alt="" />
 
       
     </div> */}
@@ -58,7 +58,7 @@ function Navbar() {
       <div className="navbar-con">
         <div className="logo">
           <Link to={"/"}>
-            <img src={bg_logo} alt="" />
+            <img loading="lazy" src={bg_logo} alt="" />
           </Link>
         </div>
 
@@ -78,7 +78,7 @@ function Navbar() {
                 <p className={menu === "Services" ? "active" : "deactive"}>
                   Services
                 </p>
-                <img src={up_down} alt="drop-down" />
+                <img loading="lazy" src={up_down} alt="drop-down" />
               </div>
               <ul>
                 <Link to={"/Outdoor-Advertising-in-Raipur"}>

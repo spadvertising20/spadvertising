@@ -26,13 +26,12 @@ const Contents = [
 `,
   },
   {
-    
     description: `"Engage. Optimize. Dominate. Master the art of creating content that rules the search engines and wins your audience’s hearts."
-`
+`,
   },
   {
     heading: `1. Content as the Cornerstone of SEO: `,
-    
+
     description: `
       Content is the primary bridge between search engines and users. Without it, your website is merely an empty vessel. High-quality content provides the foundation for keywords, backlinks, and user engagement—key factors in SEO success.
 
@@ -59,33 +58,33 @@ Engagement: Use storytelling, visuals, and compelling CTAs to keep readers hooke
   },
   {
     sub_heading: `Research Your Audience:`,
-    description: ` Understand their needs, preferences, and search behaviors.`
-  },  {
+    description: ` Understand their needs, preferences, and search behaviors.`,
+  },
+  {
     sub_heading: `Keyword Strategy:`,
-    description: `Identify primary and secondary keywords that align with your content goals.`
-  },  {
+    description: `Identify primary and secondary keywords that align with your content goals.`,
+  },
+  {
     sub_heading: `Structure Effectively:`,
-    description: `Use headers, bullet points, and short paragraphs for readability.`
+    description: `Use headers, bullet points, and short paragraphs for readability.`,
   },
   {
     sub_heading: `Optimize for Search Engines:`,
-    description: ` Incorporate keywords naturally, optimize images, and write descriptive meta tags.`
+    description: ` Incorporate keywords naturally, optimize images, and write descriptive meta tags.`,
   },
   {
     heading: `5. Tools and Techniques for Content Success: `,
     description: `Leverage tools like Google Analytics, SEMrush, and Grammarly to enhance your content’s performance. Use these resources to identify trends, analyze your competition, and ensure grammatical precision.
-`
+`,
   },
   {
     heading: `Conclusion: `,
     description: `By prioritizing quality, relevance, and optimization, you can create content that not only ranks high but also delivers value to your audience. As search algorithms continue to evolve, staying committed to producing exceptional content will ensure your digital presence thrives in the long run.
-`
+`,
   },
   {
- 
-    description: `"Great content doesn’t just drive traffic; it builds relationships, earns trust, and fosters brand loyalty. Invest in your content, and the results will speak for themselves."`
+    description: `"Great content doesn’t just drive traffic; it builds relationships, earns trust, and fosters brand loyalty. Invest in your content, and the results will speak for themselves."`,
   },
-
 ];
 
 export default function HighQualityContent() {
@@ -104,12 +103,10 @@ export default function HighQualityContent() {
     <section className="keyword-research">
       <div className="keyword-research-con">
         <div className="keyword-research-box">
-          <p>
-            {blogData[2]?.date}
-          </p>
+          <p>{blogData[2]?.date}</p>
 
           <h1>{blogData[2]?.title}</h1>
-          <img src={blogData[2]?.img} alt="" />
+          <img loading="lazy" src={blogData[2]?.img} alt="" />
           <div className="keyword-research-content">
             <div className="blog-content">
               {Contents.map((content, index) => (

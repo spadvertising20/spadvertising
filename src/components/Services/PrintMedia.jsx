@@ -10,25 +10,28 @@ import inshop from "../../assets/Services/PrintMedia/inshop.png";
 import inshop3 from "../../assets/Services/BrandingStrategy/inshop3.jpg";
 
 function PrintMedia() {
-
-
   useEffect(() => {
-    document.title = "Best Print Media company in Raipur | Print Media services";
+    document.title =
+      "Best Print Media company in Raipur | Print Media services";
 
     document
       .querySelector("meta[name='description']")
-      ?.setAttribute("content", "Boost your brand with our print media agency. Offering brochure printing, custom posters, and high-quality print ads for impactful campaigns. Contact us today!");
+      ?.setAttribute(
+        "content",
+        "Boost your brand with our print media agency. Offering brochure printing, custom posters, and high-quality print ads for impactful campaigns. Contact us today!"
+      );
 
     document
       .querySelector("meta[name='keywords']")
-      ?.setAttribute("content", "Print Media agency,	Print Advertising Services, Custom Print Media Solutions, Professional Printing Agency,	Brochure Printing Services in Raipur, Flyer Design and Printing in Raipur, High-Quality Print Ads, Custom Poster Printing, Corporate Printing Solutions");
+      ?.setAttribute(
+        "content",
+        "Print Media agency,	Print Advertising Services, Custom Print Media Solutions, Professional Printing Agency,	Brochure Printing Services in Raipur, Flyer Design and Printing in Raipur, High-Quality Print Ads, Custom Poster Printing, Corporate Printing Solutions"
+      );
   }, []);
 
   return (
     <div className="service">
-      
       <div className="service-box-con">
-   
         <div className="service-box">
           <div className="service-left">
             <h1>Print Media</h1>
@@ -40,12 +43,11 @@ function PrintMedia() {
             </Link>
           </div>
           <div className="service-right">
-            <img src={print} alt="Print Media in in Raipur" />
+            <img loading="lazy" src={print} alt="Print Media in in Raipur" />
           </div>
         </div>
       </div>
       <div className="service-con">
-        
         <div className="ul">
           <div className="topic-align1" id="topic-align2">
             <div className="topic-left" data-aos="fade-right">
@@ -61,6 +63,7 @@ function PrintMedia() {
               </p>
             </div>
             <img
+              loading="lazy"
               src={Newspaper_Ads}
               alt="Newspaper Ads in Raipur"
               data-aos="zoom-in"
@@ -68,7 +71,12 @@ function PrintMedia() {
           </div>
 
           <div className="topic-align1">
-            <img src={print_img2} alt="Brochure in Raipur" data-aos="zoom-in" />
+            <img
+              loading="lazy"
+              src={print_img2}
+              alt="Brochure in Raipur"
+              data-aos="zoom-in"
+            />
             <div className="topic-left" data-aos="fade-right">
               <h1>Brochure</h1>
               <p className="">
@@ -98,11 +106,17 @@ function PrintMedia() {
                 content and appealing design.
               </p>
             </div>
-            <img src={Pamphlet} alt="Pamphlet in Raipur" data-aos="zoom-in" />
+            <img
+              loading="lazy"
+              src={Pamphlet}
+              alt="Pamphlet in Raipur"
+              data-aos="zoom-in"
+            />
           </div>
 
           <div className="topic-align1">
             <img
+              loading="lazy"
               src={inshop3}
               alt="In-Shop Branding in Raipur"
               data-aos="zoom-in"

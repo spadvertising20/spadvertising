@@ -21,14 +21,14 @@ import { StoreContext } from "../../Context Provider/StoreProvider";
 
 const Contents = [
   {
-    heading:  `Introduction`,
+    heading: `Introduction`,
     description: `In an era dominated by digital marketing, outdoor advertising remains a powerhouse for brand visibility. From billboards to transit ads, it reaches audiences where they live, work, and travel. But why is outdoor advertising still so effective? Let’s explore its importance, benefits, and why your business should leverage it.
 
 `,
   },
 
   {
-    heading:  `1. What is Outdoor Advertising?`,
+    heading: `1. What is Outdoor Advertising?`,
     description: `Outdoor advertising, also known as out-of-home (OOH) advertising, includes various formats designed to engage audiences in public spaces. These include:
 
 `,
@@ -51,9 +51,9 @@ const Contents = [
 
 `,
   },
-  
+
   {
-    heading:  `2. The Importance of Outdoor Advertising
+    heading: `2. The Importance of Outdoor Advertising
 `,
     description: `Unlike digital ads that can be skipped, outdoor ads are always on and cannot be ignored. Here’s why it matters:
 
@@ -68,10 +68,9 @@ const Contents = [
 `,
   },
   {
-    heading:  `3. Benefits of Outdoor Advertising`,
+    heading: `3. Benefits of Outdoor Advertising`,
   },
   {
-
     description: `Outdoor advertising offers a range of advantages that digital marketing alone cannot achieve.
 `,
   },
@@ -93,10 +92,9 @@ const Contents = [
     description: `Increases Brand Recall: Repeated exposure reinforces brand messaging in consumers’ minds.
 `,
   },
- 
 
   {
-    heading:  `4. Why Your Business Should Invest in Outdoor Advertising
+    heading: `4. Why Your Business Should Invest in Outdoor Advertising
 `,
     description: `If you’re looking to boost brand awareness and customer engagement, outdoor advertising is a smart investment.
 
@@ -113,7 +111,6 @@ const Contents = [
  `,
   },
 
-
   {
     description: `Maximizes ROI: Delivers lasting impressions without continuous spending on clicks or impressions.
 
@@ -121,7 +118,7 @@ const Contents = [
   },
 
   {
-    heading:  `Conclusion`,
+    heading: `Conclusion`,
     description: `Outdoor advertising remains a vital tool in modern marketing, offering high-impact visibility and brand recognition. Whether through billboards, transit ads, or digital displays, it ensures your message reaches a massive audience effectively.
 `,
   },
@@ -149,7 +146,7 @@ export default function BenefitsOutdoorAdvertising() {
           <p>{blogData[9]?.date}</p>
 
           <h1>{blogData[9]?.title}</h1>
-          <img src={blogData[9]?.img} alt="" />
+          <img loading="lazy" src={blogData[9]?.img} alt="" />
 
           <div className="keyword-research-content">
             <div className="blog-content">

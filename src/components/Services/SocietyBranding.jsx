@@ -19,24 +19,28 @@ import SocietyBrandingImg9 from "../../assets/Services/SocietyBranding/VIP KARIS
 import SocietyBrandingImg10 from "../../assets/Services/SocietyBranding/GREEN MEADOWS.jpg";
 
 function SocietyBranding() {
-
   useEffect(() => {
-    document.title = "Best Society Branding company in Raipur | Society Branding services";
+    document.title =
+      "Best Society Branding company in Raipur | Society Branding services";
 
     document
       .querySelector("meta[name='description']")
-      ?.setAttribute("content", "Improve your brand visibility with our society branding services in Raipur. We cover all prime societies to help promote your business effectively.");
+      ?.setAttribute(
+        "content",
+        "Improve your brand visibility with our society branding services in Raipur. We cover all prime societies to help promote your business effectively."
+      );
 
     document
       .querySelector("meta[name='keywords']")
-      ?.setAttribute("content", "society branding, society branding in raipur, society branding company in raipur, society branding agency in raipur, outdoor company in chhattisgarh, society advertising in raipur, society promotion in raipur, society advertising, society promotion company in raipur");
+      ?.setAttribute(
+        "content",
+        "society branding, society branding in raipur, society branding company in raipur, society branding agency in raipur, outdoor company in chhattisgarh, society advertising in raipur, society promotion in raipur, society advertising, society promotion company in raipur"
+      );
   }, []);
 
   return (
     <div className="service">
-
       <div className="service-box-con">
-
         <div className="service-box">
           <div className="service-left">
             <h1>Society Branding</h1>
@@ -49,10 +53,7 @@ function SocietyBranding() {
             </Link>
           </div>
           <div className="service-right">
-            <img
-              src={outdoor_img1}
-              alt="society branding"
-            />
+            <img loading="lazy" src={outdoor_img1} alt="society branding" />
           </div>
         </div>
       </div>
@@ -108,6 +109,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <img
+                  loading="lazy"
                   src={SocietyBrandingImg1}
                   alt="society branding in raipur"
                   data-aos="zoom-in"
@@ -173,6 +175,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <img
+                  loading="lazy"
                   src={SocietyBrandingImg2}
                   alt="society branding company in raipur"
                   data-aos="zoom-in"
@@ -241,6 +244,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <img
+                  loading="lazy"
                   src={SocietyBrandingImg3}
                   alt="society branding agency in raipur"
                   data-aos="zoom-in"
@@ -309,6 +313,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <img
+                  loading="lazy"
                   src={SocietyBrandingImg4}
                   alt="outdoor company in chhattisgarh"
                   data-aos="zoom-in"
@@ -376,6 +381,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <img
+                  loading="lazy"
                   src={SocietyBrandingImg5}
                   alt="society advertising in raipur"
                   data-aos="zoom-in"
@@ -440,6 +446,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <img
+                  loading="lazy"
                   src={SocietyBrandingImg6}
                   alt="society promotion in raipur"
                   data-aos="zoom-in"
@@ -504,6 +511,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <img
+                  loading="lazy"
                   src={SocietyBrandingImg7}
                   alt="society advertising"
                   data-aos="zoom-in"
@@ -571,6 +579,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <img
+                  loading="lazy"
                   src={SocietyBrandingImg8}
                   alt="society promotion company in raipur"
                   data-aos="zoom-in"
@@ -639,6 +648,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <img
+                  loading="lazy"
                   src={SocietyBrandingImg9}
                   alt="society advertising agency in raipur"
                   data-aos="zoom-in"
@@ -704,6 +714,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <img
+                  loading="lazy"
                   src={SocietyBrandingImg10}
                   alt="society hoarding in raipur"
                   data-aos="zoom-in"

@@ -7,14 +7,13 @@ import { Link } from "react-router-dom";
 import { SlCalender } from "react-icons/sl";
 import { FaArrowRight } from "react-icons/fa6";
 
-
-
 export default function HomeBlog() {
   const blogs = [
     {
       id: "1",
       date_and_Category: "January 28, 2025",
-      title: "Social Media Marketing: Best Practices for Engaging Your Audience.",
+      title:
+        "Social Media Marketing: Best Practices for Engaging Your Audience.",
       image: digital_marketing_img1,
       link: "https://spadvertising.in/Blog",
       category: "Social Media",
@@ -22,10 +21,10 @@ export default function HomeBlog() {
     {
       id: "1",
       date_and_Category: "January 17, 2025 ",
-      title:"Influencer Marketing: Driving Success and Growth in 2025.",
+      title: "Influencer Marketing: Driving Success and Growth in 2025.",
       image: digital_marketing_img2,
       link: "https://spadvertising.in/Blog",
-      category: "Influencer Marketing"
+      category: "Influencer Marketing",
     },
     {
       id: "1",
@@ -33,7 +32,7 @@ export default function HomeBlog() {
       title: "What is Digital Marketing? Types, Examples and Benefits.",
       image: digital_marketing_img3,
       link: "https://spadvertising.in/Blog",
-      category: "Digital Marketing"
+      category: "Digital Marketing",
     },
   ];
 
@@ -48,10 +47,10 @@ export default function HomeBlog() {
         <div className="homeblog-article">
           <div className="homeblog-article-title">
             <div className="homeblog-article-title-con">
-              <h1>Latest Insights
-              </h1>
+              <h1>Latest Insights</h1>
               <p>
-              Discover the latest trends, strategies, and insights in digital marketing to help grow your business.
+                Discover the latest trends, strategies, and insights in digital
+                marketing to help grow your business.
               </p>
             </div>
           </div>
@@ -61,12 +60,19 @@ export default function HomeBlog() {
             <div key={blog.id} className="homeblog-main-con">
               <div className="">
                 <div className="category-tag">{blog.category}</div>
-              <img src={blog.image} alt="" />
+                <img loading="lazy" src={blog.image} alt="" />
               </div>
               <div className="homeblog-main-details">
-                <p><SlCalender />{blog.date_and_Category}</p>
-                <h2 className="">{blog.title}</h2><br />
-                <Link className="Link" to={blog.link}>Read More<FaArrowRight/></Link>
+                <p>
+                  <SlCalender />
+                  {blog.date_and_Category}
+                </p>
+                <h2 className="">{blog.title}</h2>
+                <br />
+                <Link className="Link" to={blog.link}>
+                  Read More
+                  <FaArrowRight />
+                </Link>
               </div>
             </div>
           ))}

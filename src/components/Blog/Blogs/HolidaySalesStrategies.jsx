@@ -21,7 +21,7 @@ import { StoreContext } from "../../Context Provider/StoreProvider";
 
 const Contents = [
   {
-    heading:  `Introduction`,
+    heading: `Introduction`,
     description: `The holiday season is a prime time for businesses to increase sales, and having effective holiday sales strategies is crucial. If you're looking to increase business sales during this bustling time of year, consider implementing essential holiday marketing tips. Combining these strategies can create a sizable sales boost during holidays.
 
 `,
@@ -34,26 +34,30 @@ const Contents = [
      
     `,
   },
-    {
-      heading:  `Understanding Holiday Sales Strategies`,
-      description: `${<><br /></>}To enhance your sales during the holiday period, it's essential to start with a clear understanding of the various holiday sales strategies available. Consider the following points:
+  {
+    heading: `Understanding Holiday Sales Strategies`,
+    description: `${(
+      <>
+        <br />
+      </>
+    )}To enhance your sales during the holiday period, it's essential to start with a clear understanding of the various holiday sales strategies available. Consider the following points:
 
   `,
-    },
+  },
   {
-    sub_heading:  `Market Research:`,
+    sub_heading: `Market Research:`,
     description: `Identify trends, customer preferences, and competitors' strategies to stay ahead.
 
 `,
   },
   {
-    sub_heading:  `Set Clear Goals:  `,
+    sub_heading: `Set Clear Goals:  `,
     description: `Define what you want to achieve. Is it more foot traffic to your store, increased online sales, or both?
 
 `,
   },
   {
-    heading:  `Budgeting for Promotions:  `,
+    heading: `Budgeting for Promotions:  `,
     description: `Decide how much to allocate to advertising, discounts, and other offers.
 
 `,
@@ -64,19 +68,19 @@ const Contents = [
 `,
   },
   {
-    sub_heading:  `Target Audience and Personalization`,
+    sub_heading: `Target Audience and Personalization`,
     description: `Knowing your target audience is pivotal. Analyze consumer behavior, spending habits, and previous holiday trends to tailor your marketing message.
 
 `,
   },
 
   {
-    sub_heading:  `Demographics:`,
+    sub_heading: `Demographics:`,
     description: `Age, gender, location, and interests can help define your target market.
 `,
   },
   {
-    sub_heading:  `Personalized Marketing:`,
+    sub_heading: `Personalized Marketing:`,
     description: `Use customer data to send personalized emails and offers to make them feel special.
 
 `,
@@ -87,33 +91,33 @@ const Contents = [
 `,
   },
   {
-    heading:  `Effective Holiday Marketing Tips`,
+    heading: `Effective Holiday Marketing Tips`,
   },
 
   {
-    sub_heading:  `Leverage Email Marketing:  `,
+    sub_heading: `Leverage Email Marketing:  `,
     description: ` Send holiday-themed newsletters and promotional emails to encourage repeat customers to make additional purchases.
 
 `,
   },
   {
-    sub_heading:  `Engage in Content Marketing:  `,
+    sub_heading: `Engage in Content Marketing:  `,
     description: `Partnering with influencers can expand reach and credibility, particularly if your target audience is active on platforms like Instagram or TikTok.
 `,
   },
   {
-    sub_heading:  `The Importance of Content Marketing`,
+    sub_heading: `The Importance of Content Marketing`,
     description: `Create blog posts, infographics, or videos relevant to your products and the holiday spirit to attract and engage visitors.
 
 `,
   },
   {
-    sub_heading:  `Implement Countdown Timers:  `,
+    sub_heading: `Implement Countdown Timers:  `,
     description: `Highlight limited-time offers with countdown timers on your website to create urgency.
 `,
   },
   {
-    sub_heading:  `Blogs and Articles:`,
+    sub_heading: `Blogs and Articles:`,
     description: `Regularly updating your blog with relevant content not only helps with SEO but also establishes authority.
 `,
   },
@@ -123,27 +127,27 @@ const Contents = [
 `,
   },
   {
-    heading:  `Video and Visual Content`,
+    heading: `Video and Visual Content`,
   },
   {
-    sub_heading:  `Utilizing Digital Marketing Services`,
+    sub_heading: `Utilizing Digital Marketing Services`,
     description: `Partnering with a digital marketing company in Raipur can significantly impact your holiday sales. Here are some services that can assist:
 
 `,
   },
   {
-    sub_heading:  `Social Media Advertising:  `,
+    sub_heading: `Social Media Advertising:  `,
     description: `Target specific audiences effectively during the bustling holiday season.
 `,
   },
   {
-    sub_heading:  `Search Engine Optimization:  `,
+    sub_heading: `Search Engine Optimization:  `,
     description: `Improve your website's visibility to attract organic traffic.
 
 `,
   },
   {
-    sub_heading:  `Pay-Per-Click Advertising:  `,
+    sub_heading: `Pay-Per-Click Advertising:  `,
     description: `Use PPC campaigns to reach potential customers actively searching for holiday deals.
 
 `,
@@ -167,18 +171,18 @@ const Contents = [
   },
 
   {
-    sub_heading:  `Holiday Packages:  `,
+    sub_heading: `Holiday Packages:  `,
     description: `Bundle products at a discounted rate; remove the decision fatigue for customers.
 `,
   },
   {
-    sub_heading:  `Free Shipping:  `,
+    sub_heading: `Free Shipping:  `,
     description: ` Implement a free shipping threshold that encourages customers to spend more to qualify for the offer.
 
 `,
   },
   {
-    sub_heading:  `Exclusive Sales for Subscribers:  `,
+    sub_heading: `Exclusive Sales for Subscribers:  `,
     description: `Reward loyal customers with exclusive deals for subscribing to your newsletter.
 
 `,
@@ -189,19 +193,19 @@ const Contents = [
 `,
   },
   {
-    heading:  `Leveraging Social Media for Sales Boost`,
+    heading: `Leveraging Social Media for Sales Boost`,
     description: `Social media has become a powerful tool for reaching customers and driving sales. Here’s how to use it effectively:
 `,
   },
   {
-    sub_heading:  `Run Holiday Campaigns:`,
+    sub_heading: `Run Holiday Campaigns:`,
     description: `Create unique hashtags and encourage customers to share their experiences.
 
 
 `,
   },
   {
-    sub_heading:  `Influencer Collaborations:  `,
+    sub_heading: `Influencer Collaborations:  `,
     description: `Partner with influencers that align with your brand to widen your reach.
 
 
@@ -220,28 +224,28 @@ const Contents = [
 `,
   },
   {
-    heading:  `Optimizing Your Website for Holiday Sales`,
+    heading: `Optimizing Your Website for Holiday Sales`,
     description: `Your website serves as the backbone of your online sales strategy. Here’s how to optimize it for the holidays:
 
 
 `,
   },
   {
-    sub_heading:  `User Experience:`,
+    sub_heading: `User Experience:`,
     description: `Ensure your website is easy to navigate, with fast load times and mobile optimization.
 
 
 `,
   },
   {
-    sub_heading:  `Clear Calls-to-Action:  `,
+    sub_heading: `Clear Calls-to-Action:  `,
     description: `Use clear and compelling CTAs on your pages to guide customers toward purchases.
 
 
 `,
   },
   {
-    sub_heading:  `SEO-Friendly Content:  `,
+    sub_heading: `SEO-Friendly Content:  `,
     description: `Incorporate primary and related keywords naturally within your site’s content to enhance search visibility.
 
 
@@ -254,7 +258,7 @@ const Contents = [
 `,
   },
   {
-    heading:  `Conclusion`,
+    heading: `Conclusion`,
     description: `Implementing targeted holiday sales strategies can significantly increase business sales during the holiday season. Be sure to leverage holiday marketing tips, utilize digital marketing services, and optimize your digital presence to ensure a successful sales period. Engaging with your customers and providing value through personalized promotions will foster goodwill and encourage repeat business.
 
 
@@ -287,7 +291,7 @@ export default function HolidaySalesStrategies() {
           <p>{blogData[4]?.date}</p>
 
           <h1>{blogData[4]?.title}</h1>
-          <img src={blogData[4]?.img} alt="" />
+          <img loading="lazy" src={blogData[4]?.img} alt="" />
 
           <div className="keyword-research-content">
             <div className="blog-content">

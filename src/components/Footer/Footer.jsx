@@ -7,14 +7,13 @@ import youtube from "../../assets/Footer/youtube.png";
 import logo from "../../assets/Navbar/logo.webp";
 import { Link } from "react-router-dom";
 
-
 function Footer() {
   return (
     <div className="footer">
       <div className="footer-con">
         <div className="footer-box">
           <div className="best-line">
-            <img src={logo} alt="outdoor advertising agency" />
+            <img loading="lazy" src={logo} alt="outdoor advertising agency" />
             <p>
               SP Advertising is a 360-degree marketing and branding agency
               dedicated to delivering exceptional results. Our team of experts
@@ -83,16 +82,16 @@ function Footer() {
               </div>
               <div className="icons">
                 <a href="https://www.facebook.com/spadvertisingraipur">
-                  <img src={facebook} alt="" />
+                  <img loading="lazy" src={facebook} alt="" />
                 </a>
                 <a href="https://www.instagram.com/spadvertisingrpr/">
-                  <img src={instagram} alt="" />
+                  <img loading="lazy" src={instagram} alt="" />
                 </a>
                 <a href="https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all">
-                  <img src={linkedin} alt="" />
+                  <img loading="lazy" src={linkedin} alt="" />
                 </a>
                 <a href="https://www.youtube.com/@spadvertising530">
-                  <img src={youtube} alt="" />
+                  <img loading="lazy" src={youtube} alt="" />
                 </a>
               </div>
             </div>
@@ -103,10 +102,10 @@ function Footer() {
       <hr />
       <div className="footer-headline"></div>
       <div className="copyright">
-        
         <p>
-          © Copyright 2013-25 <a href="https://spadvertising.in">SP Advertising</a>{" "}
-          - All Rights Reserved.
+          © Copyright 2013-25{" "}
+          <a href="https://spadvertising.in">SP Advertising</a> - All Rights
+          Reserved.
         </p>
       </div>
     </div>
