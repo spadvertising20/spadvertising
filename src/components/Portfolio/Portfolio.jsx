@@ -15,13 +15,13 @@ import gantry from "../../assets/Services/OutdoorAdvertising/gantry.jpg";
 // import outdoor2 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising22.jpg";
 // import outdoor3 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising3.jpg";
 // import outdoor4 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising4.jpg";
-import outdoor5 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising5.jpg";
-import outdoor6 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising6.jpg";
-import outdoor7 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising7.jpg";
-import outdoor8 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising8.jpg";
-import outdoor9 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising9.jpg";
-import outdoor10 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising10.jpg";
-import outdoor11 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising11.jpg";
+// import outdoor5 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising5.jpg";
+// import outdoor6 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising6.jpg";
+// import outdoor7 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising7.jpg";
+// import outdoor8 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising8.jpg";
+// import outdoor9 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising9.jpg";
+// import outdoor10 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising10.jpg";
+// import outdoor11 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising11.jpg";
 
 import digital_marketing_img from "../../assets/Services/DigitalMarketing/digital-marketing-img.jpg";
 import digital_marketing_img1 from "../../assets/Services/DigitalMarketing/digital-marketing-img1.jpg";
@@ -341,7 +341,7 @@ function Portfolio() {
           {/* <div>
         < img loading="lazy" src={outdoor4} alt="" />
     </div> */}
-          <div>
+          {/* <div>
             <img loading="lazy" src={outdoor5} alt="" />
           </div>
           <div>
@@ -349,11 +349,11 @@ function Portfolio() {
           </div>
           <div>
             <img loading="lazy" src={outdoor7} alt="" />
-          </div>
+          </div> */}
           {/* <div>
         < img loading="lazy" src={outdoor8} alt="" />
     </div> */}
-          <div>
+          {/* <div>
             <img loading="lazy" src={outdoor9} alt="" />
           </div>
           <div>
@@ -361,7 +361,7 @@ function Portfolio() {
           </div>
           <div>
             <img loading="lazy" src={outdoor11} alt="" />
-          </div>
+          </div> */}
         </Slider>
       </div>
       <div className="port-slider">
