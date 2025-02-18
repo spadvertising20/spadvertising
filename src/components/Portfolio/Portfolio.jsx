@@ -11,7 +11,7 @@ import outdoor_img2 from "../../assets/Services/OutdoorAdvertising/hoarding.jpg"
 import showcase1 from "../../assets/Services/OutdoorAdvertising/showcase1.webp";
 import showcase2 from "../../assets/Services/OutdoorAdvertising/showcase2.webp";
 import gantry from "../../assets/Services/OutdoorAdvertising/gantry.jpg";
-// import outdoor1 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising12.jpg";
+import outdoor1 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising12.jpg";
 // import outdoor2 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising22.jpg";
 // import outdoor3 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising3.jpg";
 // import outdoor4 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising4.jpg";
@@ -332,7 +332,7 @@ function Portfolio() {
             <img loading="lazy" src={gantry} alt="" />
           </div>
           <div>
-            {/* <img loading="lazy" src={outdoor1} alt="" /> */}
+            <img loading="lazy" src={outdoor1} alt="" />
           </div>
           <div>
             {/* <img loading="lazy" src={outdoor2} alt="" /> */}
