@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AboutMe from "./components/About Us/AboutUs.jsx";
+import AboutMe from "./components/AboutUs/AboutUs.jsx";
 import Blog from "./components/Blog/Blog.jsx";
 
 import Contact from "./components/Contact Us/Contact.jsx";
