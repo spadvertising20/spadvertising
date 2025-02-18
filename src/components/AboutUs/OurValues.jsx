@@ -1,7 +1,7 @@
 import React from "react";
 import "./OurValues.css";
 import execution from "../../assets/OurValues/execution.png";
-import accountability from "../../assets/OurValues/Accountability.png";
+import accountability from "../../assets/OurValues/accountability.png";
 import growth from "../../assets/OurValues/growth.png";
 import teamwork from "../../assets/OurValues/teamwork.png";
 
