@@ -332,7 +332,7 @@ function Portfolio() {
             <img loading="lazy" src={gantry} alt="" />
           </div>
           <div>
-            <img loading="lazy" src={outdoor1} alt="" />
+            {/* <img loading="lazy" src={outdoor1} alt="" /> */}
           </div>
           <div>
             <img loading="lazy" src={outdoor2} alt="" />
