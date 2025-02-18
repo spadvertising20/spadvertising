@@ -1,7 +1,7 @@
 import React from "react";
 import "./OurValues.css";
 import execution from "../../assets/OurValues/execution.png";
-import Accountability from "../../assets/OurValues/Accountability.png";
+// import Accountability from "../../assets/OurValues/Accountability.png";
 import growth from "../../assets/OurValues/growth.png";
 import teamwork from "../../assets/OurValues/teamwork.png";
 
@@ -16,7 +16,7 @@ export default function OurValues() {
     },
     {
       id: 2,
-      image: Accountability,
+      image: growth,
       title: "Accountability",
       description:
         "We embrace responsibility for our actions, maintaining transparency and trust, and ensuring high ethical standards in all our endeavors.",
