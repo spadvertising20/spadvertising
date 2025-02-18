@@ -12,16 +12,16 @@ import showcase1 from "../../assets/Services/OutdoorAdvertising/showcase1.webp";
 import showcase2 from "../../assets/Services/OutdoorAdvertising/showcase2.webp";
 import gantry from "../../assets/Services/OutdoorAdvertising/gantry.jpg";
 import outdoor1 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising12.jpg";
-// import outdoor2 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising22.jpg";
-// import outdoor3 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising3.jpg";
-// import outdoor4 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising4.jpg";
-// import outdoor5 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising5.jpg";
-// import outdoor6 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising6.jpg";
-// import outdoor7 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising7.jpg";
-// import outdoor8 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising8.jpg";
-// import outdoor9 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising9.jpg";
-// import outdoor10 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising10.jpg";
-// import outdoor11 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising11.jpg";
+import outdoor2 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising22.jpg";
+import outdoor3 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising3.jpg";
+import outdoor4 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising4.jpg";
+import outdoor5 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising5.jpg";
+import outdoor6 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising6.jpg";
+import outdoor7 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising7.jpg";
+import outdoor8 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising8.jpg";
+import outdoor9 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising9.jpg";
+import outdoor10 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising10.jpg";
+import outdoor11 from "../../assets/Services/OutdoorAdvertising/Outdoor-Advertising11.jpg";
 
 import digital_marketing_img from "../../assets/Services/DigitalMarketing/digital-marketing-img.jpg";
 import digital_marketing_img1 from "../../assets/Services/DigitalMarketing/digital-marketing-img1.jpg";
@@ -318,9 +318,9 @@ function Portfolio() {
       <div className="port-slider">
         <h2>Outdoor Advertising</h2>
         <Slider {...settings1} className="portfolio-slider">
-          {/* <div>
+          <div>
   < img loading="lazy" src={outdoor_img1} alt=""   />
-  </div> */}
+  </div>
 
           <div>
             <img loading="lazy" src={showcase1} alt="" />
@@ -335,13 +335,13 @@ function Portfolio() {
             <img loading="lazy" src={outdoor1} alt="" />
           </div>
           <div>
-            {/* <img loading="lazy" src={outdoor2} alt="" /> */}
+            <img loading="lazy" src={outdoor2} alt="" />
           </div>
 
-          {/* <div>
+          <div>
         < img loading="lazy" src={outdoor4} alt="" />
-    </div> */}
-          {/* <div>
+    </div>
+          <div>
             <img loading="lazy" src={outdoor5} alt="" />
           </div>
           <div>
@@ -349,11 +349,11 @@ function Portfolio() {
           </div>
           <div>
             <img loading="lazy" src={outdoor7} alt="" />
-          </div> */}
-          {/* <div>
+          </div>
+          <div>
         < img loading="lazy" src={outdoor8} alt="" />
-    </div> */}
-          {/* <div>
+    </div>
+          <div>
             <img loading="lazy" src={outdoor9} alt="" />
           </div>
           <div>
@@ -361,7 +361,7 @@ function Portfolio() {
           </div>
           <div>
             <img loading="lazy" src={outdoor11} alt="" />
-          </div> */}
+          </div>
         </Slider>
       </div>
       <div className="port-slider">
