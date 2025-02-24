@@ -13,12 +13,12 @@ import showcase2 from "../../assets/Services/OutdoorAdvertising/showcase2.webp";
 import gantry from "../../assets/Services/OutdoorAdvertising/gantry.jpg";
 import outdoor1 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising12.jpg";
 import outdoor2 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising22.jpg";
-import outdoor3 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising3.jpg";
-import outdoor4 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising4.jpg";
+// import outdoor3 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising3.jpg";
+// import outdoor4 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising4.jpg";
 import outdoor5 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising5.jpg";
 import outdoor6 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising6.jpg";
 import outdoor7 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising7.jpg";
-import outdoor8 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising8.jpg";
+// import outdoor8 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising8.jpg";
 import outdoor9 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising9.jpg";
 import outdoor10 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising10.jpg";
 import outdoor11 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising11.jpg";
@@ -318,9 +318,9 @@ function Portfolio() {
       <div className="port-slider">
         <h2>Outdoor Advertising</h2>
         <Slider {...settings1} className="portfolio-slider">
-          <div>
+          {/* <div>
   < img loading="lazy" src={outdoor_img1} alt=""   />
-  </div>
+  </div> */}
 
           <div>
             <img loading="lazy" src={showcase1} alt="" />
@@ -338,9 +338,9 @@ function Portfolio() {
             <img loading="lazy" src={outdoor2} alt="" />
           </div>
 
-          <div>
+          {/* <div>
         < img loading="lazy" src={outdoor4} alt="" />
-    </div>
+    </div> */}
           <div>
             <img loading="lazy" src={outdoor5} alt="" />
           </div>
@@ -350,9 +350,9 @@ function Portfolio() {
           <div>
             <img loading="lazy" src={outdoor7} alt="" />
           </div>
-          <div>
+          {/* <div>
         < img loading="lazy" src={outdoor8} alt="" />
-    </div>
+    </div> */}
           <div>
             <img loading="lazy" src={outdoor9} alt="" />
           </div>

@@ -29,9 +29,6 @@ const Contents = [
   {
     description: `
       In this guide, we will explore various approaches to maximize your sales potential during the holidays and how a digital marketing company can help you achieve these goals.
-
-
-     
     `,
   },
   {
