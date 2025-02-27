@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "./Blogs.css";
 import { Link } from "react-router-dom";
@@ -88,6 +88,26 @@ Engagement: Use storytelling, visuals, and compelling CTAs to keep readers hooke
 ];
 
 export default function HighQualityContent() {
+
+   useEffect(() => {
+        document.title =
+          "Why Content is Still King in SEO: How to Create High-Quality, Search-Friendly Content";
+    
+        document
+          .querySelector("meta[name='description']")
+          ?.setAttribute(
+            "content",
+            "Why content is king in SEO? Learn how quality content boosts rankings and drives traffic!"
+          );
+    
+        document
+          .querySelector("meta[name='keywords']")
+          ?.setAttribute(
+            "content",
+            "surferseo, seo ai, neuronwriter, seo content writer, seo writing, ai for seo, seo writing ai, seo website content writer, internal links"
+          );
+      }, []);
+
   const { blogData } = useContext(StoreContext);
 
   const [query, setQuery] = useState(""); // State for user input

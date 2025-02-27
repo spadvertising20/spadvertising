@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "./Blogs.css";
 import { Link } from "react-router-dom";
@@ -270,6 +270,26 @@ Now, as the holidays approach, it’s time to put these strategies into action f
 ];
 
 export default function HolidaySalesStrategies() {
+
+useEffect(() => {
+        document.title =
+          "Holiday Sales Strategies: Top Tips to Boost Business Sales";
+    
+        document
+          .querySelector("meta[name='description']")
+          ?.setAttribute(
+            "content",
+            "Unlock holiday sales strategies with essential tips to boost business sales and maximize profits this season!"
+          );
+    
+        document
+          .querySelector("meta[name='keywords']")
+          ?.setAttribute(
+            "content",
+            "marketing strategies to increase sales, how to increase sales in business, 6 ways to increase sales for your restaurant, how to improve business sales, how to improve restaurant sales, how to increase sales restaurant, how to increase sales in store, how to increase company sales, how to increase sales in a retail store"
+          );
+      }, []);
+
   const { blogData } = useContext(StoreContext);
 
   const [query, setQuery] = useState(""); // State for user input

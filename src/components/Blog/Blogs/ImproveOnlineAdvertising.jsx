@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "./Blogs.css";
 import { Link } from "react-router-dom";
@@ -236,13 +236,33 @@ const Contents = [
 ];
 
 export default function ImproveOnlineAdvertising() {
+
+  useEffect(() => {
+          document.title =
+            "Boost Online Ads with Free Tools and Techniques";
+      
+          document
+            .querySelector("meta[name='description']")
+            ?.setAttribute(
+              "content",
+              "Boost online ads with free tools and techniques. Improve advertising efforts without breaking the bank!"
+            );
+      
+          document
+            .querySelector("meta[name='keywords']")
+            ?.setAttribute(
+              "content",
+              "free facebook ad course, ad checker facebook, online advertising tools, best online advertising platforms, ads online free, ad creator online, free online advertising, free online advertising for small business, platforms to advertise your business"
+            );
+        }, []);
+
   const { blogData } = useContext(StoreContext);
 
   const [query, setQuery] = useState(""); // State for user input
 
   // Handle input change
   const handleInputChange = (e) => {
-    const userInput = e.target.value;
+    const userInput = e.target.value; 
     setQuery(userInput);
     // Filter suggestions
   };

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "./Blogs.css";
 import { Link } from "react-router-dom";
@@ -170,6 +170,26 @@ Use Relevant Hashtags: Combine niche-specific, branded, and popular hashtags.
 ];
 
 export default function SocialMediaMarketing() {
+
+useEffect(() => {
+          document.title =
+            "Social Media Marketing: Best Practices to Engage Your Audience";
+      
+          document
+            .querySelector("meta[name='description']")
+            ?.setAttribute(
+              "content",
+              "Master social media marketing with best practices to engage your audience and boost interaction!"
+            );
+      
+          document
+            .querySelector("meta[name='keywords']")
+            ?.setAttribute(
+              "content",
+              "facebook advertising management, social media marketing, smm marketing, social media and marketing, sns marketing, marketing through social media, smm social media marketing, social media mar"
+            );
+        }, []);
+
   const { blogData } = useContext(StoreContext);
 
   const [query, setQuery] = useState(""); // State for user input

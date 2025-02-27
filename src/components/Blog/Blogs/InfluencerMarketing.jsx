@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "../Blogs/Blogs.css";
 import { Link } from "react-router-dom";
@@ -216,6 +216,27 @@ Leveraging everyday users to showcase products on Instagram.
 ];
 
 export default function InfluencerMarketing() {
+
+useEffect(() => {
+          document.title =
+            "Influencer Marketing: Boosting Success and Growth in 2025";
+      
+          document
+            .querySelector("meta[name='description']")
+            ?.setAttribute(
+              "content",
+              "Explore influencer marketing in 2025: boost success and growth with strategies for the future!"
+            );
+      
+          document
+            .querySelector("meta[name='keywords']")
+            ?.setAttribute(
+              "content",
+              "influencer marketing, influencer, microinfluencer, social influencer, up fluence, influencer program amazon, influencers amazon, influencer marketing agency, find an influencer"
+            );
+        }, []);
+
+
   const { blogData } = useContext(StoreContext);
 
   const [query, setQuery] = useState(""); // State for user input

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "../Blogs/Blogs.css";
 import { Link } from "react-router-dom";
@@ -128,6 +128,27 @@ const Contents = [
 ];
 
 export default function BenefitsOutdoorAdvertising() {
+
+  useEffect(() => {
+            document.title =
+              "Outdoor Advertising: Benefits, Basics, and Why It Matters";
+        
+            document
+              .querySelector("meta[name='description']")
+              ?.setAttribute(
+                "content",
+                "Explore outdoor advertising: its basics, benefits, and why it matters for boosting brand visibility!"
+              );
+        
+            document
+              .querySelector("meta[name='keywords']")
+              ?.setAttribute(
+                "content",
+                "benefits of ooh advertising, advantages of outdoor advertising, merits of outdoor advertising, out of home advertising benefits,outdoor advertising agency, Outdoor advertising services, Outdoor advertising agency in Raipur, Billboard advertising solutions, outdoor advertising companies"
+              );
+          }, []);
+  
+
   const { blogData } = useContext(StoreContext);
 
   const [query, setQuery] = useState(""); // State for user input

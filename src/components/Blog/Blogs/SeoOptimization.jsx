@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "./Blogs.css";
 import { Link } from "react-router-dom";
@@ -18,6 +18,8 @@ import { GrInstagram } from "react-icons/gr";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
 import { StoreContext } from "../../Context Provider/StoreProvider";
+
+
 
 const Articles = [
   {
@@ -115,6 +117,25 @@ Test on Mobile Devices: Use Google’s Mobile-Friendly Test tool to identify iss
 ];
 
 export default function SeoOptimization() {
+  useEffect(() => {
+    document.title =
+      "The Ultimate Guide to On-Page SEO: Tips and Best Practices";
+
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute(
+        "content",
+        "Master on-page SEO with this ultimate guide. Get expert tips and best practices to optimize your site and boost rankings!"
+      );
+
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute(
+        "content",
+        "on page seo, on page optimization, on page seo check, on page and off page seo, seo on page and off page, on page seo and off page seo, on and off page seo, on page seo off page seo, on page seo optimisation"
+      );
+  }, []);
+
   const { blogData } = useContext(StoreContext);
 
   const [query, setQuery] = useState(""); // State for user input

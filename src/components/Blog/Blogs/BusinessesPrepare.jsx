@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "./Blogs.css";
 import { Link } from "react-router-dom";
@@ -193,6 +193,26 @@ const Contents = [
 ];
 
 export default function BusinessesPrepare() {
+
+   useEffect(() => {
+        document.title =
+          "How Businesses Can Prepare for Digital Marketing Trends in the Next Decade";
+    
+        document
+          .querySelector("meta[name='description']")
+          ?.setAttribute(
+            "content",
+            "Learn how businesses can prepare for digital marketing trends in the next decade with actionable strategies!"
+          );
+    
+        document
+          .querySelector("meta[name='keywords']")
+          ?.setAttribute(
+            "content",
+            "digital marketing trends, digital marketing industry trends, digital marketing trending, digitale marketing trends, trends in digitale marketing, latest digital marketing trends, current digital marketing trends, new trends in digital marketing, online marketing trends"
+          );
+      }, []);
+
   const { blogData } = useContext(StoreContext);
 
   const [query, setQuery] = useState(""); // State for user input

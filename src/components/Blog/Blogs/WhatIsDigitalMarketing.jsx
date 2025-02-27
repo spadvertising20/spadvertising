@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "../Blogs/Blogs.css";
 import { Link } from "react-router-dom";
@@ -224,6 +224,26 @@ const Contents = [
 ];
 
 export default function WhatIsDigitalMarketing() {
+
+useEffect(() => {
+          document.title =
+            "What is Digital Marketing? Types, Examples, and Benefits";
+      
+          document
+            .querySelector("meta[name='description']")
+            ?.setAttribute(
+              "content",
+              "What is digital marketing? Explore its types, examples, and benefits in this guide to understand its power!"
+            );
+      
+          document
+            .querySelector("meta[name='keywords']")
+            ?.setAttribute(
+              "content",
+              "what is digital marketing, digital marketing is what, what includes digital marketing, what is seo in digital marketing, what is online marketing, what is ppc in digital marketing, what is digital marketing in hindi, what is internet marketing, what is search engine optimization in digital marketing"
+            );
+        }, []);
+
   const { blogData } = useContext(StoreContext);
 
   const [query, setQuery] = useState(""); // State for user input

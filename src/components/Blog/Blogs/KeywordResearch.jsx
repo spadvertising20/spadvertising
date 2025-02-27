@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import "./Blogs.css";
 import { Link } from "react-router-dom";
@@ -151,6 +151,26 @@ const Contents = [
 ];
 
 export default function KeywordResearch() {
+
+   useEffect(() => {
+      document.title =
+        "How to Do Keyword Research for SEO: A Beginner's Guide";
+  
+      document
+        .querySelector("meta[name='description']")
+        ?.setAttribute(
+          "content",
+          "Learn how to do keyword research for SEO with this beginner’s guide. Simple steps to find keywords and boost your rankings!"
+        );
+  
+      document
+        .querySelector("meta[name='keywords']")
+        ?.setAttribute(
+          "content",
+          "keyword research for SEO, how to do keyword research, SEO keyword research guide, beginner’s guide to keyword research, keyword research tutorial, SEO for beginners, find keywords for SEO"
+        );
+    }, []);
+
   const { blogData } = useContext(StoreContext);
 
   const [query, setQuery] = useState(""); // State for user input

@@ -39,13 +39,13 @@ export default function AnimationHero() {
         </div>
         <div className="hero-anim-bg">
           <img
-            loading="lazy"
+          
             src={img_bg}
             alt="Advertising in Raipur"
             className="services-con"
           />
           <img
-            loading="lazy"
+          
             src={hero_bg}
             alt="Creatives Designing Services in Raipur"
             className="hero-anim-img"
@@ -57,7 +57,7 @@ export default function AnimationHero() {
               <div className="round-ele1">
                 <div className="hero-box">
                   <img
-                    loading="lazy"
+                  
                     src={hero_outdoor}
                     alt="Advertising agency near me"
                     className="img-rotate1"
@@ -65,7 +65,7 @@ export default function AnimationHero() {
                 </div>
                 <div className="hero-box">
                   <img
-                    loading="lazy"
+                  
                     src={hero_digital}
                     alt="Advertising agency jobs"
                     className="img-rotate2"
