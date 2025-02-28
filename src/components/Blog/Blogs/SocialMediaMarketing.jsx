@@ -208,7 +208,7 @@ useEffect(() => {
           <p>{blogData[8]?.date}</p>
 
           <h1>{blogData[8]?.title}</h1>
-          <img loading="lazy" src={blogData[8]?.img} alt="" />
+          <img loading="lazy" src={blogData[8]?.img} alt="facebook advertising management" />
           <div className="keyword-research-content">
             <div className="">
               {Contents.map((content, index) => (

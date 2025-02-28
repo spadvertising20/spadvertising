@@ -274,7 +274,7 @@ export default function ImproveOnlineAdvertising() {
           <p>{blogData[5]?.date}</p>
 
           <h1>{blogData[5]?.title}</h1>
-          <img loading="lazy" src={blogData[5]?.img} alt="" />
+          <img loading="lazy" src={blogData[5]?.img} alt="free facebook ad course" />
 
           <div className="keyword-research-content">
             <div className="blog-content">

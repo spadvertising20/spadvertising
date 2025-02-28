@@ -231,7 +231,7 @@ export default function BusinessesPrepare() {
           <p>{blogData[3]?.date}</p>
 
           <h1>{blogData[3]?.title}</h1>
-          <img loading="lazy" src={blogData[3]?.img} alt="" />
+          <img loading="lazy" src={blogData[3]?.img} alt="digital marketing trends" />
           <div className="keyword-research-content">
             <div className="blog-content">
               {Contents.map((content, index) => (

@@ -255,7 +255,7 @@ useEffect(() => {
           <p>{blogData[7]?.date}</p>
 
           <h1>{blogData[7]?.title}</h1>
-          <img loading="lazy" src={blogData[7]?.img} alt="" />
+          <img loading="lazy" src={blogData[7]?.img} alt="influencer marketing" />
 
           <div className="keyword-research-content">
             <div className="blog-content">

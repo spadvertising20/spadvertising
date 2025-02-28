@@ -9,6 +9,7 @@ import HomeBlog from "./Blog";
 import HomeClients from "./Clients";
 import './Homepage.css';
 import FAQ from "./FAQ";
+import WhyChooseUs from "./WhyChooseUs";
 
 function Homepage() {
   return (
@@ -16,6 +17,7 @@ function Homepage() {
       <AnimationHero />
       <RecentWork />
       <WhatWeDo />
+      <WhyChooseUs/>
       <HomeAbout />
       <HomeClients />
       <HomeBlog />

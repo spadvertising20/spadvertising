@@ -167,7 +167,7 @@ export default function KeywordResearch() {
         .querySelector("meta[name='keywords']")
         ?.setAttribute(
           "content",
-          "keyword research for SEO, how to do keyword research, SEO keyword research guide, beginner’s guide to keyword research, keyword research tutorial, SEO for beginners, find keywords for SEO"
+          "keyword research for SEO, how to do keyword research, SEO keyword research guide, beginner’s guide to keyword research, keyword research tutorial, SEO for beginners, find keywords for SEO,ree keyword research tool, google keyword research tool, keyword research tool, semrush pricing, keyword search tool,"
         );
     }, []);
 
@@ -189,7 +189,7 @@ export default function KeywordResearch() {
           <p>{blogData[0]?.date}</p>
 
           <h1>{blogData[0]?.title}</h1>
-          <img loading="lazy" src={digital_marketing_img1} alt="" />
+          <img loading="lazy" src={digital_marketing_img1} alt="keyword research for SEO" />
           <div className="keyword-research-content">
             <div className="blog-content">
               {Contents.map((content, index) => (

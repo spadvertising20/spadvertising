@@ -154,7 +154,7 @@ export default function SeoOptimization() {
           <p>{blogData[1]?.date}</p>
 
           <h1>{blogData[1]?.title}</h1>
-          <img loading="lazy" src={digital_marketing_img1} alt="" />
+          <img loading="lazy" src={digital_marketing_img1} alt="on page seo" />
           <div className="keyword-research-content">
             <div className="">
               {Contents.map((content, index) => (

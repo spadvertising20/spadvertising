@@ -262,7 +262,7 @@ useEffect(() => {
           <p>{blogData[6]?.date}</p>
 
           <h1>{blogData[6]?.title}</h1>
-          <img loading="lazy" src={blogData[6]?.img} alt="" />
+          <img loading="lazy" src={blogData[6]?.img} alt="what is digital marketing, digital marketing is what" />
 
           <div className="keyword-research-content">
             <div className="blog-content">

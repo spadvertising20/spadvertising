@@ -126,7 +126,7 @@ export default function HighQualityContent() {
           <p>{blogData[2]?.date}</p>
 
           <h1>{blogData[2]?.title}</h1>
-          <img loading="lazy" src={blogData[2]?.img} alt="" />
+          <img loading="lazy" src={blogData[2]?.img} alt="seo content writer" />
           <div className="keyword-research-content">
             <div className="blog-content">
               {Contents.map((content, index) => (
