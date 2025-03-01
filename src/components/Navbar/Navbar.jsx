@@ -65,13 +65,17 @@ function Navbar() {
         <div className="menu">
           <ul className={`navbar-menu ${menubtn ? "active" : ""}`}>
             <Link to={"/"} className={menu === "Home" ? "active" : "deactive"}>
-              <p>Home</p>
+              <p className="menu-hover-con">
+                Home <div className="menu-hover"></div>
+              </p>
             </Link>
             <Link
               to={"/About"}
               className={menu === "About" ? "active" : "deactive"}
             >
-              <p>About</p>
+              <p className="menu-hover-con">
+                About <div className="menu-hover"></div>
+              </p>
             </Link>
             <div className="services">
               <div className="up-down">
@@ -111,19 +115,26 @@ function Navbar() {
               to={"/Clients"}
               className={menu === "Client" ? "active" : "deactive"}
             >
-              <p>Clients</p>
+              <p className="menu-hover-con">
+                Clients <div className="menu-hover"></div>
+              </p>
             </Link>
             <Link
               to={"/Portfolio"}
               className={menu === "Portfolio" ? "active" : "deactive"}
             >
-              <p>Portfolio</p>
+              <p className="menu-hover-con">
+                {" "}
+                Portfolio <div className="menu-hover"></div>
+              </p>
             </Link>
             <Link
               to={"/Blog"}
               className={menu === "Blog" ? "active" : "deactive"}
             >
-              <p>Blog</p>
+              <p className="menu-hover-con">
+                Blog <div className="menu-hover"></div>
+              </p>
             </Link>
           </ul>
         </div>

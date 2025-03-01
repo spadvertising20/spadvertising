@@ -81,9 +81,7 @@
     border-radius: 5px;
 }
 
-.deactive:hover {
-    color: white;
-}
+
 
 /* #home1{
     background-color: black;
@@ -115,7 +113,7 @@
 }
 
 .cart button {
-    background-color: #0864AE;
+    background-color:  #0864ae ;
     padding: 10px 8px 10px 8px;
     border-radius: 10px;
     cursor: pointer;
@@ -123,7 +121,9 @@
     font-size: 15px;
     border: hidden;
 }
-
+.cart button:hover{
+    background-color: #004c8a;
+}
 
 .services .up-down {
     display: flex;
@@ -162,10 +162,7 @@
     font-weight: 600;
 }
 
-.navbar-menu p:hover {
-    background-color: black;
-    color: white;
-}
+
 
 .services ul li {
     width: 100%;
@@ -301,6 +298,25 @@
 .menudropdown-icon {
     font-size: 20px;
 }
+.menu-hover-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-hover{
+    width: 0%;
+    height: 3px;
+    background-color: #00a2ff;
+    transition: .1s;
+    display: flex;
+   border-radius: 10px;
+}
+.menu-hover-con:hover .menu-hover{
+    width: 100%;
+    
+}
 
 @media (max-width:768px) {
     .menu ul {
@@ -354,3 +370,4 @@
         right: 05px;
     }
 }
+

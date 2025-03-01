@@ -17,8 +17,8 @@ function Homepage() {
       <AnimationHero />
       <RecentWork />
       <WhatWeDo />
-      <WhyChooseUs/>
       <HomeAbout />
+      <WhyChooseUs/>
       <HomeClients />
       <HomeBlog />
       {/* <FAQ/> */}

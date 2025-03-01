@@ -51,9 +51,9 @@
   
   .header-description {
     font-family: 'Quicksand', sans-serif;
-    font-weight: 700;
+    
     font-size: 1.125rem; /* text-lg */
-    width: 80%;
+    width: 60%;
     color: #6b7280; /* text-gray-500 */
   }
   
@@ -154,18 +154,18 @@
   
   .feature-card:nth-child(1) .feature-icon {
     background-color: #90baff; /* bg-red-100 */
+    color: #f63b3b; /* text-red-500 */
     
-    color: green;
   }
   
   .feature-card:nth-child(2) .feature-icon {
     background-color: #90baff; /* bg-yellow-100 */
-    color: #f63b3b; /* text-red-500 */
+    color: yellow;
   }
   
   .feature-card:nth-child(3) .feature-icon {
     background-color: #90baff; /* bg-blue-100 */
-    color: yellow;
+    color: green;
   }
   
   .feature-content {

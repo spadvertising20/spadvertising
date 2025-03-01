@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Zap, Target, LaptopMinimalCheck , Lightbulb } from "lucide-react";
+import { Zap, Target, LaptopMinimalCheck, Lightbulb } from "lucide-react";
 // import examining from "../../images/homepage/cost.jpg"; // Ensure this path is correct
 import "./WhyChooseUs.css";
 import goals from "../../assets/Home/goals.jpg";
@@ -8,18 +8,10 @@ import ideas from "../../assets/Home/ideas.jpg";
 
 const features = [
   {
-    id: 1,
-    icon: <LaptopMinimalCheck  className="w-6 h-6 text-red-600" />,
-    title: "Success",
-    description:
-      "Achieved through strategic planning, creativity, and data-driven execution.",
-    image: success,
-  },
-  {
     id: 2,
     icon: <Target className="w-6 h-6 text-yellow-600" />,
     title: "Goals",
-    description: "Defined with precision to maximize impact and growth.",
+    description: "We define precise objectives to maximize impact and drive sustainable growth.",
     image: goals,
   },
   {
@@ -27,8 +19,16 @@ const features = [
     icon: <Lightbulb className="w-6 h-6 text-blue-600" />,
     title: "Ideas",
     description:
-      "Innovative concepts that set brands apart in a competitive market.",
+      "We develop innovative concepts that make brands stand out in competitive markets.",
     image: ideas, // Restored image
+  },
+  {
+    id: 1,
+    icon: <LaptopMinimalCheck className="w-6 h-6 text-red-600" />,
+    title: "Success",
+    description:
+      "We achieve measurable success through strategic planning, creativity, and data-backed execution.",
+    image: success,
   },
 ];
 
@@ -41,13 +41,13 @@ export default function WhyChooseUs() {
         <div className="header">
           <div className="recent-work">
             <h1>
-              RECENT WORK<p>RECENT WORK</p>
+              <p>HOW WE DRIVE RESULTS</p>
             </h1>
           </div>
           <h1 className="header-title">Our Results-Driven Performance</h1>
           <p className="header-description">
-            Our data-driven approach, creative expertise, and strategic
-            execution ensure that every campaign maximizes ROI and achieves
+            We combine data-driven insights, creative expertise, and strategic
+            execution to ensure every campaign maximizes ROI and delivers
             outstanding results.
           </p>
         </div>

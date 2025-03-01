@@ -24,8 +24,8 @@
     gap: 80px;
 }
 .service-para {
-    font-size: 10px;
-    color: red;
+    font-size: 24px;
+    color: gray;
 }
 
 .service-box {
@@ -306,5 +306,9 @@
        
         font-size: 14px;
        
+    }
+    .service-para {
+        font-size: 16px;
+        color: gray;
     }
 }

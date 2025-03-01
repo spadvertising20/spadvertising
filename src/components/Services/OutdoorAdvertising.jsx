@@ -57,14 +57,14 @@ function OutdoorAdvertising() {
           <div className="topic-align1" id="topic-align2">
             <div className="topic-left" data-aos="fade-right">
               <h1>Mobile Hoarding</h1>
-              <p>
+              <div className="service-para">
                 Mobile Hoarding Advertising features large, movable panels on
                 vehicles, offering flexible campaigns that reach high-traffic
                 areas, events, or neighborhoods for dynamic exposure. SP
                 Advertising provides top-notch Best Mobile Hoarding Advertising
                 services, ensuring your brand gains maximum visibility and
                 impact on the go.
-              </p>
+              </div>
             </div>
             <img
               loading="lazy"
@@ -83,27 +83,27 @@ function OutdoorAdvertising() {
             />
             <div className="topic-left" data-aos="fade-right">
               <h1>Hoardings</h1>
-              <p>
+              <div className="service-para">
                 Hoarding Advertising involves large, stationary boards placed in
                 prominent locations to capture attention and deliver high-impact
                 campaigns to both pedestrians and drivers. SP Advertising excels
                 in providing Best Hoarding Advertising services, ensuring your
                 brand achieves maximum visibility in key locations.
-              </p>
+              </div>
             </div>
           </div>
 
           <div className="topic-align1" id="topic-align2">
             <div className="topic-left" data-aos="fade-right">
               <h1>Gantry</h1>
-              <p>
+              <div className="service-para">
                 Gantries Advertising utilizes large, elevated structures that
                 hold advertising panels or digital screens above roadways,
                 highways, or busy intersections. Designed for maximum visibility
                 from a distance, SP Advertising offers top-tier Best Gantries
                 Advertising services to ensure your brand captures the attention
                 of both drivers and pedestrians in high-traffic areas.
-              </p>
+              </div>
             </div>
             <img
               loading="lazy"
@@ -122,13 +122,13 @@ function OutdoorAdvertising() {
             />
             <div className="topic-left" data-aos="fade-right">
               <h1>Pole Kiosk</h1>
-              <p>
+              <div className="service-para">
                 Pole kiosks Advertising features small vertical panels mounted
                 on street poles, ideal for displaying posters or digital content
                 in urban and high-traffic areas. SP Advertising specializes in
                 Best Pole kiosks Advertising, providing strategic placements to
                 maximize brand visibility and reach in key locations.
-              </p>
+              </div>
             </div>
           </div>
         </div>
