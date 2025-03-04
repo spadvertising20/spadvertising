@@ -26,7 +26,7 @@ export default function HomeAbout() {
           </Link>
         </div>
         <LazyLoad>
-          <img loading="lazy" src={about_team} alt="media marketing agency" />
+          <img  src={about_team} alt="media marketing agency" />
         </LazyLoad>
       </div>
     </div>

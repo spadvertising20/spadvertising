@@ -29,7 +29,7 @@ export default function AnimationHero() {
               Get Services
               <div className="btn-hover">
                 <img
-                  loading="lazy"
+                  
                   src={right_arrow}
                   alt="Digital Marketing in Raipur"
                 />
@@ -75,7 +75,7 @@ export default function AnimationHero() {
               <div className="round-ele2">
                 <div className="hero-box">
                   <img
-                    loading="lazy"
+                    
                     src={hero_design}
                     alt="Top Advertising agency in Raipur"
                     className="img-rotate3"
@@ -83,7 +83,7 @@ export default function AnimationHero() {
                 </div>
                 <div className="hero-box">
                   <img
-                    loading="lazy"
+                    
                     src={hero_event}
                     alt="Advertising agency in Raipur"
                     className="img-rotate4"

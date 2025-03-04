@@ -56,7 +56,7 @@ export default function OurValues() {
           {valuecards.map((value) => (
             <div key={value.id} className="values-con-card">
               <img
-                loading="lazy"
+                
                 src={value.image}
                 alt="Event Promotion in Raipur"
               />

@@ -212,7 +212,7 @@ const Blog = () => {
 
             <div className="update-image">
               <img
-                loading="lazy"
+                
                 src={update_image}
                 alt="Digital Marketing Blog"
               />
@@ -235,7 +235,7 @@ const Blog = () => {
                     className="img-text"
                   >
                     <img
-                      loading="lazy"
+                      
                       src={article.img}
                       alt={article.altTag}
                     />

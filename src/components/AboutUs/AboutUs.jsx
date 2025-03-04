@@ -44,19 +44,19 @@ function AboutMe() {
           <div className="team-image">
             <div className="team-image-con">
               <img
-                loading="lazy"
+                
                 className="team-1"
                 src={team_img1}
                 alt="Digital marketing in Raipur"
               />
               <img
-                loading="lazy"
+                
                 className="team-2"
                 src={team_img2}
                 alt="Outdoor Advertising in Raipur"
               />
               <img
-                loading="lazy"
+                
                 className="team-3"
                 src={team_img3}
                 alt="Creative advertising agency"

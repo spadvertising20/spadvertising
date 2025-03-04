@@ -21,7 +21,7 @@ function OurTeam() {
             </p>
           </div>
           <img
-            loading="lazy"
+            
             src={vision}
             alt="Branding & Stradegy in Raipur"
             data-aos="fade-up"
@@ -30,7 +30,7 @@ function OurTeam() {
 
         <div className="our-mission ">
           <img
-            loading="lazy"
+            
             src={promise}
             alt="Print Media in Raipur"
             data-aos="fade-up"

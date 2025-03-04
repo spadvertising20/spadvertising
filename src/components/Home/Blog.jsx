@@ -60,7 +60,7 @@ export default function HomeBlog() {
             <div key={blog.id} className="homeblog-main-con">
               <div className="">
                 <div className="category-tag">{blog.category}</div>
-                <img loading="lazy" src={blog.image} alt="" />
+                <img  src={blog.image} alt="" />
               </div>
               <div className="homeblog-main-details">
                 <p>

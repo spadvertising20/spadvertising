@@ -41,7 +41,7 @@ function WhatWeDo() {
         <div className="whatwedo-box">
           <div className="wwd-box" data-aos="fade-up">
             <img
-              loading="lazy"
+              
               src={outdoor_ad1}
               alt="best digital marketing agencies"
               className="outdoor-image"
@@ -59,7 +59,7 @@ function WhatWeDo() {
             <div className="points">
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={blue_tick}
                   alt="social marketing agency"
                 />
@@ -67,7 +67,7 @@ function WhatWeDo() {
               </div>
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={blue_tick}
                   alt="top digital marketing agency"
                 />
@@ -75,7 +75,7 @@ function WhatWeDo() {
               </div>
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={blue_tick}
                   alt="marketing agency digital"
                 />
@@ -83,7 +83,7 @@ function WhatWeDo() {
               </div>
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={blue_tick}
                   alt="digital agency marketing"
                 />
@@ -93,7 +93,7 @@ function WhatWeDo() {
           </div>
           <div className="wwd-box" data-aos="fade-up">
             <img
-              loading="lazy"
+              
               src={digital_marketing}
               alt="best digital marketing firms"
               className="outdoor-image"
@@ -110,7 +110,7 @@ function WhatWeDo() {
             <div className="points">
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={purple_tick}
                   alt="digital marketing advertising agency"
                 />
@@ -118,7 +118,7 @@ function WhatWeDo() {
               </div>
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={purple_tick}
                   alt="digital marketing and advertising agency"
                 />
@@ -126,7 +126,7 @@ function WhatWeDo() {
               </div>
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={purple_tick}
                   alt="biggest digital marketing agencies"
                 />
@@ -134,7 +134,7 @@ function WhatWeDo() {
               </div>
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={purple_tick}
                   alt="top digital advertising agencies"
                 />
@@ -148,7 +148,7 @@ function WhatWeDo() {
             data-aos="fade-up"
           >
             <img
-              loading="lazy"
+              
               src={design_thinking}
               alt="top digital ad agencies"
               className="outdoor-image"
@@ -164,12 +164,12 @@ function WhatWeDo() {
             </p>
             <div className="points">
               <div className="points-box">
-                <img loading="lazy" src={yellow_tick} alt="google ads agency" />
+                <img  src={yellow_tick} alt="google ads agency" />
                 <p>Packaging</p>
               </div>
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={yellow_tick}
                   alt="digital advertising"
                 />
@@ -177,7 +177,7 @@ function WhatWeDo() {
               </div>
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={yellow_tick}
                   alt="marketing agency near me"
                 />
@@ -191,7 +191,7 @@ function WhatWeDo() {
             data-aos="fade-up"
           >
             <img
-              loading="lazy"
+              
               src={audio_visual}
               alt="advertising on linkedin"
               className="outdoor-image"
@@ -207,24 +207,24 @@ function WhatWeDo() {
             </p>
             <div className="points">
               <div className="points-box">
-                <img loading="lazy" src={lightblue_tick} alt="ad agency" />
+                <img  src={lightblue_tick} alt="ad agency" />
                 <p>Video Presentations</p>
               </div>
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={lightblue_tick}
                   alt="add business to google maps"
                 />
                 <p>Short Films / Documentary</p>
               </div>
               <div className="points-box">
-                <img loading="lazy" src={lightblue_tick} alt="ad network" />
+                <img  src={lightblue_tick} alt="ad network" />
                 <p>Radio & TV Commercials</p>
               </div>
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={lightblue_tick}
                   alt="advertising agency near me"
                 />
@@ -239,7 +239,7 @@ function WhatWeDo() {
             data-aos="fade-up"
           >
             <img
-              loading="lazy"
+              
               src={analysis}
               alt="creative agencies"
               className="outdoor-image"
@@ -256,7 +256,7 @@ function WhatWeDo() {
             <div className="points">
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={orange_tick}
                   alt="billboard companies"
                 />
@@ -264,7 +264,7 @@ function WhatWeDo() {
               </div>
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={orange_tick}
                   alt="digital marketing agency website"
                 />
@@ -272,7 +272,7 @@ function WhatWeDo() {
               </div>
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={orange_tick}
                   alt="advertisement video maker"
                 />
@@ -286,7 +286,7 @@ function WhatWeDo() {
             data-aos="fade-up"
           >
             <img
-              loading="lazy"
+              
               src={print_media}
               alt="ad agencies near me"
               className="outdoor-image"
@@ -303,23 +303,23 @@ function WhatWeDo() {
             <div className="points">
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={red_tick}
                   alt="best advertising agencies"
                 />
                 <p>News Paper Ads</p>
               </div>
               <div className="points-box">
-                <img loading="lazy" src={red_tick} alt="ad company" />
+                <img  src={red_tick} alt="ad company" />
                 <p>Brochure</p>
               </div>
               <div className="points-box">
-                <img loading="lazy" src={red_tick} alt="brand agencies" />
+                <img  src={red_tick} alt="brand agencies" />
                 <p>Pamphlet</p>
               </div>
               <div className="points-box">
                 <img
-                  loading="lazy"
+                  
                   src={red_tick}
                   alt="top advertising agencies"
                 />
