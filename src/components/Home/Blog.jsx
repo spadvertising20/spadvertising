@@ -12,23 +12,22 @@ export default function HomeBlog() {
     {
       id: "1",
       date_and_Category: "January 28, 2025",
-      title:
-        "Social Media Marketing: Best Practices for Engaging Your Audience.",
+      title: "Social Media Marketing: Best Practices for Engaging Your Audience.",
       image: digital_marketing_img1,
       link: "https://spadvertising.in/Blog",
       category: "Social Media",
     },
     {
-      id: "1",
-      date_and_Category: "January 17, 2025 ",
+      id: "2", // Unique ID
+      date_and_Category: "January 17, 2025",
       title: "Influencer Marketing: Driving Success and Growth in 2025.",
       image: digital_marketing_img2,
       link: "https://spadvertising.in/Blog",
       category: "Influencer Marketing",
     },
     {
-      id: "1",
-      date_and_Category: "January 17, 2025 ",
+      id: "3", // Unique ID
+      date_and_Category: "January 17, 2025",
       title: "What is Digital Marketing? Types, Examples and Benefits.",
       image: digital_marketing_img3,
       link: "https://spadvertising.in/Blog",
@@ -40,7 +39,7 @@ export default function HomeBlog() {
     <div className="homeblog">
       <div className="homeblog-title">
         <h1>
-          BLOGS<p>BLOGS</p>
+          BLOGS <p>BLOGS</p>
         </h1>
       </div>
       <div className="homeblog-con">
@@ -58,20 +57,18 @@ export default function HomeBlog() {
         <div className="homeblog-main">
           {blogs.map((blog) => (
             <div key={blog.id} className="homeblog-main-con">
-              <div className="">
+              <div>
                 <div className="category-tag">{blog.category}</div>
-                <img  src={blog.image} alt="" />
+                <img src={blog.image} alt={blog.title} />
               </div>
               <div className="homeblog-main-details">
                 <p>
-                  <SlCalender />
-                  {blog.date_and_Category}
+                  <SlCalender /> {blog.date_and_Category}
                 </p>
-                <h2 className="">{blog.title}</h2>
+                <h2>{blog.title}</h2>
                 <br />
                 <Link className="Link" to={blog.link}>
-                  Read More
-                  <FaArrowRight />
+                  Read More <FaArrowRight />
                 </Link>
               </div>
             </div>
