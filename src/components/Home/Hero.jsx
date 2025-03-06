@@ -28,24 +28,18 @@ export default function AnimationHero() {
             <button className="hero-btn">
               Get Services
               <div className="btn-hover">
-                <img
-                  
-                  src={right_arrow}
-                  alt="Digital Marketing in Raipur"
-                />
+                <img src={right_arrow} alt="Digital Marketing in Raipur" />
               </div>
             </button>
           </Link>
         </div>
         <div className="hero-anim-bg">
           <img
-          
             src={img_bg}
             alt="Advertising in Raipur"
             className="services-con"
           />
           <img
-          
             src={hero_bg}
             alt="Creatives Designing Services in Raipur"
             className="hero-anim-img"
@@ -57,7 +51,6 @@ export default function AnimationHero() {
               <div className="round-ele1">
                 <div className="hero-box">
                   <img
-                  
                     src={hero_outdoor}
                     alt="Advertising agency near me"
                     className="img-rotate1"
@@ -65,7 +58,6 @@ export default function AnimationHero() {
                 </div>
                 <div className="hero-box">
                   <img
-                  
                     src={hero_digital}
                     alt="Advertising agency jobs"
                     className="img-rotate2"
@@ -75,7 +67,6 @@ export default function AnimationHero() {
               <div className="round-ele2">
                 <div className="hero-box">
                   <img
-                    
                     src={hero_design}
                     alt="Top Advertising agency in Raipur"
                     className="img-rotate3"
@@ -83,7 +74,6 @@ export default function AnimationHero() {
                 </div>
                 <div className="hero-box">
                   <img
-                    
                     src={hero_event}
                     alt="Advertising agency in Raipur"
                     className="img-rotate4"

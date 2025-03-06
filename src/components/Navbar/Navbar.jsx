@@ -37,29 +37,11 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      {/* <div className="flag-banner">
-    < img loading="lazy" src={flag_banner} alt="" />
-    < img loading="lazy" src={flag_banner} alt="" />
-    < img loading="lazy" src={flag_banner} alt="" />
-    < img loading="lazy" src={flag_banner} alt="" />
-    < img loading="lazy" src={flag_banner} alt="" />
-    < img loading="lazy" src={flag_banner} alt="" />
-    < img loading="lazy" src={flag_banner} alt="" />
-    < img loading="lazy" src={flag_banner} alt="" />
-    < img loading="lazy" src={flag_banner} alt="" />
-    < img loading="lazy" src={flag_banner} alt="" />
-    < img loading="lazy" src={flag_banner} alt="" />
-    < img loading="lazy" src={flag_banner} alt="" />
-    < img loading="lazy" src={flag_banner} alt="" />
-
-      
-    </div> */}
-
       <div className="navbar-con">
         <div className="logo">
-          <Link to={"/"}>
-            <img loading="lazy" src={bg_logo} alt="" />
-          </Link>
+          <a href={"https://spadvertising.in/"}>
+            <img src={bg_logo} alt="" />
+          </a>
         </div>
 
         <div className="menu">

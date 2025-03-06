@@ -37,7 +37,7 @@ export default function HomeBlog() {
 
   return (
     <div className="homeblog">
-      <div className="homeblog-title">
+      <div className="about-title">
         <h1>
           BLOGS <p>BLOGS</p>
         </h1>

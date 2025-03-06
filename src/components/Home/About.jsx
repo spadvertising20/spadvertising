@@ -1,9 +1,7 @@
 import React from "react";
 import "./About.css";
 import about_team from "../../assets/AboutMe/about-imge1.jpg";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
-import LazyLoad from "react-lazyload";
+import { Link } from "react-router-dom";  
 
 export default function HomeAbout() {
   return (
@@ -25,9 +23,9 @@ export default function HomeAbout() {
             <button>About Us</button>
           </Link>
         </div>
-        <LazyLoad>
-          <img  src={about_team} alt="media marketing agency" />
-        </LazyLoad>
+        
+          <img src={about_team} alt="media marketing agency" />
+        
       </div>
     </div>
   );
