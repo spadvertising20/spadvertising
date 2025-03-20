@@ -316,7 +316,11 @@ function Portfolio() {
         </div>
       </div>
       <div className="port-slider">
-        <h2>Outdoor Advertising</h2>
+      <div className="portfolio-title">
+        <h1>
+        OUTDOOR ADVERTISING<p>OUTDOOR ADVERTISING</p>
+        </h1>
+      </div>
         <Slider {...settings1} className="portfolio-slider">
           {/* <div>
   < img loading="lazy" src={outdoor_img1} alt=""   />
@@ -365,7 +369,12 @@ function Portfolio() {
         </Slider>
       </div>
       <div className="port-slider">
-        <h2>Digital Marketing</h2>
+      <div className="portfolio-title">
+        <h1>
+        DIGITAL MARKETING<p>DIGITAL MARKETING</p>
+        </h1>
+      </div>
+        
         <Slider {...settings2} className="portfolio-slider">
           <div className="portfolio-dm">
             <img
@@ -412,7 +421,12 @@ function Portfolio() {
         </Slider>
       </div>
       <div className="port-slider">
-        <h2>Creative Designs</h2>
+      <div className="portfolio-title">
+        <h1>
+        CREATIVE DESIGNS<p>CREATIVE DESIGNS</p>
+        </h1>
+      </div>
+        
         <Slider {...settings3} className="portfolio-slider">
           <div>
             <img
@@ -479,7 +493,12 @@ function Portfolio() {
         </Slider>
       </div>
       <div className="port-slider">
-        <h2>Print Media</h2>
+      <div className="portfolio-title">
+        <h1>
+        PRINT MEDIA<p>PRINT MEDIA</p>
+        </h1>
+      </div>
+        
         <Slider {...settings4} className="portfolio-slider">
           <div>
             <img
@@ -501,7 +520,12 @@ function Portfolio() {
         </Slider>
       </div>
       <div className="port-slider">
-        <h2>In-shop Branding</h2>
+      <div className="portfolio-title">
+        <h1>
+        IN-SHOP BRANDING<p>IN-SHOP BRANDING</p>
+        </h1>
+      </div>
+        
         <Slider {...settings5} className="portfolio-slider">
           <div>
             <img
@@ -561,7 +585,12 @@ function Portfolio() {
         </Slider>
       </div>
       <div className="port-slider">
-        <h2>Event Promotion</h2>
+      <div className="portfolio-title">
+        <h1>
+        EVENT PROMOTION<p>EVENT PROMOTION</p>
+        </h1>
+      </div>
+      
         <Slider {...settings6} className="portfolio-slider">
           <div>
             <img
@@ -594,7 +623,12 @@ function Portfolio() {
         </Slider>
       </div>
       <div className="port-slider">
-        <h2>Website Development</h2>
+      <div className="portfolio-title">
+        <h1>
+        WEBSITE DEVELOPMENT<p>WEBSITE DEVELOPMENT</p>
+        </h1>
+      </div>
+        
         <Slider {...settings5} className="portfolio-slider-website">
           <div className="website-con">
             <a href="https://cleveryoungsters.in/">
@@ -659,7 +693,12 @@ loading="lazy"
         </Slider>
       </div>
       <div className="port-slider ">
-        <h2>Videos Promotions</h2>
+      <div className="portfolio-title">
+        <h1>
+        VIDEOS PROMOTION<p>VIDEOS PROMOTION</p>
+        </h1>
+      </div>
+        
         <Slider {...settings4} className="youtube-video">
           <div>
             <iframe

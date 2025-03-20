@@ -43,7 +43,7 @@ function PrintMedia() {
             </Link>
           </div>
           <div className="service-right">
-            <img loading="lazy" src={print} alt="Print Media in in Raipur" />
+            <img src={print} alt="Print Media in in Raipur" />
           </div>
         </div>
       </div>

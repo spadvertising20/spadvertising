@@ -4,127 +4,153 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+            
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
   <loc>https://spadvertising.in/</loc>
-  <lastmod>2024-12-04T12:44:31+00:00</lastmod>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>daily</changefreq>
   <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://spadvertising.in/Outdoor-Advertising-in-Raipur</loc>
-  <lastmod>2024-12-04T12:44:31+00:00</lastmod>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 
 <url>
   <loc>https://spadvertising.in/Digital-Marketing-in-Raipur</loc>
-  <lastmod>2024-12-04T12:44:31+00:00</lastmod>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 
 <url>
   <loc>https://spadvertising.in/Designing-Services-in-Raipur</loc>
-  <lastmod>2024-12-04T12:44:31+00:00</lastmod>
-  <priority>0.90</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
 </url>
 
 <url>
   <loc>https://spadvertising.in/Print-Media-in-Raipur</loc>
-  <lastmod>2024-12-04T12:44:31+00:00</lastmod>
-  <priority>0.90</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
 </url>
 
 <url>
   <loc>https://spadvertising.in/Branding-Strategy-in-Raipur</loc>
-  <lastmod>2024-12-04T12:44:31+00:00</lastmod>
-  <priority>0.90</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
 </url>
 
 <url>
   <loc>https://spadvertising.in/Event-Promotion-in-Raipur</loc>
-  <lastmod>2024-12-04T12:44:31+00:00</lastmod>
-  <priority>0.90</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
 </url>
 
 <url>
   <loc>https://spadvertising.in/About</loc>
-  <lastmod>2024-12-04T12:44:31+00:00</lastmod>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>yearly</changefreq>
   <priority>0.80</priority>
 </url>
 
 <url>
   <loc>https://spadvertising.in/Clients</loc>
-  <lastmod>2024-12-04T12:44:31+00:00</lastmod>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>yearly</changefreq>
   <priority>0.80</priority>
 </url>
 
 <url>
   <loc>https://spadvertising.in/Portfolio</loc>
-  <lastmod>2024-12-04T12:44:31+00:00</lastmod>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>yearly</changefreq>
   <priority>0.80</priority>
 </url>
 
 <url>
   <loc>https://spadvertising.in/Blog</loc>
-  <lastmod>2024-12-04T12:44:31+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.75</priority>
 </url>
 
 <!-- New Blog Pages -->
 <url>
   <loc>https://spadvertising.in/Blog/Keyword-Research</loc>
-  <priority>0.70</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://spadvertising.in/Blog/SEO-Optimization</loc>
-  <priority>0.70</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://spadvertising.in/Blog/High-Quality-Content</loc>
-  <priority>0.70</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://spadvertising.in/Blog/Businesses-Prepare-for-Emerging-Trends</loc>
-  <priority>0.70</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://spadvertising.in/Blog/Holiday-Sales-Strategies</loc>
-  <priority>0.70</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://spadvertising.in/Blog/Advertising-Tools-and-Techniques</loc>
-  <priority>0.70</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://spadvertising.in/Blog/What-is-Digital-Marketing</loc>
-  <priority>0.70</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://spadvertising.in/Blog/Influencer-Marketing</loc>
-  <priority>0.70</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://spadvertising.in/Blog/Social-Media-Marketing</loc>
-  <priority>0.70</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://spadvertising.in/Blog/Benefits-of-Outdoor-Advertising</loc>
-  <priority>0.70</priority>
+  <lastmod>2024-12-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.60</priority>
 </url>
 
 <url>
   <loc>https://spadvertising.in/Contact</loc>
-  <lastmod>2024-12-04T12:44:31+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://spadvertising.in/favicon.png</loc>
-  <lastmod>2024-01-01</lastmod>
+  <lastmod>2024-12-04</lastmod>
   <changefreq>yearly</changefreq>
-  <priority>0.1</priority>
+  <priority>0.80</priority>
 </url>
 
 </urlset>

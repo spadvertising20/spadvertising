@@ -7,25 +7,26 @@
     z-index: 10;
     box-shadow: 0 0 10px gainsboro;
     background-color: white;
-   
+
     z-index: 100;
-   
+
 }
 
-.decor-con1{
-    
+.decor-con1 {
+
     display: flex;
     position: absolute;
     justify-content: center;
     transform: translate(-0%, -45%);
     z-index: -20;
 }
-.decor1{
+
+.decor1 {
     width: 500px;
-    
- 
-    
-    
+
+
+
+
 }
 
 .navbar-con {
@@ -34,47 +35,65 @@
     align-items: center;
     width: 90%;
     max-width: 1200px;
-   
+
 }
-.flag-banner{
+
+.flag-banner {
     width: 100%;
     position: absolute;
     top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    }
-.flag-banner img{
-   z-index: 1;
+}
+
+.flag-banner img {
+    z-index: 1;
     width: 100px;
     left: 0;
-    
+
 }
-.logo{
+
+.logo {
     position: relative;
 }
+
 .logo img {
     width: 220px;
     position: relative;
     padding-top: 3px;
 }
-.bg-logo2{
+
+.bg-logo2 {
     position: relative;
     left: -210px;
     top: 10px;
     z-index: -1;
     -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 .menu ul {
     display: flex;
     gap: 18px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 17px;
     font-style: normal;
 }
 
+.dropdown-menu li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    text-align: left;
+    padding: 10px;
+    border-bottom: rgb(238, 238, 238) 1px solid;
+}
+.services-dropdown ul li:hover {
+    background-color: rgb(230, 248, 255);
+}
 .active {
 
 
@@ -113,7 +132,7 @@
 }
 
 .cart button {
-    background-color:  #0864ae ;
+    background-color: #0864ae;
     padding: 10px 8px 10px 8px;
     border-radius: 10px;
     cursor: pointer;
@@ -121,7 +140,8 @@
     font-size: 15px;
     border: hidden;
 }
-.cart button:hover{
+
+.cart button:hover {
     background-color: #004c8a;
 }
 
@@ -137,6 +157,11 @@
 
 .services:hover img {
     transform: translate(0px, 1px) rotate(180deg);
+}
+
+.services .up-down {
+    position: relative;
+    bottom: 1px;
 }
 
 .services ul {
@@ -159,9 +184,14 @@
     padding: 3px;
     border-radius: 5px;
 
-    font-weight: 600;
 }
 
+.navbar-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
 
 
 .services ul li {
@@ -235,19 +265,23 @@
 .menu-btn {
     position: absolute;
     background-color: white;
+    overflow: scroll;
     width: 70%;
     height: 100vh;
     top: 64px;
     text-align: left;
     border-left: rgb(238, 238, 238) 1px solid;
 }
-
+.menu-btn-services-icon{
+    color:#00a2ff ;
+}
 .menu-btn-services p {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 18px;
     text-align: left;
+    color:black ;
     padding: 10px;
     border-bottom: rgb(238, 238, 238) 1px solid;
 }
@@ -298,33 +332,38 @@
 .menudropdown-icon {
     font-size: 20px;
 }
-.menu-hover-con{
+
+.menu-hover-con {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.menu-hover{
+.menu-hover {
     width: 0%;
     height: 3px;
     background-color: #00a2ff;
     transition: .1s;
     display: flex;
-   border-radius: 10px;
+    border-radius: 10px;
 }
-.menu-hover-con:hover .menu-hover{
+
+
+.menu-hover-con:hover .menu-hover {
     width: 100%;
-    
+
 }
 
 @media (max-width:768px) {
     .menu ul {
         display: none;
     }
-.navbar{
-    padding-top: 5px;
-}
+
+    .navbar {
+        padding-top: 5px;
+    }
+
     .watsapp img {
         width: 50px;
         height: 50px;
@@ -356,7 +395,7 @@
 
 
     }
-    
+
 
     .menu-btn-con {
         display: block;
@@ -370,4 +409,3 @@
         right: 05px;
     }
 }
-

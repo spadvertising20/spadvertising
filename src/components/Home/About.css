@@ -1,4 +1,4 @@
-.home-about{
+.home-about {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -7,25 +7,29 @@
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
-.about-title{
+
+.about-title {
     line-height: 0;
     font-family: sans-serif;
     margin-bottom: 20px;
 }
-.about-title p{
+
+.about-title p {
     color: #00aeff;
     font-size: 28px;
     font-weight: 700;
     text-align: center;
-    
+
 }
-.about-title h1{
+
+.about-title h1 {
     color: #F0F0F0;
     font-size: 60px;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
-.home-about-con{
+
+.home-about-con {
     width: 90%;
     max-width: 1200px;
     display: flex;
@@ -34,24 +38,26 @@
     gap: 20px;
 }
 
-.home-about-con img{
+.home-about-con img {
     width: 40vw;
     max-width: 1300px;
-    
+
     border-radius: 10px;
 }
-.home-content{
+
+.home-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-   
+
     gap: 10px;
-    
+
 }
+
 /* .home-content h1{
     font-size:2rem;
 } */
-.home-content button{
+.home-content button {
     width: 30%;
     padding: 10px;
     border-radius: 10px;
@@ -62,25 +68,31 @@
 }
 
 @media (max-width:768px) {
-    .home-about-con{
+    .home-about-con {
         flex-direction: column-reverse;
     }
-    .home-content{
+
+    .home-content {
         align-items: center;
         text-align: center;
         width: 100%;
     }
-    .home-content button{
+
+    .home-content button {
         width: 100%;
     }
-    .about-title h1{
+
+    .about-title h1 {
         color: #F0F0F0;
-        font-size: 50px;}
-    .home-content h1{
+        font-size: 50px;
+    }
+
+    .home-content h1 {
         font-size: 30px;
     }
-    .home-about-con img{
+
+    .home-about-con img {
         width: 90vw;
-        
+
     }
 }

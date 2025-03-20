@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
         <div className="header">
           <div className="recent-work">
             <h1>
-              <p>HOW WE DRIVE RESULTS</p>
+            DRIVE RESULTS<p>HOW WE DRIVE RESULTS</p>
             </h1>
           </div>
           <h1 className="header-title">Our Results-Driven Performance</h1>

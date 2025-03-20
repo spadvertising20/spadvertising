@@ -43,7 +43,7 @@ export default function AudioVisuals() {
             </Link>
           </div>
           <div className="service-right">
-            <img loading="lazy" src={outdoor_img1} alt="Audio " />
+            <img src={outdoor_img1} alt="Audio " />
           </div>
         </div>
       </div>

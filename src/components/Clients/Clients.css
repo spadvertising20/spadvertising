@@ -95,9 +95,6 @@
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
-    .welcome {
-      padding: 30px 10px;
-    }
   
     .welcome h1 {
       font-size: 2rem;

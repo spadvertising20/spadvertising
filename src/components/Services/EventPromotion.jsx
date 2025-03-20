@@ -42,7 +42,7 @@ function EventPromotion() {
           </div>
           <div className="service-right">
             <img
-              loading="lazy"
+              
               src={event}
               alt="Event Promotion in Raipur"
               data-aos="zoom-in"

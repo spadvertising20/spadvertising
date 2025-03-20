@@ -42,7 +42,7 @@ function BrandingStrategy() {
             </Link>
           </div>
           <div className="service-right">
-            <img loading="lazy" src={brand} alt="Branding Strategy in Raipur" />
+            <img src={brand} alt="Branding Strategy in Raipur" />
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import facebook from "../../assets/Footer/facebook.png";
 import instagram from "../../assets/Footer/instagram.png";
 import linkedin from "../../assets/Footer/linkedin.png";
 import youtube from "../../assets/Footer/youtube.png";
-import logo from "../../assets/Navbar/logo.webp";
+import logo from "../../assets/Footer/logo-footer.png";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -23,6 +23,7 @@ function Footer() {
           </div>
 
           <div className="footer-contact">
+            <div className="pages-con">
             <h2>Pages</h2>
             <div className="pages">
               <Link to={"/"}>
@@ -44,9 +45,11 @@ function Footer() {
                 <p>Career</p>
               </Link>
             </div>
+            </div>
           </div>
 
           <div className="footer-service">
+            <div className="pages-con">
             <h2>Services</h2>
             <div className="pages">
               <Link to={"/Outdoor-Advertising-in-Raipur"}>
@@ -71,6 +74,7 @@ function Footer() {
                 <p>Print Media</p>
               </Link>
             </div>
+            </div>
           </div>
 
           <div className="div2">
@@ -81,17 +85,29 @@ function Footer() {
                 <p>spadvertising@live.com</p>
               </div>
               <div className="icons">
-                <a href="https://www.facebook.com/spadvertisingraipur">
-                  <img loading="lazy" src={facebook} alt="" />
+                <a
+                  href="https://www.facebook.com/spadvertisingraipur"
+                  aria-label="Visit our Facebook page"
+                >
+                  <img loading="lazy" src={facebook} alt="Facebook Icon" /> 
                 </a>
-                <a href="https://www.instagram.com/spadvertisingrpr/">
-                  <img loading="lazy" src={instagram} alt="" />
+                <a
+                  href="https://www.instagram.com/spadvertisingrpr/"
+                  aria-label="Visit our Instagram page"
+                >
+                  <img loading="lazy" src={instagram} alt="Instagram Icon" />
                 </a>
-                <a href="https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all">
-                  <img loading="lazy" src={linkedin} alt="" />
+                <a
+                  href="https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
+                  aria-label="Visit our LinkedIn page"
+                >
+                  <img loading="lazy" src={linkedin} alt="LinkedIn Icon" />
                 </a>
-                <a href="https://www.youtube.com/@spadvertising530">
-                  <img loading="lazy" src={youtube} alt="" />
+                <a
+                  href="https://www.youtube.com/@spadvertising530"
+                  aria-label="Visit our YouTube channel"
+                >
+                  <img loading="lazy" src={youtube} alt="YouTube Icon" />
                 </a>
               </div>
             </div>

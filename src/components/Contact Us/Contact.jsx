@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Contact.css";
 import { Helmet } from "react-helmet";
 
 function Contact() {
   const [result, setResult] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const formRef = useRef(null);
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
+    setResult("Sending...");
+    setIsLoading(true);
 
+    const formData = new FormData(formRef.current);
     formData.append("access_key", import.meta.env.VITE_KEY);
 
     try {
@@ -18,92 +21,74 @@ function Contact() {
         body: formData,
       });
 
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
+      if (!response.ok) throw new Error("Network response was not ok");
 
       const data = await response.json();
 
       if (data.success) {
-        setResult("Form Submitted Successfully");
-        event.target.reset();
+        setResult("✅ Form Submitted Successfully!");
+        formRef.current.reset();
       } else {
-        console.log("Error", data);
-        setResult(data.message);
+        console.error("Error:", data);
+        setResult("❌ " + data.message);
       }
     } catch (error) {
-      console.error("Fetch error: ", error);
-      setResult("There was an error submitting the form.");
+      console.error("Fetch error:", error);
+      setResult("❌ There was an error submitting the form.");
+    } finally {
+      setIsLoading(false);
+      setTimeout(() => setResult(""), 5000);
     }
   };
 
   return (
-    <div className="contact" id="contact">
-     
+    <div className="contact-section" id="contact">
       <Helmet>
         <title>Contact SP Advertising | Leading Advertising Agency in Raipur</title>
-        <meta
-          name="description"
-          content="Reach out to SP Advertising in Raipur, including Outdoor Advertising, digital marketing, web development, Designing services, and SEO."
-        />
-        <meta
-          name="keywords"
-          content="contact us, Contact SP Advertising, Raipur best services, Digital Marketing in Raipur, Digital solutions Raipur, Web development Raipur, Mobile app development Raipur, Digital marketing Raipur, SEO services Raipur"/>
+        <meta name="description" content="Reach out to SP Advertising in Raipur for Outdoor Advertising, digital marketing, web development, designing services, and SEO." />
+        <meta name="keywords" content="contact us, Contact SP Advertising, Raipur best services, Digital Marketing in Raipur, Web development Raipur, SEO services Raipur" />
       </Helmet>
-      <div className="contact-con">
-        <div className="contact-box">
-          <div className="contact-details-left">
-            <h1 className="contact-heading">Contact Us</h1>
-            <p data-aos="fade-up" data-aos-duration="300">
-              Feel free to get in touch with us through any of the following
-              means. Whether you have inquiries, collaboration opportunities, or
-              just want to say hello, we're here to listen.
+
+      <div className="contact-container">
+        <div className="contact-content">
+          {/* Left Contact Details */}
+          <div className="contact-info">
+            <h1 className="contact-title">Contact Us</h1>
+            <p className="contact-text">
+              Feel free to reach out for inquiries, collaborations, or just to say hello. We're here to help!
             </p>
-            <h2>Get In Touch</h2>
-            <p>+91-8085354646</p>
-            <p>spadvertising@live.com</p>
+            <h2>📞 Get In Touch</h2>
+            <p className="contact-detail">+91-8085354646</p>
+            <p className="contact-detail">✉️ spadvertising@live.com</p>
           </div>
-          <div className="contact-details-right">
-            <form onSubmit={onSubmit}>
-              <h1>Get In Touch</h1>
-              <div className="input">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Full Name"
-                  required
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone Number"
-                  required
-                />
-                <select name="service" required>
-                  <option value="Select Your Service">
-                    Select Your Service
-                  </option>
-                  <option value="Outdoor Advertising">
-                    Outdoor Advertising
-                  </option>
+
+          {/* Right Form Section */}
+          <div className="contact-form-container">
+            <form ref={formRef} onSubmit={onSubmit} className="contact-form">
+              <h2 className="form-title">GET IN TOUCH</h2>
+
+              <div className="form-group">
+                <input type="text" name="name" placeholder="Full Name" required className="form-input" />
+                <input type="tel" name="phone" placeholder="Phone Number" required className="form-input" />
+                <select name="service" required className="form-select">
+                  <option value="">Select Your Service</option>
+                  <option value="Outdoor Advertising">Outdoor Advertising</option>
                   <option value="Digital Marketing">Digital Marketing</option>
+                  <option value="Society Branding">Society Branding</option>
                   <option value="Designing Services">Designing Services</option>
+                  <option value="Audio Visuals">Audio Visuals</option>
                   <option value="Print Media">Print Media</option>
-                  <option value="Branding & Strategy">
-                    Branding & Strategy
-                  </option>
+                  <option value="Branding & Strategy">Branding & Strategy</option>
                   <option value="Event Promotion">Event Promotion</option>
                 </select>
               </div>
-              <div className="desc">
-                <textarea
-                  name="message"
-                  className="description"
-                  placeholder="Describe Your Project..."
-                  required
-                />
-                <button type="submit">Massage Us</button>
-                <span>{result}</span>
+
+              <div className="form-group">
+                <textarea name="message" placeholder="Describe Your Project..." required className="form-textarea"></textarea>
+                <button type="submit" disabled={isLoading} className="form-button">
+                  {isLoading ? "Sending..." : "Message Us"}
+                </button>
+                {result && <span className={`form-message ${result.includes("✅") ? "success" : "error"}`}>{result}</span>}
               </div>
             </form>
           </div>

@@ -53,7 +53,7 @@ function SocietyBranding() {
             </Link>
           </div>
           <div className="service-right">
-            <img loading="lazy" src={outdoor_img1} alt="society branding" />
+            <img src={outdoor_img1} alt="society branding" />
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@
     flex-direction: column;
     align-items: center;
     width: 90%;
-    max-width: 1200px;
+    
     gap: 80px;
     margin-top: 4rem;
 }
@@ -24,8 +24,10 @@
     gap: 80px;
 }
 .service-para {
-    font-size: 24px;
+    font-size: 18px;
     color: gray;
+    padding-block: 10px;
+ 
 }
 
 .service-box {
@@ -92,7 +94,7 @@
 
 
 .service-con button {
-    width: 200px;
+    width: 90%;
     padding: 20px;
     border-radius: 50px;
     border: hidden;
@@ -106,7 +108,7 @@
 }
 
 .topic-align1 {
-    align-items: center;
+    align-items: start;
     flex-direction: row;
     display: flex;
     justify-content: space-between;
@@ -118,18 +120,10 @@
 
 }
 
-.topic-left {
-    width: 30rem;
-}
 
-.topic-left p {
-    color: gray;
-
-
-}
 
 .topic-align1 img {
-    width: 40vw;
+    width: 30rem;
     border: 5px solid black;
   
 }
@@ -218,13 +212,60 @@
     color: #265AA5;
 }
 
+.topic-left h2{
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.service-btn{
+    display: flex;
+    gap: 10px;
+}
+.service-btn1, .service-btn2{
+    width: 10vw;
+    min-width: 120px;
+    min-height: 10px;
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: none; /* Removed hidden, as it's not needed */
+    background-color: #0864ae;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 18px 8px 8px 8px; /* top, right, bottom, left */
+    cursor: pointer; /* For better UX */
+}
+.service-btn1{
+    background-color: #007BFF;
+}
+
+.service-btn2{
+    background-color: #128C7E;
+}
+
+.topic-left ul{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
 
 @media (max-width:768px) {
 
     .service-box {
         flex-direction: column;
     }
-
+    .service-con button {
+        width: 38vw;
+        
+    }
+    .topic-left ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
     .service-left {
         width: 100%;
         color: #265AA5;
@@ -260,8 +301,11 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        text-align: center;
+        
         gap: 10px;
+    }
+    .topic-left h1{
+        text-align: center;
     }
 
     .topic-align1 img {
@@ -276,6 +320,10 @@
 
     .topic-left h1 {
         font-size: 35px;
+    }
+    .topic-left h2{
+        font-size: 28px;
+        text-align: left;
     }
 
     .align2 {
@@ -310,5 +358,6 @@
     .service-para {
         font-size: 16px;
         color: gray;
+        text-align: center;
     }
 }
