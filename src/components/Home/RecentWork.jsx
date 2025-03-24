@@ -96,50 +96,50 @@ const Showcase = () => {
       <Slider {...settings} className="slide-con">
         <div>
           <img
-            
             src={showcase1}
             alt="Advertising agency in India"
+            loading="lazy"
           />
         </div>
         <div>
           <img
-            
             src={showcase2}
             alt="Advertising agency near raipur chhattisgarh"
+            loading="lazy"
           />
         </div>
         <div>
           <img
-            
             src={showcase3}
             alt="advertising and marketing agency in raipur"
+            loading="lazy"
           />
         </div>
         <div>
           <img
-            
             src={showcase4}
             alt="social media marketing agency"
+            loading="lazy"
           />
         </div>
         <div>
           <img
-            
             src={showcase5}
             alt="digital marketing agencies"
+            loading="lazy"
           />
         </div>
         <div>
           <img
-            
             src={showcase6}
             alt="digital marketing agency near me"
+            loading="lazy"
           />
         </div>
       </Slider>
       <Link to={"/Portfolio"}>
         <button type="button" aria-label="Go to Portfolio">
-          See more...
+          See more... 
         </button>
       </Link>
     </div>

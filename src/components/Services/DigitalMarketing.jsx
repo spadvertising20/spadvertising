@@ -24,7 +24,7 @@ function DigitalMarketing() {
       .querySelector("meta[name='keywords']")
       ?.setAttribute(
         "content",
-        "digital marketing agency, digital marketing company, best digital marketing agency, digital marketing agency near me, digital marketing company, digital marketing services, digital marketing near me, digital marketing agency near me, best digital marketing agencies"
+        "digital marketing services, digital marketing agency, marketing digital marketing, digital agency marketing, digital marketing company in raipur, digital marketing course in raipur, digital marketing in raipur, digital marketing agency in raipur, best digital marketing course in raipur"
       );
   }, []);
 
@@ -52,14 +52,18 @@ function DigitalMarketing() {
           <div className="topic-align1" id="topic-align2">
             <div className="topic-left" data-aos="fade-right">
               <h1>
-                Unlock Your Digital Potential with Our Expert Web Development
-                Services
+                Make Use of Our Expert Web Development Services to Unlock Your
+                Potential Online
               </h1>
               <div className="service-para">
-                Looking for top-notch <a href="" aria-label="web development services">web development services</a>?
-                Your search ends here! We are a leading website development
-                company dedicated to crafting innovative, user-friendly, and
-                high-performance websites that drive success.
+                Looking for top-notch{" "}
+                <a href="" aria-label="web development services">
+                  web development services
+                </a>
+                ? Are you trying to find the best web development services? This
+                is where your hunt is over! As a top website creation business,
+                we are committed to creating cutting-edge, intuitive, and
+                effective websites that promote success.
               </div>
               <h2>Why Choose Us?</h2>
               <ul>
@@ -114,46 +118,46 @@ function DigitalMarketing() {
               data-aos="zoom-in"
             />
             <div className="topic-left" data-aos="fade-right">
-              <h1>Boost Your Online Presence with Our Expert SEO Services</h1>
+              <h1>Increase Online Visibility with Skilled SEO Services!</h1>
               <div className="service-para">
-                Want to rank higher on Google and drive more traffic? Our
-                professional <a href="" aria-label="SEO / SEM Optimization services">SEO / SEM Optimization services</a> are designed to help businesses
-                dominate search results and attract the right audience.
+                Looking to rank higher on search engines and attract more
+                customers? Your search ends here! We are a leading SEO agency
+                specializing in SEO Engine Optimization to drive organic traffic
+                and maximize your online success.
               </div>
-              <h2>What We Offer:</h2>
+              <h2>Why Choose Us?</h2>
               <ul>
                 <li>
-                  <strong> SEO Engine Optimization –</strong> Improve your
-                  website’s visibility with cutting-edge strategies.
+                  <strong> Top-Rated SEO Services –</strong> We implement
+                  powerful strategies to improve your website’s search rankings.
                 </li>
                 <li>
-                  <strong> SEO Search Optimization –</strong> Optimize your site
-                  for top rankings on major search engines.
+                  <strong> Expert SEO Optimization Service –</strong> Our
+                  specialists use cutting-edge techniques for maximum
+                  visibility.
                 </li>
                 <li>
-                  <strong> Search Engine Positioning SEO –</strong> Stay ahead
-                  of the competition with smart keyword targeting.
+                  <strong> Search Engine Positioning SEO –</strong> Get ahead of
+                  your competitors with strategic keyword targeting.
                 </li>
                 <li>
-                  <strong> SEO Optimization Service –</strong> Get tailored
-                  solutions for your business growth.
+                  <strong> Advanced SEO Search Engine Tools –</strong> We
+                  leverage the latest tools to track, analyze, and enhance
+                  performance.
                 </li>
                 <li>
-                  <strong> Search Engine Optimisation SEO –</strong> Enhance
-                  your brand’s online credibility.
-                </li>
-                <li>
-                  <strong> Search Engine Optimization Tool –</strong> Leverage
-                  powerful tools to track and improve performance.
-                </li>
-                <li>
-                  <strong> Internet Search Optimization –</strong> Expand your
-                  reach and connect with more potential customers.
+                  <strong> Customized Search Optimization –</strong> Tailored
+                  solutions to boost your brand’s online authority.
                 </li>
               </ul>
               <div className="service-para">
-                🚀 Let’s take your business to the next level! Contact us today
-                for top-notch search optimization services!
+                Whether you need SEO Search Optimization for a new website or
+                want to improve your current Search Engine Optimisation SEO,
+                we’ve got you covered!
+              </div>
+              <div className="service-para">
+                📩 Contact us today and let’s take your website to the top of
+                search results! 🚀
               </div>
               <div className="service-btn">
                 <a href="https://spadvertising.in/Contact">
@@ -168,58 +172,56 @@ function DigitalMarketing() {
 
           <div className="topic-align1" id="topic-align2">
             <div className="topic-left" data-aos="fade-right">
-              <h1>Powerful Social Media Marketing to Grow Your Brand 🚀</h1>
+              <h1>
+                Increase the Visibility of Your Brand with Skilled Social Media
+                Promotion!
+              </h1>
               <div className="service-para">
-                Looking to expand your online presence and boost engagement? Our
-                expert <a href="" aria-label="social media marketing agency">social media marketing agency</a> helps businesses thrive
-                through strategic SMM marketing and targeted campaigns.
+                Struggling to get noticed online? Our Facebook Advertising
+                Management and Social Media Marketing services help businesses
+                like yours stand out, engage audiences, and drive real results.
               </div>
-              <h2>Our Social Media Marketing Services Include:</h2>
-              <ul>
-                <li>
-                  <strong> Facebook Advertising Management –</strong> Maximize
-                  ROI with data-driven Facebook ad strategies.
-                </li>
-                <li>
-                  <strong> Social Media Marketing (SMM) –</strong> Increase
-                  brand awareness and customer engagement.
-                </li>
-                <li>
-                  <strong> Marketing Through Social Media –</strong> Reach the
-                  right audience with effective content marketing.
-                </li>
-                <li>
-                  <strong> SNS Marketing –</strong> Optimize your brand’s
-                  visibility across all social networks.
-                </li>
-                <li>
-                  <strong> Social Media and Marketing –</strong> Build strong
-                  connections and grow your community.
-                </li>
-                <li>
-                  <strong> SMM Social Media Marketing –</strong> Generate leads
-                  and boost conversions with smart campaigns.
-                </li>
-                <li>
-                  <strong> Social Media Mar & Media in Marketing –</strong>{" "}
-                  Utilize multimedia strategies for better reach.
-                </li>
-              </ul>
               <h2>Why Choose Us?</h2>
               <ul>
                 <li>
-                  Expert social media marketing agency with proven results
+                  <strong> Top-Tier SMM Marketing –</strong> We craft targeted
+                  campaigns that convert.
                 </li>
-                <li> Custom strategies tailored to your business goals</li>
-                <li> Advanced analytics and performance tracking</li>
-                <li> Engaging content and audience-focused campaigns</li>
+                <li>
+                  <strong>
+                    Expert Social Media and Marketing Strategies –
+                  </strong>{" "}
+                  Grow your brand with data-driven insights.
+                </li>
+                <li>
+                  <strong> SNS Marketing Solutions –</strong> Reach the right
+                  audience on Facebook, Instagram, and more.
+                </li>
+                <li>
+                  <strong> Marketing Through Social Media –</strong> Boost
+                  engagement and brand awareness effectively.
+                </li>
+                <li>
+                  <strong> Comprehensive SMM Social Media Marketing –</strong>{" "}
+                  From strategy to execution, we handle it all.
+                </li>
+                <li>
+                  <strong> Proven Media in Marketing Techniques –</strong>{" "}
+                  Leverage high-performing content to increase conversions.
+                </li>
+                <li>
+                  <strong> Leading Social Media Marketing Agency –</strong>{" "}
+                  Trusted by businesses to deliver measurable success.
+                </li>
               </ul>
               <div className="service-para">
-                🚀 Let’s take your brand to the next level!
+                Whether you're a startup or an established brand, our Social
+                Media Mar experts create customized campaigns to elevate your
+                online presence and drive sales.
               </div>
               <div className="service-para">
-                📩 Contact us today for high-impact social media marketing
-                solutions!
+                📩 Contact us today and take your social media marketing to the
+                next level! 🚀
               </div>
               <div className="service-btn">
                 <a href="https://spadvertising.in/Contact">
@@ -247,69 +249,58 @@ function DigitalMarketing() {
               data-aos="zoom-in"
             />
             <div className="topic-left" data-aos="fade-right">
-              <h1>
-                Transform Your Business with Expert Mobile App Development 🚀
-              </h1>
+              <h1>Convert Your Concepts into Effective Mobile Applications!</h1>
               <div className="service-para">
-                Looking for a reliable <a href="" aria-label="mobile app development company">mobile app development company</a> to turn
-                your idea into a powerful application? We specialize in mobile
-                application development, creating high-performance apps that
-                enhance user experience and drive business growth.
+                Looking for top-notch{" "}
+                <strong>Mobile Application Development</strong> services? Your
+                search ends here! We are a leading{" "}
+                <strong>Mobile App Development Company</strong> dedicated to
+                crafting high-performance, user-friendly, and innovative mobile
+                solutions tailored to your business needs.
               </div>
-              <h2>Our Mobile App Development Services Include:</h2>
-              <ul>
-                <li>
-                  <strong> App Development –</strong> Custom mobile apps
-                  designed for scalability and efficiency.
-                </li>
-                <li>
-                  <strong> Mobile App Development –</strong> Cutting-edge
-                  solutions for Android & iOS platforms.
-                </li>
-                <li>
-                  <strong> Mobile App Developers –</strong> A team of experts
-                  crafting seamless and feature-rich applications.
-                </li>
-                <li>
-                  <strong> Mobile Application Developers –</strong> Skilled
-                  professionals to bring your vision to life.
-                </li>
-                <li>
-                  <strong> Mobile Phone App Development –</strong> High-quality
-                  apps tailored to your business needs.
-                </li>
-                <li>
-                  <strong> Mobile App Dev –</strong> Robust development
-                  solutions for all industries.
-                </li>
-                <li>
-                  <strong> Mobile Application and Development –</strong>{" "}
-                  End-to-end services from planning to deployment.
-                </li>
-                <li>
-                  <strong> Apps to Develop –</strong> Innovative and
-                  user-friendly applications for startups & enterprises.
-                </li>
-              </ul>
               <h2>Why Choose Us?</h2>
               <ul>
                 <li>
-                   Experienced mobile app developers with proven success
-                </li>
-                <li> User-friendly & performance-driven app solutions</li>
-                <li>
-                   Custom features tailored to your business requirements
+                  <strong> Expert App Development –</strong> We create
+                  feature-rich and scalable mobile applications.
                 </li>
                 <li>
-                   Secure, scalable, and high-quality mobile applications
+                  <strong> Skilled Mobile App Developers –</strong> Our team
+                  turns your vision into a seamless digital experience.
+                </li>
+                <li>
+                  <strong> Custom Mobile Phone App Development –</strong>{" "}
+                  Tailored solutions for Android & iOS platforms.
+                </li>
+                <li>
+                  <strong> End-to-End Mobile App Dev –</strong> From concept to
+                  deployment, we handle everything.
+                </li>
+                <li>
+                  <strong>Experienced Mobile Application Developers –</strong>{" "}
+                  We build cutting-edge apps with the latest technology.
+                </li>
+                <li>
+                  <strong>
+                    Complete Mobile Application and Development Services –
+                  </strong>{" "}
+                  UX/UI design, coding, testing & launch.
+                </li>
+                <li>
+                  <strong> Innovative Apps to Develop –</strong> We bring your
+                  app ideas to life with creativity and expertise.
                 </li>
               </ul>
               <div className="service-para">
-                🚀 Let’s build your next big app!
+                Whether you need a business app, eCommerce platform, or custom
+                software solution, we’re here to help!
               </div>
               <div className="service-para">
-                📩 Contact us today for top-notch mobile application development
-                services!
+                📩{" "}
+                <strong>
+                  Contact us today to build a high-quality mobile app and take
+                  your business to the next level! 🚀
+                </strong>
               </div>
               <div className="service-btn">
                 <a href="https://spadvertising.in/Contact">

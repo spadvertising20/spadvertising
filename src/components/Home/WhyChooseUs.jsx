@@ -75,6 +75,7 @@ export default function WhyChooseUs() {
               src={selectedImage}
               alt="Feature representation"
               className="feature-image"
+              loading="lazy"
             />
           </div>
         </div>

@@ -17,7 +17,49 @@ import { FaFacebookF } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
-import { StoreContext } from "../../Context Provider/StoreProvider";
+import digital_marketing_img4 from "../../../assets/Blog/digital-marketing-img4.jpg";
+
+const blogData = [
+  {
+    img: digital_marketing_img4,
+    date: "January 06, 2025",
+
+    title:
+      "How Can Businesses Prepare for Emerging Trends in the Next Decade of Digital Marketing?",
+    link: "/Blog/Businesses-Prepare-for-Emerging-Trends",
+    facebook: <CiFacebook className="blog-icon" />,
+    instagram: <IoLogoInstagram className="blog-icon" />,
+    linkedin: <CiLinkedin className="blog-icon" />,
+    writer: "BY ADMIN",
+    altTag: "best digital marketing agency",
+  },
+];
+
+const titles = [
+  "Outdoor Advertising: What It Is, Benefits, and Why It Matters",
+  "Social Media Marketing: Best Practices for Engaging Your Audience.",
+  "Influencer Marketing: Driving Success and Growth in 2025.",
+  "What is Digital Marketing? Types, Examples and Benefits.",
+  "Improve Online Advertising Efforts with Free Tools and Techniques",
+  "Holiday Sales Strategies: Essential Tips to Increase Business Sales",
+  "How Can Businesses Prepare for Emerging Trends in the Next Decade of Digital Marketing?",
+  "Why Content is Still King in SEO: How to Create High-Quality, Search-Friendly Content",
+  "The Ultimate Guide to On-Page SEO: Best Practices and Tips",
+  "How to Conduct Effective Keyword Research for 2025-26",
+];
+
+const links = [
+  "/Blog/Outdoor-Advertising",
+  "/Blog/Social-Media-Marketing",
+  "/Blog/Influencer-Marketing",
+  "/Blog/Digital-Marketing",
+  "/Blog/Online-Advertising-Tools",
+  "/Blog/Holiday-Sales-Strategies",
+  "/Blog/Emerging-Trends-Digital-Marketing",
+  "/Blog/SEO-Content-Strategy",
+  "/Blog/On-Page-SEO-Guide",
+  "/Blog/Keyword-Research-2025",
+];
 
 const Contents = [
   {
@@ -193,27 +235,24 @@ const Contents = [
 ];
 
 export default function BusinessesPrepare() {
+  useEffect(() => {
+    document.title =
+      "How Businesses Can Prepare for Digital Marketing Trends in the Next Decade";
 
-   useEffect(() => {
-        document.title =
-          "How Businesses Can Prepare for Digital Marketing Trends in the Next Decade";
-    
-        document
-          .querySelector("meta[name='description']")
-          ?.setAttribute(
-            "content",
-            "Learn how businesses can prepare for digital marketing trends in the next decade with actionable strategies!"
-          );
-    
-        document
-          .querySelector("meta[name='keywords']")
-          ?.setAttribute(
-            "content",
-            "digital marketing trends, digital marketing industry trends, digital marketing trending, digitale marketing trends, trends in digitale marketing, latest digital marketing trends, current digital marketing trends, new trends in digital marketing, online marketing trends"
-          );
-      }, []);
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute(
+        "content",
+        "Learn how businesses can prepare for digital marketing trends in the next decade with actionable strategies!"
+      );
 
-  const { blogData } = useContext(StoreContext);
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute(
+        "content",
+        "digital marketing trends, digital marketing industry trends, digital marketing trending, digitale marketing trends, trends in digitale marketing, latest digital marketing trends, current digital marketing trends, new trends in digital marketing, online marketing trends"
+      );
+  }, []);
 
   const [query, setQuery] = useState(""); // State for user input
 
@@ -225,79 +264,87 @@ export default function BusinessesPrepare() {
   };
 
   return (
-    <section className="keyword-research">
-      <div className="keyword-research-con">
-        <div className="keyword-research-box">
-          <p>{blogData[3]?.date}</p>
-
-          <h1>{blogData[3]?.title}</h1>
-          <img loading="lazy" src={blogData[3]?.img} alt="digital marketing trends" />
-          <div className="keyword-research-content">
-            <div className="blog-content">
-              {Contents.map((content, index) => (
-                <div className="">
-                  <h1>{content.heading}</h1>
-                  <h2>{content.sub_heading}</h2>
-                  <p>{content.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="search-container">
-          <input
-            type="text"
-            placeholder="Search..."
-            value={query}
-            onChange={handleInputChange}
-          />
-          <p className="blog-post-heading">Recent Posts</p>
-
-          {query.trim() === ""
-            ? blogData.map((article, index) => (
-                <div className="title-gap">
-                  <Link to={`${article.link}`} key={index}>
-                    {article.title}
-                  </Link>
-                </div>
-              ))
-            : blogData
-                .filter((article) =>
-                  article.title.toLowerCase().includes(query.toLowerCase())
-                )
-                .map((filteredArticle, index) => (
-                  <div className="title-gap2">
-                    <Link to={`${filteredArticle.link}`}>
-                      {filteredArticle.title}
-                    </Link>
-                  </div>
-                ))}
-
-          <br />
-
-          <div className="blog-icons2">
-            <h2>Follow Us</h2>
-            <div className="blog-icons2-con">
-              <Link to={"https://www.instagram.com/spadvertisingrpr/"}>
-                <GrInstagram />
-              </Link>
-              <Link to={"https://www.facebook.com/spadvertisingraipur"}>
-                <FaFacebookF />
-              </Link>
-              <Link
-                to={
-                  "https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
-                }
-              >
-                <FaLinkedinIn />
-              </Link>
-              <Link to={"https://www.youtube.com/@spadvertising530"}>
-                <IoLogoYoutube />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+   <section className="keyword-research">
+         <div className="keyword-research-con">
+           <div className="keyword-research-box">
+             <p>{blogData[0]?.date}</p>
+   
+             <h1>{blogData[0]?.title}</h1>
+             <img
+               loading="lazy"
+               src={blogData[0]?.img}
+               alt="what is digital marketing, digital marketing is what"
+             />
+   
+             <div className="keyword-research-content">
+               <div className="blog-content">
+                 {Contents.map((content, index) => (
+                   <div className="">
+                     <h1>{content.heading}</h1>
+                     <h2>{content.sub_heading}</h2>
+                     <p>{content.description}</p>
+                   </div>
+                 ))}
+               </div>
+             </div>
+           </div>
+           <div className="search-container">
+             <input
+               type="text"
+               placeholder="Search..."
+               value={query}
+               onChange={handleInputChange}
+             />
+             <p className="blog-post-heading">Recent Posts</p>
+   
+             {query.trim() === ""
+               ? blogData.map((article, index) => (
+                   <div className="title-gap" key={index}>
+                     {titles.map((title, i) => (
+                       <div className="title-gap" key={i}>
+                         <Link to={links[i]}>{title}</Link>
+                         <br />
+                       </div>
+                     ))}
+                   </div>
+                 ))
+               : blogData
+                   .filter((article) =>
+                     article.title.toLowerCase().includes(query.toLowerCase())
+                   )
+                   .map((filteredArticle, index) => (
+                     <div className="title-gap2">
+                       <Link to={`${filteredArticle.link}`}>
+                         {filteredArticle.title}
+                       </Link>
+                     </div>
+                   ))}
+   
+             <br />
+   
+             <div className="blog-icons2">
+               <h2>Follow Us</h2>
+               <div className="blog-icons2-con">
+                 <Link to={"https://www.instagram.com/spadvertisingrpr/"}>
+                   <GrInstagram />
+                 </Link>
+                 <Link to={"https://www.facebook.com/spadvertisingraipur"}>
+                   <FaFacebookF />
+                 </Link>
+                 <Link
+                   to={
+                     "https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
+                   }
+                 >
+                   <FaLinkedinIn />
+                 </Link>
+                 <Link to={"https://www.youtube.com/@spadvertising530"}>
+                   <IoLogoYoutube />
+                 </Link>
+               </div>
+             </div>
+           </div>
+         </div>
+       </section>
   );
 }

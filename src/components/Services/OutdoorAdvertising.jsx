@@ -44,7 +44,6 @@ function OutdoorAdvertising() {
           </div>
           <div className="service-right">
             <img
-              
               src={outdoor_img1}
               alt="Outdoor Advertising agency in Raipur"
             />
@@ -57,13 +56,16 @@ function OutdoorAdvertising() {
           <div className="topic-align1" id="topic-align2">
             <div className="topic-left" data-aos="fade-right">
               <h1>
-                Boost Your Brand with High-Impact Mobile Hoarding Advertising
+              Increase Brand Awareness with Effective Mobile Hoarding Promotion
               </h1>
               <div className="service-para">
-                Looking for <a href="">Mobile Hoarding solutions</a> that grab
-                attention? Our outdoor hoarding services ensure maximum
-                visibility for your brand, delivering high engagement and
-                recall.
+                Looking for{" "}
+                <a href="" aria-label="Mobile Hoarding solutions">
+                  Mobile Hoarding solutions
+                </a>{" "}
+                that grab attention? Our outdoor hoarding services ensure
+                maximum visibility for your brand, delivering high engagement
+                and recall.
               </div>
               <h2>Why Choose Our Mobile Hoarding Services?</h2>
               <ul>
@@ -117,8 +119,11 @@ function OutdoorAdvertising() {
                 High-Impact Hoarding Advertising for Maximum Brand Exposure
               </h1>
               <div className="service-para">
-                Looking for the <a href="">best advertising hoardings</a> to
-                promote your brand? Our ad hoarding solutions provide high
+                Looking for the{" "}
+                <a href="" aria-label="best advertising hoardings">
+                  best advertising hoardings
+                </a>{" "}
+                to promote your brand? Our ad hoarding solutions provide high
                 visibility and ensure your message reaches a vast audience. With
                 strategically placed outdoor hoarding, you can make a lasting
                 impression in high-traffic areas.
@@ -164,11 +169,14 @@ function OutdoorAdvertising() {
                 High-Impact Gantries Advertising for Maximum Brand Exposure
               </h1>
               <div className="service-para">
-                Looking for premium <a href="">Gantries Advertising</a> to boost
-                your brand visibility? Gantry billboards are strategically
-                placed on highways and major roads, ensuring high engagement and
-                maximum reach. With large, eye-catching displays, Gantries
-                Advertising guarantees that your message stands out in
+                Looking for premium{" "}
+                <a href="" aria-label="Gantries Advertising">
+                  Gantries Advertising
+                </a>{" "}
+                to boost your brand visibility? Gantry billboards are
+                strategically placed on highways and major roads, ensuring high
+                engagement and maximum reach. With large, eye-catching displays,
+                Gantries Advertising guarantees that your message stands out in
                 high-traffic areas.
               </div>
               <h2>Why Choose Gantries Advertising?</h2>
@@ -219,14 +227,17 @@ function OutdoorAdvertising() {
               data-aos="zoom-in"
             />
             <div className="topic-left" data-aos="fade-right">
-              <h1>Boost Your Brand with Pole Kiosk Branding & Advertising</h1>
+              <h1>Use Pole Kiosk Branding & Advertising to Expand Your Brand</h1>
               <div className="service-para">
-                Looking for <a href="">pole kiosk branding</a> that guarantees
-                high visibility and engagement? Our pole kiosks advertising
-                solutions help your brand stand out in high-traffic areas,
-                ensuring maximum exposure. With strategically placed outdoor
-                pole kiosks, you can capture the attention of pedestrians and
-                motorists alike.
+                Looking for{" "}
+                <a href="" aria-label="pole kiosk branding">
+                  pole kiosk branding
+                </a>{" "}
+                that guarantees high visibility and engagement? Our pole kiosks
+                advertising solutions help your brand stand out in high-traffic
+                areas, ensuring maximum exposure. With strategically placed
+                outdoor pole kiosks, you can capture the attention of
+                pedestrians and motorists alike.
               </div>
               <h2>Why Choose Pole Kiosks Advertising?</h2>
               <ul>

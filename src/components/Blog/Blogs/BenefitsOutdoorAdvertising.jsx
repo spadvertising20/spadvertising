@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
-
+import React, { useEffect, useState } from "react";
 import "../Blogs/Blogs.css";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -17,7 +16,47 @@ import { FaFacebookF } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
-import { StoreContext } from "../../Context Provider/StoreProvider";
+import digital_marketing_img10 from "../../../assets/Blog/digital-marketing-img10.jpg";
+
+const blogData = [
+  {
+    img: digital_marketing_img10,
+    date: "January 31, 2025",
+    title: "Outdoor Advertising: What It Is, Benefits, and Why It Matters",
+    link: "/Blog/Benefits-of-Outdoor-Advertising",
+    facebook: <CiFacebook className="blog-icon" />,
+    instagram: <IoLogoInstagram className="blog-icon" />,
+    linkedin: <CiLinkedin className="blog-icon" />,
+    writer: "BY ADMIN",
+    altTag: "hubspot digital marketing course",
+  },
+];
+
+const titles = [
+  "Outdoor Advertising: What It Is, Benefits, and Why It Matters",
+  "Social Media Marketing: Best Practices for Engaging Your Audience.",
+  "Influencer Marketing: Driving Success and Growth in 2025.",
+  "What is Digital Marketing? Types, Examples and Benefits.",
+  "Improve Online Advertising Efforts with Free Tools and Techniques",
+  "Holiday Sales Strategies: Essential Tips to Increase Business Sales",
+  "How Can Businesses Prepare for Emerging Trends in the Next Decade of Digital Marketing?",
+  "Why Content is Still King in SEO: How to Create High-Quality, Search-Friendly Content",
+  "The Ultimate Guide to On-Page SEO: Best Practices and Tips",
+  "How to Conduct Effective Keyword Research for 2025-26",
+];
+
+const links = [
+  "/Blog/Outdoor-Advertising",
+  "/Blog/Social-Media-Marketing",
+  "/Blog/Influencer-Marketing",
+  "/Blog/Digital-Marketing",
+  "/Blog/Online-Advertising-Tools",
+  "/Blog/Holiday-Sales-Strategies",
+  "/Blog/Emerging-Trends-Digital-Marketing",
+  "/Blog/SEO-Content-Strategy",
+  "/Blog/On-Page-SEO-Guide",
+  "/Blog/Keyword-Research-2025",
+];
 
 const Contents = [
   {
@@ -128,113 +167,112 @@ const Contents = [
 ];
 
 export default function BenefitsOutdoorAdvertising() {
-
   useEffect(() => {
-            document.title =
-              "Outdoor Advertising: Benefits, Basics, and Why It Matters";
-        
-            document
-              .querySelector("meta[name='description']")
-              ?.setAttribute(
-                "content",
-                "Explore outdoor advertising: its basics, benefits, and why it matters for boosting brand visibility!"
-              );
-        
-            document
-              .querySelector("meta[name='keywords']")
-              ?.setAttribute(
-                "content",
-                "benefits of ooh advertising, advantages of outdoor advertising, merits of outdoor advertising, out of home advertising benefits,outdoor advertising agency, Outdoor advertising services, Outdoor advertising agency in Raipur, Billboard advertising solutions, outdoor advertising companies"
-              );
-          }, []);
-  
-
-  const { blogData } = useContext(StoreContext);
+    document.title =
+      "Outdoor Advertising: Benefits, Basics, and Why It Matters";
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute(
+        "content",
+        "Explore outdoor advertising: its basics, benefits, and why it matters for boosting brand visibility!"
+      );
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute(
+        "content",
+        "benefits of ooh advertising, advantages of outdoor advertising, merits of outdoor advertising, out of home advertising benefits, outdoor advertising agency, Outdoor advertising services, Outdoor advertising agency in Raipur, Billboard advertising solutions, outdoor advertising companies"
+      );
+  }, []);
 
   const [query, setQuery] = useState(""); // State for user input
 
   // Handle input change
   const handleInputChange = (e) => {
-    const userInput = e.target.value;
-    setQuery(userInput);
-    // Filter suggestions
+    setQuery(e.target.value);
   };
 
   return (
     <section className="keyword-research">
-      <div className="keyword-research-con">
-        <div className="keyword-research-box">
-          <p>{blogData[9]?.date}</p>
-
-          <h1>{blogData[9]?.title}</h1>
-          <img loading="lazy" src={blogData[9]?.img} alt="benefits of ooh advertising" />
-
-          <div className="keyword-research-content">
-            <div className="blog-content">
-              {Contents.map((content, index) => (
-                <div className="">
-                  <h1>{content.heading}</h1>
-                  <h2>{content.sub_heading}</h2>
-                  <p>{content.description}</p>
+          <div className="keyword-research-con">
+            <div className="keyword-research-box">
+              <p>{blogData[0]?.date}</p>
+    
+              <h1>{blogData[0]?.title}</h1>
+              <img
+                loading="lazy"
+                src={blogData[0]?.img}
+                alt="what is digital marketing, digital marketing is what"
+              />
+    
+              <div className="keyword-research-content">
+                <div className="blog-content">
+                  {Contents.map((content, index) => (
+                    <div className="">
+                      <h1>{content.heading}</h1>
+                      <h2>{content.sub_heading}</h2>
+                      <p>{content.description}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="search-container">
-          <input
-            type="text"
-            placeholder="Search..."
-            value={query}
-            onChange={handleInputChange}
-          />
-          <p className="blog-post-heading">Recent Posts</p>
-
-          {query.trim() === ""
-            ? blogData.map((article, index) => (
-                <div className="title-gap">
-                  <Link to={`${article.link}`} key={index}>
-                    {article.title}
+            <div className="search-container">
+              <input
+                type="text"
+                placeholder="Search..."
+                value={query}
+                onChange={handleInputChange}
+              />
+              <p className="blog-post-heading">Recent Posts</p>
+    
+              {query.trim() === ""
+                ? blogData.map((article, index) => (
+                    <div className="title-gap" key={index}>
+                      {titles.map((title, i) => (
+                        <div className="title-gap" key={i}>
+                          <Link to={links[i]}>{title}</Link>
+                          <br />
+                        </div>
+                      ))}
+                    </div>
+                  ))
+                : blogData
+                    .filter((article) =>
+                      article.title.toLowerCase().includes(query.toLowerCase())
+                    )
+                    .map((filteredArticle, index) => (
+                      <div className="title-gap2">
+                        <Link to={`${filteredArticle.link}`}>
+                          {filteredArticle.title}
+                        </Link>
+                      </div>
+                    ))}
+    
+              <br />
+    
+              <div className="blog-icons2">
+                <h2>Follow Us</h2>
+                <div className="blog-icons2-con">
+                  <Link to={"https://www.instagram.com/spadvertisingrpr/"}>
+                    <GrInstagram />
+                  </Link>
+                  <Link to={"https://www.facebook.com/spadvertisingraipur"}>
+                    <FaFacebookF />
+                  </Link>
+                  <Link
+                    to={
+                      "https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
+                    }
+                  >
+                    <FaLinkedinIn />
+                  </Link>
+                  <Link to={"https://www.youtube.com/@spadvertising530"}>
+                    <IoLogoYoutube />
                   </Link>
                 </div>
-              ))
-            : blogData
-                .filter((article) =>
-                  article.title.toLowerCase().includes(query.toLowerCase())
-                )
-                .map((filteredArticle, index) => (
-                  <div className="title-gap2">
-                    <Link to={`${filteredArticle.link}`}>
-                      {filteredArticle.title}
-                    </Link>
-                  </div>
-                ))}
-
-          <br />
-
-          <div className="blog-icons2">
-            <h2>Follow Us</h2>
-            <div className="blog-icons2-con">
-              <Link to={"https://www.instagram.com/spadvertisingrpr/"}>
-                <GrInstagram />
-              </Link>
-              <Link to={"https://www.facebook.com/spadvertisingraipur"}>
-                <FaFacebookF />
-              </Link>
-              <Link
-                to={
-                  "https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
-                }
-              >
-                <FaLinkedinIn />
-              </Link>
-              <Link to={"https://www.youtube.com/@spadvertising530"}>
-                <IoLogoYoutube />
-              </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
   );
 }

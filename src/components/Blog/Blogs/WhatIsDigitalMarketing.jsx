@@ -17,7 +17,47 @@ import { FaFacebookF } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
-import { StoreContext } from "../../Context Provider/StoreProvider";
+import digital_marketing_img7 from "../../../assets/Blog/digital-marketing-img7.jpg";
+
+const blogData = [
+  {
+    img: digital_marketing_img7,
+    date: "January 17, 2025",
+    title: "Influencer Marketing: Driving Success and Growth in 2025.",
+    link: "/Blog/Influencer-Marketing",
+    facebook: <CiFacebook className="blog-icon" />,
+    instagram: <IoLogoInstagram className="blog-icon" />,
+    linkedin: <CiLinkedin className="blog-icon" />,
+    writer: "BY ADMIN",
+    altTag: "digital marketing examples",
+  },
+];
+
+const titles = [
+  "Outdoor Advertising: What It Is, Benefits, and Why It Matters",
+  "Social Media Marketing: Best Practices for Engaging Your Audience.",
+  "Influencer Marketing: Driving Success and Growth in 2025.",
+  "What is Digital Marketing? Types, Examples and Benefits.",
+  "Improve Online Advertising Efforts with Free Tools and Techniques",
+  "Holiday Sales Strategies: Essential Tips to Increase Business Sales",
+  "How Can Businesses Prepare for Emerging Trends in the Next Decade of Digital Marketing?",
+  "Why Content is Still King in SEO: How to Create High-Quality, Search-Friendly Content",
+  "The Ultimate Guide to On-Page SEO: Best Practices and Tips",
+  "How to Conduct Effective Keyword Research for 2025-26",
+];
+
+const links = [
+  "/Blog/Outdoor-Advertising",
+  "/Blog/Social-Media-Marketing",
+  "/Blog/Influencer-Marketing",
+  "/Blog/Digital-Marketing",
+  "/Blog/Online-Advertising-Tools",
+  "/Blog/Holiday-Sales-Strategies",
+  "/Blog/Emerging-Trends-Digital-Marketing",
+  "/Blog/SEO-Content-Strategy",
+  "/Blog/On-Page-SEO-Guide",
+  "/Blog/Keyword-Research-2025",
+];
 
 const Contents = [
   {
@@ -224,27 +264,23 @@ const Contents = [
 ];
 
 export default function WhatIsDigitalMarketing() {
+  useEffect(() => {
+    document.title = "What is Digital Marketing? Types, Examples, and Benefits";
 
-useEffect(() => {
-          document.title =
-            "What is Digital Marketing? Types, Examples, and Benefits";
-      
-          document
-            .querySelector("meta[name='description']")
-            ?.setAttribute(
-              "content",
-              "What is digital marketing? Explore its types, examples, and benefits in this guide to understand its power!"
-            );
-      
-          document
-            .querySelector("meta[name='keywords']")
-            ?.setAttribute(
-              "content",
-              "what is digital marketing, digital marketing is what, what includes digital marketing, what is seo in digital marketing, what is online marketing, what is ppc in digital marketing, what is digital marketing in hindi, what is internet marketing, what is search engine optimization in digital marketing"
-            );
-        }, []);
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute(
+        "content",
+        "What is digital marketing? Explore its types, examples, and benefits in this guide to understand its power!"
+      );
 
-  const { blogData } = useContext(StoreContext);
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute(
+        "content",
+        "what is digital marketing, digital marketing is what, what includes digital marketing, what is seo in digital marketing, what is online marketing, what is ppc in digital marketing, what is digital marketing in hindi, what is internet marketing, what is search engine optimization in digital marketing"
+      );
+  }, []);
 
   const [query, setQuery] = useState(""); // State for user input
 
@@ -259,10 +295,14 @@ useEffect(() => {
     <section className="keyword-research">
       <div className="keyword-research-con">
         <div className="keyword-research-box">
-          <p>{blogData[6]?.date}</p>
+          <p>{blogData[0]?.date}</p>
 
-          <h1>{blogData[6]?.title}</h1>
-          <img loading="lazy" src={blogData[6]?.img} alt="what is digital marketing, digital marketing is what" />
+          <h1>{blogData[0]?.title}</h1>
+          <img
+            loading="lazy"
+            src={blogData[0]?.img}
+            alt="what is digital marketing, digital marketing is what"
+          />
 
           <div className="keyword-research-content">
             <div className="blog-content">
@@ -287,10 +327,13 @@ useEffect(() => {
 
           {query.trim() === ""
             ? blogData.map((article, index) => (
-                <div className="title-gap">
-                  <Link to={`${article.link}`} key={index}>
-                    {article.title}
-                  </Link>
+                <div className="title-gap" key={index}>
+                  {titles.map((title, i) => (
+                    <div className="title-gap" key={i}>
+                      <Link to={links[i]}>{title}</Link>
+                      <br />
+                    </div>
+                  ))}
                 </div>
               ))
             : blogData

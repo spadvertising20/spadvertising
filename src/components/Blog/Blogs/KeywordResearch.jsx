@@ -17,7 +17,48 @@ import { FaFacebookF } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
-import { StoreContext } from "../../Context Provider/StoreProvider";
+
+const blogData = [
+  {
+    img: digital_marketing_img1,
+    date: "December 21, 2024",
+
+    title: "How to Conduct Effective Keyword Research for 2025-26",
+    link: "/Blog/Keyword-Research",
+
+    facebook: <CiFacebook className="blog-icon" />,
+    instagram: <IoLogoInstagram className="blog-icon" />,
+    linkedin: <CiLinkedin className="blog-icon" />,
+    writer: "BY ADMIN",
+    altTag: "Digital Marketing Blog",
+  },
+];
+
+const titles = [
+  "Outdoor Advertising: What It Is, Benefits, and Why It Matters",
+  "Social Media Marketing: Best Practices for Engaging Your Audience.",
+  "Influencer Marketing: Driving Success and Growth in 2025.",
+  "What is Digital Marketing? Types, Examples and Benefits.",
+  "Improve Online Advertising Efforts with Free Tools and Techniques",
+  "Holiday Sales Strategies: Essential Tips to Increase Business Sales",
+  "How Can Businesses Prepare for Emerging Trends in the Next Decade of Digital Marketing?",
+  "Why Content is Still King in SEO: How to Create High-Quality, Search-Friendly Content",
+  "The Ultimate Guide to On-Page SEO: Best Practices and Tips",
+  "How to Conduct Effective Keyword Research for 2025-26",
+];
+
+const links = [
+  "/Blog/Outdoor-Advertising",
+  "/Blog/Social-Media-Marketing",
+  "/Blog/Influencer-Marketing",
+  "/Blog/Digital-Marketing",
+  "/Blog/Online-Advertising-Tools",
+  "/Blog/Holiday-Sales-Strategies",
+  "/Blog/Emerging-Trends-Digital-Marketing",
+  "/Blog/SEO-Content-Strategy",
+  "/Blog/On-Page-SEO-Guide",
+  "/Blog/Keyword-Research-2025",
+];
 
 const Contents = [
   {
@@ -151,27 +192,23 @@ const Contents = [
 ];
 
 export default function KeywordResearch() {
+  useEffect(() => {
+    document.title = "How to Do Keyword Research for SEO: A Beginner's Guide";
 
-   useEffect(() => {
-      document.title =
-        "How to Do Keyword Research for SEO: A Beginner's Guide";
-  
-      document
-        .querySelector("meta[name='description']")
-        ?.setAttribute(
-          "content",
-          "Learn how to do keyword research for SEO with this beginner’s guide. Simple steps to find keywords and boost your rankings!"
-        );
-  
-      document
-        .querySelector("meta[name='keywords']")
-        ?.setAttribute(
-          "content",
-          "keyword research for SEO, how to do keyword research, SEO keyword research guide, beginner’s guide to keyword research, keyword research tutorial, SEO for beginners, find keywords for SEO,ree keyword research tool, google keyword research tool, keyword research tool, semrush pricing, keyword search tool,"
-        );
-    }, []);
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute(
+        "content",
+        "Learn how to do keyword research for SEO with this beginner’s guide. Simple steps to find keywords and boost your rankings!"
+      );
 
-  const { blogData } = useContext(StoreContext);
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute(
+        "content",
+        "keyword research for SEO, how to do keyword research, SEO keyword research guide, beginner’s guide to keyword research, keyword research tutorial, SEO for beginners, find keywords for SEO,ree keyword research tool, google keyword research tool, keyword research tool, semrush pricing, keyword search tool,"
+      );
+  }, []);
 
   const [query, setQuery] = useState(""); // State for user input
 
@@ -184,80 +221,86 @@ export default function KeywordResearch() {
 
   return (
     <section className="keyword-research">
-      <div className="keyword-research-con">
-        <div className="keyword-research-box">
-          <p>{blogData[0]?.date}</p>
-
-          <h1>{blogData[0]?.title}</h1>
-          <img loading="lazy" src={digital_marketing_img1} alt="keyword research for SEO" />
-          <div className="keyword-research-content">
-            <div className="blog-content">
-              {Contents.map((content, index) => (
-                <div className="">
-                  <h1>{content.heading}</h1>
-                  <h2>{content.sub_heading}</h2>
-                  <p
-                    dangerouslySetInnerHTML={{ __html: content.description }}
-                  ></p>
+          <div className="keyword-research-con">
+            <div className="keyword-research-box">
+              <p>{blogData[0]?.date}</p>
+    
+              <h1>{blogData[0]?.title}</h1>
+              <img
+                loading="lazy"
+                src={blogData[0]?.img}
+                alt="what is digital marketing, digital marketing is what"
+              />
+    
+              <div className="keyword-research-content">
+                <div className="blog-content">
+                  {Contents.map((content, index) => (
+                    <div className="">
+                      <h1>{content.heading}</h1>
+                      <h2>{content.sub_heading}</h2>
+                      <p>{content.description}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="search-container">
-          <input
-            type="text"
-            placeholder="Search..."
-            value={query}
-            onChange={handleInputChange}
-          />
-          <p className="blog-post-heading">Recent Posts</p>
-
-          {query.trim() === ""
-            ? blogData.map((article, index) => (
-                <div className="title-gap">
-                  <Link to={`${article.link}`} key={index}>
-                    {article.title}
+            <div className="search-container">
+              <input
+                type="text"
+                placeholder="Search..."
+                value={query}
+                onChange={handleInputChange}
+              />
+              <p className="blog-post-heading">Recent Posts</p>
+    
+              {query.trim() === ""
+                ? blogData.map((article, index) => (
+                    <div className="title-gap" key={index}>
+                      {titles.map((title, i) => (
+                        <div className="title-gap" key={i}>
+                          <Link to={links[i]}>{title}</Link>
+                          <br />
+                        </div>
+                      ))}
+                    </div>
+                  ))
+                : blogData
+                    .filter((article) =>
+                      article.title.toLowerCase().includes(query.toLowerCase())
+                    )
+                    .map((filteredArticle, index) => (
+                      <div className="title-gap2">
+                        <Link to={`${filteredArticle.link}`}>
+                          {filteredArticle.title}
+                        </Link>
+                      </div>
+                    ))}
+    
+              <br />
+    
+              <div className="blog-icons2">
+                <h2>Follow Us</h2>
+                <div className="blog-icons2-con">
+                  <Link to={"https://www.instagram.com/spadvertisingrpr/"}>
+                    <GrInstagram />
+                  </Link>
+                  <Link to={"https://www.facebook.com/spadvertisingraipur"}>
+                    <FaFacebookF />
+                  </Link>
+                  <Link
+                    to={
+                      "https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
+                    }
+                  >
+                    <FaLinkedinIn />
+                  </Link>
+                  <Link to={"https://www.youtube.com/@spadvertising530"}>
+                    <IoLogoYoutube />
                   </Link>
                 </div>
-              ))
-            : blogData
-                .filter((article) =>
-                  article.title.toLowerCase().includes(query.toLowerCase())
-                )
-                .map((filteredArticle, index) => (
-                  <div className="title-gap2">
-                    <Link to={`${filteredArticle.link}`}>
-                      {filteredArticle.title}
-                    </Link>
-                  </div>
-                ))}
-
-          <br />
-
-          <div className="blog-icons2">
-            <h2>Follow Us</h2>
-            <div className="blog-icons2-con">
-              <Link to={"https://www.instagram.com/spadvertisingrpr/"}>
-                <GrInstagram />
-              </Link>
-              <Link to={"https://www.facebook.com/spadvertisingraipur"}>
-                <FaFacebookF />
-              </Link>
-              <Link
-                to={
-                  "https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
-                }
-              >
-                <FaLinkedinIn />
-              </Link>
-              <Link to={"https://www.youtube.com/@spadvertising530"}>
-                <IoLogoYoutube />
-              </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
   );
 }
