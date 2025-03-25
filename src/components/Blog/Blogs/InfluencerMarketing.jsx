@@ -47,16 +47,16 @@ const titles = [
 ];
 
 const links = [
-  "/Blog/Outdoor-Advertising",
+  "/Blog/Benefits-of-Outdoor-Advertising",
   "/Blog/Social-Media-Marketing",
   "/Blog/Influencer-Marketing",
-  "/Blog/Digital-Marketing",
-  "/Blog/Online-Advertising-Tools",
+  "/Blog/What-is-Digital-Marketing",
+  "/Blog/Advertising-Tools-and-Techniques",
   "/Blog/Holiday-Sales-Strategies",
-  "/Blog/Emerging-Trends-Digital-Marketing",
-  "/Blog/SEO-Content-Strategy",
-  "/Blog/On-Page-SEO-Guide",
-  "/Blog/Keyword-Research-2025",
+  "/Blog/Businesses-Prepare-for-Emerging-Trends",
+  "/Blog/High-Quality-Content",
+  "/Blog/SEO-Optimization",
+  "/Blog/Keyword-Research",
 ];
 
 const Contents = [

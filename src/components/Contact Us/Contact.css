@@ -2,7 +2,7 @@
 .contact-section {
     width: 100%;
     padding-top: 7rem;
-  
+    background-image: linear-gradient(to left, #00c2f3, #005eda);
     display: flex;
     justify-content: center;
 }
@@ -11,7 +11,7 @@
 .contact-container {
     max-width: 1200px;
     width: 100%;
-    padding: 14px;
+    padding: 18px;
 }
 
 /* Contact Content */

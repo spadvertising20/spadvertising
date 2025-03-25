@@ -91,7 +91,7 @@ function App() {
           <Route path="/Blog/SEO-Optimization" element={<SeoOptimization />} />
           <Route
             path="/Blog/High-Quality-Content"
-            element={<HighQualityContent />}
+            element={<HighQualityContent />} 
           />
           <Route
             path="/Blog/Businesses-Prepare-for-Emerging-Trends"

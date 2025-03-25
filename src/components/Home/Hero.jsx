@@ -31,7 +31,7 @@ export default function AnimationHero() {
               <div className="btn-hover">
                 <img src={right_arrow} alt="Digital Marketing in Raipur" />
               </div>
-            </button>
+            </button> 
           </Link>
         </div>
 
