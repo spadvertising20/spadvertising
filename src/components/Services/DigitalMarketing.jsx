@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Services.css";
 import { Link } from "react-router-dom";
 import digital_marketing_img from "../../assets/Services/DigitalMarketing/digital-marketing-img.jpg";
@@ -6,9 +6,11 @@ import digital_marketing_img1 from "../../assets/Services/DigitalMarketing/digit
 import digital_marketing_img2 from "../../assets/Services/DigitalMarketing/digital-marketing-img2.jpg";
 import digital_marketing_img3 from "../../assets/Services/DigitalMarketing/digital-marketing-img3.jpg";
 import digital_marketing_img4 from "../../assets/Services/DigitalMarketing/digital-marketing-img4.jpg";
-import { Helmet } from "react-helmet";
+import loading from "../../assets/components/loading-image.png";
 
 function DigitalMarketing() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   useEffect(() => {
     document.title =
       "Best Digital Marketing agency in Raipur | Digital Marketing services";
@@ -26,6 +28,10 @@ function DigitalMarketing() {
         "content",
         "digital marketing services, digital marketing agency, marketing digital marketing, digital agency marketing, digital marketing company in raipur, digital marketing course in raipur, digital marketing in raipur, digital marketing agency in raipur, best digital marketing course in raipur"
       );
+
+    const img = new Image();
+    img.src = loading;
+    img.onload = () => setImageLoaded(true);
   }, []);
 
   return (
@@ -43,7 +49,24 @@ function DigitalMarketing() {
             </Link>
           </div>
           <div className="service-right">
-            <img src={digital_marketing_img} alt="digital marketers" />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={digital_marketing_img}
+                  alt="digital marketers"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -102,21 +125,46 @@ function DigitalMarketing() {
                 </a>
               </div>
             </div>
-            <img
-              loading="lazy"
-              src={digital_marketing_img1}
-              alt="digital marketing agency"
-              data-aos="zoom-in"
-            />
+
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={digital_marketing_img1}
+                  alt="digital marketing agency"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="topic-align1">
-            <img
-              loading="lazy"
-              src={digital_marketing_img2}
-              alt="digital marketing company"
-              data-aos="zoom-in"
-            />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={digital_marketing_img2}
+                  alt="digital marketing company"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
             <div className="topic-left" data-aos="fade-right">
               <h1>Increase Online Visibility with Skilled SEO Services!</h1>
               <div className="service-para">
@@ -233,21 +281,45 @@ function DigitalMarketing() {
               </div>
             </div>
 
-            <img
-              loading="lazy"
-              src={digital_marketing_img3}
-              alt="digital marketing services"
-              data-aos="zoom-in"
-            />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={digital_marketing_img3}
+                  alt="digital marketing services"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="topic-align1">
-            <img
-              loading="lazy"
-              src={digital_marketing_img4}
-              alt="digital marketing near me"
-              data-aos="zoom-in"
-            />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={digital_marketing_img4}
+                  alt="digital marketing near me"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
             <div className="topic-left" data-aos="fade-right">
               <h1>Convert Your Concepts into Effective Mobile Applications!</h1>
               <div className="service-para">

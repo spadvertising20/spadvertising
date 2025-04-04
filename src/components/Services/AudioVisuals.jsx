@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Services.css";
 import { Helmet } from "react-helmet";
 import outdoor_img1 from "../../assets/Services/AudioVisuals/AudioVisuals.png";
@@ -7,8 +7,11 @@ import showcase1 from "../../assets/Services/AudioVisuals/AudioVisuals3.jpg";
 import showcase2 from "../../assets/Services/AudioVisuals/AudioVisuals4.jpg";
 import outdoor_img2 from "../../assets/Services/AudioVisuals/AudioVisuals1.jpg";
 import gantry from "../../assets/Services/AudioVisuals/AudioVisuals2.jpg";
+import loading from "../../assets/components/loading-image.png";
 
 export default function AudioVisuals() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   useEffect(() => {
     document.title =
       "Best Video Visuals service in Raipur | Video Visuals | SP Advertising";
@@ -26,6 +29,10 @@ export default function AudioVisuals() {
         "content",
         "Video Visuals Service, High-Quality Visuals, Raipur Video Services, Event Visuals, Promotional Visuals, Creative Video Solutions, Video Production Raipur, Professional Visuals, Stunning Video Graphics,"
       );
+
+    const img = new Image();
+    img.src = loading;
+    img.onload = () => setImageLoaded(true);
   }, []);
 
   return (
@@ -43,7 +50,24 @@ export default function AudioVisuals() {
             </Link>
           </div>
           <div className="service-right">
-            <img src={outdoor_img1} alt="Audio " />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={outdoor_img1}
+                  alt="Audio "
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -64,16 +88,45 @@ export default function AudioVisuals() {
                 enhance viewer understanding.
               </p>
             </div>
-            <img loading="lazy" src={showcase1} alt="  " data-aos="zoom-in" />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={showcase1}
+                  alt="Audio "
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="topic-align1">
-            <img
-              loading="lazy"
-              src={outdoor_img2}
-              alt="Hoardings in Raipur"
-              data-aos="zoom-in"
-            />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={outdoor_img2}
+                  alt="Hoardings in Raipur "
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
             <div className="topic-left" data-aos="fade-right">
               <h1>Short Films / Documentary</h1>
               <p>
@@ -103,16 +156,36 @@ export default function AudioVisuals() {
                 awareness across mass media platforms.
               </p>
             </div>
-            <img loading="lazy" src={gantry} alt="Gantry" data-aos="zoom-in" />
+
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img src={gantry} alt="" data-aos="zoom-in" loading="lazy" />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="topic-align1">
-            <img
-              loading="lazy"
-              src={showcase2}
-              alt="Pole Kiosk in Raipur"
-              data-aos="zoom-in"
-            />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img src={showcase2} alt="" data-aos="zoom-in" loading="lazy" />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
             <div className="topic-left" data-aos="fade-right">
               <h1>Photography & Videography</h1>
               <p>

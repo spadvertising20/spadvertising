@@ -23,7 +23,7 @@ const blogData = [
   {
     img: digital_marketing_img7,
     date: "January 17, 2025",
-    title: "Influencer Marketing: Driving Success and Growth in 2025.",
+    title: "What is Digital Marketing? Types, Examples and Benefits.",
     link: "/Blog/Influencer-Marketing",
     facebook: <CiFacebook className="blog-icon" />,
     instagram: <IoLogoInstagram className="blog-icon" />,

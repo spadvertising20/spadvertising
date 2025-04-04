@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Services.css";
 import design from "../../assets/Services/DesigningServices/design.png";
 import { Link } from "react-router-dom";
 import packaging_img from "../../assets/Services/DesigningServices/packaging-img.jpg";
 import packaging_img2 from "../../assets/Services/DesigningServices/creative-design3.jpg";
 import packaging_img1 from "../../assets/Services/DesigningServices/creative-design8.jpg";
-import { Helmet } from "react-helmet";
+import loading from "../../assets/components/loading-image.png";
 
 function DesigningServices() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   useEffect(() => {
     document.title = "Best Designing services in Raipur | Designing services";
 
@@ -24,6 +26,10 @@ function DesigningServices() {
         "content",
         "Creative Designing Services,Graphic Design Services in raipur, Creative Agency in raipur, Web Design Company in raipur, creative logo design, creative flyer design, creative brochure design, creative poster design, creative i logo design"
       );
+
+    const img = new Image();
+    img.src = loading;
+    img.onload = () => setImageLoaded(true);
   }, []);
 
   return (
@@ -41,7 +47,24 @@ function DesigningServices() {
             </Link>
           </div>
           <div className="service-right">
-            <img loading="lazy" src={design} alt="creative logo design" />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={design}
+                  alt="creative logo design"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -49,7 +72,7 @@ function DesigningServices() {
         <div className="ul">
           <div className="topic-align1" id="topic-align2">
             <div className="topic-left" data-aos="fade-right">
-              <h1>Packaging</h1>
+              <h1> Packaging Design</h1>
               <p>
                 In today's competitive market, having the Best Packaging Design
                 Service is essential to capture consumer attention. Our creative
@@ -116,21 +139,48 @@ function DesigningServices() {
   </div>
 </div>
  */}
-            <img
-              loading="lazy"
-              src={packaging_img}
-              alt="creative web design"
-              data-aos="zoom-in"
-            />
+            
+            
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={packaging_img}
+                  alt="creative web design"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="topic-align1">
-            <img
-              loading="lazy"
-              src={packaging_img1}
-              alt="creative flyer design"
-              data-aos="zoom-in"
-            />
+          
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={packaging_img1}
+                   alt="creative flyer design"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
             <div className="topic-left" data-aos="fade-right">
               <h1>Creative Concepts</h1>
               <p>
@@ -154,12 +204,25 @@ function DesigningServices() {
                 aesthetically pleasing and functional visuals.
               </p>
             </div>
-            <img
-              loading="lazy"
-              src={packaging_img2}
-              alt="creative brochure design"
-              data-aos="zoom-in"
-            />
+          
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={packaging_img2}
+                   alt="creative brochure design"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

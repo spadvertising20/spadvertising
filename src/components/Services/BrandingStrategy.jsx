@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Services.css";
 import { Helmet } from "react-helmet";
 import brand from "../../assets/Services/BrandingStrategy/brand.png";
@@ -6,8 +6,11 @@ import { Link } from "react-router-dom";
 import Communications_Strategy from "../../assets/Services/BrandingStrategy/Communications-Strategy.jpg";
 import Creative_Campaigns from "../../assets/Services/BrandingStrategy/Creative_Campaigns.jpg";
 import Corporate from "../../assets/Services/BrandingStrategy/Corporate.jpg";
+import loading from "../../assets/components/loading-image.png";
 
 function BrandingStrategy() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   useEffect(() => {
     document.title =
       "Best Branding & Stradegy agency in Raipur | Branding & Stradegy services";
@@ -25,6 +28,10 @@ function BrandingStrategy() {
         "content",
         "Branding and strategy agency, Creative Branding Solutions, Strategic Marketing Agency, Brand Identity Development,	Corporate Branding Services in Raipur, Strategic Brand Consulting, Brand Positioning Agency in Raipur, Rebranding and Marketing Experts, Integrated Branding Strategies"
       );
+
+    const img = new Image();
+    img.src = loading;
+    img.onload = () => setImageLoaded(true);
   }, []);
 
   return (
@@ -42,19 +49,48 @@ function BrandingStrategy() {
             </Link>
           </div>
           <div className="service-right">
-            <img src={brand} alt="Branding Strategy in Raipur" />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={brand}
+                  alt="Branding Strategy in Raipur"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
       <div className="service-con">
         <div className="ul">
           <div className="topic-align1">
-            <img
-              loading="lazy"
-              src={Communications_Strategy}
-              alt="Communications Strategy in Raipur"
-              data-aos="zoom-in"
-            />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={Communications_Strategy}
+                  alt="Communications Strategy in Raipur"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
             <div className="topic-left" data-aos="fade-right">
               <h1>Communications Strategy</h1>
               <p>
@@ -84,21 +120,45 @@ function BrandingStrategy() {
                 communication throughout various touchpoints.
               </p>
             </div>
-            <img
-              loading="lazy"
-              src={Creative_Campaigns}
-              alt="Creative 360 Campaigns in Raipur"
-              data-aos="zoom-in"
-            />
+
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={Creative_Campaigns}
+                  alt="Creative 360 Campaigns in Raipur"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="topic-align1">
-            <img
-              loading="lazy"
-              src={Corporate}
-              alt="Corporate and Brand Identity in Raipur"
-              data-aos="zoom-in"
-            />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={Corporate}
+                  alt="Corporate and Brand Identity in Raipur"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
             <div className="topic-left" data-aos="fade-right">
               <h1>Corporate and Brand Identity</h1>
               <p>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Services.css";
 import outdoor_img1 from "../../assets/Services/OutdoorAdvertising/outdoor-img1.png";
 import { Link } from "react-router-dom";
@@ -6,7 +6,6 @@ import showcase1 from "../../assets/Services/OutdoorAdvertising/showcase1.webp";
 import showcase2 from "../../assets/Services/OutdoorAdvertising/showcase2.webp";
 import outdoor_img2 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising5.jpg";
 import gantry from "../../assets/Services/OutdoorAdvertising/gantry.jpg";
-import { Helmet } from "react-helmet";
 import SocietyBrandingImg1 from "../../assets/Services/SocietyBranding/SHRISHTI PLAZO.jpg";
 import SocietyBrandingImg2 from "../../assets/Services/SocietyBranding/ASHOKA HEIGHTS.jpg";
 import SocietyBrandingImg3 from "../../assets/Services/SocietyBranding/GT NATURA.jpg";
@@ -17,8 +16,11 @@ import SocietyBrandingImg7 from "../../assets/Services/SocietyBranding/OM SHREE.
 import SocietyBrandingImg8 from "../../assets/Services/SocietyBranding/RAJAT PRIME.jpg";
 import SocietyBrandingImg9 from "../../assets/Services/SocietyBranding/VIP KARISHMA 3.jpg";
 import SocietyBrandingImg10 from "../../assets/Services/SocietyBranding/GREEN MEADOWS.jpg";
+import loading from "../../assets/components/loading-image.png";
 
 function SocietyBranding() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   useEffect(() => {
     document.title =
       "Best Society Branding company in Raipur | Society Branding services";
@@ -36,6 +38,10 @@ function SocietyBranding() {
         "content",
         "society branding, society branding in raipur, society branding company in raipur, society branding agency in raipur, outdoor company in chhattisgarh, society advertising in raipur, society promotion in raipur, society advertising, society promotion company in raipur"
       );
+
+    const img = new Image();
+    img.src = outdoor_img1;
+    img.onload = () => setImageLoaded(true);
   }, []);
 
   return (
@@ -53,7 +59,23 @@ function SocietyBranding() {
             </Link>
           </div>
           <div className="service-right">
-            <img src={outdoor_img1} alt="society branding" />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={outdoor_img1}
+                  alt="society branding"
+                  data-aos="zoom-in"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -108,12 +130,24 @@ function SocietyBranding() {
                 </table>
               </div>
               <div className="society-con">
-                <img
-                  loading="lazy"
-                  src={SocietyBrandingImg1}
-                  alt="society branding in raipur"
-                  data-aos="zoom-in"
-                />
+                <div className="image-loading">
+                  {imageLoaded ? (
+                    <img
+                      src={SocietyBrandingImg1}
+                      alt="society branding in raipur"
+                      data-aos="zoom-in"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="loading-container">
+                      <img
+                        className="loading-placeholder"
+                        src={loading}
+                        alt="Loading"
+                      />
+                    </div>
+                  )}
+                </div>
                 <p>
                   An eco- friendly project, the Srishtis Palazzo Shankar Nagar
                   is known to be the very first skyscapers of Raipur. Surrounded
@@ -174,12 +208,24 @@ function SocietyBranding() {
                 </table>
               </div>
               <div className="society-con">
-                <img
-                  loading="lazy"
-                  src={SocietyBrandingImg2}
-                  alt="society branding company in raipur"
-                  data-aos="zoom-in"
-                />
+                <div className="image-loading">
+                  {imageLoaded ? (
+                    <img
+                      src={SocietyBrandingImg2}
+                      alt="society branding company in raipur"
+                      data-aos="zoom-in"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="loading-container">
+                      <img
+                        className="loading-placeholder"
+                        src={loading}
+                        alt="Loading"
+                      />
+                    </div>
+                  )}
+                </div>
                 <p>
                   This project is a perfect combination of comfort and style,
                   specifically designed to suit your requirements and
@@ -243,12 +289,24 @@ function SocietyBranding() {
                 </table>
               </div>
               <div className="society-con">
-                <img
-                  loading="lazy"
-                  src={SocietyBrandingImg3}
-                  alt="society branding agency in raipur"
-                  data-aos="zoom-in"
-                />
+                <div className="image-loading">
+                  {imageLoaded ? (
+                    <img
+                      src={SocietyBrandingImg3}
+                      alt="society branding company in raipur"
+                      data-aos="zoom-in"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="loading-container">
+                      <img
+                        className="loading-placeholder"
+                        src={loading}
+                        alt="Loading"
+                      />
+                    </div>
+                  )}
+                </div>
                 <p>
                   G T Natura is a vibrant and modern destination in Raipur,
                   offering an exceptional blend of nature, luxury, and
@@ -312,12 +370,24 @@ function SocietyBranding() {
                 </table>
               </div>
               <div className="society-con">
-                <img
-                  loading="lazy"
-                  src={SocietyBrandingImg4}
-                  alt="outdoor company in chhattisgarh"
-                  data-aos="zoom-in"
-                />
+                <div className="image-loading">
+                  {imageLoaded ? (
+                    <img
+                      src={SocietyBrandingImg4}
+                      alt="outdoor company in chhattisgarh"
+                      data-aos="zoom-in"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="loading-container">
+                      <img
+                        className="loading-placeholder"
+                        src={loading}
+                        alt="Loading"
+                      />
+                    </div>
+                  )}
+                </div>
                 <p>
                   A perfect blend of modern living and convenience with rich and
                   well educated people. CG Heights ensures a lifestyle of luxury
@@ -380,12 +450,24 @@ function SocietyBranding() {
                 </table>
               </div>
               <div className="society-con">
-                <img
-                  loading="lazy"
-                  src={SocietyBrandingImg5}
-                  alt="society advertising in raipur"
-                  data-aos="zoom-in"
-                />
+                <div className="image-loading">
+                  {imageLoaded ? (
+                    <img
+                      src={SocietyBrandingImg5}
+                      alt="society advertising in raipur"
+                      data-aos="zoom-in"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="loading-container">
+                      <img
+                        className="loading-placeholder"
+                        src={loading}
+                        alt="Loading"
+                      />
+                    </div>
+                  )}
+                </div>
                 <p>
                   Diamond Tree is a luxurious and modern residential destination
                   in Raipur, offering a perfect combination of elegance,
@@ -445,12 +527,24 @@ function SocietyBranding() {
                 </table>
               </div>
               <div className="society-con">
-                <img
-                  loading="lazy"
-                  src={SocietyBrandingImg6}
-                  alt="society promotion in raipur"
-                  data-aos="zoom-in"
-                />
+                <div className="image-loading">
+                  {imageLoaded ? (
+                    <img
+                      src={SocietyBrandingImg6}
+                      alt="society promotion in raipur"
+                      data-aos="zoom-in"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="loading-container">
+                      <img
+                        className="loading-placeholder"
+                        src={loading}
+                        alt="Loading"
+                      />
+                    </div>
+                  )}
+                </div>
                 <p>
                   Aastha Green typically focuses on providing modern amenities
                   and comfortable living spaces, appealing to families and
@@ -510,12 +604,24 @@ function SocietyBranding() {
                 </table>
               </div>
               <div className="society-con">
-                <img
-                  loading="lazy"
-                  src={SocietyBrandingImg7}
-                  alt="society advertising"
-                  data-aos="zoom-in"
-                />
+                <div className="image-loading">
+                  {imageLoaded ? (
+                    <img
+                      src={SocietyBrandingImg7}
+                      alt="society advertising"
+                      data-aos="zoom-in"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="loading-container">
+                      <img
+                        className="loading-placeholder"
+                        src={loading}
+                        alt="Loading"
+                      />
+                    </div>
+                  )}
+                </div>
                 <p>
                   One of the finest and well planned residential project of
                   Central India. Comfortable living and with top-in-class
@@ -578,12 +684,24 @@ function SocietyBranding() {
                 </table>
               </div>
               <div className="society-con">
-                <img
-                  loading="lazy"
-                  src={SocietyBrandingImg8}
-                  alt="society promotion company in raipur"
-                  data-aos="zoom-in"
-                />
+                <div className="image-loading">
+                  {imageLoaded ? (
+                    <img
+                      src={SocietyBrandingImg8}
+                      alt="society promotion company in raipur"
+                      data-aos="zoom-in"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="loading-container">
+                      <img
+                        className="loading-placeholder"
+                        src={loading}
+                        alt="Loading"
+                      />
+                    </div>
+                  )}
+                </div>
                 <p>
                   Welcome to Rajat Prime, a premium residential society located
                   in the heart of Raipur. Designed to offer modern living with a
@@ -647,12 +765,24 @@ function SocietyBranding() {
                 </table>
               </div>
               <div className="society-con">
-                <img
-                  loading="lazy"
-                  src={SocietyBrandingImg9}
-                  alt="society advertising agency in raipur"
-                  data-aos="zoom-in"
-                />
+                <div className="image-loading">
+                  {imageLoaded ? (
+                    <img
+                      src={SocietyBrandingImg9}
+                      alt="society advertising agency in raipur"
+                      data-aos="zoom-in"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="loading-container">
+                      <img
+                        className="loading-placeholder"
+                        src={loading}
+                        alt="Loading"
+                      />
+                    </div>
+                  )}
+                </div>
                 <p>
                   Nestled in a prime location, VIP Karishma Society is a vibrant
                   residential community that redefines modern living. Designed
@@ -713,12 +843,24 @@ function SocietyBranding() {
                 </table>
               </div>
               <div className="society-con">
-                <img
-                  loading="lazy"
-                  src={SocietyBrandingImg10}
-                  alt="society hoarding in raipur"
-                  data-aos="zoom-in"
-                />
+                <div className="image-loading">
+                  {imageLoaded ? (
+                    <img
+                      src={SocietyBrandingImg10}
+                      alt="society hoarding in raipur"
+                      data-aos="zoom-in"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="loading-container">
+                      <img
+                        className="loading-placeholder"
+                        src={loading}
+                        alt="Loading"
+                      />
+                    </div>
+                  )}
+                </div>
                 <p>
                   Nestled in the heart of nature, Green Meadows offers a
                   peaceful escape from the hustle and bustle of everyday life

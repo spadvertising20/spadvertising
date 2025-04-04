@@ -14,20 +14,24 @@
     flex-direction: column;
     align-items: center;
     width: 90%;
-    
+
     gap: 80px;
     margin-top: 4rem;
 }
-.ul{
+
+.ul {
+    max-width: 1200px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 80px;
 }
+
 .service-para {
     font-size: 18px;
     color: gray;
     padding-block: 10px;
- 
+
 }
 
 .service-box {
@@ -85,6 +89,7 @@
 
 .service-right {
     width: 50vw;
+
 }
 
 .service-right img {
@@ -125,7 +130,7 @@
 .topic-align1 img {
     width: 30rem;
     border: 5px solid black;
-  
+
 }
 
 .topic-align2 {
@@ -166,35 +171,51 @@
 }
 
 .align2 table {
-    width: 40vw; /* Responsive width */
-    border-collapse: collapse; /* Remove space between cells */
-    text-align: center; /* Center-align text */
-    font-family: Arial, sans-serif; /* Use a clean font */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* Ensure rounded corners are visible */
-    margin: 20px auto; /* Center the table */
+    width: 40vw;
+    /* Responsive width */
+    border-collapse: collapse;
+    /* Remove space between cells */
+    text-align: center;
+    /* Center-align text */
+    font-family: Arial, sans-serif;
+    /* Use a clean font */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+    border-radius: 8px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Ensure rounded corners are visible */
+    margin: 20px auto;
+    /* Center the table */
 }
 
 .align2 th,
 .align2 td {
-    border: 1px solid #ddd; /* Light gray border */
-    padding: 7px; /* Add padding for better spacing */
+    border: 1px solid #ddd;
+    /* Light gray border */
+    padding: 7px;
+    /* Add padding for better spacing */
 }
 
 .align2 th {
-    background-color: #f8f9fa; /* Light gray background for headers */
-    font-weight: bold; /* Bold header text */
-    color: #333; /* Darker text color for headers */
+    background-color: #f8f9fa;
+    /* Light gray background for headers */
+    font-weight: bold;
+    /* Bold header text */
+    color: #333;
+    /* Darker text color for headers */
 }
 
 .align2 tr:nth-child(even) {
-    background-color: #f9f9f9; /* Zebra striping for rows */
+    background-color: #f9f9f9;
+    /* Zebra striping for rows */
 }
 
 .align2 tr:hover {
-    background-color: #f1f1f1; /* Highlight row on hover */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    background-color: #f1f1f1;
+    /* Highlight row on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
 }
 
 
@@ -204,52 +225,61 @@
     justify-content: center;
     align-items: center;
 }
-.align3 h1{
+
+.align3 h1 {
     color: #00c2f3;
     text-decoration: underline;
 }
-.align3 p{
+
+.align3 p {
     color: #265AA5;
 }
 
-.topic-left h2{
+.topic-left h2 {
     color: black;
     font-weight: bold;
     font-size: 22px;
 }
 
-.service-btn{
+.service-btn {
     display: flex;
     gap: 10px;
 }
-.service-btn1, .service-btn2{
-    width: 10vw;
+
+.service-btn1,
+.service-btn2 {
+
     min-width: 120px;
     min-height: 10px;
-    padding: 10px 16px;
-    border-radius: 20px;
-    border: none; /* Removed hidden, as it's not needed */
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    /* Removed hidden, as it's not needed */
     background-color: #0864ae;
     color: white;
     text-align: center;
     font-size: 18px;
     line-height: 1.5;
-    margin: 18px 8px 8px 8px; /* top, right, bottom, left */
-    cursor: pointer; /* For better UX */
+    margin: 18px 8px 8px 8px;
+    /* top, right, bottom, left */
+    cursor: pointer;
+    /* For better UX */
 }
-.service-btn1{
+
+.service-btn1 {
     background-color: #007BFF;
 }
 
-.service-btn2{
+.service-btn2 {
     background-color: #128C7E;
 }
 
-.topic-left ul{
+.topic-left ul {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
+
 
 
 @media (max-width:768px) {
@@ -257,15 +287,19 @@
     .service-box {
         flex-direction: column;
     }
+
     .service-con button {
         width: 38vw;
-        
+
     }
-    .topic-left ul{
+
+    .topic-left ul {
         display: flex;
         flex-direction: column;
+
         gap: 10px;
     }
+
     .service-left {
         width: 100%;
         color: #265AA5;
@@ -284,9 +318,8 @@
         flex-direction: column;
         display: flex;
         justify-content: center;
-        align-self: center;
+        align-items: center;
         width: 90%;
-        box-shadow: 0px 5px 10px gainsboro;
         border-radius: 10px;
         padding-top: 30px;
     }
@@ -301,10 +334,11 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        
+
         gap: 10px;
     }
-    .topic-left h1{
+
+    .topic-left h1 {
         text-align: center;
     }
 
@@ -321,10 +355,13 @@
     .topic-left h1 {
         font-size: 35px;
     }
-    .topic-left h2{
+
+    .topic-left h2 {
         font-size: 28px;
         text-align: left;
     }
+
+ 
 
     .align2 {
         flex-direction: column-reverse;
@@ -341,20 +378,26 @@
         justify-content: center;
         align-items: center;
     }
+
     .align2 table {
-        width: 90vw; /* Increase width for smaller screens */
-        font-size: 14px; /* Reduce font size for better fit */
+        width: 90vw;
+        /* Increase width for smaller screens */
+        font-size: 14px;
+        /* Reduce font size for better fit */
     }
 
     .align2 th,
     .align2 td {
-        padding: 8px; /* Reduce padding for smaller screens */
+        padding: 8px;
+        /* Reduce padding for smaller screens */
     }
+
     .society-con p {
-       
+
         font-size: 14px;
-       
+
     }
+
     .service-para {
         font-size: 16px;
         color: gray;

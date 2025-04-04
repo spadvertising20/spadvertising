@@ -133,8 +133,8 @@
 
 .cart button {
     background-color: #0864ae;
-    padding: 10px 8px 10px 8px;
-    border-radius: 10px;
+    padding: 10px 16px;
+    border-radius: 8px;
     cursor: pointer;
     color: white;
     font-size: 15px;

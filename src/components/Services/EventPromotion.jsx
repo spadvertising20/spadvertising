@@ -1,12 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Services.css";
 import { Link } from "react-router-dom";
 import event from "../../assets/Services/EventPromotion/event.png";
 import Corporate_Event from "../../assets/Services/EventPromotion/Corporate-Event.jpg";
 import mall from "../../assets/Services/EventPromotion/mall.png";
-import { Helmet } from "react-helmet";
+import loading from "../../assets/components/loading-image.png";
 
 function EventPromotion() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   useEffect(() => {
     document.title =
       "Best Event Promotion company in Raipur | Event Promotion services";
@@ -24,6 +26,10 @@ function EventPromotion() {
         "content",
         "Event promotion company,	event marketing services, professional event promotion, event advertising agency,	Affordable event promotion strategies,  Event promotion agency near me, Event promotion company in Raipur, Best event marketing services in Raipur, Event advertising and marketing in Raipur"
       );
+
+    const img = new Image();
+    img.src = loading;
+    img.onload = () => setImageLoaded(true);
   }, []);
 
   return (
@@ -41,12 +47,24 @@ function EventPromotion() {
             </Link>
           </div>
           <div className="service-right">
-            <img
-              
-              src={event}
-              alt="Event Promotion in Raipur"
-              data-aos="zoom-in"
-            />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={event}
+                  alt="Event Promotion in Raipur"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -54,12 +72,24 @@ function EventPromotion() {
       <div className="service-con">
         <div className="ul">
           <div className="topic-align1">
-            <img
-              loading="lazy"
-              src={Corporate_Event}
-              alt="Corporate Event in Raipur"
-              data-aos="zoom-in"
-            />
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={Corporate_Event}
+                  alt="Corporate Event in Raipur"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
             <div className="topic-left" data-aos="fade-right">
               <h1>Corporate Event</h1>
               <p>
@@ -89,12 +119,25 @@ function EventPromotion() {
                 foot traffic.
               </p>
             </div>
-            <img
-              loading="lazy"
-              src={mall}
-              alt="Mall Activation in Raipur"
-              data-aos="zoom-in"
-            />
+
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img
+                  src={mall}
+                  alt="Mall Activation in Raipur"
+                  data-aos="zoom-in"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="loading-container">
+                  <img
+                    className="loading-placeholder"
+                    src={loading}
+                    alt="Loading"
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

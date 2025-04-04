@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Services.css";
 import outdoor_img1 from "../../assets/Services/OutdoorAdvertising/outdoor-img1.png";
 import { Link } from "react-router-dom";
@@ -6,9 +6,12 @@ import showcase1 from "../../assets/Services/OutdoorAdvertising/showcase1.webp";
 import showcase2 from "../../assets/Services/OutdoorAdvertising/showcase2.webp";
 import outdoor_img2 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising5.jpg";
 import gantry from "../../assets/Services/OutdoorAdvertising/gantry.jpg";
-import { Helmet } from "react-helmet-async";
+import loading from "../../assets/components/loading-image.png";
+
 
 function OutdoorAdvertising() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   useEffect(() => {
     document.title =
       "Best Outdoor Advertising company in Raipur | Outdoor Advertising services";
@@ -26,6 +29,10 @@ function OutdoorAdvertising() {
         "content",
         "outdoor advertising agency, Outdoor advertising services, Outdoor advertising agency in Raipur, Billboard advertising solutions, outdoor advertising companies, billboard advertising companies, outdoor billboard companies, billboard ad companies, out of home advertising companies"
       );
+
+    const img = new Image();
+    img.src = outdoor_img1;
+    img.onload = () => setImageLoaded(true);
   }, []);
 
   return (
@@ -43,10 +50,15 @@ function OutdoorAdvertising() {
             </Link>
           </div>
           <div className="service-right">
-            <img
-              src={outdoor_img1}
-              alt="Outdoor Advertising agency in Raipur"
-            />
+            {imageLoaded ? (
+              <img src={outdoor_img1} alt="Outdoor Advertising in Raipur" data-aos="zoom-in" />
+            ) : (
+              <img
+                className="loading-placeholder"
+                src={loading}
+                alt="Loading"
+              />
+            )}
           </div>
         </div>
       </div>
@@ -56,7 +68,8 @@ function OutdoorAdvertising() {
           <div className="topic-align1" id="topic-align2">
             <div className="topic-left" data-aos="fade-right">
               <h1>
-              Increase Brand Awareness with Effective Mobile Hoarding Promotion
+                Increase Brand Awareness with Effective Mobile Hoarding
+                Promotion
               </h1>
               <div className="service-para">
                 Looking for{" "}
@@ -99,21 +112,29 @@ function OutdoorAdvertising() {
                 </a>
               </div>
             </div>
-            <img
-              loading="lazy"
-              src={showcase1}
-              alt=" Outdoor advertising services"
-              data-aos="zoom-in"
-            />
+
+            {imageLoaded ? (
+              <img src={showcase1} alt="BOutdoor advertising services" data-aos="zoom-in" />
+            ) : (
+              <img
+                className="loading-placeholder"
+                src={loading}
+                alt="Loading"
+              />
+            )}
           </div>
 
-          <div className="topic-align1">
-            <img
-              loading="lazy"
-              src={outdoor_img2}
-              alt="Outdoor advertising near me"
-              data-aos="zoom-in"
-            />
+          <div className="topic-align1" data-aos="fade-right">
+            {imageLoaded ? (
+              <img src={outdoor_img2} alt="Outdoor advertising near me" data-aos="zoom-in" />
+            ) : (
+              <img
+                className="loading-placeholder"
+                src={loading}
+                alt="Loading"
+              />
+            )}
+
             <div className="topic-left" data-aos="fade-right">
               <h1>
                 High-Impact Hoarding Advertising for Maximum Brand Exposure
@@ -211,23 +232,38 @@ function OutdoorAdvertising() {
                 </a>
               </div>
             </div>
-            <img
-              loading="lazy"
-              src={gantry}
-              alt="Billboard advertising solutions"
-              data-aos="zoom-in"
-            />
+
+            <div className="image-loading">
+              {imageLoaded ? (
+                <img src={gantry} alt="Billboard advertising solutions" data-aos="zoom-in" />
+              ) : (
+                <img
+                  className="loading-placeholder"
+                  src={loading}
+                  alt="Loading"
+                />
+              )}
+            </div>
           </div>
 
           <div className="topic-align1">
-            <img
-              loading="lazy"
-              src={showcase2}
-              alt="Outdoor Advertising agency"
-              data-aos="zoom-in"
-            />
+              <div className="image-loading">
+                {imageLoaded ? (
+                  <img src={showcase2} alt="Outdoor Advertising agency" data-aos="zoom-in" />
+                ) : (
+                  <div className="loading-container">
+                    <img
+                      className="loading-placeholder"
+                      src={loading}
+                      alt="Loading"
+                    />
+                  </div>
+                )}
+              </div>
             <div className="topic-left" data-aos="fade-right">
-              <h1>Use Pole Kiosk Branding & Advertising to Expand Your Brand</h1>
+              <h1>
+                Use Pole Kiosk Branding & Advertising to Expand Your Brand
+              </h1>
               <div className="service-para">
                 Looking for{" "}
                 <a href="" aria-label="pole kiosk branding">
