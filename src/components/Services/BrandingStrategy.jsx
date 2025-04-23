@@ -7,10 +7,10 @@ import Communications_Strategy from "../../assets/Services/BrandingStrategy/Comm
 import Creative_Campaigns from "../../assets/Services/BrandingStrategy/Creative_Campaigns.jpg";
 import Corporate from "../../assets/Services/BrandingStrategy/Corporate.jpg";
 import loading from "../../assets/components/loading-image.png";
+import ImageLoader from "../../elements/ImageLoader";
+import WhyTrustUs from "../../elements/WhyTrustUs";
 
 function BrandingStrategy() {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
   useEffect(() => {
     document.title =
       "Best Branding & Stradegy agency in Raipur | Branding & Stradegy services";
@@ -28,11 +28,13 @@ function BrandingStrategy() {
         "content",
         "Branding and strategy agency, Creative Branding Solutions, Strategic Marketing Agency, Brand Identity Development,	Corporate Branding Services in Raipur, Strategic Brand Consulting, Brand Positioning Agency in Raipur, Rebranding and Marketing Experts, Integrated Branding Strategies"
       );
-
-    const img = new Image();
-    img.src = loading;
-    img.onload = () => setImageLoaded(true);
   }, []);
+
+  const wcsservices = [
+    "Communications Strategy",
+    "Creative 360 Campaigns",
+    "Corporate and Brand Identity",
+  ];
 
   return (
     <div className="service">
@@ -49,48 +51,24 @@ function BrandingStrategy() {
             </Link>
           </div>
           <div className="service-right">
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={brand}
-                  alt="Branding Strategy in Raipur"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
-            </div>
+            <ImageLoader src={loading}
+              data-src={brand}
+              alt="Branding Strategy in Raipur"
+              data-aos="zoom-in"
+              
+            />
           </div>
         </div>
       </div>
       <div className="service-con">
         <div className="ul">
           <div className="topic-align1">
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={Communications_Strategy}
-                  alt="Communications Strategy in Raipur"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
-            </div>
+            <ImageLoader src={loading}
+              data-src={Communications_Strategy}
+              alt="Communications Strategy in Raipur"
+              data-aos="zoom-in"
+              
+            />
             <div className="topic-left" data-aos="fade-right">
               <h1>Communications Strategy</h1>
               <p>
@@ -121,44 +99,20 @@ function BrandingStrategy() {
               </p>
             </div>
 
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={Creative_Campaigns}
-                  alt="Creative 360 Campaigns in Raipur"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
-            </div>
+            <ImageLoader src={loading}
+              data-src={Creative_Campaigns}
+              alt="Creative 360 Campaigns in Raipur"
+              data-aos="zoom-in"
+              
+            />
           </div>
 
           <div className="topic-align1">
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={Corporate}
-                  alt="Corporate and Brand Identity in Raipur"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
-            </div>
+            <ImageLoader src={loading}
+              data-src={Corporate}
+              alt="Corporate and Brand Identity in Raipur"
+              
+            />
             <div className="topic-left" data-aos="fade-right">
               <h1>Corporate and Brand Identity</h1>
               <p>
@@ -175,6 +129,7 @@ function BrandingStrategy() {
           </div>
         </div>
       </div>
+       <WhyTrustUs services={wcsservices}/>
     </div>
   );
 }

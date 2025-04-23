@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
 import about_team from "../../assets/AboutMe/about-imge1.jpg";
-import { Link } from "react-router-dom";  
+import { Link } from "react-router-dom";
 
 export default function HomeAbout() {
   return (
@@ -19,13 +19,14 @@ export default function HomeAbout() {
             industry experts, who bring unparalleled expertise, innovation, and
             dedication to driving sustainable growth and transformation.
           </p>
-          <Link to={"/About"}>
-            <button>About Us</button>
-          </Link>
+          <div className="shadow-about">
+            <a href="/about">
+              <button>About Us</button>
+            </a>
+          </div>
         </div>
-        
-          <img src={about_team} alt="media marketing agency" loading="lazy"/>
-        
+
+        <img src={about_team} alt="media marketing agency" loading="lazy" />
       </div>
     </div>
   );

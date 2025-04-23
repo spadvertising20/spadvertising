@@ -41,8 +41,15 @@
 .home-about-con img {
     width: 40rem;
     max-width: 1300px;
-
-    border-radius: 10px;
+box-shadow: 8px 8px #00254e;
+    border-radius: 30px;
+    transition: all 0.1s ease-in-out;
+   
+}
+.home-about-con img:active {
+    
+box-shadow: 0px 0px #00254e;
+transform: translate(3px, 3px);
 }
 
 .home-content {
@@ -66,6 +73,24 @@
     color: white;
     font-size: 18px;
 }
+.shadow-about button {
+    
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 #00254e;
+    transition: all 0.1s ease-in-out;
+}
+
+.shadow-about button:active {
+    box-shadow: 0 0px 0px #0f6fff;
+    transform: translateY(3px);
+}
+
 
 @media (max-width:768px) {
     .home-about-con {

@@ -137,11 +137,13 @@ const Showcase = () => {
           />
         </div>
       </Slider>
-      <Link to={"/Portfolio"}>
-        <button type="button" aria-label="Go to Portfolio">
-          See more... 
-        </button>
-      </Link>
+      
+        <div className="shadow">
+          <a href="/portfolio">
+            <button>Explore Our Work</button>
+          </a>
+        </div>
+    
     </div>
   );
 };

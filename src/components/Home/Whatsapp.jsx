@@ -11,7 +11,7 @@ export default function Whatsapp() {
         rel="noopener noreferrer"
         href="https://wa.me/918085354646"
       >
-        <img loading="lazy" src={whatsapp} alt="" />
+        <img loading="lazy" src={whatsapp} alt="whatsapp" />
       </a>
     </div>
   );

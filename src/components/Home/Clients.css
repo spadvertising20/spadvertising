@@ -52,7 +52,7 @@
 }
 
 .home-clients-title h1 {
-    color: #F0F0F0;
+    color: #e7e7e7;
     font-size: 60px;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -71,6 +71,10 @@
     width: 130px;
     padding: 20px;
     
+}
+.img-visible{
+    background: #000;
+    border-radius: 10px;
 }
 
 @media (max-width:768px) {

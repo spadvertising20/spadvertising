@@ -5,13 +5,18 @@ import { Link } from "react-router-dom";
 import print_img2 from "../../assets/Services/PrintMedia/prini-img2.jpeg";
 import Newspaper_Ads from "../../assets/Services/PrintMedia/Newspaper-Ads.jpg";
 import Pamphlet from "../../assets/Services/PrintMedia/Pamphlet.jpg";
-import inshop from "../../assets/Services/PrintMedia/inshop.png";
 import inshop3 from "../../assets/Services/BrandingStrategy/inshop3.jpg";
 import loading from "../../assets/components/loading-image.png";
+import ImageLoader from "../../elements/ImageLoader";
+import WhyTrustUs from "../../elements/WhyTrustUs";
 
 function PrintMedia() {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
+  const wcsservices = [
+    "Newspaper Ads",
+    "Brochure",
+    "Pamphlet",
+    "In-Shop Branding",
+  ];
   useEffect(() => {
     document.title =
       "Best Print Media company in Raipur | Print Media services";
@@ -29,10 +34,6 @@ function PrintMedia() {
         "content",
         "Print Media agency,	Print Advertising Services, Custom Print Media Solutions, Professional Printing Agency,	Brochure Printing Services in Raipur, Flyer Design and Printing in Raipur, High-Quality Print Ads, Custom Poster Printing, Corporate Printing Solutions"
       );
-
-    const img = new Image();
-    img.src = outdoor_img1;
-    img.onload = () => setImageLoaded(true);
   }, []);
 
   return (
@@ -49,24 +50,11 @@ function PrintMedia() {
             </Link>
           </div>
           <div className="service-right">
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={print}
-                  alt="Print Media in in Raipur"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
-            </div>
+            <ImageLoader src={loading}
+              data-src={print}
+              alt="Print Media in in Raipur"
+              data-aos="zoom-in"
+            />
           </div>
         </div>
       </div>
@@ -86,45 +74,19 @@ function PrintMedia() {
               </p>
             </div>
 
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={Newspaper_Ads}
-                  alt="Newspaper Ads in Raipur"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
-            </div>
+            <ImageLoader src={loading}
+              data-src={Newspaper_Ads}
+              alt="Newspaper Ads in Raipur"
+              data-aos="zoom-in"
+            />
           </div>
 
           <div className="topic-align1">
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={print_img2}
-                  alt="Brochure in Raipur"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
-            </div>
+            <ImageLoader src={loading}
+              data-src={print_img2}
+              alt="Brochure in Raipur"
+              data-aos="zoom-in"
+            />
             <div className="topic-left" data-aos="fade-right">
               <h1>Brochure</h1>
               <p className="">
@@ -155,45 +117,19 @@ function PrintMedia() {
               </p>
             </div>
 
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={Pamphlet}
-                  alt="Pamphlet in Raipur"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
-            </div>
+            <ImageLoader src={loading}
+              data-src={Pamphlet}
+              alt="Pamphlet in Raipur"
+              data-aos="zoom-in"
+            />
           </div>
 
           <div className="topic-align1">
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={inshop3}
-                  alt="In-Shop Branding in Raipur"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
-            </div>
+            <ImageLoader src={loading}
+              data-src={inshop3}
+              alt="In-Shop Branding in Raipur"
+              data-aos="zoom-in"
+            />
             <div className="topic-left" data-aos="fade-right">
               <h1>In-Shop Branding</h1>
               <p>
@@ -207,6 +143,7 @@ function PrintMedia() {
           </div>
         </div>
       </div>
+      <WhyTrustUs services={wcsservices}/>
     </div>
   );
 }

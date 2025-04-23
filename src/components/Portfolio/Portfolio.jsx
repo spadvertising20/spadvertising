@@ -5,6 +5,8 @@ import homepage1 from "../../assets/Portfolio/homepage1.png";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import loading from "../../assets/components/loading-image.png";
+import ImageLoader from "../../elements/ImageLoader";
 
 import outdoor_img1 from "../../assets/Services/OutdoorAdvertising/outdoor-img1.png";
 import outdoor_img2 from "../../assets/Services/OutdoorAdvertising/hoarding.jpg";
@@ -154,12 +156,12 @@ function Portfolio() {
 
   const settings2 = {
     ...settings1,
-    rtl: false, // Left-to-right behavior
+    rtl: false, 
   };
 
   const settings3 = {
     ...settings1,
-    rtl: true, // Right-to-left behavior remains
+    rtl: true, 
   };
 
   const settings4 = {
@@ -305,9 +307,9 @@ function Portfolio() {
                 have driven success to many of our valued clients."
               </p>
             </div>
-            <img
-              loading="lazy"
-              src={portfolio_heading_img}
+            <ImageLoader
+              src={loading}
+              data-src={portfolio_heading_img}
               alt=""
               data-aos="fade-up"
               data-aos-duration="1500"
@@ -322,49 +324,43 @@ function Portfolio() {
         </h1>
       </div>
         <Slider {...settings1} className="portfolio-slider">
-          {/* <div>
-  < img loading="lazy" src={outdoor_img1} alt=""   />
-  </div> */}
+         
 
           <div>
-            <img loading="lazy" src={showcase1} alt="" />
+            <ImageLoader src={loading} data-src={showcase1} alt="" />
           </div>
           <div>
-            <img loading="lazy" src={showcase2} alt="" />
+            <ImageLoader src={loading} data-src={showcase2} alt="" />
           </div>
           <div>
-            <img loading="lazy" src={gantry} alt="" />
+            <ImageLoader src={loading} data-src={gantry} alt="" />
           </div>
           <div>
-            <img loading="lazy" src={outdoor1} alt="" />
+            <ImageLoader src={loading} data-src={outdoor1} alt="" />
           </div>
           <div>
-            <img loading="lazy" src={outdoor2} alt="" />
+            <ImageLoader src={loading} data-src={outdoor2} alt="" />
           </div>
 
-          {/* <div>
-        < img loading="lazy" src={outdoor4} alt="" />
-    </div> */}
+         
           <div>
-            <img loading="lazy" src={outdoor5} alt="" />
+            <ImageLoader src={loading} data-src={outdoor5} alt="" />
           </div>
           <div>
-            <img loading="lazy" src={outdoor6} alt="" />
+            <ImageLoader src={loading} data-src={outdoor6} alt="" />
           </div>
           <div>
-            <img loading="lazy" src={outdoor7} alt="" />
+            <ImageLoader src={loading} data-src={outdoor7} alt="" />
           </div>
-          {/* <div>
-        < img loading="lazy" src={outdoor8} alt="" />
-    </div> */}
+          
           <div>
-            <img loading="lazy" src={outdoor9} alt="" />
+            <ImageLoader src={loading} data-src={outdoor9} alt="" />
           </div>
           <div>
-            <img loading="lazy" src={outdoor10} alt="" />
+            <ImageLoader src={loading} data-src={outdoor10} alt="" />
           </div>
           <div>
-            <img loading="lazy" src={outdoor11} alt="" />
+            <ImageLoader src={loading} data-src={outdoor11} alt="" />
           </div>
         </Slider>
       </div>
@@ -377,44 +373,44 @@ function Portfolio() {
         
         <Slider {...settings2} className="portfolio-slider">
           <div className="portfolio-dm">
-            <img
-              loading="lazy"
-              src={digital_marketing_img5}
+            <ImageLoader
+              src={loading}
+              data-src={digital_marketing_img5}
               alt="Digital Marketing in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={digital_marketing_img6}
+            <ImageLoader
+              src={loading}
+              data-src={digital_marketing_img6}
               alt="Digital Marketing in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={digital_marketing_img7}
+            <ImageLoader
+              src={loading}
+              data-src={digital_marketing_img7}
               alt="Digital Marketing in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={digital_marketing_img8}
+            <ImageLoader
+              src={loading}
+              data-src={digital_marketing_img8}
               alt="Digital Marketing in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={digital_marketing_img9}
+            <ImageLoader
+              src={loading}
+              data-src={digital_marketing_img9}
               alt="Digital Marketing in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={digital_marketing_img10}
+            <ImageLoader
+              src={loading}
+              data-src={digital_marketing_img10}
               alt="Digital Marketing in Raipur"
             />
           </div>
@@ -429,66 +425,64 @@ function Portfolio() {
         
         <Slider {...settings3} className="portfolio-slider">
           <div>
-            <img
-              loading="lazy"
-              src={design1}
+            <ImageLoader
+              src={loading}
+              data-src={design1}
               alt="Creative Concepts in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={design2}
+            <ImageLoader
+              src={loading}
+              data-src={design2}
               alt="Creative Concepts in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={design3}
+            <ImageLoader
+              src={loading}
+              data-src={design3}
               alt="Creative Concepts in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={design4}
+            <ImageLoader
+              src={loading}
+              data-src={design4}
               alt="Creative Concepts in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={design5}
+            <ImageLoader
+              src={loading}
+              data-src={design5}
               alt="Creative Concepts in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={design6}
+            <ImageLoader
+              src={loading}
+              data-src={design6}
               alt="Creative Concepts in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={design7}
+            <ImageLoader
+              src={loading}
+              data-src={design7}
               alt="Creative Concepts in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={design8}
+            <ImageLoader
+              src={loading}
+              data-src={design8}
               alt="Creative Concepts in Raipur"
             />
           </div>
-          {/* <div>
-< img loading="lazy" src={design9} alt=""   />
-</div> */}
+         
           <div>
-            <img loading="lazy" src={design10} alt="" />
+            <ImageLoader src={loading} data-src={design10} alt="" />
           </div>
         </Slider>
       </div>
@@ -501,21 +495,21 @@ function Portfolio() {
         
         <Slider {...settings4} className="portfolio-slider">
           <div>
-            <img
-              loading="lazy"
-              src={print_img2}
+            <ImageLoader
+              src={loading}
+              data-src={print_img2}
               alt="Print Media in in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={Newspaper_Ads}
+            <ImageLoader
+              src={loading}
+              data-src={Newspaper_Ads}
               alt="Print Media in in Raipur"
             />
           </div>
           <div>
-            <img loading="lazy" src={Pamphlet} alt="Print Media in in Raipur" />
+            <ImageLoader src={loading} data-src={Pamphlet} alt="Print Media in in Raipur" />
           </div>
         </Slider>
       </div>
@@ -528,57 +522,55 @@ function Portfolio() {
         
         <Slider {...settings5} className="portfolio-slider">
           <div>
-            <img
-              loading="lazy"
-              src={inshop1}
+            <ImageLoader
+              src={loading}
+              data-src={inshop1}
               alt="In-Shop Branding in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={inshop2}
+            <ImageLoader
+              src={loading}
+              data-src={inshop2}
               alt="In-Shop Branding company in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={inshop3}
+            <ImageLoader
+              src={loading}
+              data-src={inshop3}
               alt="In-Shop Branding agency in Raipur"
             />
           </div>
           <div>
-            <img loading="lazy" src={inshop4} alt="In-Shop Branding" />
+            <ImageLoader src={loading} data-src={inshop4} alt="In-Shop Branding" />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={inshop5}
+            <ImageLoader
+              src={loading}
+              data-src={inshop5}
               alt="In-Shop advertising in Raipur"
             />
           </div>
-          {/* <div>
-< img loading="lazy" src={inshop6} alt=""   />
-</div> */}
+          
           <div>
-            <img
-              loading="lazy"
-              src={inshop7}
+            <ImageLoader
+              src={loading}
+              data-src={inshop7}
               alt="In-Shop promotion in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={inshop8}
+            <ImageLoader
+              src={loading}
+              data-src={inshop8}
               alt="In-Shop Branding company in chhattisgarh"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={inshop9}
+            <ImageLoader
+              src={loading}
+              data-src={inshop9}
               alt="In-Shop advertising company"
             />
           </div>
@@ -593,30 +585,30 @@ function Portfolio() {
       
         <Slider {...settings6} className="portfolio-slider">
           <div>
-            <img
-              loading="lazy"
-              src={event_promotion1}
+            <ImageLoader
+              src={loading}
+              data-src={event_promotion1}
               alt="Event Promotion in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={event_promotion2}
+            <ImageLoader
+              src={loading}
+              data-src={event_promotion2}
               alt="Event Promotion in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={event_promotion3}
+            <ImageLoader
+              src={loading}
+              data-src={event_promotion3}
               alt="Event Promotion in Raipur"
             />
           </div>
           <div>
-            <img
-              loading="lazy"
-              src={event_promotion4}
+            <ImageLoader
+              src={loading}
+              data-src={event_promotion4}
               alt="Event Promotion in Raipur"
             />
           </div>
@@ -633,14 +625,10 @@ function Portfolio() {
           <div className="website-con">
             <a href="https://cleveryoungsters.in/">
               <div className="website-absolute">
-                <img loading="lazy" src={homepageImage1} alt="" />
+                <ImageLoader src={loading} data-src={homepageImage1} alt="" />
                 <div className="website-visit">
                   <p>visit website</p>
-                  {/* < img loading="lazy"
-src={external_link}
-alt="Website Development in Raipur"
-loading="lazy"
-/> */}
+                 
                 </div>
               </div>
             </a>
@@ -648,14 +636,10 @@ loading="lazy"
           <div className="website-con">
             <a href="https://www.nirmaantmt.com/">
               <div className="website-absolute">
-                <img loading="lazy" src={homepageImage2} alt="" />
+                <ImageLoader src={loading} data-src={homepageImage2} alt="" />
                 <div>
                   <p>visit website</p>
-                  {/* < img loading="lazy"
-src={external_link}
-alt="Website Development in Raipur"
-loading="lazy"
-/> */}
+                 
                 </div>
               </div>
             </a>
@@ -663,14 +647,10 @@ loading="lazy"
           <div className="website-con">
             <a href="https://sprn.in/">
               <div className="website-absolute">
-                <img loading="lazy" src={homepageImage3} alt="" />
+                <ImageLoader src={loading} data-src={homepageImage3} alt="" />
                 <div>
                   <p>visit website</p>
-                  {/* < img loading="lazy"
-src={external_link}
-alt="Website Development in Raipur"
-loading="lazy"
-/> */}
+                  
                 </div>
               </div>
             </a>
@@ -678,14 +658,10 @@ loading="lazy"
           <div className="website-con">
             <a href="https://sprn.in/">
               <div className="website-absolute">
-                <img loading="lazy" src={homepageImage4} alt="" />
+                <ImageLoader src={loading} data-src={homepageImage4} alt="" />
                 <div>
                   <p>visit website</p>
-                  {/* < img loading="lazy"
-src={external_link}
-alt="Website Development in Raipur"
-loading="lazy"
-/> */}
+                 
                 </div>
               </div>
             </a>
@@ -831,13 +807,13 @@ loading="lazy"
             </p>
             <Link to={"/contact"}>
               <button>
-                {/* < img loading="lazy" src={flight} alt=""   /> */}
+                
                 Let's Take Flight
               </button>
             </Link>
           </div>
           <iframe
-            loading="lazy"
+             loading="lazy"
             className="video"
             width="560"
             height="315"

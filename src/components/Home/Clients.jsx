@@ -37,73 +37,46 @@ export default function HomeClients() {
         </p>
 
         <div className="home-clients-images">
-          <img
-            
-            src={client1}
-            alt="outdoor advertising companies"
-          />
+          <img src={client1} alt="outdoor advertising companies" />
 
-          <img
-            
-            src={client2}
-            alt="social media marketing agency near me"
-          />
+          <img src={client2} alt="social media marketing agency near me" />
 
-          <img  src={client3} alt="digital marketing ads" />
+          <img src={client3} alt="digital marketing ads" />
 
+          <img src={client4} alt="digital marketing advertising" />
           <img
-            
-            src={client4}
-            alt="digital marketing advertising"
-          />
-          <img
-            
             className="img-visible"
             src={client7}
             alt="billboard advertising companies"
           />
-          <img  src={client5} alt="best advertising" />
-          <img
-            
-            className="img-visible"
-            src={client6}
-            alt="ad makers"
-          />
+          <img src={client5} alt="best advertising" />
+          <img className="img-visible" src={client6} alt="ad makers" />
 
-          <img  src={client8} alt="outdoor billboard companies" />
+          <img src={client8} alt="outdoor billboard companies" />
 
-          <img
-            
-            src={client9}
-            alt="advertising and marketing companies"
-          />
+          <img src={client9} alt="advertising and marketing companies" />
 
-          <img  src={client10} alt="advertising on billboards" />
+          <img src={client10} alt="advertising on billboards" />
 
-          <img  src={client11} alt="top ad agencies" />
+          <img src={client11} alt="top ad agencies" />
 
-          <img  src={client12} alt="advertising firms near me" />
+          <img src={client12} alt="advertising firms near me" />
 
-          <img  src={client13} alt="construction advertisement" />
+          <img src={client13} alt="construction advertisement" />
 
-          <img  src={client14} alt="ad marketing agency" />
+          <img src={client14} alt="ad marketing agency" />
 
-          <img
-            
-            className="img-visible"
-            src={client15}
-            alt="agency google ads"
-          />
+          <img className="img-visible" src={client15} alt="agency google ads" />
 
-          <img  src={client16} alt="brand advertising" />
+          <img src={client16} alt="brand advertising" />
 
-          <img  src={client17} alt="linkedin ads management" />
+          <img src={client17} alt="linkedin ads management" />
         </div>
-        <Link to={"https://spadvertising.in/Clients"}>
+        {/* <Link to={"https://spadvertising.in/Clients"}>
           <button type="button" aria-label="Go to Portfolio">
             Explore more...
           </button>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

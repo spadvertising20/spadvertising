@@ -6,11 +6,106 @@ import digital_marketing_img1 from "../../assets/Services/DigitalMarketing/digit
 import digital_marketing_img2 from "../../assets/Services/DigitalMarketing/digital-marketing-img2.jpg";
 import digital_marketing_img3 from "../../assets/Services/DigitalMarketing/digital-marketing-img3.jpg";
 import digital_marketing_img4 from "../../assets/Services/DigitalMarketing/digital-marketing-img4.jpg";
+import digital_marketing_img11 from "../../assets/Services/DigitalMarketing/digital-marketing-img11.jpg";
+
 import loading from "../../assets/components/loading-image.png";
+import ImageLoader from "../../elements/ImageLoader";
+// Import images
+import outdoor_ad1 from "../../assets/WhatWeDo/outdoor_ad1.png";
+import digital_marketing from "../../assets/WhatWeDo/bullhorn.png";
+import design_thinking from "../../assets/WhatWeDo/design-thinking.png";
+import print_media from "../../assets/WhatWeDo/flyer.png";
+import analysis from "../../assets/WhatWeDo/analysis.png";
+import audio_visual from "../../assets/WhatWeDo/audio-visual.png";
+
+// Import tick icons
+import blue_tick from "../../assets/WhatWeDo/approved.png";
+import red_tick from "../../assets/WhatWeDo/approved-red.png";
+import yellow_tick from "../../assets/WhatWeDo/approved-yellow.png";
+import orange_tick from "../../assets/WhatWeDo/approved-orange.png";
+import purple_tick from "../../assets/WhatWeDo/approved-purple.png";
+import lightblue_tick from "../../assets/WhatWeDo/approved-light-blue.png";
+import WhyTrustUs from "../../elements/WhyTrustUs";
+
+import web_development_icon from "../../assets/Services/DigitalMarketing/web_development_icon.png";
+import sem_icon from "../../assets/Services/DigitalMarketing/sem_icon.png";
+import socialmedia_marketing_icon from "../../assets/Services/DigitalMarketing/socialmedia_marketing_icon.png";
+import mobile_app_development_icon from "../../assets/Services/DigitalMarketing/mobile_app_development_icon.png";
+
+const services = [
+  {
+    img: web_development_icon,
+    title: "Web Development",
+    desc: (
+      <>
+        We build secure, scalable, and user-friendly websites designed for
+        performance and engagement. With a focus on custom UI designs.
+      </>
+    ),
+    link: "https://spadvertising.in/Outdoor-Advertising-in-Raipur",
+    points: [
+      "Mobile Hoarding",
+      "Hoardings",
+      "Gantry",
+      "Pole Kiosk",
+      "Society Branding",
+    ],
+    tick: blue_tick,
+  },
+  {
+    img: sem_icon,
+    title: "SEO and SEM",
+    desc: (
+      <>
+        Improve your search engine rankings and attract organic traffic with our
+        expert SEO services. From keyword targeting to advanced search engine
+        positioning
+      </>
+    ),
+    link: "https://spadvertising.in/Digital-Marketing-in-Raipur",
+    points: [
+      "Website Development",
+      "SEO / SEM Optimization",
+      "Social Media Marketing",
+      "Application Development",
+    ],
+    tick: purple_tick,
+  },
+  {
+    img: socialmedia_marketing_icon,
+    title: "Social Media Marketing",
+    desc: (
+      <>
+        Our customized social media strategies and Facebook advertising
+        campaigns increase brand awareness and drive real engagement.
+      </>
+    ),
+    link: "https://spadvertising.in/Designing-Services-in-Raipur",
+    points: ["Packaging", "Creative Concepts", "Design & Artwork"],
+    tick: yellow_tick,
+  },
+  {
+    img: mobile_app_development_icon,
+    title: "Mobile Applications",
+    desc: (
+      <>
+        From concept to launch, our expert mobile app developers create
+        intuitive and feature-rich apps for Android and iOS that deliver
+        seamless user experiences.
+      </>
+    ),
+    link: "https://spadvertising.in/Audio-Visuals-in-Raipur",
+    points: [
+      "Video Presentations",
+      "Short Films / Documentary",
+      "Radio & TV Commercials",
+      "Photography & Videography",
+    ],
+    tick: lightblue_tick,
+  },
+];
 
 function DigitalMarketing() {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
   useEffect(() => {
     document.title =
       "Best Digital Marketing agency in Raipur | Digital Marketing services";
@@ -28,11 +123,13 @@ function DigitalMarketing() {
         "content",
         "digital marketing services, digital marketing agency, marketing digital marketing, digital agency marketing, digital marketing company in raipur, digital marketing course in raipur, digital marketing in raipur, digital marketing agency in raipur, best digital marketing course in raipur"
       );
-
-    const img = new Image();
-    img.src = loading;
-    img.onload = () => setImageLoaded(true);
   }, []);
+  const wcsservices = [
+    "WEB DEVELOPMENT",
+    "SEO AND SEM",
+    "SOCIAL MEDIA PROMOTION",
+    "MOBILE APPLICATIONS",
+  ];
 
   return (
     <div className="service">
@@ -49,24 +146,12 @@ function DigitalMarketing() {
             </Link>
           </div>
           <div className="service-right">
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={digital_marketing_img}
-                  alt="digital marketers"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
-            </div>
+            <ImageLoader
+              src={loading}
+              data-src={digital_marketing_img}
+              alt="digital marketers"
+              data-aos="zoom-in"
+            />
           </div>
         </div>
       </div>
@@ -75,20 +160,29 @@ function DigitalMarketing() {
           <div className="topic-align1" id="topic-align2">
             <div className="topic-left" data-aos="fade-right">
               <h1>
-                Make Use of Our Expert Web Development Services to Unlock Your
-                Potential Online
+                Digital Marketing Services to Accelerate Your Online Growth
               </h1>
               <div className="service-para">
-                Looking for top-notch{" "}
+                {/* Looking for top-notch{" "}
                 <a href="" aria-label="web development services">
                   web development services
-                </a>
-                ? Are you trying to find the best web development services? This
-                is where your hunt is over! As a top website creation business,
-                we are committed to creating cutting-edge, intuitive, and
-                effective websites that promote success.
+                </a> */}
+                At SP Advertising, we offer comprehensive digital marketing
+                services designed to help your brand thrive in the digital
+                landscape. Whether you're a startup looking to build visibility
+                or an established business aiming to scale, our expert team
+                crafts data-driven strategies that deliver real results.
               </div>
-              <h2>Why Choose Us?</h2>
+              <div className="service-para">
+                We are one of the best digital marketing agency in Raipur, We
+                help you to grow your business and build your brand through SEO
+                (Search Engine Optimization), Social Media Marketing, Paid
+                Advertising, and Content Marketing. As a leading digital
+                marketing agency in Chhattisgarh, we help businesses establish a
+                strong online presence, drive traffic to their websites, and
+                generate leads.
+              </div>
+              {/* <h2>Why Choose Us?</h2>
               <ul>
                 <li>
                   <strong> Top-Rated Web Development Company –</strong> We build
@@ -115,56 +209,32 @@ function DigitalMarketing() {
               <div className="service-para">
                 📩 Contact us today to transform your online presence with
                 cutting-edge web site development services! 🚀
-              </div>
-              <div className="service-btn">
+              </div> */}
+              {/* <div className="service-btn">
                 <a href="https://spadvertising.in/Contact">
                   <div className="service-btn1">Get Quote</div>
                 </a>
                 <a href="https://wa.me/918085354646">
                   <div className="service-btn2">Chat with Us</div>
                 </a>
-              </div>
+              </div> */}
             </div>
 
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={digital_marketing_img1}
-                  alt="digital marketing agency"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
-            </div>
+            <ImageLoader
+              src={loading}
+              data-src={digital_marketing_img11}
+              alt="digital marketing agency"
+              data-aos="zoom-in"
+            />
           </div>
 
-          <div className="topic-align1">
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={digital_marketing_img2}
-                  alt="digital marketing company"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
-            </div>
+          {/* <div className="topic-align1">
+            <ImageLoader
+              src={loading}
+              data-src={digital_marketing_img2}
+              alt="digital marketing company"
+              data-aos="zoom-in"
+            />
             <div className="topic-left" data-aos="fade-right">
               <h1>Increase Online Visibility with Skilled SEO Services!</h1>
               <div className="service-para">
@@ -281,45 +351,21 @@ function DigitalMarketing() {
               </div>
             </div>
 
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={digital_marketing_img3}
-                  alt="digital marketing services"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
-            </div>
+            <ImageLoader
+              src={loading}
+              data-src={digital_marketing_img3}
+              alt="digital marketing services"
+              data-aos="zoom-in"
+            />
           </div>
 
           <div className="topic-align1">
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={digital_marketing_img4}
-                  alt="digital marketing near me"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
-            </div>
+            <ImageLoader
+              src={loading}
+              data-src={digital_marketing_img4}
+              alt="digital marketing near me"
+              data-aos="zoom-in"
+            />
             <div className="topic-left" data-aos="fade-right">
               <h1>Convert Your Concepts into Effective Mobile Applications!</h1>
               <div className="service-para">
@@ -383,9 +429,30 @@ function DigitalMarketing() {
                 </a>
               </div>
             </div>
+          </div> */}
+
+          <div className="whatwedo-box1">
+            {services.map((service, index) => (
+              <div key={index} className="wwd-box1">
+                <img
+                  loading="lazy"
+                  src={service.img}
+                  alt={service.title}
+                  className="outdoor-image"
+                />
+                <h2>{service.title}</h2>
+                <p className="desc1">{service.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
+      <div className="shadow">
+        <a href="/portfolio">
+          <button>Explore Our Work</button>
+        </a>
+      </div>
+      <WhyTrustUs services={wcsservices}/>
     </div>
   );
 }

@@ -161,7 +161,8 @@
 
 .services .up-down {
     position: relative;
-    bottom: 1px;
+    bottom: 2.5px;
+    padding-bottom: 2.5px;
 }
 
 .services ul {
@@ -182,9 +183,11 @@
 
 .navbar-menu p {
     padding: 3px;
-    border-radius: 5px;
+    
+
 
 }
+
 
 .navbar-menu {
     display: flex;
@@ -333,26 +336,71 @@
     font-size: 20px;
 }
 
-.menu-hover-con {
+.menu-hover-con-con {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.menu-hover {
+/* .menu-hover-con {
     width: 0%;
     height: 3px;
     background-color: #00a2ff;
     transition: .1s;
     display: flex;
     border-radius: 10px;
-}
+} */
 
 
-.menu-hover-con:hover .menu-hover {
+/* .menu-hover-con-con:hover .menu-hover-con {
     width: 100%;
 
+} */
+.menu-hover-con {
+    position: relative;
+    display: inline-block;
+
+    width: 100%;
+    font-size: 18px;
+
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .menu-hover-con::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #00a2ff;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .menu-hover-con:hover::after {
+    transform: scaleX(1);
+    transform-origin: left; /* Makes it slide out to the LEFT on hover out */
+  }
+  .shadow-contact button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 #00254e;
+    transition: all 0.1s ease-in-out;
+}
+
+.shadow-contact button:active {
+    box-shadow: 0 0px 0px #0f6fff;
+    transform: translateY(3px);
 }
 
 @media (max-width:768px) {
@@ -380,7 +428,7 @@
         width: 150px;
     }
 
-    .cart button {
+    .shadow-contact button{
         padding: 10px;
         font-size: 15px;
         display: none;

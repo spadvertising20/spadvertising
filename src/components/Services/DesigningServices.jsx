@@ -6,10 +6,16 @@ import packaging_img from "../../assets/Services/DesigningServices/packaging-img
 import packaging_img2 from "../../assets/Services/DesigningServices/creative-design3.jpg";
 import packaging_img1 from "../../assets/Services/DesigningServices/creative-design8.jpg";
 import loading from "../../assets/components/loading-image.png";
+import ImageLoader from "../../elements/ImageLoader";
+import WhyTrustUs from "../../elements/WhyTrustUs";
 
 function DesigningServices() {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
+  const wcsservices = [
+    "Packaging Design",
+    "Creative Concepts",
+    "Design & Artwork",
+    "Photography & Videography",
+  ];
   useEffect(() => {
     document.title = "Best Designing services in Raipur | Designing services";
 
@@ -26,10 +32,6 @@ function DesigningServices() {
         "content",
         "Creative Designing Services,Graphic Design Services in raipur, Creative Agency in raipur, Web Design Company in raipur, creative logo design, creative flyer design, creative brochure design, creative poster design, creative i logo design"
       );
-
-    const img = new Image();
-    img.src = loading;
-    img.onload = () => setImageLoaded(true);
   }, []);
 
   return (
@@ -48,22 +50,11 @@ function DesigningServices() {
           </div>
           <div className="service-right">
             <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={design}
-                  alt="creative logo design"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
+              <ImageLoader
+                data-src={design}
+                src={loading}
+                alt="creative logo design"
+              />
             </div>
           </div>
         </div>
@@ -82,104 +73,23 @@ function DesigningServices() {
                 impact that drives sales and brand loyalty.
               </p>
             </div>
-            {/* <div className="topic-left" data-aos="fade-right">
-  <h1>Creative Packaging Design to Elevate Your Brand 🚀</h1>
-  <div className="service-para">
-    Looking for stunning packaging and design solutions that make your products stand out? 
-    Our expert packaging design agency specializes in creating eye-catching, functional, and 
-    brand-driven packaging that captures attention and boosts sales.
-  </div>
-  <h2>Our Packaging Design Services Include:</h2>
-  <ul>
-    <li>
-      <strong>✔ Design in Packaging –</strong> Unique and creative designs tailored to your brand identity.
-    </li>
-    <li>
-      <strong>✔ Mock-Up Packaging –</strong> High-quality mock-ups to visualize your final product before production.
-    </li>
-    <li>
-      <strong>✔ Design a Packaging Box –</strong> Custom box designs that enhance product appeal.
-    </li>
-    <li>
-      <strong>✔ Design Packaging for Food –</strong> Attractive and compliant food packaging solutions.
-    </li>
-    <li>
-      <strong>✔ Design for Packaging Box –</strong> Functional and stylish box packaging for all industries.
-    </li>
-    <li>
-      <strong>✔ Packaging Design Services –</strong> From concept to final product, we handle everything.
-    </li>
-    <li>
-      <strong>✔ Design Packaging –</strong> Innovative and sustainable packaging solutions.
-    </li>
-    <li>
-      <strong>✔ Packaging Design Companies –</strong> We are a trusted name in the industry for premium designs.
-    </li>
-  </ul>
-  <h2>Why Choose Us?</h2>
-  <ul>
-    <li>✅ Expert packaging design agency with years of experience</li>
-    <li>✅ Custom and visually stunning designs that enhance brand recognition</li>
-    <li>✅ High-quality packaging solutions for various industries</li>
-    <li>✅ Affordable and innovative packaging strategies</li>
-  </ul>
-  <div className="service-para">
-    🚀 Let’s bring your packaging vision to life!
-  </div>
-  <div className="service-para">
-    📩 Contact us today for premium packaging design services!
-  </div>
-  <div className="service-btn">
-    <a href="https://spadvertising.in/Contact">
-      <div className="service-btn1">Get Quote</div>
-    </a>
-    <a href="https://wa.me/918085354646">
-      <div className="service-btn2">Chat with Us</div>
-    </a>
-  </div>
-</div>
- */}
-            
-            
+
             <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={packaging_img}
-                  alt="creative web design"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
+              <ImageLoader
+                data-src={packaging_img}
+                src={loading}
+                alt="creative web design"
+              />
             </div>
           </div>
 
           <div className="topic-align1">
-          
             <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={packaging_img1}
-                   alt="creative flyer design"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
+              <ImageLoader
+                data-src={packaging_img1}
+                src={loading}
+                alt="creative flyer design"
+              />
             </div>
             <div className="topic-left" data-aos="fade-right">
               <h1>Creative Concepts</h1>
@@ -204,28 +114,18 @@ function DesigningServices() {
                 aesthetically pleasing and functional visuals.
               </p>
             </div>
-          
+
             <div className="image-loading">
-              {imageLoaded ? (
-                <img
-                  src={packaging_img2}
-                   alt="creative brochure design"
-                  data-aos="zoom-in"
-                  loading="lazy"
-                />
-              ) : (
-                <div className="loading-container">
-                  <img
-                    className="loading-placeholder"
-                    src={loading}
-                    alt="Loading"
-                  />
-                </div>
-              )}
+              <ImageLoader
+                data-src={packaging_img2}
+                src={loading}
+                alt="creative brochure design"
+              />
             </div>
           </div>
         </div>
       </div>
+      <WhyTrustUs services={wcsservices}/>
     </div>
   );
 }

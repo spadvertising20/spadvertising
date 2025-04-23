@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
-import bg_logo from "../../assets/Navbar/logo.webp";
+import bg_logo from "../../assets/Navbar/logo.png";
 import up_down from "../../assets/Navbar/up-down.svg";
 import { Link } from "react-router-dom";
 import { IoCloseOutline, IoCall } from "react-icons/io5";
@@ -68,9 +68,9 @@ function Navbar() {
             </li>
 
             <li className="services">
-              <div className="up-down">
+              <div className="up-down menu-hover-con">
                 <div>Services</div>
-                <img src={up_down} alt="Toggle Services Menu" loading="lazy" />
+                <img src={up_down} alt="Toggle Services Menu" />
               </div>
               <ul>
                 {[
@@ -145,14 +145,10 @@ function Navbar() {
           </ul>
         </div>
 
-        <div className="cart">
-          <Link
-            to="/Contact"
-            className={menu === "Contact" ? "active1" : ""}
-            title="Contact Us"
-          >
+        <div className="shadow-contact">
+          <a href="/contact">
             <button>Contact Us</button>
-          </Link>
+          </a>
         </div>
 
         <div className="menu-btn-con">
@@ -208,7 +204,10 @@ function Navbar() {
                       to: "/Branding-Strategy-in-Raipur",
                       text: "Branding & Strategy",
                     },
-                    { to: "/Event-Promotion-in-Raipur", text: "Event Promotion" },
+                    {
+                      to: "/Event-Promotion-in-Raipur",
+                      text: "Event Promotion",
+                    },
                     { to: "/Print-Media-in-Raipur", text: "Print Media" },
                   ],
                 },
@@ -243,13 +242,17 @@ function Navbar() {
                   ) : (
                     <div className="dropdown">
                       <p onClick={toggleServicesDropdown}>
-                        <div className="">{icon} {" "} {text} </div> 
+                        <div className="">
+                          {icon} {text}{" "}
+                        </div>
                       </p>
                       {servicesDropdown && (
                         <ul className="dropdown-menu">
                           {items.map((item, idx) => (
-                            <li key={idx} >
-                              <Link onClick={menuslider} to={item.to}>{item.text}</Link>
+                            <li key={idx}>
+                              <Link onClick={menuslider} to={item.to}>
+                                {item.text}
+                              </Link>
                             </li>
                           ))}
                         </ul>

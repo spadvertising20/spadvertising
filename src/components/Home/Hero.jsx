@@ -7,12 +7,12 @@ import hero_bg from "../../assets/Home/hero_bg.png";
 import hero_outdoor from "../../assets/Home/hero_outdoor.png";
 import hero_digital from "../../assets/Home/hero_digital.png";
 import hero_design from "../../assets/Home/hero_design.png";
-import hero_event from "../../assets/Home/hero_event.webp";
+import hero_event from "../../assets/Home/hero_event.png";
 import right_arrow from "../../assets/Home/right-arrow.png";
 
 export default function AnimationHero() {
   return (
-    <div className="hero">
+    <section className="hero">
       <div className="hero-con">
         <div className="shadow-effect"></div>
 
@@ -20,23 +20,27 @@ export default function AnimationHero() {
           <h1>Empowering Your Brand with Strategic Advertising</h1>
           <h2 className="typing-effect"></h2>
           <p>
-            Welcome to SP ADVERTISING, one of the most creative and well-established
-            advertising agencies in Raipur, Chhattisgarh. With SP Advertising, make
-            your brand live better.
+            Welcome to SP ADVERTISING, one of the most creative and
+            well-established advertising agencies in Raipur, Chhattisgarh. With
+            SP Advertising, make your brand live better.
           </p>
           <br />
-          <Link to="https://spadvertising.in/Services">
+          <a href="https://spadvertising.in/Services" target="_blank" rel="noopener noreferrer">
             <button className="hero-btn">
               Get Services
               <div className="btn-hover">
                 <img src={right_arrow} alt="Digital Marketing in Raipur" />
               </div>
-            </button> 
-          </Link>
+            </button>
+          </a>
         </div>
 
         <div className="hero-anim-bg">
-          <img src={img_bg} alt="Advertising in Raipur" className="services-con" />
+          <img
+            src={img_bg}
+            alt="Advertising in Raipur"
+            className="services-con"
+          />
           <img
             src={hero_bg}
             alt="Creatives Designing Services in Raipur"
@@ -77,15 +81,13 @@ export default function AnimationHero() {
                     src={hero_event}
                     alt="Advertising agency in Raipur"
                     className="img-rotate4"
-                    
                   />
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
-    </div>
+    </section>
   );
 }

@@ -7,11 +7,16 @@ import showcase2 from "../../assets/Services/OutdoorAdvertising/showcase2.webp";
 import outdoor_img2 from "../../assets/Services/OutdoorAdvertising/outdoor-advertising5.jpg";
 import gantry from "../../assets/Services/OutdoorAdvertising/gantry.jpg";
 import loading from "../../assets/components/loading-image.png";
-
+import ImageLoader from "../../elements/ImageLoader";
+import WhyTrustUs from "../../elements/WhyTrustUs";
 
 function OutdoorAdvertising() {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
+  const wcsservices = [
+    "Mobile Hoarding",
+    "Hoarding Advertising",
+    "Gantries Advertising",
+    "Pole Kiosk",
+  ];
   useEffect(() => {
     document.title =
       "Best Outdoor Advertising company in Raipur | Outdoor Advertising services";
@@ -29,10 +34,6 @@ function OutdoorAdvertising() {
         "content",
         "outdoor advertising agency, Outdoor advertising services, Outdoor advertising agency in Raipur, Billboard advertising solutions, outdoor advertising companies, billboard advertising companies, outdoor billboard companies, billboard ad companies, out of home advertising companies"
       );
-
-    const img = new Image();
-    img.src = outdoor_img1;
-    img.onload = () => setImageLoaded(true);
   }, []);
 
   return (
@@ -50,15 +51,12 @@ function OutdoorAdvertising() {
             </Link>
           </div>
           <div className="service-right">
-            {imageLoaded ? (
-              <img src={outdoor_img1} alt="Outdoor Advertising in Raipur" data-aos="zoom-in" />
-            ) : (
-              <img
-                className="loading-placeholder"
-                src={loading}
-                alt="Loading"
-              />
-            )}
+            <ImageLoader
+              src={loading}
+              data-src={outdoor_img1}
+              alt="Outdoor Advertising in Raipur"
+              data-aos="zoom-in"
+            />
           </div>
         </div>
       </div>
@@ -68,17 +66,16 @@ function OutdoorAdvertising() {
           <div className="topic-align1" id="topic-align2">
             <div className="topic-left" data-aos="fade-right">
               <h1>
-                Increase Brand Awareness with Effective Mobile Hoarding
-                Promotion
+                Looking for the Best Outdoor Advertising Agency in Raipur?
               </h1>
               <div className="service-para">
                 Looking for{" "}
                 <a href="" aria-label="Mobile Hoarding solutions">
                   Mobile Hoarding solutions
                 </a>{" "}
-                that grab attention? Our outdoor hoarding services ensure
-                maximum visibility for your brand, delivering high engagement
-                and recall.
+                Boost your brand visibility with us from eye-catching billboards
+                to high-impact hoardings. We create campaigns that deliver real
+                results. Contact us today!
               </div>
               <h2>Why Choose Our Mobile Hoarding Services?</h2>
               <ul>
@@ -113,27 +110,21 @@ function OutdoorAdvertising() {
               </div>
             </div>
 
-            {imageLoaded ? (
-              <img src={showcase1} alt="BOutdoor advertising services" data-aos="zoom-in" />
-            ) : (
-              <img
-                className="loading-placeholder"
-                src={loading}
-                alt="Loading"
-              />
-            )}
+            <ImageLoader
+              src={loading}
+              data-src={showcase1}
+              alt="BOutdoor advertising services"
+              data-aos="zoom-in"
+            />
           </div>
 
           <div className="topic-align1" data-aos="fade-right">
-            {imageLoaded ? (
-              <img src={outdoor_img2} alt="Outdoor advertising near me" data-aos="zoom-in" />
-            ) : (
-              <img
-                className="loading-placeholder"
-                src={loading}
-                alt="Loading"
-              />
-            )}
+            <ImageLoader
+              src={loading}
+              data-src={outdoor_img2}
+              alt="Outdoor advertising near me"
+              data-aos="zoom-in"
+            />
 
             <div className="topic-left" data-aos="fade-right">
               <h1>
@@ -233,33 +224,21 @@ function OutdoorAdvertising() {
               </div>
             </div>
 
-            <div className="image-loading">
-              {imageLoaded ? (
-                <img src={gantry} alt="Billboard advertising solutions" data-aos="zoom-in" />
-              ) : (
-                <img
-                  className="loading-placeholder"
-                  src={loading}
-                  alt="Loading"
-                />
-              )}
-            </div>
+            <ImageLoader
+              src={loading}
+              data-src={gantry}
+              alt="Billboard advertising solutions"
+              data-aos="zoom-in"
+            />
           </div>
 
           <div className="topic-align1">
-              <div className="image-loading">
-                {imageLoaded ? (
-                  <img src={showcase2} alt="Outdoor Advertising agency" data-aos="zoom-in" />
-                ) : (
-                  <div className="loading-container">
-                    <img
-                      className="loading-placeholder"
-                      src={loading}
-                      alt="Loading"
-                    />
-                  </div>
-                )}
-              </div>
+            <ImageLoader
+              src={loading}
+              data-src={showcase2}
+              alt="Outdoor Advertising agency"
+              data-aos="zoom-in"
+            />
             <div className="topic-left" data-aos="fade-right">
               <h1>
                 Use Pole Kiosk Branding & Advertising to Expand Your Brand
@@ -310,6 +289,7 @@ function OutdoorAdvertising() {
           </div>
         </div>
       </div>
+       <WhyTrustUs services={wcsservices}/>
     </div>
   );
 }

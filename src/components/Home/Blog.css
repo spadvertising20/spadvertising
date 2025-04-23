@@ -57,18 +57,19 @@
 
 .homeblog-main-con {
     width: 22em;
-    border-radius: 10px;
+    border-radius: 25px;
     background: #fff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px #00254e;
+    border: solid 1px #00254e;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
-.homeblog-main-con:hover {
+/* .homeblog-main-con:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* Image */
 .homeblog-main-con img {

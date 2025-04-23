@@ -6,17 +6,18 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    
+
    
     /* background-image: url('../../assets/Showcase/back1.png'); */
 }
 .slide-con{
     width: 85%;
     max-width: 1200px;
-    background-color: red;
+    
     padding: 10px;
-    box-shadow: 0 0 10px gainsboro;
-    border-radius: 10px;
+    box-shadow: 5px 5px #00254e;
+    border: solid 1px #00254e;
+    border-radius: 25px;
     
     background-color: white;
 }   
@@ -42,7 +43,7 @@
     width: 98%;
     max-width: 500px; /* Set a max width to limit size */
     height: 280px;
-    border-radius: 10px;
+    border-radius: 20px;
     
     
 }
@@ -62,7 +63,7 @@
     
 }
 .recent-work h1{
-    color: #F0F0F0;
+    color: #e7e7e7 ;
     font-size: 60px;
     margin-top: 3rem;
     margin-bottom: 3rem;

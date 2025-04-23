@@ -6,7 +6,7 @@ export default function UnderWorking() {
   return (
     <div className="under-working">
       <div className="under-working-con">
-        <img loading="lazy" src={under_working} alt="" />
+        <img loading="lazy" src={under_working} alt="under working" />
       </div>
     </div>
   );

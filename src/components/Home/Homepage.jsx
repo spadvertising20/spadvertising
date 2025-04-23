@@ -10,16 +10,28 @@ import HomeClients from "./Clients";
 import './Homepage.css';
 import FAQ from "./FAQ";
 import WhyChooseUs from "./WhyChooseUs";
+import WhyTrustUs from "../../elements/WhyTrustUs";
+
+
 
 function Homepage() {
+  const wcsservices = [
+    "OUTDOOR ADVERTISING",
+    "DIGITAL MARKETING",
+    "DESIGNING SERVICES",
+    "AUDIO VISUAL",
+    "BRANDING & STRATEGY",
+    "PRINT MEDIA",
+  ];
+
   return (
     <div className="homepage-con">      
       <AnimationHero />
-      <RecentWork />
-      <WhatWeDo />
       <HomeAbout />
-      <WhyChooseUs/>
+      <WhatWeDo />
+      <WhyTrustUs services={wcsservices}/>
       <HomeClients />
+      <RecentWork />
       <HomeBlog />
       {/* <FAQ/> */}
     </div>

@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import AboutMe from "./components/AboutUs/AboutUs.jsx";
-import Blog from "./components/Blog/Blog.jsx";
+
 import Contact from "./components/Contact Us/Contact.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import BrandingStrategy from "./components/Services/BrandingStrategy.jsx";
@@ -25,8 +25,6 @@ import KeywordResearch from "./components/Blog/Blogs/KeywordResearch.jsx";
 import UnderWorking from "./components/Home/UnderWorking.jsx";
 import SeoOptimization from "./components/Blog/Blogs/SeoOptimization.jsx";
 import HighQualityContent from "./components/Blog/Blogs/HighQualityContent.jsx";
-import BusinessesPrepare from "./components/Blog/Blogs/BusinessesPrepare.jsx";
-import HolidaySalesStrategies from "./components/Blog/Blogs/HolidaySalesStrategies.jsx";
 import ImproveOnlineAdvertising from "./components/Blog/Blogs/ImproveOnlineAdvertising.jsx";
 import Blog2 from "./components/Blog/Blog2.jsx";
 import WhatIsDigitalMarketing from "./components/Blog/Blogs/WhatIsDigitalMarketing.jsx";
@@ -36,6 +34,13 @@ import SocialMediaMarketing from "./components/Blog/Blogs/SocialMediaMarketing.j
 import SocietyBranding from "./components/Services/SocietyBranding.jsx";
 import BenefitsOutdoorAdvertising from "./components/Blog/Blogs/BenefitsOutdoorAdvertising.jsx";
 import { HelmetProvider } from "react-helmet-async";
+import Blog from "./components/Blog/Blog.jsx";
+import Test from "./elements/Test.jsx";
+
+
+// Lazy loaded components
+const HolidaySalesStrategies = lazy(() => import("./components/Blog/Blogs/HolidaySalesStrategies.jsx"));
+const BusinessesPrepare = lazy(() => import("./components/Blog/Blogs/BusinessesPrepare.jsx"));
 
 function App() {
   return (
@@ -44,87 +49,49 @@ function App() {
         {/* Consulting Popup */}
         {/* <ConsultingPopup /> */}
         <LoadScrollTop />
-        <ScrollToTop /> {/* Corrected duplicate ScrollToTop */}
+        <ScrollToTop />
         <Whatsapp />
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/About" element={<AboutMe />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/Showcase" element={<RecentWork />} />
-          <Route path="/Clients" element={<Clients />} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/About" element={<AboutMe />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Showcase" element={<RecentWork />} />
+            <Route path="/Clients" element={<Clients />} />
 
-          {/* Services Routes */}
-          <Route path="/Services" element={<WhatWeDo />} />
-          <Route
-            path="/Outdoor-Advertising-in-Raipur"
-            element={<OutdoorAdvertising />}
-          />
-          <Route path="/Outdoor-Advertising" element={<OutdoorAdvertising />} />
-          <Route
-            path="/Digital-Marketing-in-Raipur"
-            element={<DigitalMarketing />}
-          />
-          <Route
-            path="/Designing-Services-in-Raipur"
-            element={<DesigningServices />}
-          />
-          <Route path="/Print-Media-in-Raipur" element={<PrintMedia />} />
-          <Route
-            path="/Branding-Strategy-in-Raipur"
-            element={<BrandingStrategy />}
-          />
-          <Route
-            path="/Event-Promotion-in-Raipur"
-            element={<EventPromotion />}
-          />
-          <Route path="/Audio-Visuals-in-Raipur" element={<AudioVisuals />} />
-          <Route
-            path="/Society-Branding-in-Raipur"
-            element={<SocietyBranding />}
-          />
+            {/* Services Routes */}
+            <Route path="/Services" element={<WhatWeDo />} />
+            <Route path="/Outdoor-Advertising-in-Raipur" element={<OutdoorAdvertising />} />
+            <Route path="/Outdoor-Advertising" element={<OutdoorAdvertising />} />
+            <Route path="/Digital-Marketing-in-Raipur" element={<DigitalMarketing />} />
+            <Route path="/Designing-Services-in-Raipur" element={<DesigningServices />} />
+            <Route path="/Print-Media-in-Raipur" element={<PrintMedia />} />
+            <Route path="/Branding-Strategy-in-Raipur" element={<BrandingStrategy />} />
+            <Route path="/Event-Promotion-in-Raipur" element={<EventPromotion />} />
+            <Route path="/Audio-Visuals-in-Raipur" element={<AudioVisuals />} />
+            <Route path="/Society-Branding-in-Raipur" element={<SocietyBranding />} />
 
-          {/* Blog Routes */}
-          <Route path="/Blog" element={<Blog />} />
-          <Route path="/Blog/2" element={<Blog2 />} />
-          <Route path="/Blog/Keyword-Research" element={<KeywordResearch />} />
-          <Route path="/Blog/SEO-Optimization" element={<SeoOptimization />} />
-          <Route
-            path="/Blog/High-Quality-Content"
-            element={<HighQualityContent />} 
-          />
-          <Route
-            path="/Blog/Businesses-Prepare-for-Emerging-Trends"
-            element={<BusinessesPrepare />}
-          />
-          <Route
-            path="/Blog/Holiday-Sales-Strategies"
-            element={<HolidaySalesStrategies />}
-          />
-          <Route
-            path="/Blog/Advertising-Tools-and-Techniques"
-            element={<ImproveOnlineAdvertising />}
-          />
-          <Route
-            path="/Blog/What-is-Digital-Marketing"
-            element={<WhatIsDigitalMarketing />}
-          />
-          <Route
-            path="/Blog/Influencer-Marketing"
-            element={<InfluencerMarketing />}
-          />
-          <Route
-            path="/Blog/Social-Media-Marketing"
-            element={<SocialMediaMarketing />}
-          />
-          <Route
-            path="/Blog/Benefits-of-Outdoor-Advertising"
-            element={<BenefitsOutdoorAdvertising />}
-          />
+            {/* Blog Routes */}
+            <Route path="/Blog" element={<Blog />} />
+            <Route path="/Blog/2" element={<Blog2 />} />
+            <Route path="/Blog/Keyword-Research" element={<KeywordResearch />} />
+            <Route path="/Blog/SEO-Optimization" element={<SeoOptimization />} />
+            <Route path="/Blog/High-Quality-Content" element={<HighQualityContent />} />
+            <Route path="/Blog/Businesses-Prepare-for-Emerging-Trends" element={<BusinessesPrepare />} />
+            <Route path="/Blog/Holiday-Sales-Strategies" element={<HolidaySalesStrategies />} />
+            <Route path="/Blog/Advertising-Tools-and-Techniques" element={<ImproveOnlineAdvertising />} />
+            <Route path="/Blog/What-is-Digital-Marketing" element={<WhatIsDigitalMarketing />} />
+            <Route path="/Blog/Influencer-Marketing" element={<InfluencerMarketing />} />
+            <Route path="/Blog/Social-Media-Marketing" element={<SocialMediaMarketing />} />
+            <Route path="/Blog/Benefits-of-Outdoor-Advertising" element={<BenefitsOutdoorAdvertising />} />
 
-          <Route path="/Portfolio" element={<Portfolio />} />
-          <Route path="*" element={<UnderWorking />} />
-        </Routes>
+            <Route path="/Portfolio" element={<Portfolio />} />
+            <Route path="*" element={<UnderWorking />} />
+
+            <Route path="/test" element={<Test/>}/>
+          </Routes>
+        </Suspense>
         <NeedHelp />
         <Footer />
       </Router>
