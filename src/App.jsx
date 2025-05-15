@@ -36,6 +36,7 @@ import BenefitsOutdoorAdvertising from "./components/Blog/Blogs/BenefitsOutdoorA
 import { HelmetProvider } from "react-helmet-async";
 import Blog from "./components/Blog/Blog.jsx";
 import Test from "./elements/Test.jsx";
+import Career from "./components/Career/Career.jsx";
 
 
 // Lazy loaded components
@@ -89,7 +90,7 @@ function App() {
             <Route path="/Portfolio" element={<Portfolio />} />
             <Route path="*" element={<UnderWorking />} />
 
-            <Route path="/test" element={<Test/>}/>
+            <Route path="/career" element={<Career/>}/>
           </Routes>
         </Suspense>
         <NeedHelp />

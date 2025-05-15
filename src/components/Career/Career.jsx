@@ -1,7 +1,7 @@
 // components/ContactForm.jsx
 import { useState } from "react";
 
-export default function ContactForm() {
+export default function Career() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,7 +29,7 @@ export default function ContactForm() {
       data.append("photo", formData.photo);
     }
 
-    const res = await fetch("http://localhost:5000/api/contact", {
+    const res = await fetch("https://spadvertising-ka76.vercel.app/api/contact", {
       method: "POST",
       body: data,
     });
