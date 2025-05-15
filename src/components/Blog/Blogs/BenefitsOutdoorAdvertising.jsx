@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../Blogs/Blogs.css";
+import "./Blogs.css";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import update_image from "../../../assets/Services/DigitalMarketing/digital-marketing-img.jpg";
@@ -73,22 +73,29 @@ const Contents = [
 `,
   },
   {
-    description: `  Billboards: Large, high-visibility ads placed along highways and urban centers.
-
-`,
-  },
-  {
-    description: `Transit Advertising: Ads on buses, taxis, and trains that reach commuters daily.
-`,
-  },
-  {
-    description: `Street Furniture Ads: Posters on bus stops, benches, and kiosks in high-traffic areas.
-`,
-  },
-  {
-    description: `Digital OOH: LED and digital billboards displaying dynamic, eye-catching content.
-
-`,
+    description: (
+      <>
+        <ul>
+          <li>
+            <h3>Billboards:</h3> Large, high-visibility ads placed along
+            highways and urban centers.
+          </li>
+          <li>
+            <h3>Transit Advertising:</h3> Ads on buses, taxis, and trains that
+            reach commuters daily.
+          </li>
+          <li>
+            <h3>Street Furniture Ads:</h3> Posters on bus stops, benches, and
+            kiosks in high-traffic areas.
+          </li>
+          <li>
+            <h3>Digital OOH:</h3> LED and digital billboards displaying dynamic,
+            eye-catching content.
+          </li>
+         
+        </ul>
+      </>
+    ),
   },
 
   {
@@ -99,37 +106,37 @@ const Contents = [
 `,
   },
   {
-    description: `Massive Reach: Targets a broad audience, from pedestrians to drivers and public transport users.
-`,
+    description: (
+      <>
+        <ul>
+        <li><h3>Massive Reach: </h3>Targets a broad audience, from pedestrians to drivers and public transport users.</li>
+        <li><h3>Brand Credibility:</h3> Increases trust by showcasing a brand in real-world spaces.</li>
+          
+        </ul>
+      </>
+    ),
   },
-  {
-    description: `Brand Credibility: Increases trust by showcasing a brand in real-world spaces.
-`,
-  },
+
   {
     heading: `3. Benefits of Outdoor Advertising`,
   },
+  
   {
     description: `Outdoor advertising offers a range of advantages that digital marketing alone cannot achieve.
 `,
   },
-  {
-    description: `High Visibility: Large-scale ads capture attention 24/7.
-`,
-  },
-  {
-    description: `Cost-Effective: Long-lasting exposure compared to pay-per-click models.
-`,
-  },
-
-  {
-    description: `Localized Targeting: Perfect for businesses wanting to attract customers in specific areas.
-
-`,
-  },
-  {
-    description: `Increases Brand Recall: Repeated exposure reinforces brand messaging in consumers’ minds.
-`,
+   {
+    description: (
+      <>
+        <ul>
+        <li><h3>High Visibility:</h3>  Large-scale ads capture attention 24/7.</li>
+        <li><h3>Cost-Effective:</h3>  Long-lasting exposure compared to pay-per-click models.</li>
+        <li><h3>Localized Targeting:</h3>  Perfect for businesses wanting to attract customers in specific areas.</li>
+        <li><h3>Increases Brand Recall:</h3>  Repeated exposure reinforces brand messaging in consumers’ minds.</li>
+          
+        </ul>
+      </>
+    ),
   },
 
   {
@@ -139,19 +146,33 @@ const Contents = [
 
 `,
   },
+
   {
-    description: `Enhances Local Marketing: Ideal for businesses targeting specific geographic locations.
+    description: (
+      <>
+        <ul>
+        <li><h3>Enhances Local Marketing:</h3>  Ideal for businesses targeting specific geographic locations.</li>
+        <li><h3>Boosts Offline Conversions:</h3>  Encourages in-store visits and direct purchases.</li>
+        <li><h3>Maximizes ROI:</h3>  Delivers lasting impressions without continuous spending on clicks or impressions.</li>
+          
+        </ul>
+      </>
+    ),
+  },
+
+  {
+    description: `
 
  `,
   },
   {
-    description: `Boosts Offline Conversions: Encourages in-store visits and direct purchases.
+    description: `
 
  `,
   },
 
   {
-    description: `Maximizes ROI: Delivers lasting impressions without continuous spending on clicks or impressions.
+    description: `
 
 `,
   },
@@ -193,86 +214,86 @@ export default function BenefitsOutdoorAdvertising() {
 
   return (
     <section className="keyword-research">
-          <div className="keyword-research-con">
-            <div className="keyword-research-box">
-              <p>{blogData[0]?.date}</p>
-    
-              <h1>{blogData[0]?.title}</h1>
-              <img
-                loading="lazy"
-                src={blogData[0]?.img}
-                alt="what is digital marketing, digital marketing is what"
-              />
-    
-              <div className="keyword-research-content">
-                <div className="blog-content">
-                  {Contents.map((content, index) => (
-                    <div className="">
-                      <h1>{content.heading}</h1>
-                      <h2>{content.sub_heading}</h2>
-                      <p>{content.description}</p>
+      <div className="keyword-research-con">
+        <div className="keyword-research-box">
+          <p>{blogData[0]?.date}</p>
+
+          <h1>{blogData[0]?.title}</h1>
+          <img
+            loading="lazy"
+            src={blogData[0]?.img}
+            alt="what is digital marketing, digital marketing is what"
+          />
+
+          <div className="keyword-research-content">
+            <div className="blog-content">
+              {Contents.map((content, index) => (
+                <div className="">
+                  <h1>{content.heading}</h1>
+                  <h2>{content.sub_heading}</h2>
+                  <p>{content.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Search..."
+            value={query}
+            onChange={handleInputChange}
+          />
+          <p className="blog-post-heading">Recent Posts</p>
+
+          {query.trim() === ""
+            ? blogData.map((article, index) => (
+                <div className="title-gap" key={index}>
+                  {titles.map((title, i) => (
+                    <div className="title-gap" key={i}>
+                      <Link to={links[i]}>{title}</Link>
+                      <br />
                     </div>
                   ))}
                 </div>
-              </div>
-            </div>
-            <div className="search-container">
-              <input
-                type="text"
-                placeholder="Search..."
-                value={query}
-                onChange={handleInputChange}
-              />
-              <p className="blog-post-heading">Recent Posts</p>
-    
-              {query.trim() === ""
-                ? blogData.map((article, index) => (
-                    <div className="title-gap" key={index}>
-                      {titles.map((title, i) => (
-                        <div className="title-gap" key={i}>
-                          <Link to={links[i]}>{title}</Link>
-                          <br />
-                        </div>
-                      ))}
-                    </div>
-                  ))
-                : blogData
-                    .filter((article) =>
-                      article.title.toLowerCase().includes(query.toLowerCase())
-                    )
-                    .map((filteredArticle, index) => (
-                      <div className="title-gap2">
-                        <Link to={`${filteredArticle.link}`}>
-                          {filteredArticle.title}
-                        </Link>
-                      </div>
-                    ))}
-    
-              <br />
-    
-              <div className="blog-icons2">
-                <h2>Follow Us</h2>
-                <div className="blog-icons2-con">
-                  <Link to={"https://www.instagram.com/spadvertisingrpr/"}>
-                    <GrInstagram />
-                  </Link>
-                  <Link to={"https://www.facebook.com/spadvertisingraipur"}>
-                    <FaFacebookF />
-                  </Link>
-                  <Link
-                    to={
-                      "https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
-                    }
-                  >
-                    <FaLinkedinIn />
-                  </Link>
-                  <Link to={"https://www.youtube.com/@spadvertising530"}>
-                    <IoLogoYoutube />
-                  </Link>
-                </div>
-              </div>
+              ))
+            : blogData
+                .filter((article) =>
+                  article.title.toLowerCase().includes(query.toLowerCase())
+                )
+                .map((filteredArticle, index) => (
+                  <div className="title-gap2">
+                    <Link to={`${filteredArticle.link}`}>
+                      {filteredArticle.title}
+                    </Link>
+                  </div>
+                ))}
+
+          <br />
+
+          <div className="blog-icons2">
+            <h2>Follow Us</h2>
+            <div className="blog-icons2-con">
+              <Link to={"https://www.instagram.com/spadvertisingrpr/"}>
+                <GrInstagram />
+              </Link>
+              <Link to={"https://www.facebook.com/spadvertisingraipur"}>
+                <FaFacebookF />
+              </Link>
+              <Link
+                to={
+                  "https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
+                }
+              >
+                <FaLinkedinIn />
+              </Link>
+              <Link to={"https://www.youtube.com/@spadvertising530"}>
+                <IoLogoYoutube />
+              </Link>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
   );
 }

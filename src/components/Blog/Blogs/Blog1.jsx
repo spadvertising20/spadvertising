@@ -6,7 +6,7 @@ const Blog1 = () => {
   const { slug } = useParams();
   const post = blogPosts.find((b) => b.slug === slug);
 
-  if (!post) return <div>Post not found.</div>;
+  if (!post) return <div>Post not found.</div>; 
 
   return (
     <div className="max-w-3xl mx-auto p-6">
