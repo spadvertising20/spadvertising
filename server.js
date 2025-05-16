@@ -46,7 +46,7 @@ app.post("/api/contact", (req, res) => {
 
     const mime = uploadedFile.mimetype; // like "application/pdf"
     const ext = mime?.split("/")[1] || "pdf"; // extract extension
-    const originalName = uploadedFile.originalFilename || "cv";
+    const originalName = uploadedFile.originalFilename;
 
     const safeFilename = originalName.endsWith(`.${ext}`)
       ? originalName
