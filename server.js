@@ -15,10 +15,11 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Middleware
 app.use(cors());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// Create uploads folder if not exist
+// Ensure uploads directory exists
 const uploadPath = path.join(__dirname, "uploads");
 if (!fs.existsSync(uploadPath)) {
   fs.mkdirSync(uploadPath);
@@ -44,14 +45,23 @@ app.post("/api/contact", (req, res) => {
       return res.status(400).json({ success: false, error: "CV file is missing." });
     }
 
-    const mime = uploadedFile.mimetype; // like "application/pdf"
-    const ext = mime?.split("/")[1] || "pdf"; // extract extension
-    const originalName = uploadedFile.originalFilename || "cv";
+    // Check if file exists
+    try {
+      await fs.promises.access(uploadedFile.filepath, fs.constants.F_OK);
+    } catch (fileErr) {
+      console.error("Uploaded file not found:", fileErr);
+      return res.status(400).json({ success: false, error: "Uploaded file not found." });
+    }
 
+    // Determine filename and extension
+    const mime = uploadedFile.mimetype || "application/pdf";
+    const ext = mime.split("/")[1] || "pdf";
+    const originalName = uploadedFile.originalFilename || "cv";
     const safeFilename = originalName.endsWith(`.${ext}`)
       ? originalName
       : `${originalName}.${ext}`;
 
+    // Nodemailer transporter
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
@@ -79,7 +89,7 @@ Email: ${email}
         {
           filename: safeFilename,
           path: uploadedFile.filepath,
-          contentType: mime || "application/pdf",
+          contentType: mime,
         },
       ],
     };
@@ -95,5 +105,5 @@ Email: ${email}
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Server started at http://localhost:${PORT}/api/contact`);
+  console.log(`✅ Server running at http://localhost:${PORT}/api/contact`);
 });
