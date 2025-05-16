@@ -34,7 +34,7 @@ app.post("/api/contact", (req, res) => {
     keepExtensions: true,
   });
 
-  form.parse(req, async (err, fields, files) => {
+  form.parse(req, async (err, fields, files) => { 
     if (err) {
       console.error("Form parse error:", err);
       return res.status(400).json({ success: false, error: "Form parsing failed." });
