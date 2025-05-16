@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import formidablePkg from "formidable";
+import { formidable } from "formidable";  // Correct import here
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 import fs from "fs";
@@ -27,7 +27,6 @@ if (!fs.existsSync(uploadPath)) {
 }
 
 app.post("/api/contact", (req, res) => {
-  const formidable = formidablePkg.default; // ESM fix
   const form = formidable({
     multiples: false,
     uploadDir: uploadPath,
@@ -50,7 +49,7 @@ app.post("/api/contact", (req, res) => {
     // Email setup
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
-      port: process.env.SMTP_PORT,
+      port: Number(process.env.SMTP_PORT),
       secure: false,
       auth: {
         user: process.env.SMTP_USER,
@@ -60,7 +59,7 @@ app.post("/api/contact", (req, res) => {
 
     const mailOptions = {
       from: `"SP Advertising Careers" <${process.env.SMTP_USER}>`,
-      to: process.env.SMTP_USER,
+      to: process.env.SMTP_TO || process.env.SMTP_USER,
       subject: `New Application for ${position}`,
       text: `
 New career application:
