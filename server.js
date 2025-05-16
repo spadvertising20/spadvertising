@@ -33,7 +33,10 @@ app.post("/api/contact", (req, res) => {
   });
 
   form.parse(req, async (err, fields, files) => {
-    if (err) return res.status(400).json({ success: false, error: "Form parsing failed." });
+    if (err) {
+      console.error("Form parse error:", err);
+      return res.status(400).json({ success: false, error: "Form parsing failed." });
+    }
 
     const { position, firstName, lastName, experience, phone, email } = fields;
     const uploadedFile = files.cv;
@@ -66,7 +69,8 @@ Email: ${email}
       attachments: [
         {
           filename: uploadedFile.originalFilename,
-          path: uploadedFile.filepath,
+          content: fs.readFileSync(uploadedFile.filepath),
+          contentType: uploadedFile.mimetype || "application/pdf",
         },
       ],
     };
