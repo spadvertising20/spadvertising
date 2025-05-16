@@ -34,7 +34,7 @@ export default function CareerForm() {
     });
 
     try {
-      const res = await fetch("https://spadvertising-backend-2.onrender.com/api/contact", {
+      const res = await fetch("https://spadvertising.onrender.com/api/contact", {
         method: "POST",
         body: form,
       });
