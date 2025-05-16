@@ -16,8 +16,13 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(cors());
+// CORS Middleware - allow your frontend origin
+app.use(cors({
+  origin: "http://192.168.29.111:5173",  // Replace with your frontend URL
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+}));
+
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 const uploadPath = path.join(__dirname, "uploads");
