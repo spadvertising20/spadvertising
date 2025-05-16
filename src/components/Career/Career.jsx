@@ -1,67 +1,162 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import "./Career.css";
 
-const Career = () => {
-  const [form, setForm] = useState({
+export default function CareerForm() {
+  const [formData, setFormData] = useState({
+    position: "",
     firstName: "",
     lastName: "",
-    position: "",
     experience: "",
     phone: "",
     email: "",
+    cv: null,
   });
 
-  const [cvFile, setCvFile] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleFileChange = (e) => {
-    setCvFile(e.target.files[0]);
+    const { name, value, files } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: files ? files[0] : value,
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setStatus("");
 
-    if (!cvFile) return alert("Please upload your CV!");
-
-    const formData = new FormData();
-    Object.entries(form).forEach(([key, value]) => {
-      formData.append(key, value);
+    const form = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+      form.append(key, value);
     });
-    formData.append("cv", cvFile);
 
     try {
       const res = await fetch("https://spadvertising.onrender.com/api/contact", {
         method: "POST",
-        body: formData,
+        body: form,
       });
 
-      const data = await res.json();
-      if (data.success) {
-        alert("Application sent successfully!");
+      const result = await res.json();
+
+      if (res.ok) {
+        setStatus("✅ Application submitted successfully.");
+        setFormData({
+          position: "",
+          firstName: "",
+          lastName: "",
+          experience: "",
+          phone: "",
+          email: "",
+          cv: null,
+        });
       } else {
-        alert("Error: " + data.error);
+        setStatus("❌ Failed to submit. Please try again.");
       }
-    } catch (err) {
-      console.error(err);
-      alert("Failed to send application.");
+    } catch (error) {
+      setStatus("❌ Server error. Try again later.");
+      console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} encType="multipart/form-data">
-      <br /><br /><br /><br /><br /><br />
-      <input type="text" name="firstName" placeholder="First Name" onChange={handleChange} required />
-      <input type="text" name="lastName" placeholder="Last Name" onChange={handleChange} required />
-      <input type="text" name="position" placeholder="Position Applying For" onChange={handleChange} required />
-      <input type="text" name="experience" placeholder="Experience in years" onChange={handleChange} required />
-      <input type="tel" name="phone" placeholder="Phone Number" onChange={handleChange} required />
-      <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
-      <input type="file" name="cv" accept=".pdf" onChange={handleFileChange} required />
-      <button type="submit">Submit Application</button>
-    </form>
-  );
-};
+    <div className="career-container">
+      <form onSubmit={handleSubmit} className="career-form">
+        <h2>Apply for a Position</h2>
 
-export default Career;
+        <label>
+          Position Title <span className="required">*</span>
+          <select
+            name="position"
+            required
+            value={formData.position}
+            onChange={handleChange}
+          >
+            <option value="">-- Select --</option>
+            <option value="Sales Executive">Sales Executive</option>
+            <option value="Sales Intern">Sales Intern</option>
+            <option value="Graphics Designer">Graphics Designer</option>
+            <option value="Business Development">Business Development</option>
+          </select>
+        </label>
+
+        <label>
+          First Name <span className="required">*</span>
+          <input
+            name="firstName"
+            required
+            value={formData.firstName}
+            onChange={handleChange}
+            type="text"
+          />
+        </label>
+
+        <label>
+          Last Name <span className="required">*</span>
+          <input
+            name="lastName"
+            required
+            value={formData.lastName}
+            onChange={handleChange}
+            type="text"
+          />
+        </label>
+
+        <label>
+          Year of Experience <span className="required">*</span>
+          <input
+            name="experience"
+            required
+            value={formData.experience}
+            onChange={handleChange}
+            type="number"
+            min="0"
+          />
+        </label>
+
+        <label>
+          Phone Number <span className="required">*</span>
+          <input
+            name="phone"
+            required
+            value={formData.phone}
+            onChange={handleChange}
+            type="tel"
+          />
+        </label>
+
+        <label>
+          Email <span className="required">*</span>
+          <input
+            name="email"
+            required
+            value={formData.email}
+            onChange={handleChange}
+            type="email"
+          />
+        </label>
+
+        <label>
+          Upload Your CV <span className="required">*</span>
+          <input
+            name="cv"
+            type="file"
+            required
+            onChange={handleChange}
+            accept=".pdf,.doc,.docx"
+          />
+        </label>
+
+        <button type="submit" disabled={loading}>
+          {loading ? "Submitting..." : "Submit"}
+        </button>
+
+        {status && <p className="status-message">{status}</p>}
+      </form>
+    </div>
+  );
+}
