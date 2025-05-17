@@ -1,14 +1,15 @@
 import { useState } from "react";
 import "./Career.css";
+import join_us from "../../assets/Career/join-us.png"
 
 export default function CareerForm() {
   const [formData, setFormData] = useState({
-    position: "sales",
-    firstName: "raju",
-    lastName: "rao",
-    experience: "2",
-    phone: "1234567890",
-    email: "raju@gmail.com",
+    position: "",
+    firstName: "",
+    lastName: "",
+    experience: "",
+    phone: "",
+    email: "",
     cv: null,
   });
 
@@ -34,10 +35,13 @@ export default function CareerForm() {
     });
 
     try {
-      const res = await fetch("https://spadvertising.onrender.com/api/contact", {
-        method: "POST",
-        body: form,
-      });
+      const res = await fetch(
+        "https://spadvertising.onrender.com/api/contact",
+        {
+          method: "POST",
+          body: form,
+        }
+      );
 
       const result = await res.json();
 
@@ -65,6 +69,20 @@ export default function CareerForm() {
 
   return (
     <div className="career-container">
+      <section className="career-section">
+        <div className="career-section-con">
+          <div className="job-recruitment">Job Recruitment</div>
+          <h1>Boost Your Career</h1>
+          <p>
+            At SP Advertising Company, we’re not just building products — we’re
+            building a future where innovation, creativity, and passion come
+            together. If you’re driven by purpose and excited to grow in a
+            fast-paced, supportive environment, we’d love to meet you.
+          </p>
+          {/* <button>Apply Now</button> */}
+          <img src={join_us} alt="" />
+        </div>
+      </section>
       <form onSubmit={handleSubmit} className="career-form">
         <h2>Apply for a Position</h2>
 
@@ -142,13 +160,7 @@ export default function CareerForm() {
 
         <label>
           Upload Your CV <span className="required">*</span>
-          <input
-            name="cv"
-            type="file"
-            required
-            onChange={handleChange}
-            
-          />
+          <input name="cv" type="file" required onChange={handleChange} />
         </label>
 
         <button type="submit" disabled={loading}>

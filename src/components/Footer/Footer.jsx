@@ -41,7 +41,7 @@ function Footer() {
               <Link to={"/Blog"}>
                 <p>Blog</p>
               </Link>
-              <Link to={"https://forms.gle/9fxJFB3RH6nysCb77"}>
+              <Link to={"/career"}>
                 <p>Career</p>
               </Link>
             </div>
