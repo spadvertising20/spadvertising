@@ -1,105 +1,102 @@
 import express from "express";
 import cors from "cors";
-import { formidable } from "formidable";
 import nodemailer from "nodemailer";
+import multer from "multer";
 import dotenv from "dotenv";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const port = 5000;
 
+// Middleware
 app.use(cors());
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+app.use(express.json());
+dotenv.config();
 
-const uploadPath = path.join(__dirname, "uploads");
-if (!fs.existsSync(uploadPath)) {
-  fs.mkdirSync(uploadPath);
-}
+// Configure Multer for file uploads
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
-app.post("/api/contact", (req, res) => {
-  const form = formidable({
-    multiples: false,
-    uploadDir: uploadPath,
-    keepExtensions: true,
-  });
-
-  form.parse(req, async (err, fields, files) => {
-    if (err) {
-      console.error("Form parse error:", err);
-      return res.status(400).json({ success: false, error: "Form parsing failed." });
-    }
-
-    const { position, firstName, lastName, experience, phone, email } = fields;
-    const uploadedFile = files.cv;
-
-    if (!uploadedFile) {
-      return res.status(400).json({ success: false, error: "CV file is missing." });
-    }
-
-    const filePath = uploadedFile.filepath;
-    const mimeType = uploadedFile.mimetype || "application/octet-stream";
-    const originalName = uploadedFile.originalFilename || "cv";
-    const extension = path.extname(originalName) || ".pdf";
-    const safeFilename = `${firstName}_${lastName}_CV${extension}`;
-    const newFilePath = path.join(uploadPath, safeFilename);
-
-    try {
-      // Rename the uploaded file to a proper filename
-      fs.renameSync(filePath, newFilePath);
-    } catch (renameErr) {
-      console.error("File rename error:", renameErr);
-      return res.status(500).json({ success: false, error: "Failed to process uploaded file." });
-    }
-
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
-      secure: false,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
-
-    const mailOptions = {
-      from: `"SP Advertising Careers" <${process.env.SMTP_USER}>`,
-      to: process.env.SMTP_TO || process.env.SMTP_USER,
-      subject: `New Application for ${position}`,
-      text: `
-New career application:
-
-Position: ${position}
-Name: ${firstName} ${lastName}
-Experience: ${experience} years
-Phone: ${phone}
-Email: ${email}
-      `,
-      attachments: [
-        {
-          filename: safeFilename,
-          path: newFilePath,
-          contentType: mimeType,
-        },
-      ],
-    };
-
-    try {
-      await transporter.sendMail(mailOptions);
-      res.status(200).json({ success: true, message: "Application sent successfully." });
-    } catch (mailErr) {
-      console.error("Email send error:", mailErr);
-      res.status(500).json({ success: false, error: "Failed to send email." });
-    }
-  });
+// Configure Nodemailer transporter
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  host: process.env.SMTP_HOST,
+  port: process.env.SMTP_PORT,
+  secure: false,
+  auth: {
+    user: process.env.SMTP_USER, // Replace with your email
+    pass: process.env.SMTP_PASS, // Replace with your app-specific password
+  },
 });
 
-app.listen(PORT, () => {
-  console.log(`✅ Server started at http://localhost:${PORT}/api/contact`);
+// Verify transporter configuration
+transporter.verify((error, success) => {
+  if (error) {
+    console.error('Transporter verification failed:', error);
+  } else {
+    console.log('Transporter is ready to send emails');
+  }
+});
+
+// Endpoint to handle form submission
+app.post('/api/contact', upload.single('cv'), async (req, res) => {
+  try {
+    const { position, firstName, lastName, experience, phone, email } = req.body;
+    const cvFile = req.file;
+
+    // Prepare email content for the job application (to employer)
+    const applicationMailOptions = {
+      from: process.env.SMTP_USER, // Sender email
+      to: process.env.SMTP_TO_HR, // Recipient email (employer)
+      subject: `New Job Application: ${position} - ${firstName} ${lastName}`,
+      html: `
+        <h3>New Job Application</h3>
+        <p><strong>Position:</strong> ${position}</p>
+        <p><strong>First Name:</strong> ${firstName}</p>
+        <p><strong>Last Name:</strong> ${lastName}</p>
+        <p><strong>Years of Experience:</strong> ${experience}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Email:</strong> ${email}</p>
+      `,
+      attachments: cvFile
+        ? [
+            {
+              filename: cvFile.originalname,
+              content: cvFile.buffer,
+            },
+          ]
+        : [],
+    };
+
+    // Prepare email content for the confirmation (to applicant)
+    const confirmationMailOptions = {
+      from: process.env.SMTP_USER, // Sender email
+      to: process.env.SMTP_TO_SIR, // Recipient email (employer) 
+      subject: `Application Confirmation for ${position}`,
+      html: `
+        <h3>Application Received</h3>
+        <p>Dear ${firstName} ${lastName},</p>
+        <p>Thank you for applying for the <strong>${position}</strong> position.</p>
+        <p>We have received your application and will review it shortly. Below are the details you submitted:</p>
+        <p><strong>Years of Experience:</strong> ${experience}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p>Best regards,</p>
+        <p>Recruitment Team</p>
+      `,
+    };
+
+    // Send both emails
+    await transporter.sendMail(applicationMailOptions);
+    await transporter.sendMail(confirmationMailOptions);
+
+    res.status(200).json({ message: 'Application submitted successfully, and confirmation email sent' });
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ message: 'Server error. Please try again later.' });
+  }
+});
+
+// Start server
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
 });

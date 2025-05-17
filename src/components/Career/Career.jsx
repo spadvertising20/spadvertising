@@ -3,12 +3,12 @@ import "./Career.css";
 
 export default function CareerForm() {
   const [formData, setFormData] = useState({
-    position: "",
-    firstName: "",
-    lastName: "",
-    experience: "",
-    phone: "",
-    email: "",
+    position: "sales",
+    firstName: "raju",
+    lastName: "rao",
+    experience: "2",
+    phone: "1234567890",
+    email: "raju@gmail.com",
     cv: null,
   });
 
@@ -34,7 +34,7 @@ export default function CareerForm() {
     });
 
     try {
-      const res = await fetch("https://spadvertising.onrender.com/api/contact", {
+      const res = await fetch("http://localhost:5000/api/contact", {
         method: "POST",
         body: form,
       });
@@ -76,7 +76,7 @@ export default function CareerForm() {
             value={formData.position}
             onChange={handleChange}
           >
-            <option value="">-- Select --</option>
+            <option value="Sales Executive">-- Select --</option>
             <option value="Sales Executive">Sales Executive</option>
             <option value="Sales Intern">Sales Intern</option>
             <option value="Graphics Designer">Graphics Designer</option>
@@ -147,7 +147,7 @@ export default function CareerForm() {
             type="file"
             required
             onChange={handleChange}
-            accept=".pdf,.doc,.docx"
+            
           />
         </label>
 
