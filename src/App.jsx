@@ -2,7 +2,7 @@ import { useState, lazy, Suspense } from "react";
 import AboutMe from "./components/AboutUs/AboutUs.jsx";
 
 import Contact from "./components/Contact Us/Contact.jsx";
-import Footer from "./components/Footer/Footer.jsx";
+import Footer from "./elements/Footer/Footer.jsx";
 import BrandingStrategy from "./components/Services/BrandingStrategy.jsx";
 import DigitalMarketing from "./components/Services/DigitalMarketing.jsx";
 import DesigningServices from "./components/Services/DesigningServices.jsx";
@@ -13,30 +13,31 @@ import RecentWork from "./components/Home/RecentWork.jsx";
 import WhatWeDo from "./components/Home/Expertise.jsx";
 import Clients from "./components/Clients/Clients.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar.jsx";
-import ScrollToTop from "./components/Home/ScrollToTop.jsx";
+import Navbar from "./elements/Navbar/Navbar.jsx";
+import ScrollToTop from "./elements/ScrollToTop.jsx";
 import Portfolio from "./components/Portfolio/Portfolio.jsx";
 import Homepage from "./components/Home/Homepage.jsx";
-import Whatsapp from "./components/Home/Whatsapp.jsx";
+import Whatsapp from "./elements/Whatsapp.jsx";
 import NeedHelp from "./components/Needhelp/NeedHelp.jsx";
 import ConsultingPopup from "./components/Home/ConsultingPopup.jsx";
 import AudioVisuals from "./components/Services/AudioVisuals.jsx";
 import KeywordResearch from "./components/Blog/Blogs/KeywordResearch.jsx";
-import UnderWorking from "./components/Home/UnderWorking.jsx";
+import UnderWorking from "./elements/UnderWorking.jsx";
 import SeoOptimization from "./components/Blog/Blogs/SeoOptimization.jsx";
 import HighQualityContent from "./components/Blog/Blogs/HighQualityContent.jsx";
 import ImproveOnlineAdvertising from "./components/Blog/Blogs/ImproveOnlineAdvertising.jsx";
 import Blog2 from "./components/Blog/Blog2.jsx";
 import WhatIsDigitalMarketing from "./components/Blog/Blogs/WhatIsDigitalMarketing.jsx";
 import InfluencerMarketing from "./components/Blog/Blogs/InfluencerMarketing.jsx";
-import LoadScrollTop from "./components/Home/LoadScrollTop.jsx";
+import LoadScrollTop from "./elements/LoadScrollTop.jsx";
 import SocialMediaMarketing from "./components/Blog/Blogs/SocialMediaMarketing.jsx";
 import SocietyBranding from "./components/Services/SocietyBranding.jsx";
 import BenefitsOutdoorAdvertising from "./components/Blog/Blogs/BenefitsOutdoorAdvertising.jsx";
 import { HelmetProvider } from "react-helmet-async";
 import Blog from "./components/Blog/Blog.jsx";
-import Test from "./elements/Test.jsx";
 import Career from "./components/Career/Career.jsx";
+import Test from "./components/Test.jsx";
+import CTA from "./elements/CTA.jsx";
 
 
 // Lazy loaded components
@@ -47,6 +48,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <CTA/>
         {/* Consulting Popup */}
         {/* <ConsultingPopup /> */}
         <LoadScrollTop />
@@ -91,6 +93,8 @@ function App() {
             <Route path="*" element={<UnderWorking />} />
 
             <Route path="/career" element={<Career/>}/>
+
+            <Route path="/test" element={<Test/>}/>
           </Routes>
         </Suspense>
         <NeedHelp />

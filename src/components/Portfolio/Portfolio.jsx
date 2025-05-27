@@ -671,7 +671,7 @@ function Portfolio() {
       <div className="port-slider ">
       <div className="portfolio-title">
         <h1>
-        VIDEOS PROMOTION<p>VIDEOS PROMOTION</p>
+        VIDEOS PROMOTIONAL<p>VIDEOS PROMOTIONAL</p>
         </h1>
       </div>
         

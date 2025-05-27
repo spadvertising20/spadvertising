@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spadvertising_blogs",
+  "info": {
+    "singularName": "spadvertising-blog",
+    "pluralName": "spadvertising-blogs",
+    "displayName": "spadvertisingblog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "author": {
+      "type": "string"
+    },
+    "publishedDate": {
+      "type": "date"
+    },
+    "blogTitle": {
+      "type": "string"
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "blogContent": {
+      "type": "blocks"
+    },
+    "category": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

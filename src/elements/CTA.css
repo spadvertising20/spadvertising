@@ -1,0 +1,108 @@
+.cta-container {
+  position: fixed;
+  top: 44%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  background-color: #0084ff;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  z-index: 1000;
+  align-items: center;
+}
+
+.cta-container:hover {
+
+  border-bottom-left-radius: 0px;
+
+}
+
+.cta-button {
+  padding: 12px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s ease;
+
+  cursor: pointer;
+}
+
+
+.cta-button.whatsapp {
+  background-color: #25d366;
+  border-top-left-radius: 8px;
+
+}
+
+.cta-button.whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+.cta-button.call {
+  background-color: #000000;
+  border-top-left-radius: 8px;
+}
+
+.cta-button.email {
+  background-color:rgb(47, 206, 255);
+}
+
+.cta-share-group {
+  position: relative;
+
+}
+
+.cta-button.share-icon {
+  background-color: transparent;
+}
+
+.share-options {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  right: 0%;
+  margin-right: 0px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-bottom-left-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cta-share-group:hover .share-options {
+  height: 100px;
+  padding: 10px 0;
+}
+
+.share-option {
+  transition: transform 0.2s ease;
+}
+
+.share-option:hover {
+  transform: scale(1.1);
+}
+
+.share-option.facebook {
+  color: #1877f2;
+}
+
+.share-option.twitter {
+  color: #e1306c;
+}
+
+.share-option.linkedin {
+  color: #0077b5;
+}
+
+.share-option.youtube {
+  color: red;
+}

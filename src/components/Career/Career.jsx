@@ -88,18 +88,14 @@ export default function CareerForm() {
 
         <label>
           Position Title <span className="required">*</span>
-          <select
+          
+          <input
             name="position"
             required
-            value={formData.position}
+            value={formData.firstName}
             onChange={handleChange}
-          >
-            <option value="Sales Executive">-- Select --</option>
-            <option value="Sales Executive">Sales Executive</option>
-            <option value="Sales Intern">Sales Intern</option>
-            <option value="Graphics Designer">Graphics Designer</option>
-            <option value="Business Development">Business Development</option>
-          </select>
+            type="text"
+          />
         </label>
 
         <label>

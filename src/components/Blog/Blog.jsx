@@ -26,8 +26,10 @@ import { GrInstagram } from "react-icons/gr";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { StoreContext } from "../Context Provider/StoreProvider";
+
 import { SlCalender } from "react-icons/sl";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchBlogs } from "./blogsSlice";
 
 const Articles = [
   {
@@ -152,7 +154,8 @@ const Articles = [
 ];
 
 const Blog = () => {
-  const { updateState } = useContext(StoreContext);
+  const dispatch = useDispatch();
+  const { blogs } = useSelector((state) => state.blogs);
 
   const [query, setQuery] = useState(""); // State for user input
 
@@ -179,7 +182,9 @@ const Blog = () => {
         "content",
         "Digital Marketing Blog, Social Media Marketing, digital marketer, best digital marketing agency, types of digital marketing, types of digital marketing, content marketers, performance marketers, digital marketing examples"
       );
-  }, []);
+
+    dispatch(fetchBlogs());
+  }, [dispatch]);
 
   return (
     <div className="blog">
@@ -191,7 +196,7 @@ const Blog = () => {
             <div className="headline">
               <div className="headline-con">
                 <h1>
-                  The Ultimate Guide to Onpage SEO: Best Practices and Tips
+                  The Ultimate Guide to <br /> on-page SEO: Best Practices and Tips
                 </h1>
                 <p>
                   Search Engine Optimization (SEO) is a crucial component of any
@@ -211,11 +216,7 @@ const Blog = () => {
             </div>
 
             <div className="update-image">
-              <img
-                
-                src={update_image}
-                alt="Digital Marketing Blog"
-              />
+              <img src={update_image} alt="Digital Marketing Blog" />
             </div>
           </div>
         </div>
@@ -225,25 +226,18 @@ const Blog = () => {
       <div className="articles-con">
         <div className="articles">
           <div className="latest-article">
-            {Articles.slice(4, 10) // Limit to the first 6 items
+            {blogs
+              .slice(4, 10) // Limit to the first 6 items
               .reverse() // Reverse the order of objects
               .map((article, index) => (
                 <div className="article-box" key={index}>
-                  <Link
-                    onClick={() => updateState(Articles)}
-                    to={article.link}
-                    className="img-text"
-                  >
-                    <img
-                      
-                      src={article.img}
-                      alt={article.altTag}
-                    />
+                  <Link to={article.link} className="img-text">
+                    <img src={`http://localhost:1337${article.coverImage.url}`} alt={article.altTag} />
                     <div className="text-cal">
                       <SlCalender />
-                      <div className="date-category">{article.date}</div>
+                      <div className="date-category">{article.publishedDate}</div>
                     </div>
-                    <h3>{article.title}</h3>
+                    <h3>{article.blogTitle}</h3>
                     <div>
                       <p className="blog-arrow-con">Read more</p>
                     </div>
@@ -277,11 +271,11 @@ const Blog = () => {
               <Link to={"/Blog"}>
                 <button>1</button>
               </Link>
-              <Link to={"/Blog/2"} onClick={() => updateState(Articles)}>
+              <Link to={"/Blog/2"}>
                 <button>2</button>
               </Link>
               ...
-              <Link to={"/Blog/2"} onClick={() => updateState(Articles)}>
+              <Link to={"/Blog/2"}>
                 <button>2</button>
               </Link>
             </div>

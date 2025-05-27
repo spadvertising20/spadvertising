@@ -1,6 +1,7 @@
 .career-container{
-    padding-top: 5rem;
+    padding-top: 4rem;
     padding-bottom: 8rem;
+    
 }
 .career-form {
   max-width: 500px;
@@ -103,19 +104,23 @@
   background-image: linear-gradient(to left, #00c2f3, #005eda);
    margin-bottom: 4rem;
   padding-block: 3rem;
+  
 }
 .career-section-con{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50vw;
-  gap: 10px;
   
+  gap: 10px;
+  width: 100%;
+    max-width: 1200px;
   color: white;
 }
+
 .career-section-con p{
   text-align: center;
+  width: 50vw;
 }
 
   .career-section-con button {
@@ -136,7 +141,7 @@
    
 }
 .career-section-con img{
-  width: 40vw;
+  width: 32rem;
 }
 .job-recruitment{
   font-size: 20px;
@@ -152,4 +157,15 @@
     padding: 20px 16px;
     margin: 20px 12px;
   }
+  .career-section-con img{
+  width: 20rem;
+}
+.career-section-con h1{
+  color: #00254e;
+  font-size: 30px;
+}
+.career-section-con p{
+  text-align: center;
+  width: 90%;
+}
 }
