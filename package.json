@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "server": "concurrently \"npm run develop --prefix strapi\" \"nodemon server.js\"",
+    "server": "concurrently \"npm run install --prefix strapi\" \"npm run develop --prefix strapi\" \"nodemon server.js\"",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -44,6 +44,8 @@
     "nodemailer": "^6.10.1",
     "nodemon": "^3.1.9",
     "path": "^0.12.7",
+    "pg": "^8.16.0",
+    "pg-connection-string": "^2.9.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
