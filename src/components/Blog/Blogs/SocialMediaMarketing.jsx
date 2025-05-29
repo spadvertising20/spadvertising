@@ -1,302 +1,203 @@
-import React, { useContext, useEffect, useState } from "react";
-
-import "./Blogs.css";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
-import update_image from "../../../assets/Services/DigitalMarketing/digital-marketing-img.jpg";
-import img3 from "../../../assets/Blog/img3.webp";
-import img4 from "../../../assets/Blog/img4.webp";
-import img5 from "../../../assets/Blog/img5.webp";
-import img6 from "../../../assets/Blog/img6.webp";
-import outdoor_img1 from "../../../assets/Blog/outdoor-img1.jpg";
-import digital_marketing_img1 from "../../../assets/Blog/digital-marketing-img2.jpg";
-import { CiFacebook } from "react-icons/ci";
-import { IoLogoInstagram } from "react-icons/io5";
-import { CiLinkedin } from "react-icons/ci";
-import { FaFacebookF } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+
 import { GrInstagram } from "react-icons/gr";
+import { FaFacebookF } from "react-icons/fa";
+import { SlCalender } from "react-icons/sl";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io";
-import digital_marketing_img9 from "../../../assets/Blog/digital-marketing-img9.jpg";
 
-const blogData = [
-  {
-    img: digital_marketing_img9,
-    date: "January 28, 2025",
-    title: "Social Media Marketing: Best Practices for Engaging Your Audience.",
-    link: "/Blog/Social-Media-Marketing",
-    facebook: <CiFacebook className="blog-icon" />,
-    instagram: <IoLogoInstagram className="blog-icon" />,
-    linkedin: <CiLinkedin className="blog-icon" />,
-    writer: "BY ADMIN",
-    altTag: "google marketing digital",
-  },
-];
+import "./Blogs.css";
+import { fetchBlogs } from "../blogsSlice";
 
-const titles = [
-  "Outdoor Advertising: What It Is, Benefits, and Why It Matters",
-  "Social Media Marketing: Best Practices for Engaging Your Audience.",
-  "Influencer Marketing: Driving Success and Growth in 2025.",
-  "What is Digital Marketing? Types, Examples and Benefits.",
-  "Improve Online Advertising Efforts with Free Tools and Techniques",
-  "Holiday Sales Strategies: Essential Tips to Increase Business Sales",
-  "How Can Businesses Prepare for Emerging Trends in the Next Decade of Digital Marketing?",
-  "Why Content is Still King in SEO: How to Create High-Quality, Search-Friendly Content",
-  "The Ultimate Guide to On-Page SEO: Best Practices and Tips",
-  "How to Conduct Effective Keyword Research for 2025-26",
-];
-
-const links = [
-  "/Blog/Benefits-of-Outdoor-Advertising",
-  "/Blog/Social-Media-Marketing",
-  "/Blog/Influencer-Marketing",
-  "/Blog/What-is-Digital-Marketing",
-  "/Blog/Advertising-Tools-and-Techniques",
-  "/Blog/Holiday-Sales-Strategies",
-  "/Blog/Businesses-Prepare-for-Emerging-Trends",
-  "/Blog/High-Quality-Content",
-  "/Blog/SEO-Optimization",
-  "/Blog/Keyword-Research",
-];
-
-const Contents = [
-  {
-    heading: `Introduction`,
-    description: `
-       Social media isn’t just a platform; it’s the heartbeat of modern marketing. With billions of users scrolling daily, your business has the opportunity to connect, inspire, and convert. But how do you break through the noise and build a community that loves and shares your content? Let’s dive into the best practices for growing and engaging your social media audience.
-
-    `,
-  },
-  {
-    heading: `1. Know Your Audience Inside Out
-`,
-    description: `Your audience is the foundation of your social media strategy. Here’s how to get to know them better:
-
-`,
-  },
-  {
-    description: `Create Detailed Buyer Personas: Identify your audience's age, interests, challenges, and preferences.
-
-`,
-  },
-  {
-    description: `Engage Directly: Use polls, surveys, and Q&A sessions to gather insights.
-
-`,
-  },
-  {
-    description: `Analyze Data: Use analytics tools to understand what content resonates most.
-
-`,
-  },
-  {
-    description: `Pro Tip: Use tools like Google Analytics and native social platform insights to track demographics and user behavior.
-
-`,
-  },
-  {
-    heading: `2. Consistency is Key`,
-    description: `Staying top-of-mind means showing up consistently. This doesn’t mean posting for the sake of it but delivering value with every post.
-`,
-  },
-  {
-    description: `Develop a Content Calendar: Plan posts ahead of time to ensure a steady flow of content.
-`,
-  },
-  {
-    description: `Use Scheduling Tools: Tools like Hootsuite or Buffer can help automate posts, so you never miss a beat.
-`,
-  },
-  {
-    description: `Stick to Your Brand Voice: Consistent tone, style, and messaging reinforce your brand identity.
-`,
-  },
-  {
-    heading: `3. Engage Authentically`,
-    description: `Social media is a two-way street. Responding to comments, liking user-generated content, and showing genuine interest fosters a loyal community.
-`,
-  },
-  {
-    description: `Reply Promptly: Acknowledge comments, questions, and mentions quickly.`,
-  },
-  {
-    description: `Celebrate Your Audience: Share user-generated content and give shoutouts.`,
-  },
-  {
-    description: `Host Interactive Sessions: Live Q&As, webinars, or Instagram Lives create real-time connections.
-`,
-  },
-  {
-    heading: `4. Create High-Value Content`,
-    description: `Content is king, but engagement is queen. Together, they rule your social strategy. Share posts that educate, entertain, and inspire.
-`,
-  },
-  {
-    description: `Visual Content: Use high-quality images, videos, and infographics.
-`,
-  },
-  {
-    description: `Storytelling: Share behind-the-scenes moments or customer success stories.
-`,
-  },
-  {
-    description: `Call-to-Action (CTA): Encourage followers to take action, whether it’s clicking a link, sharing a post, or commenting.
-`,
-  },
-  {
-    heading: `5. Leverage Hashtags and Trends
-`,
-    description: `Hashtags and trending topics boost visibility and help your content reach new audiences.
-Use Relevant Hashtags: Combine niche-specific, branded, and popular hashtags.
-`,
-  },
-  {
-    description: `Jump on Trends: Participate in viral challenges or trending topics but stay authentic to your brand.
-`,
-  },
-  {
-    description: `Create Branded Hashtags: Encourage followers to use them when sharing content related to your business.
-`,
-  },
-  {
-    heading: `6. Measure, Adjust, and Optimize
-`,
-    description: `Your strategy should evolve based on performance metrics. Monitor, test, and refine for better results.
-`,
-  },
-  {
-    description: `Track Engagement Rates: Likes, comments, shares, and saves indicate content effectiveness.
-`,
-  },
-  {
-    description: `A/B Test Content: Experiment with different formats, captions, and posting times.
-`,
-  },
-  {
-    description: `Learn from Competitors: Analyze what’s working for others in your industry.
-`,
-  },
-  {
-    heading: `Conclusion:`,
-    description: `Building and engaging a social media audience doesn’t happen overnight. It’s a mix of creativity, consistency, and connection. By following these best practices, you’ll not only grow your online presence but also foster a community that champions your brand.
-`,
-  },
-  {
-    description: `Ready to take your social media strategy to the next level? Implement these tips today and watch your audience engagement soar!`,
-  },
-];
+// Example: Action to fetch blogs (you should have this defined in your Redux setup)
 
 export default function SocialMediaMarketing() {
-  useEffect(() => {
-    document.title =
-      "Social Media Marketing: Best Practices to Engage Your Audience";
+  const dispatch = useDispatch();
+  const { blogs } = useSelector((state) => state.blogs); // Assumes blogs is an array
+  const [query, setQuery] = useState("");
 
+  useEffect(() => {
+    document.title = "How to Do Keyword Research for SEO: A Beginner's Guide";
     document
       .querySelector("meta[name='description']")
       ?.setAttribute(
         "content",
-        "Master social media marketing with best practices to engage your audience and boost interaction!"
+        "Learn how to do keyword research for SEO with this beginner’s guide. Simple steps to find keywords and boost your rankings!"
       );
-
     document
       .querySelector("meta[name='keywords']")
       ?.setAttribute(
         "content",
-        "facebook advertising management, social media marketing, smm marketing, social media and marketing, sns marketing, marketing through social media, smm social media marketing, social media mar"
+        "keyword research for SEO, how to do keyword research, SEO keyword research guide, beginner’s guide to keyword research, keyword research tutorial, SEO for beginners, find keywords for SEO, free keyword research tool, google keyword research tool, keyword research tool, semrush pricing, keyword search tool"
       );
-  }, []);
 
-  const [query, setQuery] = useState(""); // State for user input
+    dispatch(fetchBlogs());
+  }, [dispatch]);
 
-  // Handle input change
-  const handleInputChange = (e) => {
-    const userInput = e.target.value;
-    setQuery(userInput);
-    // Filter suggestions
+  const renderContent = (content = []) => {
+    return content.map((block, index) => {
+      if (!block) return null;
+
+      const key = `block-${index}`;
+
+      const renderTextChildren = (children) =>
+        children?.map((child, i) => {
+          if (!child?.text) return null;
+
+          const text = child.text;
+
+          // Wrap with bold if needed
+          if (child.bold) {
+            return <strong key={i}>{text}</strong>;
+          }
+
+          return <span key={i}>{text}</span>;
+        });
+
+      switch (block.type) {
+        case "heading": {
+          const level = block.level >= 1 && block.level <= 6 ? block.level : 2;
+          const HeadingTag = `h${level}`;
+          return (
+            <HeadingTag key={key}>
+              {renderTextChildren(block.children)}
+            </HeadingTag>
+          );
+        }
+
+        case "paragraph": {
+          return <p key={key}>{renderTextChildren(block.children)}</p>;
+        }
+
+        case "list": {
+          const isOrdered = block.ordered || false;
+          const ListTag = isOrdered ? "ol" : "ul";
+          return (
+            <ListTag key={key}>
+              {block.children?.map((item, i) => (
+                <li key={`li-${i}`}>{renderTextChildren(item.children)}</li>
+              ))}
+            </ListTag>
+          );
+        }
+
+        case "image": {
+          const url = block?.url || "";
+          const alt = block?.alt || "Image";
+          return <img key={key} src={url} alt={alt} loading="lazy" />;
+        }
+
+        case "quote": {
+          return (
+            <blockquote key={key}>
+              {renderTextChildren(block.children)}
+            </blockquote>
+          );
+        }
+
+        default:
+          return null;
+      }
+    });
   };
 
+  const handleInputChange = (e) => {
+    setQuery(e.target.value);
+  };
+
+  const filteredBlogs =
+    query.trim() === ""
+      ? blogs
+      : blogs.filter((article) =>
+          article.title?.toLowerCase().includes(query.toLowerCase())
+        );
+
   return (
-   <section className="keyword-research">
-         <div className="keyword-research-con">
-           <div className="keyword-research-box">
-             <p>{blogData[0]?.date}</p>
-   
-             <h1>{blogData[0]?.title}</h1>
-             <img
-               loading="lazy"
-               src={blogData[0]?.img}
-               alt="what is digital marketing, digital marketing is what"
-             />
-   
-             <div className="keyword-research-content">
-               <div className="blog-content">
-                 {Contents.map((content, index) => (
-                   <div className="">
-                     <h1>{content.heading}</h1>
-                     <h2>{content.sub_heading}</h2>
-                     <p>{content.description}</p>
-                   </div>
-                 ))}
-               </div>
-             </div>
-           </div>
-           <div className="search-container">
-             <input
-               type="text"
-               placeholder="Search..."
-               value={query}
-               onChange={handleInputChange}
-             />
-             <p className="blog-post-heading">Recent Posts</p>
-   
-             {query.trim() === ""
-               ? blogData.map((article, index) => (
-                   <div className="title-gap" key={index}>
-                     {titles.map((title, i) => (
-                       <div className="title-gap" key={i}>
-                         <Link to={links[i]}>{title}</Link>
-                         <br />
-                       </div>
-                     ))}
-                   </div>
-                 ))
-               : blogData
-                   .filter((article) =>
-                     article.title.toLowerCase().includes(query.toLowerCase())
-                   )
-                   .map((filteredArticle, index) => (
-                     <div className="title-gap2">
-                       <Link to={`${filteredArticle.link}`}>
-                         {filteredArticle.title}
-                       </Link>
-                     </div>
-                   ))}
-   
-             <br />
-   
-             <div className="blog-icons2">
-               <h2>Follow Us</h2>
-               <div className="blog-icons2-con">
-                 <Link to={"https://www.instagram.com/spadvertisingrpr/"}>
-                   <GrInstagram />
-                 </Link>
-                 <Link to={"https://www.facebook.com/spadvertisingraipur"}>
-                   <FaFacebookF />
-                 </Link>
-                 <Link
-                   to={
-                     "https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
-                   }
-                 >
-                   <FaLinkedinIn />
-                 </Link>
-                 <Link to={"https://www.youtube.com/@spadvertising530"}>
-                   <IoLogoYoutube />
-                 </Link>
-               </div>
-             </div>
-           </div>
-         </div>
-       </section>
+    <section className="keyword-research">
+      <div className="keyword-research-con">
+        {/* Left blog content */}
+        <div className="keyword-research-box">
+          {blogs.slice(4, 5).map((blog, index) => (
+            <>
+              <p>
+                <SlCalender />
+                {blog.publishedDate}
+              </p>
+              <h1>{blog.blogTitle}</h1>
+              <img
+                loading="lazy"
+                src={`http://localhost:1337${blog.coverImage.url}`}
+                alt={blog.blogTitle}
+              />
+
+              <div className="keyword-research-content">
+                <p>
+                  {blog.blogContent ? (
+                    renderContent(blog.blogContent)
+                  ) : (
+                    <p>No content available.</p>
+                  )}
+                </p>
+              </div>
+            </>
+          ))}
+        </div>
+
+        {/* Right sidebar: search and recent posts */}
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Search..."
+            value={query}
+            onChange={handleInputChange}
+          />
+          <p className="blog-post-heading">Recent Posts</p>
+          {query.trim() === ""
+            ? blogs.map((article, index) => (
+                <div className="title-gap">
+                  <Link to={`${article.link}`} key={index}>
+                    {article.blogTitle}
+                  </Link>
+                </div>
+              ))
+            : blogs
+                .filter((article) =>
+                  article.blogTitle.toLowerCase().includes(query.toLowerCase())
+                )
+                .map((filteredArticle, index) => (
+                  <div className="title-gap2">
+                    <Link to={`${filteredArticle.link}`}>
+                      {filteredArticle.blogTitle}
+                    </Link>
+                  </div>
+                ))}
+          <br />
+
+          <div className="blog-icons2">
+            <h2>Follow Us</h2>
+            <div className="blog-icons2-con">
+              <Link to={"https://www.instagram.com/spadvertisingrpr/"}>
+                <GrInstagram />
+              </Link>
+              <Link to={"https://www.facebook.com/spadvertisingraipur"}>
+                <FaFacebookF />
+              </Link>
+              <Link
+                to={
+                  "https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
+                }
+              >
+                <FaLinkedinIn />
+              </Link>
+              <Link to={"https://www.youtube.com/@spadvertising530"}>
+                <IoLogoYoutube />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

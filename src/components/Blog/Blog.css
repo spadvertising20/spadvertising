@@ -6,6 +6,15 @@
     flex-direction: column;
     background-color: white;
 }
+.blog2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+    flex-direction: column;
+    background-color: white;
+}
 
 .blog-con {
     width: 90%;

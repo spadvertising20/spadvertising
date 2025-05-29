@@ -1,61 +1,111 @@
-import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import "./Blog.css";
+import { Link, Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { StoreContext } from "../Context Provider/StoreProvider";
-import { GrInstagram } from "react-icons/gr";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
-import { IoLogoYoutube } from "react-icons/io";
+import update_image from "../../assets/Services/DigitalMarketing/digital-marketing-img.jpg";
+import img3 from "../../assets/Blog/img3.webp";
+import img4 from "../../assets/Blog/img4.webp";
+import img5 from "../../assets/Blog/img5.webp";
+import img6 from "../../assets/Blog/img6.webp";
+import outdoor_img1 from "../../assets/Blog/outdoor-img1.jpg";
+import digital_marketing_img1 from "../../assets/Blog/digital-marketing-img1.png";
+import digital_marketing_img2 from "../../assets/Blog/digital-marketing-img2.jpg";
+import digital_marketing_img3 from "../../assets/Blog/digital-marketing-img3.jpg";
+import digital_marketing_img4 from "../../assets/Blog/digital-marketing-img4.jpg";
+import digital_marketing_img5 from "../../assets/Blog/digital-marketing-img5.jpg";
+import digital_marketing_img6 from "../../assets/Blog/digital-marketing-img6.jpg";
+import digital_marketing_img7 from "../../assets/Blog/digital-marketing-img7.jpg";
+import digital_marketing_img8 from "../../assets/Blog/digital-marketing-img8.jpg";
+import digital_marketing_img9 from "../../assets/Blog/digital-marketing-img9.jpg";
+import digital_marketing_img10 from "../../assets/Blog/digital-marketing-img10.jpg";
 import { CiFacebook } from "react-icons/ci";
 import { IoLogoInstagram } from "react-icons/io5";
 import { CiLinkedin } from "react-icons/ci";
+import { FaFacebookF } from "react-icons/fa";
+import { GrInstagram } from "react-icons/gr";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { IoLogoYoutube } from "react-icons/io";
+import { FaArrowRightLong } from "react-icons/fa6";
+
+import { SlCalender } from "react-icons/sl";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchBlogs } from "./blogsSlice";
 
 const Blog2 = () => {
-  const { blogData } = useContext(StoreContext);
-  const [query, setQuery] = useState("");
+  const dispatch = useDispatch();
+  const { blogs } = useSelector((state) => state.blogs);
 
-  const handleInputChange = (e) => setQuery(e.target.value);
+  const [query, setQuery] = useState(""); // State for user input
+
+  // Handle input change
+  const handleInputChange = (e) => {
+    const userInput = e.target.value;
+    setQuery(userInput);
+  };
+
+  useEffect(() => {
+    document.title =
+      "Best Digital Marketing Blog by SP Advertising Agency in Raipur";
+
+    document
+      .querySelector("meta[name='description']")
+      ?.setAttribute(
+        "content",
+        "Explore the best digital marketing blog by SP Advertising Agency in Raipur! Get expert tips on SEO, social media, PPC, and content marketing to grow your business online."
+      );
+
+    document
+      .querySelector("meta[name='keywords']")
+      ?.setAttribute(
+        "content",
+        "Digital Marketing Blog, Social Media Marketing, digital marketer, best digital marketing agency, types of digital marketing, types of digital marketing, content marketers, performance marketers, digital marketing examples"
+      );
+
+    dispatch(fetchBlogs());
+  }, [dispatch]);
 
   return (
-    <div className="blog">
-      <Helmet>
-        <title>Blog: SP Advertising</title>
-        <meta
-          name="description"
-          content="Blog about advertising tips and updates"
-        />
-        <meta name="keywords" content="advertising, marketing, blogs" />
-      </Helmet>
-
-      <div className="articles-con blogs2-con">
+    <div className="blog2">
+      {/* Articles Section */}
+      <div className="articles-con">
         <div className="articles">
           <div className="latest-article">
-            {blogData
+            {blogs
               .slice(0, 4) // Limit to the first 6 items
-              .reverse() // Reverse the order of objects
               .map((article, index) => (
                 <div className="article-box" key={index}>
                   <Link to={article.link} className="img-text">
-                    <img src={article.img} alt={article.alt} />
-                    <div className="date-category">{article.date}</div>
-                    <h3>{article.title}</h3>
-                    <p className="blog-arrow-con">Read more</p>
+                    <img
+                      src={`http://localhost:1337${article.coverImage.url}`}
+                      alt={article.altTag}
+                    />
+                    <div className="text-cal">
+                      <SlCalender />
+                      <div className="date-category">
+                        {article.publishedDate}
+                      </div>
+                    </div>
+                    <h3>{article.blogTitle}</h3>
+                    <div>
+                      <p className="blog-arrow-con">Read more</p>
+                    </div>
                     <div className="social-writer">
                       <div className="blog-icon-con">
                         <div className="blog-icon">
                           <Link
                             to={`https://www.instagram.com/spadvertisingrpr/`}
                           >
-                            <CiFacebook className="blog-icon" />
+                            {article.instagram}
                           </Link>
                           <Link
                             to={`https://www.facebook.com/spadvertisingraipur`}
                           >
-                            <IoLogoInstagram className="blog-icon" />
+                            {article.facebook}
                           </Link>
                           <Link
                             to={`https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all`}
                           >
-                            <CiLinkedin className="blog-icon" />
+                            {article.linkedin}
                           </Link>
                         </div>
                         <p>{article.writer}</p>
@@ -64,21 +114,23 @@ const Blog2 = () => {
                   </Link>
                 </div>
               ))}
-          </div>
-          <div className="blog-pages">
-            <Link to={"/Blog"}>
-              <button>1</button>
-            </Link>
-            <Link to={"/Blog/2"}>
-              <button>2</button>
-            </Link>
-            ...
-            <Link to={"/Blog/2"}>
-              <button>2</button>
-            </Link>
+
+            <div className="blog-pages">
+              <Link to={"/Blog"}>
+                <button>1</button>
+              </Link>
+              <Link to={"/Blog/2"}>
+                <button>2</button>
+              </Link>
+              ...
+              <Link to={"/Blog/2"}>
+                <button>2</button>
+              </Link>
+            </div>
           </div>
         </div>
 
+        {/* Search Section */}
         <div className="search-container">
           <input
             type="text"
@@ -88,53 +140,45 @@ const Blog2 = () => {
           />
           <p className="blog-post-heading">Recent Posts</p>
           {query.trim() === ""
-            ? blogData?.map((article, index) => (
-                <div className="title-gap" key={index}>
-                  <Link to={article.link}>{article.title}</Link>
+            ? blogs.map((article, index) => (
+                <div className="title-gap">
+                  <Link to={`${article.link}`} key={index}>
+                    {article.blogTitle}
+                  </Link>
                 </div>
               ))
-            : blogData
-                ?.filter((article) =>
-                  article.title.toLowerCase().includes(query.toLowerCase())
+            : blogs
+                .filter((article) =>
+                  article.blogTitle.toLowerCase().includes(query.toLowerCase())
                 )
                 .map((filteredArticle, index) => (
-                  <div className="title-gap2" key={index}>
-                    <Link to={filteredArticle.link}>
-                      {filteredArticle.title}
+                  <div className="title-gap2">
+                    <Link to={`${filteredArticle.link}`}>
+                      {filteredArticle.blogTitle}
                     </Link>
                   </div>
                 ))}
+          <br />
+
           <div className="blog-icons2">
             <h2>Follow Us</h2>
             <div className="blog-icons2-con">
-              <a
-                href="https://www.instagram.com/spadvertisingrpr/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link to={"https://www.instagram.com/spadvertisingrpr/"}>
                 <GrInstagram />
-              </a>
-              <a
-                href="https://www.facebook.com/spadvertisingraipur"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              </Link>
+              <Link to={"https://www.facebook.com/spadvertisingraipur"}>
                 <FaFacebookF />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
-                target="_blank"
-                rel="noopener noreferrer"
+              </Link>
+              <Link
+                to={
+                  "https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
+                }
               >
                 <FaLinkedinIn />
-              </a>
-              <a
-                href="https://www.youtube.com/@spadvertising530"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              </Link>
+              <Link to={"https://www.youtube.com/@spadvertising530"}>
                 <IoLogoYoutube />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

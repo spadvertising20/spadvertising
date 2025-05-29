@@ -7,17 +7,18 @@
 }
 
 .keyword-research-con {
-    width: 80%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1100px;
     padding-top: 5rem;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 30px;
 }
-.blog-content h2{
+
+.blog-content h2 {
     color: rgb(95, 95, 95);
     font-weight: 600;
     font-size: 22px;
@@ -31,26 +32,39 @@
 }
 
 .keyword-research-box {
-    width: 100%;
+    width: 80%;
     padding-top: 40px;
 }
-.keyword-research-box h1{
+
+.keyword-research-box h1 {
     margin-top: 10px;
     font-size: 40px;
     color: #007BFF;
     font-weight: 600;
 }
 
-.keyword-research-box p{
+.keyword-research-box p {
     margin-top: 10px;
     font-size: 16px;
     margin-bottom: 10px;
 
     text-align: left;
 }
-.keyword-research-content h1{
+.blog-date{
+    display: flex;
+    align-items: center;
+    color: gray;
+    gap: 10px;
+}
+
+.keyword-research-content h1 {
     font-size: 30px;
 }
+
+.keyword-research-content h2 {
+    font-size: 24px;
+}
+
 .search-container {
     width: 40%;
 }
@@ -58,43 +72,59 @@
 .keyword-research-box img {
     width: 100%;
 }
+
+/* .keyword-research-con strong{
+    color:rgb(59, 59, 59);
+} */
 @media (max-width: 768px) {
 
     .keyword-research-con {
-       
+
         padding-top: 3rem;
-        
+
     }
-    
-    .keyword-research-con {
-        
-        flex-direction: column;
+
+    .keyword-research-box {
         width: 90%;
+
     }
-   
- 
-    .keyword-research-content p{
+
+    .keyword-research-con {
+
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .keyword-research-content p {
         text-align: left;
     }
+
     .search-container {
         width: 90%;
-    
+
     }
-    .keyword-research-box h1{
-      
+
+    .keyword-research-box h1 {
+
         font-size: 30px;
-     
+
     }
-    .blog-content h2{
-        font-size: 20px;
+
+    .blog-content h2 {
+        font-size: 24px;
     }
-   
-    .keyword-research-content h1{
-        font-size: 20px;
+
+    .keyword-research-content h2 {
+        font-size: 25px;
+        font-family: monospace;
     }
-    .keyword-research-box p{
-        
+
+    .keyword-research-box p {
+
         font-size: 14px;
-        
+
     }
 }

@@ -31,128 +31,6 @@ import { SlCalender } from "react-icons/sl";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchBlogs } from "./blogsSlice";
 
-const Articles = [
-  {
-    img: digital_marketing_img1,
-    date: "December 21, 2024",
-
-    title: "How to Conduct Effective Keyword Research for 2025-26",
-    link: "/Blog/Keyword-Research",
-
-    facebook: <CiFacebook className="blog-icon" />,
-    instagram: <IoLogoInstagram className="blog-icon" />,
-    linkedin: <CiLinkedin className="blog-icon" />,
-    writer: "BY ADMIN",
-    altTag: "Digital Marketing Blog",
-  },
-  {
-    img: digital_marketing_img2,
-    date: "December 28, 2024",
-
-    title: "The Ultimate Guide to On-Page SEO: Best Practices and Tips",
-    link: "/Blog/SEO-Optimization",
-    facebook: <CiFacebook className="blog-icon" />,
-    instagram: <IoLogoInstagram className="blog-icon" />,
-    linkedin: <CiLinkedin className="blog-icon" />,
-    writer: "BY ADMIN",
-    altTag: "Social Media Marketing",
-  },
-  {
-    img: digital_marketing_img3,
-    date: "January 03, 2025",
-
-    title:
-      "Why Content is Still King in SEO: How to Create High-Quality, Search-Friendly Content",
-    link: "/Blog/High-Quality-Content",
-    facebook: <CiFacebook className="blog-icon" />,
-    instagram: <IoLogoInstagram className="blog-icon" />,
-    linkedin: <CiLinkedin className="blog-icon" />,
-    writer: "BY ADMIN",
-    altTag: "digital marketer,",
-  },
-  {
-    img: digital_marketing_img4,
-    date: "January 06, 2025",
-
-    title:
-      "How Can Businesses Prepare for Emerging Trends in the Next Decade of Digital Marketing?",
-    link: "/Blog/Businesses-Prepare-for-Emerging-Trends",
-    facebook: <CiFacebook className="blog-icon" />,
-    instagram: <IoLogoInstagram className="blog-icon" />,
-    linkedin: <CiLinkedin className="blog-icon" />,
-    writer: "BY ADMIN",
-    altTag: "best digital marketing agency",
-  },
-  {
-    img: digital_marketing_img5,
-    date: "January 08, 2025",
-
-    title:
-      "Holiday Sales Strategies: Essential Tips to Increase Business Sales",
-    link: "/Blog/Holiday-Sales-Strategies",
-    facebook: <CiFacebook className="blog-icon" />,
-    instagram: <IoLogoInstagram className="blog-icon" />,
-    linkedin: <CiLinkedin className="blog-icon" />,
-    writer: "BY ADMIN",
-    altTag: "types of digital marketing",
-  },
-  {
-    img: digital_marketing_img6,
-    date: "January 08, 2025",
-    title: "Improve Online Advertising Efforts with Free Tools and Techniques",
-    link: "/Blog/Advertising-Tools-and-Techniques",
-    facebook: <CiFacebook className="blog-icon" />,
-    instagram: <IoLogoInstagram className="blog-icon" />,
-    linkedin: <CiLinkedin className="blog-icon" />,
-    writer: "BY ADMIN",
-    altTag: "content marketers",
-  },
-  {
-    img: digital_marketing_img7,
-    date: "January 17, 2025",
-    title: "What is Digital Marketing? Types, Examples and Benefits.",
-    link: "/Blog/What-is-Digital-Marketing",
-    facebook: <CiFacebook className="blog-icon" />,
-    instagram: <IoLogoInstagram className="blog-icon" />,
-    linkedin: <CiLinkedin className="blog-icon" />,
-    writer: "BY ADMIN",
-    altTag: "performance marketers",
-  },
-  {
-    img: digital_marketing_img8,
-    date: "January 17, 2025",
-    title: "Influencer Marketing: Driving Success and Growth in 2025.",
-    link: "/Blog/Influencer-Marketing",
-    facebook: <CiFacebook className="blog-icon" />,
-    instagram: <IoLogoInstagram className="blog-icon" />,
-    linkedin: <CiLinkedin className="blog-icon" />,
-    writer: "BY ADMIN",
-    altTag: "digital marketing examples",
-  },
-  {
-    img: digital_marketing_img9,
-    date: "January 28, 2025",
-    title: "Social Media Marketing: Best Practices for Engaging Your Audience.",
-    link: "/Blog/Social-Media-Marketing",
-    facebook: <CiFacebook className="blog-icon" />,
-    instagram: <IoLogoInstagram className="blog-icon" />,
-    linkedin: <CiLinkedin className="blog-icon" />,
-    writer: "BY ADMIN",
-    altTag: "google marketing digital",
-  },
-  {
-    img: digital_marketing_img10,
-    date: "January 31, 2025",
-    title: "Outdoor Advertising: What It Is, Benefits, and Why It Matters",
-    link: "/Blog/Benefits-of-Outdoor-Advertising",
-    facebook: <CiFacebook className="blog-icon" />,
-    instagram: <IoLogoInstagram className="blog-icon" />,
-    linkedin: <CiLinkedin className="blog-icon" />,
-    writer: "BY ADMIN",
-    altTag: "hubspot digital marketing course",
-  },
-];
-
 const Blog = () => {
   const dispatch = useDispatch();
   const { blogs } = useSelector((state) => state.blogs);
@@ -292,19 +170,19 @@ const Blog = () => {
           />
           <p className="blog-post-heading">Recent Posts</p>
           {query.trim() === ""
-            ? Articles.map((article, index) => (
+            ? blogs.map((article, index) => (
                 <div className="title-gap">
                   <Link to={`${article.link}`} key={index}>
-                    {article.title}
+                    {article.blogTitle}
                   </Link>
                 </div>
               ))
-            : Articles.filter((article) =>
-                article.title.toLowerCase().includes(query.toLowerCase())
+            : blogs.filter((article) =>
+                article.blogTitle.toLowerCase().includes(query.toLowerCase())
               ).map((filteredArticle, index) => (
                 <div className="title-gap2">
                   <Link to={`${filteredArticle.link}`}>
-                    {filteredArticle.title}
+                    {filteredArticle.blogTitle}
                   </Link>
                 </div>
               ))}
