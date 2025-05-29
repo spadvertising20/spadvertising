@@ -121,7 +121,7 @@ export default function InfluencerMarketing() {
         <div className="keyword-research-box">
           {blogs.slice(7, 8).map((blog, index) => (
             <>
-              <p>
+              <p className="blog-date">
                 <SlCalender />
                 {blog.publishedDate}
               </p>

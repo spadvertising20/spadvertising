@@ -121,7 +121,7 @@ export default function HighQualityContent() {
         <div className="keyword-research-box">
           {blogs.slice(9, 10).map((blog, index) => (
             <>
-              <p>
+              <p className="blog-date">
                 <SlCalender />
                 {blog.publishedDate}
               </p>

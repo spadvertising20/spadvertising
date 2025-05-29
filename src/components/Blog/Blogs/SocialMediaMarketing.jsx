@@ -121,7 +121,7 @@ export default function SocialMediaMarketing() {
         <div className="keyword-research-box">
           {blogs.slice(4, 5).map((blog, index) => (
             <>
-              <p>
+              <p className="blog-date">
                 <SlCalender />
                 {blog.publishedDate}
               </p>

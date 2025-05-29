@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "server": "nodemon server.js",
+    "server": "concurrently \"npm run develop --prefix strapi\" \"nodemon server.js\"",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

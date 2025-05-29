@@ -121,7 +121,7 @@ export default function KeywordResearch() {
         <div className="keyword-research-box">
           {blogs.slice(1, 2).map((blog, index) => (
             <>
-              <p>
+              <p className="blog-date">
                 <SlCalender />
                 {blog.publishedDate}
               </p>

@@ -121,7 +121,7 @@ export default function SeoOptimization() {
         <div className="keyword-research-box">
           {blogs.slice(0, 1).map((blog, index) => (
             <>
-              <p>
+              <p className="blog-date">
                 <SlCalender />
                 {blog.publishedDate}
               </p>

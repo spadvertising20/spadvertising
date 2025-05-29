@@ -121,7 +121,7 @@ export default function BusinessesPrepare() {
         <div className="keyword-research-box">
           {blogs.slice(2, 3).map((blog, index) => (
             <>
-              <p>
+              <p className="blog-date">
                 <SlCalender />
                 {blog.publishedDate}
               </p>

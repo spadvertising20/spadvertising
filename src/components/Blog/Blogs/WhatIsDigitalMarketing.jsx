@@ -121,7 +121,7 @@ export default function WhatIsDigitalMarketing() {
         <div className="keyword-research-box">
           {blogs.slice(6, 7).map((blog, index) => (
             <>
-              <p>
+              <p className="blog-date">
                 <SlCalender />
                 {blog.publishedDate}
               </p>

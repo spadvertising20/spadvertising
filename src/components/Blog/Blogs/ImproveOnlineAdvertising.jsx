@@ -121,7 +121,7 @@ export default function ImproveOnlineAdvertising() {
         <div className="keyword-research-box">
           {blogs.slice(3, 4).map((blog, index) => (
             <>
-              <p>
+              <p className="blog-date">
                 <SlCalender />
                 {blog.publishedDate}
               </p>

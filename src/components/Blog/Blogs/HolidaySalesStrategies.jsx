@@ -121,7 +121,7 @@ export default function HolidaySalesStrategies() {
         <div className="keyword-research-box">
           {blogs.slice(8, 9).map((blog, index) => (
             <>
-              <p>
+              <p className="blog-date">
                 <SlCalender />
                 {blog.publishedDate}
               </p>
