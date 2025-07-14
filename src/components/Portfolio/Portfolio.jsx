@@ -36,6 +36,7 @@ import digital_marketing_img7 from "../../assets/Services/DigitalMarketing/digit
 import digital_marketing_img8 from "../../assets/Services/DigitalMarketing/digital-marketing-img8.jpg";
 import digital_marketing_img9 from "../../assets/Services/DigitalMarketing/digital-marketing-img9.jpg";
 import digital_marketing_img10 from "../../assets/Services/DigitalMarketing/digital-marketing-img10.jpg";
+import digital_marketing_img12 from "../../assets/Services/DigitalMarketing/digital-marketing-img12.jpg";
 
 import packaging_img from "../../assets/Services/DesigningServices/packaging-img.jpg";
 import packaging_img1 from "../../assets/Services/DesigningServices/packaging-img2.jpg";
@@ -76,6 +77,7 @@ import homepageImage1 from "../../assets/Portfolio/homepage1.png";
 import homepageImage2 from "../../assets/Portfolio/homepage2.png";
 import homepageImage3 from "../../assets/Portfolio/homepage3.png";
 import homepageImage4 from "../../assets/Portfolio/homepage4.png";
+import homepageImage5 from "../../assets/Portfolio/homepage5.png";
 
 import external_link from "../../assets/Portfolio/external-link.png";
 
@@ -414,6 +416,13 @@ function Portfolio() {
               alt="Digital Marketing in Raipur"
             />
           </div>
+           <div>
+            <ImageLoader
+              src={loading}
+              data-src={digital_marketing_img12}
+              alt="Digital Marketing in Raipur"
+            />
+          </div>
         </Slider>
       </div>
       <div className="port-slider">
@@ -656,9 +665,20 @@ function Portfolio() {
             </a>
           </div>
           <div className="website-con">
-            <a href="https://sprn.in/">
+            <a href="https://coldfistfitnessclub.in/">
               <div className="website-absolute">
                 <ImageLoader src={loading} data-src={homepageImage4} alt="" />
+                <div>
+                  <p>visit website</p>
+                 
+                </div>
+              </div>
+            </a>
+          </div>
+          <div className="website-con">
+            <a href="https://drchitraendocare.com">
+              <div className="website-absolute">
+                <ImageLoader src={loading} data-src={homepageImage5} alt="" />
                 <div>
                   <p>visit website</p>
                  

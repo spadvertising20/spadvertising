@@ -48,7 +48,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <CTA/>
+        {/* <CTA/> */}
         {/* Consulting Popup */}
         {/* <ConsultingPopup /> */}
         <LoadScrollTop />

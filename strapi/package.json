@@ -8,7 +8,7 @@
     "console": "strapi console",
     "deploy": "strapi deploy",
     "dev": "strapi develop",
-    "develop": "strapi develop", 
+    "develop": "strapi develop",
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
@@ -22,6 +22,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "spadvertising": "file:..",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
