@@ -78,6 +78,7 @@ import homepageImage2 from "../../assets/Portfolio/homepage2.png";
 import homepageImage3 from "../../assets/Portfolio/homepage3.png";
 import homepageImage4 from "../../assets/Portfolio/homepage4.png";
 import homepageImage5 from "../../assets/Portfolio/homepage5.png";
+import homepageImage6 from "../../assets/Portfolio/homepage6.png";
 
 import external_link from "../../assets/Portfolio/external-link.png";
 
@@ -679,6 +680,17 @@ function Portfolio() {
             <a href="https://drchitraendocare.com">
               <div className="website-absolute">
                 <ImageLoader src={loading} data-src={homepageImage5} alt="" />
+                <div>
+                  <p>visit website</p>
+                 
+                </div>
+              </div>
+            </a>
+          </div>
+           <div className="website-con">
+            <a href="https://muraadconstruction.com">
+              <div className="website-absolute">
+                <ImageLoader src={loading} data-src={homepageImage6} alt="" />
                 <div>
                   <p>visit website</p>
                  

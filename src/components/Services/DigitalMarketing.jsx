@@ -62,7 +62,7 @@ const services = [
         positioning
       </>
     ),
-    link: "https://spadvertising.in/Digital-Marketing-in-Raipur",
+    link: "https://spadvertising.in/Digital-Marketing-Agency-in-Raipur",
     points: [
       "Website Development",
       "SEO / SEM Optimization",
@@ -114,7 +114,7 @@ function DigitalMarketing() {
       .querySelector("meta[name='description']")
       ?.setAttribute(
         "content",
-        "Top digital marketing agency in Raipur offering expert services in SEO, social media marketing, website development and digital solutions in Chhattisgarh"
+        "Top digital marketing agency in Raipur (C.G.) offering expert services in SEO, social media marketing, website development and digital solutions in Chhattisgarh"
       );
 
     document
@@ -174,13 +174,18 @@ function DigitalMarketing() {
                 crafts data-driven strategies that deliver real results.
               </div>
               <div className="service-para">
-                We are one of the best digital marketing agency in Raipur, We
-                help you to grow your business and build your brand through SEO
-                (Search Engine Optimization), Social Media Marketing, Paid
-                Advertising, and Content Marketing. As a leading digital
-                marketing agency in Chhattisgarh, we help businesses establish a
-                strong online presence, drive traffic to their websites, and
-                generate leads.
+                We are one of the{" "}
+                <a href="/Digital-Marketing-Agency-in-Raipur">
+                  best digital marketing agency in Raipur
+                </a>
+                , We help you to grow your business and build your brand through
+                SEO (Search Engine Optimization), Social Media Marketing, Paid
+                Advertising, and Content Marketing. As a leading{" "}
+                <a href="/Digital-Marketing-Agency-in-Raipur">
+                  digital marketing agency in Chhattisgarh
+                </a>
+                , we help businesses establish a strong online presence, drive
+                traffic to their websites, and generate leads.
               </div>
               {/* <h2>Why Choose Us?</h2>
               <ul>
@@ -452,7 +457,7 @@ function DigitalMarketing() {
           <button>Explore Our Work</button>
         </a>
       </div>
-      <WhyTrustUs services={wcsservices}/>
+      <WhyTrustUs services={wcsservices} />
     </div>
   );
 }

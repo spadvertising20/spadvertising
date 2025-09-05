@@ -34,7 +34,13 @@ const services = [
       </>
     ),
     link: "https://spadvertising.in/Outdoor-Advertising-in-Raipur",
-    points: ["Mobile Hoarding", "Hoardings", "Gantry", "Pole Kiosk", "Society Branding"],
+    points: [
+      "Mobile Hoarding",
+      "Hoardings",
+      "Gantry",
+      "Pole Kiosk",
+      "Society Branding",
+    ],
     tick: blue_tick,
   },
   {
@@ -44,7 +50,7 @@ const services = [
       <>
         Boost your business with a{" "}
         <a
-          href="https://spadvertising.in/Digital-Marketing-in-Raipur"
+          href="https://spadvertising.in/Digital-Marketing-Agency-in-Raipur"
           aria-label="leading digital marketing company in Raipur"
         >
           leading digital marketing company in Raipur
@@ -52,7 +58,7 @@ const services = [
         , offering SEO, social media, and advertising solutions.
       </>
     ),
-    link: "https://spadvertising.in/Digital-Marketing-in-Raipur",
+    link: "https://spadvertising.in/Digital-Marketing-Agency-in-Raipur",
     points: [
       "Website Development",
       "SEO / SEM Optimization",
@@ -138,9 +144,9 @@ const services = [
           href="https://spadvertising.in/Event-Promotion-in-Raipur"
           aria-label="trusted print media company in Raipur"
         >
-          trusted print media company in Raipur, 
+          trusted print media company in Raipur,
         </a>
-         that offers high-quality printing solutions for various needs.
+        that offers high-quality printing solutions for various needs.
       </>
     ),
     link: "https://spadvertising.in/Event-Promotion-in-Raipur",

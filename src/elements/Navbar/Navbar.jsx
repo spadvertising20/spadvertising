@@ -79,7 +79,7 @@ function Navbar() {
                     text: "Outdoor Advertising",
                   },
                   {
-                    to: "/Digital-Marketing-in-Raipur",
+                    to: "/Digital-Marketing-Agency-in-Raipur",
                     text: "Digital Marketing",
                   },
                   {
@@ -188,7 +188,7 @@ function Navbar() {
                       text: "Outdoor Advertising",
                     },
                     {
-                      to: "/Digital-Marketing-in-Raipur",
+                      to: "/Digital-Marketing-Agency-in-Raipur",
                       text: "Digital Marketing",
                     },
                     {

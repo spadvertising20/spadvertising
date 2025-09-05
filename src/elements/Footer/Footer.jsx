@@ -24,56 +24,56 @@ function Footer() {
 
           <div className="footer-contact">
             <div className="pages-con">
-            <h2>Pages</h2>
-            <div className="pages">
-              <Link to={"/"}>
-                <p>Home</p>
-              </Link>
-              <Link to={"/About"}>
-                <p>About</p>
-              </Link>
-              <Link to={"/Welcome-page"}>
-                <p>Clients</p>
-              </Link>
-              <Link to={"/Contact"}>
-                <p>Contact Us</p>
-              </Link>
-              <Link to={"/Blog"}>
-                <p>Blog</p>
-              </Link>
-              <Link to={"/career"}>
-                <p>Career</p>
-              </Link>
-            </div>
+              <h2>Pages</h2>
+              <div className="pages">
+                <Link to={"/"}>
+                  <p>Home</p>
+                </Link>
+                <Link to={"/About"}>
+                  <p>About</p>
+                </Link>
+                <Link to={"/Welcome-page"}>
+                  <p>Clients</p>
+                </Link>
+                <Link to={"/Contact"}>
+                  <p>Contact Us</p>
+                </Link>
+                <Link to={"/Blog"}>
+                  <p>Blog</p>
+                </Link>
+                <Link to={"/career"}>
+                  <p>Career</p>
+                </Link>
+              </div>
             </div>
           </div>
 
           <div className="footer-service">
             <div className="pages-con">
-            <h2>Services</h2>
-            <div className="pages">
-              <Link to={"/Outdoor-Advertising-in-Raipur"}>
-                <p>Outdoor Advertising</p>
-              </Link>
-              <Link to={"/Digital-Marketing-in-Raipur"}>
-                <p>Digital Marketing</p>
-              </Link>
-              <Link to={"/Designing-Services-in-Raipur"}>
-                <p>Designing Services</p>
-              </Link>
-              <Link to={"/Audio-Visuals-in-Raipur"}>
-                <p>Audio Visuals</p>
-              </Link>
-              <Link to={"/Branding-Strategy-in-Raipur"}>
-                <p>Branding & Strategy</p>
-              </Link>
-              <Link to={"/Event-Promotion-in-Raipur"}>
-                <p>Event Promotion</p>
-              </Link>
-              <Link to={"/Print-Media-in-Raipur"}>
-                <p>Print Media</p>
-              </Link>
-            </div>
+              <h2>Services</h2>
+              <div className="pages">
+                <Link to={"/Outdoor-Advertising-in-Raipur"}>
+                  <p>Outdoor Advertising</p>
+                </Link>
+                <Link to={"/Digital-Marketing-Agency-in-Raipur"}>
+                  <p>Digital Marketing</p>
+                </Link>
+                <Link to={"/Designing-Services-in-Raipur"}>
+                  <p>Designing Services</p>
+                </Link>
+                <Link to={"/Audio-Visuals-in-Raipur"}>
+                  <p>Audio Visuals</p>
+                </Link>
+                <Link to={"/Branding-Strategy-in-Raipur"}>
+                  <p>Branding & Strategy</p>
+                </Link>
+                <Link to={"/Event-Promotion-in-Raipur"}>
+                  <p>Event Promotion</p>
+                </Link>
+                <Link to={"/Print-Media-in-Raipur"}>
+                  <p>Print Media</p>
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -89,7 +89,7 @@ function Footer() {
                   href="https://www.facebook.com/spadvertisingraipur"
                   aria-label="Visit our Facebook page"
                 >
-                  <img loading="lazy" src={facebook} alt="Facebook Icon" /> 
+                  <img loading="lazy" src={facebook} alt="Facebook Icon" />
                 </a>
                 <a
                   href="https://www.instagram.com/spadvertisingrpr/"

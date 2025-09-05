@@ -1,6 +1,13 @@
 import { useState, lazy, Suspense } from "react";
-import AboutMe from "./components/AboutUs/AboutUs.jsx";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
+import AboutMe from "./components/AboutUs/AboutUs.jsx";
 import Contact from "./components/Contact Us/Contact.jsx";
 import Footer from "./elements/Footer/Footer.jsx";
 import BrandingStrategy from "./components/Services/BrandingStrategy.jsx";
@@ -12,7 +19,6 @@ import PrintMedia from "./components/Services/PrintMedia.jsx";
 import RecentWork from "./components/Home/RecentWork.jsx";
 import WhatWeDo from "./components/Home/Expertise.jsx";
 import Clients from "./components/Clients/Clients.jsx";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./elements/Navbar/Navbar.jsx";
 import ScrollToTop from "./elements/ScrollToTop.jsx";
 import Portfolio from "./components/Portfolio/Portfolio.jsx";
@@ -33,28 +39,42 @@ import LoadScrollTop from "./elements/LoadScrollTop.jsx";
 import SocialMediaMarketing from "./components/Blog/Blogs/SocialMediaMarketing.jsx";
 import SocietyBranding from "./components/Services/SocietyBranding.jsx";
 import BenefitsOutdoorAdvertising from "./components/Blog/Blogs/BenefitsOutdoorAdvertising.jsx";
-import { HelmetProvider } from "react-helmet-async";
 import Blog from "./components/Blog/Blog.jsx";
 import Career from "./components/Career/Career.jsx";
 import Test from "./components/Test.jsx";
-import CTA from "./elements/CTA.jsx";
-
 
 // Lazy loaded components
-const HolidaySalesStrategies = lazy(() => import("./components/Blog/Blogs/HolidaySalesStrategies.jsx"));
-const BusinessesPrepare = lazy(() => import("./components/Blog/Blogs/BusinessesPrepare.jsx"));
+const HolidaySalesStrategies = lazy(() =>
+  import("./components/Blog/Blogs/HolidaySalesStrategies.jsx")
+);
+const BusinessesPrepare = lazy(() =>
+  import("./components/Blog/Blogs/BusinessesPrepare.jsx")
+);
+
+// ✅ Component to handle canonical link dynamically
+function CanonicalLink() {
+  const location = useLocation();
+  const canonicalUrl = `https://www.spadvertising.in${location.pathname}`;
+  return (
+    <Helmet>
+      <link rel="canonical" href={canonicalUrl} />
+    </Helmet>
+  );
+}
 
 function App() {
   return (
     <HelmetProvider>
       <Router>
-        {/* <CTA/> */}
-        {/* Consulting Popup */}
+        <CanonicalLink />
+
+        {/* <CTA /> */}
         {/* <ConsultingPopup /> */}
         <LoadScrollTop />
         <ScrollToTop />
         <Whatsapp />
         <Navbar />
+
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<Homepage />} />
@@ -67,7 +87,7 @@ function App() {
             <Route path="/Services" element={<WhatWeDo />} />
             <Route path="/Outdoor-Advertising-in-Raipur" element={<OutdoorAdvertising />} />
             <Route path="/Outdoor-Advertising" element={<OutdoorAdvertising />} />
-            <Route path="/Digital-Marketing-in-Raipur" element={<DigitalMarketing />} />
+            <Route path="/Digital-Marketing-Agency-in-Raipur" element={<DigitalMarketing />} />
             <Route path="/Designing-Services-in-Raipur" element={<DesigningServices />} />
             <Route path="/Print-Media-in-Raipur" element={<PrintMedia />} />
             <Route path="/Branding-Strategy-in-Raipur" element={<BrandingStrategy />} />
@@ -90,13 +110,14 @@ function App() {
             <Route path="/Blog/Benefits-of-Outdoor-Advertising" element={<BenefitsOutdoorAdvertising />} />
 
             <Route path="/Portfolio" element={<Portfolio />} />
+            <Route path="/career" element={<Career />} />
+            <Route path="/test" element={<Test />} />
+
+            {/* Catch-all */}
             <Route path="*" element={<UnderWorking />} />
-
-            <Route path="/career" element={<Career/>}/>
-
-            <Route path="/test" element={<Test/>}/>
           </Routes>
         </Suspense>
+
         <NeedHelp />
         <Footer />
       </Router>
