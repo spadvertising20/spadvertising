@@ -7,22 +7,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Dependency directories
-node_modules/
-**/node_modules/
-
-# Build outputs
-dist/
-dist-ssr/
+node_modules
+dist
+dist-ssr
 *.local
-
-# Environment files
 .env
-**/.env
-
-# Package lock files (optional — uncomment if you don’t want them in git)
-package-lock.json
-**/package-lock.json
 
 # Editor directories and files
 .vscode/*
