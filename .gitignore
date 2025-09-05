@@ -8,6 +8,9 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+blog/node_modules
+blog/package-lock.json
+blog/server/.env
 dist
 dist-ssr
 *.local
