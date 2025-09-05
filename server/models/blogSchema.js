@@ -16,7 +16,7 @@ const blogSchema = new mongoose.Schema(
     // Change author to String if you don’t have User auth yet
     author: {
       type: String,
-      default: "Anonymous",
+      default: "By Admin",
     },
 
     authorImage: {
