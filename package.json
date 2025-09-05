@@ -3,9 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite --host",
-   "server": "concurrently \"npm install --prefix strapi\" \"npm run develop --prefix strapi\" \"nodemon server.js\"",
+  "scripts": {    
+"dev": "concurrently \"vite --host\" \"npm run dev --prefix src/blog\"",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
