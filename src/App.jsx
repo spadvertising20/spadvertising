@@ -42,8 +42,17 @@ import BenefitsOutdoorAdvertising from "./components/Blog/Blogs/BenefitsOutdoorA
 import Blog from "./components/Blog/Blog.jsx";
 import Career from "./components/Career/Career.jsx";
 import Test from "./components/Test.jsx";
+import { AllBlogs } from "./admin/blog/AllBlogs/AllBlogs.jsx";
+import { CreateBlog } from "./admin/blog/CreateBlog/CreateBlog.jsx";
+import { BlogPage } from "./admin/blog/BlogPage/BlogPage.jsx";
+import { EditBlog } from "./admin/blog/EditBlog/EditBlog.jsx";
+import Dashboard from "./admin/auth/Dashboard.jsx";
+import SignIn from "./admin/auth/SignIn.jsx";
+import ResetPassword from "./admin/auth/ResetPassword.jsx";
+import ForgotPassword from "./admin/auth/ForgotPassword.jsx";
+import SignUp from "./admin/auth/SignUp.jsx";
+import ProtectedRoute from "./admin/auth/ProtectedRoute.jsx";
 
-// Lazy loaded components
 const HolidaySalesStrategies = lazy(() =>
   import("./components/Blog/Blogs/HolidaySalesStrategies.jsx")
 );
@@ -85,29 +94,80 @@ function App() {
 
             {/* Services Routes */}
             <Route path="/Services" element={<WhatWeDo />} />
-            <Route path="/Outdoor-Advertising-in-Raipur" element={<OutdoorAdvertising />} />
-            <Route path="/Outdoor-Advertising" element={<OutdoorAdvertising />} />
-            <Route path="/Digital-Marketing-Agency-in-Raipur" element={<DigitalMarketing />} />
-            <Route path="/Designing-Services-in-Raipur" element={<DesigningServices />} />
+            <Route
+              path="/Outdoor-Advertising-in-Raipur"
+              element={<OutdoorAdvertising />}
+            />
+            <Route
+              path="/Outdoor-Advertising"
+              element={<OutdoorAdvertising />}
+            />
+            <Route
+              path="/Digital-Marketing-Agency-in-Raipur"
+              element={<DigitalMarketing />}
+            />
+            <Route
+              path="/Designing-Services-in-Raipur"
+              element={<DesigningServices />}
+            />
             <Route path="/Print-Media-in-Raipur" element={<PrintMedia />} />
-            <Route path="/Branding-Strategy-in-Raipur" element={<BrandingStrategy />} />
-            <Route path="/Event-Promotion-in-Raipur" element={<EventPromotion />} />
+            <Route
+              path="/Branding-Strategy-in-Raipur"
+              element={<BrandingStrategy />}
+            />
+            <Route
+              path="/Event-Promotion-in-Raipur"
+              element={<EventPromotion />}
+            />
             <Route path="/Audio-Visuals-in-Raipur" element={<AudioVisuals />} />
-            <Route path="/Society-Branding-in-Raipur" element={<SocietyBranding />} />
+            <Route
+              path="/Society-Branding-in-Raipur"
+              element={<SocietyBranding />}
+            />
 
             {/* Blog Routes */}
             <Route path="/Blog" element={<Blog />} />
             <Route path="/Blog/2" element={<Blog2 />} />
-            <Route path="/Blog/Keyword-Research" element={<KeywordResearch />} />
-            <Route path="/Blog/SEO-Optimization" element={<SeoOptimization />} />
-            <Route path="/Blog/High-Quality-Content" element={<HighQualityContent />} />
-            <Route path="/Blog/Businesses-Prepare-for-Emerging-Trends" element={<BusinessesPrepare />} />
-            <Route path="/Blog/Holiday-Sales-Strategies" element={<HolidaySalesStrategies />} />
-            <Route path="/Blog/Advertising-Tools-and-Techniques" element={<ImproveOnlineAdvertising />} />
-            <Route path="/Blog/What-is-Digital-Marketing" element={<WhatIsDigitalMarketing />} />
-            <Route path="/Blog/Influencer-Marketing" element={<InfluencerMarketing />} />
-            <Route path="/Blog/Social-Media-Marketing" element={<SocialMediaMarketing />} />
-            <Route path="/Blog/Benefits-of-Outdoor-Advertising" element={<BenefitsOutdoorAdvertising />} />
+            <Route
+              path="/Blog/Keyword-Research"
+              element={<KeywordResearch />}
+            />
+            <Route
+              path="/Blog/SEO-Optimization"
+              element={<SeoOptimization />}
+            />
+            <Route
+              path="/Blog/High-Quality-Content"
+              element={<HighQualityContent />}
+            />
+            <Route
+              path="/Blog/Businesses-Prepare-for-Emerging-Trends"
+              element={<BusinessesPrepare />}
+            />
+            <Route
+              path="/Blog/Holiday-Sales-Strategies"
+              element={<HolidaySalesStrategies />}
+            />
+            <Route
+              path="/Blog/Advertising-Tools-and-Techniques"
+              element={<ImproveOnlineAdvertising />}
+            />
+            <Route
+              path="/Blog/What-is-Digital-Marketing"
+              element={<WhatIsDigitalMarketing />}
+            />
+            <Route
+              path="/Blog/Influencer-Marketing"
+              element={<InfluencerMarketing />}
+            />
+            <Route
+              path="/Blog/Social-Media-Marketing"
+              element={<SocialMediaMarketing />}
+            />
+            <Route
+              path="/Blog/Benefits-of-Outdoor-Advertising"
+              element={<BenefitsOutdoorAdvertising />}
+            />
 
             <Route path="/Portfolio" element={<Portfolio />} />
             <Route path="/career" element={<Career />} />
@@ -115,6 +175,54 @@ function App() {
 
             {/* Catch-all */}
             <Route path="*" element={<UnderWorking />} />
+
+            <Route
+              path="/blogs"
+              element={
+                <ProtectedRoute>
+                  <AllBlogs />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/create"
+              element={
+                <ProtectedRoute>
+                  <CreateBlog />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/blog/:slug"
+              element={
+                <ProtectedRoute>
+                  <BlogPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/edit/:id"
+              element={
+                <ProtectedRoute>
+                  <EditBlog />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/test" element={<Test />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
+
+            {/* Secure Dashboard Route */}
+            <Route
+              path="/dashboard"
+              element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </Suspense>
 

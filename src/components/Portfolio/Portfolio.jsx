@@ -37,6 +37,8 @@ import digital_marketing_img8 from "../../assets/Services/DigitalMarketing/digit
 import digital_marketing_img9 from "../../assets/Services/DigitalMarketing/digital-marketing-img9.jpg";
 import digital_marketing_img10 from "../../assets/Services/DigitalMarketing/digital-marketing-img10.jpg";
 import digital_marketing_img12 from "../../assets/Services/DigitalMarketing/digital-marketing-img12.jpg";
+import digital_marketing_img13 from "../../assets/Services/DigitalMarketing/digital-marketing-img13.jpg";
+
 
 import packaging_img from "../../assets/Services/DesigningServices/packaging-img.jpg";
 import packaging_img1 from "../../assets/Services/DesigningServices/packaging-img2.jpg";
@@ -79,6 +81,7 @@ import homepageImage3 from "../../assets/Portfolio/homepage3.png";
 import homepageImage4 from "../../assets/Portfolio/homepage4.png";
 import homepageImage5 from "../../assets/Portfolio/homepage5.png";
 import homepageImage6 from "../../assets/Portfolio/homepage6.png";
+import homepageImage7 from "../../assets/Portfolio/homepage7.png";
 
 import external_link from "../../assets/Portfolio/external-link.png";
 
@@ -424,6 +427,13 @@ function Portfolio() {
               alt="Digital Marketing in Raipur"
             />
           </div>
+           <div>
+            <ImageLoader
+              src={loading}
+              data-src={digital_marketing_img13}
+              alt="Digital Marketing in Raipur"
+            />
+          </div>
         </Slider>
       </div>
       <div className="port-slider">
@@ -691,6 +701,17 @@ function Portfolio() {
             <a href="https://muraadconstruction.com">
               <div className="website-absolute">
                 <ImageLoader src={loading} data-src={homepageImage6} alt="" />
+                <div>
+                  <p>visit website</p>
+                 
+                </div>
+              </div>
+            </a>
+          </div>
+          <div className="website-con">
+            <a href="https://irefraipur.in/">
+              <div className="website-absolute">
+                <ImageLoader src={loading} data-src={homepageImage7} alt="" />
                 <div>
                   <p>visit website</p>
                  
