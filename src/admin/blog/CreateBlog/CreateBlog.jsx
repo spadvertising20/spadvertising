@@ -1,158 +1,554 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { ArrowLeft, PlusCircle, Upload, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import "./CreateBlog.css";
+import {
+  Editor,
+  EditorState,
+  RichUtils,
+  convertToRaw,
+  CompositeDecorator,
+  ContentState,
+} from "draft-js";
+import { stateToHTML } from "draft-js-export-html";
+import "draft-js/dist/Draft.css";
+import "./CreateBlog.css"; // reuse same css
+
+// Icons
+import {
+  FaBold,
+  FaItalic,
+  FaUnderline,
+  FaListUl,
+  FaListOl,
+  FaQuoteRight,
+  FaCode,
+  FaLink,
+  FaUnlink,
+  FaSave,
+  FaUpload,
+  FaArrowLeft,
+  FaImage,
+  FaEye,
+  FaSpinner,
+  FaTimes,
+  FaCheck,
+} from "react-icons/fa";
+
+const API_BASE_URL = "https://spadvertising-l9xm.onrender.com";
+
+// --- Link decorator ---
+function findLinkEntities(contentBlock, callback, contentState) {
+  contentBlock.findEntityRanges((character) => {
+    const entityKey = character.getEntity();
+    return (
+      entityKey !== null &&
+      contentState.getEntity(entityKey).getType() === "LINK"
+    );
+  }, callback);
+}
+
+const Link = (props) => {
+  const { url } = props.contentState.getEntity(props.entityKey).getData();
+  return (
+    <a href={url} className="editor-link" target="_blank" rel="noreferrer">
+      {props.children}
+    </a>
+  );
+};
+
+const decorator = new CompositeDecorator([
+  {
+    strategy: findLinkEntities,
+    component: Link,
+  },
+]);
+
+// Toolbar button
+const ToolbarButton = ({ onClick, active, title, children, variant = "default" }) => {
+  const classNames = `toolbar-button variant-${variant} ${active ? "active" : ""}`;
+  return (
+    <button type="button" onClick={onClick} className={classNames} title={title}>
+      {children}
+    </button>
+  );
+};
+
+// Alert
+const Alert = ({ type, message, onClose }) => (
+  <div className={`alert alert-${type}`}>
+    <span>{message}</span>
+    {onClose && (
+      <button onClick={onClose} className="alert-close-btn">
+        <FaTimes />
+      </button>
+    )}
+  </div>
+);
 
 export const CreateBlog = () => {
-  const [addBlog, setAddBlog] = useState({
+  const navigate = useNavigate();
+
+  const [editorState, setEditorState] = useState(() =>
+    EditorState.createEmpty(decorator)
+  );
+
+  const [blog, setBlog] = useState({
     title: "",
     content: "",
     category: "",
     author: "",
-    tags: "",
+    tags: [],
   });
 
-  const [file, setFile] = useState(null);
-  const [authorFile, setAuthorFile] = useState(null);
-  const [preview, setPreview] = useState(null);
-  const [authorPreview, setAuthorPreview] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [newImage, setNewImage] = useState(null);
+  const [imagePreview, setImagePreview] = useState(null);
+  const [newAuthorImage, setNewAuthorImage] = useState(null);
+  const [authorImagePreview, setAuthorImagePreview] = useState(null);
 
-  const navigate = useNavigate();
+  const [isCreating, setIsCreating] = useState(false);
+  const [success, setSuccess] = useState(null);
+  const [error, setError] = useState(null);
+  const [showPreview, setShowPreview] = useState(false);
+  const [wordCount, setWordCount] = useState(0);
 
-  const handleFileChange = (e) => {
-    const selectedFile = e.target.files[0];
-    if (!selectedFile) return;
-    setFile(selectedFile);
-    setPreview(URL.createObjectURL(selectedFile));
+  // --- Helpers ---
+  const updateWordCount = (state) => {
+    const text = state.getCurrentContent().getPlainText("");
+    const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+    setWordCount(words);
   };
 
-  const handleAuthorFileChange = (e) => {
-    const selectedFile = e.target.files[0];
-    if (!selectedFile) return;
-    setAuthorFile(selectedFile);
-    setAuthorPreview(URL.createObjectURL(selectedFile));
+  const handleEditorChange = (newState) => {
+    setEditorState(newState);
+    updateWordCount(newState);
   };
 
-  const sendBlog = async (e) => {
-    e.preventDefault();
-    if (!addBlog.title || !addBlog.content || !addBlog.author) {
-      alert("Please fill in title, content, and author");
-      return;
+  const handleKeyCommand = (command) => {
+    const newState = RichUtils.handleKeyCommand(editorState, command);
+    if (newState) {
+      handleEditorChange(newState);
+      return "handled";
     }
+    return "not-handled";
+  };
 
-    setLoading(true);
-    try {
-      const formData = new FormData();
-      formData.append("title", addBlog.title);
-      formData.append("content", addBlog.content);
-      formData.append("category", addBlog.category);
-      formData.append("author", addBlog.author);
+  const toggleInlineStyle = (style) => {
+    handleEditorChange(RichUtils.toggleInlineStyle(editorState, style));
+  };
 
-      if (addBlog.tags) {
-        addBlog.tags.split(",").map((t) => t.trim()).forEach((tag) => formData.append("tags", tag));
+  const toggleBlockType = (blockType) => {
+    handleEditorChange(RichUtils.toggleBlockType(editorState, blockType));
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setBlog({ ...blog, [name]: value });
+  };
+
+  const handleTagsChange = (e) => {
+    const tags = e.target.value
+      .split(",")
+      .map((tag) => tag.trim())
+      .filter((tag) => tag);
+    setBlog({ ...blog, tags });
+  };
+
+  const handleFileChange = (e, setImage, setPreview) => {
+    const file = e.target.files[0];
+    setImage(file);
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => setPreview(event.target.result);
+      reader.readAsDataURL(file);
+    } else {
+      setPreview(null);
+    }
+  };
+
+  const saveDraft = () => {
+    const raw = convertToRaw(editorState.getCurrentContent());
+    const contentData = { ...blog, content: JSON.stringify(raw) };
+    localStorage.setItem("draftContent", JSON.stringify(contentData));
+    setSuccess("Draft saved successfully!");
+    setTimeout(() => setSuccess(null), 3000);
+  };
+
+  const loadDraft = () => {
+    const saved = localStorage.getItem("draftContent");
+    if (saved) {
+      try {
+        const data = JSON.parse(saved);
+        setBlog({
+          title: data.title || "",
+          category: data.category || "",
+          author: data.author || "Anonymous",
+          tags: Array.isArray(data.tags) ? data.tags : [],
+        });
+        const content = JSON.parse(data.content);
+        const contentState = ContentState.createFromBlockArray(content.blocks);
+        const newEditorState = EditorState.createWithContent(contentState, decorator);
+        handleEditorChange(newEditorState);
+        setSuccess("Draft loaded successfully!");
+        setTimeout(() => setSuccess(null), 3000);
+      } catch {
+        setError("Failed to load saved content.");
+        setTimeout(() => setError(null), 3000);
       }
+    } else {
+      setError("No saved draft found.");
+      setTimeout(() => setError(null), 3000);
+    }
+  };
 
-      if (file) formData.append("image", file);
-      if (authorFile) formData.append("authorImage", authorFile);
+  const addLink = () => {
+    const selection = editorState.getSelection();
+    if (!selection.isCollapsed()) {
+      const url = prompt("Enter the URL:");
+      if (url) {
+        const contentState = editorState.getCurrentContent();
+        const contentStateWithEntity = contentState.createEntity("LINK", "MUTABLE", {
+          url,
+        });
+        const entityKey = contentStateWithEntity.getLastCreatedEntityKey();
+        let newState = EditorState.push(
+          editorState,
+          contentStateWithEntity,
+          "apply-entity"
+        );
+        newState = RichUtils.toggleLink(newState, newState.getSelection(), entityKey);
+        handleEditorChange(newState);
+      }
+    } else {
+      setError("Please select some text to add a link.");
+      setTimeout(() => setError(null), 3000);
+    }
+  };
 
-      const res = await fetch("https://spadvertising-l9xm.onrender.com/blog", {
+  const removeLink = () => {
+    const selection = editorState.getSelection();
+    if (!selection.isCollapsed()) {
+      handleEditorChange(RichUtils.toggleLink(editorState, selection, null));
+    }
+  };
+
+  const handleCreateBlog = async (e) => {
+    e.preventDefault();
+    setIsCreating(true);
+    setError(null);
+    setSuccess(null);
+    try {
+      const contentState = editorState.getCurrentContent();
+      const htmlContent = stateToHTML(contentState);
+
+      const formData = new FormData();
+      formData.append("title", blog.title);
+      formData.append("content", htmlContent);
+      formData.append("category", blog.category);
+      formData.append("author", blog.author);
+      blog.tags.forEach((tag) => formData.append("tags[]", tag));
+      if (newImage) formData.append("image", newImage);
+      if (newAuthorImage) formData.append("authorImage", newAuthorImage);
+
+      const res = await fetch(`${API_BASE_URL}/blog`, {
         method: "POST",
         body: formData,
       });
 
-      const data = await res.json();
+      if (!res.ok) throw new Error("Failed to create blog");
 
-      if (res.ok) {
-        alert("Blog posted successfully 🎉");
-        setAddBlog({ title: "", content: "", category: "", author: "", tags: "" });
-        setFile(null);
-        setAuthorFile(null);
-        setPreview(null);
-        setAuthorPreview(null);
-        navigate("/");
-      } else {
-        alert(data.error || "Something went wrong while posting");
-      }
-    } catch (error) {
-      console.error("Error posting blog:", error);
-      alert("Something went wrong while posting");
+      setSuccess("Blog created successfully! Redirecting...");
+      setTimeout(() => navigate("/blogs"), 2000);
+    } catch (err) {
+      setError("Failed to create blog. Please check your connection and try again.");
     } finally {
-      setLoading(false);
+      setIsCreating(false);
     }
   };
 
+  const currentInlineStyles = editorState.getCurrentInlineStyle();
+  const currentBlockType = RichUtils.getCurrentBlockType(editorState);
+
   return (
-    <div className="create-blog-container">
-      <motion.div
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-        className="create-blog-card"
-      >
-        {/* Header */}
-        <div className="header">
-          <button onClick={() => navigate(-1)} className="back-btn">
-            <ArrowLeft size={20} className="mr-1" /> Back
-          </button>
-          <h1>Create a Blog</h1>
-        </div>
+    <div className="blog-editor-page">
+      <div className="editor-container">
+        <header className="card editor-header">
+          <div className="header-top">
+            <div className="header-left">
+              <button onClick={() => navigate(-1)} className="header-back-button">
+                <FaArrowLeft />
+                <span>Back to Blogs</span>
+              </button>
+              <div className="header-divider"></div>
+              <h1>Create New Blog</h1>
+            </div>
+            <div className="header-right">
+              <span className="word-count">{wordCount} words</span>
+              <button
+                onClick={() => setShowPreview(!showPreview)}
+                className="preview-button"
+              >
+                <FaEye />
+                <span>{showPreview ? "Edit" : "Preview"}</span>
+              </button>
+            </div>
+          </div>
+          {error && <Alert type="error" message={error} onClose={() => setError(null)} />}
+          {success && (
+            <Alert type="success" message={success} onClose={() => setSuccess(null)} />
+          )}
+        </header>
 
-        {/* Blog Image Upload */}
-        <div className="upload-section">
-          <h2>Upload Blog Image</h2>
-          <div className="upload-box">
-            <label className="upload-label">
-              <Upload size={24} />
-              <span>Click to select image</span>
-              <input type="file" accept="image/*" hidden onChange={handleFileChange} />
-            </label>
-            {preview && (
-              <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="preview">
-                <img src={preview} alt="Preview" />
-                <button type="button" className="remove-btn" onClick={() => { setFile(null); setPreview(null); }}>
-                  <X size={16} />
-                </button>
-              </motion.div>
+        <form onSubmit={handleCreateBlog} className="editor-form">
+          {/* Featured Image */}
+          <div className="card image-upload-card">
+            <h2 className="card-title">
+              <FaImage className="card-title-icon" />
+              Featured Image
+            </h2>
+            <div className="form-group">
+              <input
+                type="file"
+                accept="image/*"
+                onChange={(e) => handleFileChange(e, setNewImage, setImagePreview)}
+              />
+            </div>
+            {imagePreview && (
+              <div>
+                <p className="preview-label">New Image Preview:</p>
+                <img src={imagePreview} alt="Preview" className="image-preview featured" />
+              </div>
             )}
           </div>
-        </div>
 
-        {/* Author Image Upload */}
-        <div className="upload-section">
-          <h2>Upload Author Image</h2>
-          <div className="upload-box">
-            <label className="upload-label">
-              <Upload size={24} />
-              <span>Click to select author image</span>
-              <input type="file" accept="image/*" hidden onChange={handleAuthorFileChange} />
-            </label>
-            {authorPreview && (
-              <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="preview">
-                <img src={authorPreview} alt="Author Preview" />
-                <button type="button" className="remove-btn" onClick={() => { setAuthorFile(null); setAuthorPreview(null); }}>
-                  <X size={16} />
-                </button>
-              </motion.div>
+          {/* Author Image */}
+          <div className="card image-upload-card">
+            <h2 className="card-title">
+              <FaImage className="card-title-icon" />
+              Author Image
+            </h2>
+            <div className="form-group">
+              <input
+                type="file"
+                accept="image/*"
+                onChange={(e) =>
+                  handleFileChange(e, setNewAuthorImage, setAuthorImagePreview)
+                }
+              />
+            </div>
+            {authorImagePreview && (
+              <div>
+                <p className="preview-label">New Author Image Preview:</p>
+                <img
+                  src={authorImagePreview}
+                  alt="Author Preview"
+                  className="image-preview author"
+                />
+              </div>
             )}
           </div>
-        </div>
 
-        {/* Blog Form */}
-        <form onSubmit={sendBlog} className="blog-form">
-          <h2>Write Blog</h2>
-          <input type="text" placeholder="Enter blog title" value={addBlog.title} onChange={(e) => setAddBlog({ ...addBlog, title: e.target.value })} />
-          <input type="text" placeholder="Add category" value={addBlog.category} onChange={(e) => setAddBlog({ ...addBlog, category: e.target.value })} />
-          <input type="text" placeholder="Author name" value={addBlog.author} onChange={(e) => setAddBlog({ ...addBlog, author: e.target.value })} />
-          <input type="text" placeholder="Tags (comma separated)" value={addBlog.tags} onChange={(e) => setAddBlog({ ...addBlog, tags: e.target.value })} />
-          <textarea placeholder="Write your content here..." value={addBlog.content} onChange={(e) => setAddBlog({ ...addBlog, content: e.target.value })}></textarea>
+          {/* Blog details */}
+          <div className="card details-card">
+            <div className="blog-details-form">
+              <div className="form-group">
+                <label className="form-label">Blog Title *</label>
+                <input
+                  type="text"
+                  name="title"
+                  value={blog.title}
+                  onChange={handleInputChange}
+                  placeholder="Enter an engaging blog title..."
+                  className="form-input"
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label className="form-label">Category</label>
+                <input
+                  type="text"
+                  name="category"
+                  value={blog.category}
+                  onChange={handleInputChange}
+                  placeholder="e.g., Technology, Travel..."
+                  className="form-input"
+                />
+              </div>
+              <div className="form-group">
+                <label className="form-label">Author Name</label>
+                <input
+                  type="text"
+                  name="author"
+                  value={blog.author}
+                  onChange={handleInputChange}
+                  placeholder="Enter author name..."
+                  className="form-input"
+                />
+              </div>
+              <div className="form-group">
+                <label className="form-label">Tags</label>
+                <input
+                  type="text"
+                  value={blog.tags.join(", ")}
+                  onChange={handleTagsChange}
+                  placeholder="e.g., tech, coding, javascript..."
+                  className="form-input"
+                />
+              </div>
+            </div>
+          </div>
 
-          <button type="submit" disabled={loading} className="submit-btn">
-            {loading ? <span className="spinner"></span> : <><PlusCircle size={20} /> Add Blog</>}
-          </button>
+          {/* Content editor */}
+          <div className="card editor-main">
+            <div className="editor-toolbar-container">
+              <div className="draft-actions">
+                <ToolbarButton onClick={saveDraft} variant="success" title="Save Draft">
+                  <FaSave /> Save
+                </ToolbarButton>
+                <ToolbarButton onClick={loadDraft} variant="info" title="Load Draft">
+                  <FaUpload /> Load
+                </ToolbarButton>
+              </div>
+              <div className="toolbar-controls">
+                <div className="toolbar-group">
+                  <ToolbarButton
+                    onClick={() => toggleInlineStyle("BOLD")}
+                    active={currentInlineStyles.has("BOLD")}
+                    title="Bold"
+                  >
+                    <FaBold />
+                  </ToolbarButton>
+                  <ToolbarButton
+                    onClick={() => toggleInlineStyle("ITALIC")}
+                    active={currentInlineStyles.has("ITALIC")}
+                    title="Italic"
+                  >
+                    <FaItalic />
+                  </ToolbarButton>
+                  <ToolbarButton
+                    onClick={() => toggleInlineStyle("UNDERLINE")}
+                    active={currentInlineStyles.has("UNDERLINE")}
+                    title="Underline"
+                  >
+                    <FaUnderline />
+                  </ToolbarButton>
+                </div>
+                <div className="toolbar-group">
+                  <ToolbarButton
+                    onClick={() => toggleBlockType("unordered-list-item")}
+                    active={currentBlockType === "unordered-list-item"}
+                    title="Bullet List"
+                  >
+                    <FaListUl />
+                  </ToolbarButton>
+                  <ToolbarButton
+                    onClick={() => toggleBlockType("ordered-list-item")}
+                    active={currentBlockType === "ordered-list-item"}
+                    title="Numbered List"
+                  >
+                    <FaListOl />
+                  </ToolbarButton>
+                  <ToolbarButton
+                    onClick={() => toggleBlockType("blockquote")}
+                    active={currentBlockType === "blockquote"}
+                    title="Quote"
+                  >
+                    <FaQuoteRight />
+                  </ToolbarButton>
+                  <ToolbarButton
+                    onClick={() => toggleBlockType("code-block")}
+                    active={currentBlockType === "code-block"}
+                    title="Code Block"
+                  >
+                    <FaCode />
+                  </ToolbarButton>
+                </div>
+
+                {/* Heading dropdown */}
+                <div className="toolbar-group">
+                  <select
+                    value={currentBlockType}
+                    onChange={(e) => toggleBlockType(e.target.value)}
+                    className="heading-dropdown"
+                  >
+                    <option value="unstyled">Paragraph</option>
+                    <option value="header-one">Heading 1</option>
+                    <option value="header-two">Heading 2</option>
+                    <option value="header-three">Heading 3</option>
+                    <option value="header-four">Heading 4</option>
+                    <option value="header-five">Heading 5</option>
+                    <option value="header-six">Heading 6</option>
+                  </select>
+                </div>
+
+                <div className="toolbar-group">
+                  <ToolbarButton onClick={addLink} variant="info" title="Add Link">
+                    <FaLink />
+                  </ToolbarButton>
+                  <ToolbarButton onClick={removeLink} variant="danger" title="Remove Link">
+                    <FaUnlink />
+                  </ToolbarButton>
+                </div>
+              </div>
+            </div>
+            <div className="editor-wrapper">
+              {showPreview ? (
+                <div
+                  className="editor-preview prose"
+                  dangerouslySetInnerHTML={{
+                    __html: stateToHTML(editorState.getCurrentContent()),
+                  }}
+                />
+              ) : (
+                <Editor
+                  editorState={editorState}
+                  onChange={handleEditorChange}
+                  handleKeyCommand={handleKeyCommand}
+                  placeholder="Start writing your blog content..."
+                  spellCheck
+                />
+              )}
+            </div>
+          </div>
+
+          {/* Actions */}
+          <div className="card form-actions">
+            <button
+              type="button"
+              onClick={() => navigate("/blogs")}
+              className="action-button cancel-button"
+            >
+              <FaTimes />
+              <span>Cancel</span>
+            </button>
+            <div className="submit-actions">
+              <button
+                type="button"
+                onClick={saveDraft}
+                className="action-button save-draft-button"
+              >
+                <FaSave />
+                <span>Save Draft</span>
+              </button>
+              <button
+                type="submit"
+                disabled={isCreating || !blog.title.trim()}
+                className="action-button submit-button"
+              >
+                {isCreating ? (
+                  <>
+                    <FaSpinner className="spinner-icon-sm" />
+                    <span>Creating...</span>
+                  </>
+                ) : (
+                  <>
+                    <FaCheck />
+                    <span>Create Blog</span>
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
         </form>
-      </motion.div>
+      </div>
     </div>
   );
 };

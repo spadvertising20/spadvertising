@@ -63,7 +63,7 @@ const ConfirmationModal = ({ isOpen, onClose, onConfirm, title, children }) => {
 const BlogCard = ({ post, onEdit, onDelete, onToggleLike, currentUserId }) => {
   const slug = post.slug ?? slugify(post.title);
   const excerpt =
-    post.content?.substring(0, 100) + (post.content?.length > 100 ? "..." : "");
+    post.content?.substring(0, 140) + (post.content?.length > 100 ? "..." : "");
 
   const isLiked = post.likes?.includes(currentUserId);
 
@@ -71,18 +71,21 @@ const BlogCard = ({ post, onEdit, onDelete, onToggleLike, currentUserId }) => {
     <div className="blog-card">
       <div className="blog-card-content">
         {post.image && (
-          <img
-            src={`https://spadvertising-l9xm.onrender.com/blog/image/${post._id}`}
-            alt={post.title}
-            className="blog-img"
-            onError={(e) => (e.target.style.display = "none")}
-          />
-        )}
+    <img
+      src={`https://spadvertising-l9xm.onrender.com/blog/image/${post._id}`}
+      alt={post.title}
+      className="blog-img"
+      onError={(e) => (e.target.style.display = "none")}
+    />
+  )}
         <div className="blog-details">
           <Link to={`/blog/${slug}`}>
-            <h2>{post.title}</h2>
+            <h1>{post.title}</h1>
           </Link>
-         
+     <div
+      className="blog-contents"
+        dangerouslySetInnerHTML={{ __html: excerpt }}
+      />
 
           <div className="blog-meta">
             <button
@@ -93,18 +96,20 @@ const BlogCard = ({ post, onEdit, onDelete, onToggleLike, currentUserId }) => {
               {post.likes?.length || 0} Likes
             </button>
             <span>👁️ {post.views || 0} Views</span>
-          </div>
-        </div>
-      </div>
 
-      <div className="blog-actions">
         <button onClick={() => onEdit(post._id)} className="icon-btn edit">
           <Pencil size={18} />
         </button>
         <button onClick={() => onDelete(post._id)} className="icon-btn delete">
           <Trash2 size={18} />
         </button>
+
+          </div>
+           
+        </div>
       </div>
+
+     
     </div>
   );
 };

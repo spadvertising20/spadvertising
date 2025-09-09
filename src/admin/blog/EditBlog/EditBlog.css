@@ -286,10 +286,15 @@
   border-right: none;
 }
 .editor-wrapper {
-  min-height: 400px;
-  padding: 1.5rem;
-  background-color: #fff;
+  min-height: 250px;
+  max-height: 300px;   /* set max height */
+  overflow-y: auto;    /* enable vertical scroll */
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: #fafafa;
 }
+
 .editor-link {
   color: #2563eb; /* blue-600 */
   text-decoration: underline;

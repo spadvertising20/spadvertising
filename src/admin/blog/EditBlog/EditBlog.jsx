@@ -294,7 +294,7 @@ export const EditBlog = () => {
       if (!res.ok) throw new Error("Failed to submit blog");
 
       setSuccess(`Blog ${id ? 'updated' : 'created'} successfully! Redirecting...`);
-      setTimeout(() => navigate("/"), 2000);
+      setTimeout(() => navigate("/blogs"), 2000);
     } catch (err) {
       setError("Failed to submit blog. Please check your connection and try again.");
     } finally {
@@ -319,7 +319,7 @@ export const EditBlog = () => {
         <header className="card editor-header">
           <div className="header-top">
             <div className="header-left">
-              <button onClick={() => navigate("/")} className="header-back-button">
+              <button onClick={() => navigate(-1)} className="header-back-button">
                 <FaArrowLeft />
                 <span>Back to Blogs</span>
               </button>
@@ -478,7 +478,7 @@ export const EditBlog = () => {
           </div>
 
           <div className="card form-actions">
-            <button type="button" onClick={() => navigate("/")} className="action-button cancel-button">
+            <button type="button" onClick={() => navigate("/blogs")} className="action-button cancel-button">
               <FaTimes />
               <span>Cancel</span>
             </button>

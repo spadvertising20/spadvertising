@@ -49,12 +49,12 @@ export default function SignIn() {
           required
         />
         <button className="signin-button">Sign In</button>
-        <p className="signin-text">
+        {/* <p className="signin-text">
           Don't have an account?{" "}
           <Link to="/signup" className="link-green">
             Sign Up
           </Link>
-        </p>
+        </p> */}
         <p className="signin-text">
           <Link to="/forgot-password" className="link-purple">
             Forgot Password?
