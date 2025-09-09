@@ -15,7 +15,7 @@ export default function SignIn() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/auth/login",
+        "https://spadvertising-l9xm.onrender.com/api/auth/login",
         form
       );
       localStorage.setItem("token", res.data.token);

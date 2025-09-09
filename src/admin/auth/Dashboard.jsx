@@ -11,7 +11,7 @@ export default function Dashboard() {
     const fetchDashboard = async () => {
       const token = localStorage.getItem("token");
       try {
-        const res = await axios.get("http://localhost:3000/api/auth/dashboard", {
+        const res = await axios.get("https://spadvertising-l9xm.onrender.com/api/auth/dashboard", {
           headers: { Authorization: token }
         });
         setMessage(res.data.message);
