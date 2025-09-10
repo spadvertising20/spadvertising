@@ -2,139 +2,145 @@
 
 /* General styling for the welcome section */
 .welcome {
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-    padding-top: 100px;
-  }
-  
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  padding-top: 100px;
+}
+
+.welcome h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Container for the welcome content */
+.welcome-con {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Welcome box styling */
+.welcome-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.welcome-sentence {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sentence-center p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Client section styling */
+.client-logo {
+  padding: 20px 0;
+}
+
+.client-logo h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* Slider styling */
+.logo-slider {
+  padding: 0 10px;
+}
+
+.logo-slider .slick-slide {
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.logo-slider .slick-slide img {
+  max-width: 100%;
+  height: 100px;
+  /* Fixed height for uniformity */
+  object-fit: contain;
+  /* Ensures logos maintain aspect ratio */
+  filter: grayscale(100%);
+  /* Optional: Adds a grayscale effect */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.logo-slider .slick-slide img:hover {
+  filter: grayscale(0%);
+  /* Color on hover */
+  transform: scale(1.1);
+  /* Slight zoom effect */
+}
+
+/* Dots styling */
+.slick-dots {
+  margin-top: 20px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #888;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
   .welcome h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-  }
-  
-  /* Container for the welcome content */
-  .welcome-con {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Welcome box styling */
-  .welcome-box {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
-  }
-  
-  .welcome-sentence {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .sentence-center p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  /* Client section styling */
-  .client-logo {
-    padding: 20px 0;
-  }
-  
-  .client-logo h2 {
     font-size: 2rem;
-    color: #333;
-    margin-bottom: 30px;
-    text-transform: uppercase;
   }
-  
-  /* Slider styling */
-  .logo-slider {
-    padding: 0 10px;
+
+  .welcome-box {
+    padding: 20px;
   }
-  
-  .logo-slider .slick-slide {
-    padding: 10px;
-    transition: transform 0.3s ease;
+
+  .sentence-center p {
+    font-size: 1rem;
   }
-  
+
+  .client-logo h2 {
+    font-size: 1.5rem;
+  }
+
   .logo-slider .slick-slide img {
-    max-width: 100%;
-    height: 100px; /* Fixed height for uniformity */
-    object-fit: contain; /* Ensures logos maintain aspect ratio */
-    filter: grayscale(100%); /* Optional: Adds a grayscale effect */
-    transition: filter 0.3s ease, transform 0.3s ease;
+    height: 80px;
+    /* Smaller height for mobile */
   }
-  
-  .logo-slider .slick-slide img:hover {
-    filter: grayscale(0%); /* Color on hover */
-    transform: scale(1.1); /* Slight zoom effect */
+}
+
+@media (max-width: 480px) {
+  .welcome h1 {
+    font-size: 1.5rem;
   }
-  
-  /* Dots styling */
-  .slick-dots {
-    margin-top: 20px;
+
+  .welcome-box {
+    padding: 15px;
   }
-  
-  .slick-dots li button:before {
-    font-size: 12px;
-    color: #888;
+
+  .sentence-center p {
+    font-size: 0.9rem;
   }
-  
-  .slick-dots li.slick-active button:before {
-    color: #333;
+
+  .client-logo h2 {
+    font-size: 1.2rem;
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-  
-    .welcome h1 {
-      font-size: 2rem;
-    }
-  
-    .welcome-box {
-      padding: 20px;
-    }
-  
-    .sentence-center p {
-      font-size: 1rem;
-    }
-  
-    .client-logo h2 {
-      font-size: 1.5rem;
-    }
-  
-    .logo-slider .slick-slide img {
-      height: 80px; /* Smaller height for mobile */
-    }
+
+  .logo-slider .slick-slide img {
+    height: 60px;
   }
-  
-  @media (max-width: 480px) {
-    .welcome h1 {
-      font-size: 1.5rem;
-    }
-  
-    .welcome-box {
-      padding: 15px;
-    }
-  
-    .sentence-center p {
-      font-size: 0.9rem;
-    }
-  
-    .client-logo h2 {
-      font-size: 1.2rem;
-    }
-  
-    .logo-slider .slick-slide img {
-      height: 60px;
-    }
-  }
+}

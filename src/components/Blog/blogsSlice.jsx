@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchBlogs = createAsyncThunk("blogs/fetchBlogs", async () => {
   const res = await fetch(
-    "http://localhost:1337/api/spadvertising-blogs?populate=coverImage"
+    "https://spadvertising-l9xm.onrender.com/blog"
   );
   if (!res.ok) {
     throw new Error("Failed to fetch blogs");

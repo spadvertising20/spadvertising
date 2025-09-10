@@ -9,7 +9,6 @@ import { MdMiscellaneousServices } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { AiFillProfile, AiFillHome } from "react-icons/ai";
 import { RiArticleFill } from "react-icons/ri";
-import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { LuMenu } from "react-icons/lu";
 
 function Navbar() {

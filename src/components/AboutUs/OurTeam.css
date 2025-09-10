@@ -1,5 +1,4 @@
-
-.our-team-con{
+.our-team-con {
     width: 90%;
     max-width: 1200px;
     display: flex;
@@ -8,36 +7,41 @@
     align-items: center;
     text-align: center;
     margin-bottom: 5rem;
-   
+
 }
-.team-headline{
+
+.team-headline {
     width: 90%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
     padding-top: 2rem;
-    
+
 }
-.team-headline p{
+
+.team-headline p {
     width: 50%;
     color: gray;
 }
-.team-headline h1{
-   font-weight: 700;
-  font-style: normal;
- font-size: 50px;
-  color:#265aa2 ;
+
+.team-headline h1 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    color: #265aa2;
 }
-.team-member{
+
+.team-member {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 50px;
-    
+
 }
-.team-con{
+
+.team-con {
     width: 93%;
     display: flex;
     align-items: center;
@@ -46,13 +50,15 @@
     gap: 40px;
 
 }
-.team-box h2{
+
+.team-box h2 {
     font-size: 25px;
 }
+
 /* .prashant h2{
     font-size: 25px;
 } */
-.team-box{
+.team-box {
     width: 250px;
     height: 410px;
     background-color: white;
@@ -63,23 +69,26 @@
     padding-bottom: 10px;
     box-shadow: 0 0 10px gainsboro;
     transition: .3s;
- 
+
 }
-.name, .position{
+
+.name,
+.position {
     text-align: center;
 }
 
-.team-box:hover{
+.team-box:hover {
     box-shadow: 0 0 20px rgb(187, 187, 187);
 }
 
-.team-box img{
-   width: 250px;
+.team-box img {
+    width: 250px;
     height: 330px;
-    
+
     z-index: -10;
 }
-.head1-con{
+
+.head1-con {
     width: 25rem;
     border-radius: 10px;
     display: flex;
@@ -90,13 +99,14 @@
     gap: 20px;
     flex-direction: column-reverse;
 }
-.head-icon-con img{
+
+.head-icon-con img {
     width: 40px;
-    
+
     gap: 10px;
 }
 
-.head-left{
+.head-left {
     padding-left: 20px;
     width: 90%;
     height: 70%;
@@ -107,21 +117,22 @@
 
 }
 
-.head-right{
+.head-right {
     width: 100%;
     height: 100%;
 }
-.head-right img{
+
+.head-right img {
     width: 100%;
-   border-radius: 10px;
-   z-index: 1;
+    border-radius: 10px;
+    z-index: 1;
 }
 
-.head2-con{
+.head2-con {
     width: 90%;
     height: 80vh;
     background-color: white;
-    
+
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -129,16 +140,19 @@
     justify-content: space-between;
     box-shadow: 0 0 10px gainsboro;
 }
-.head-icon-con{
+
+.head-icon-con {
     display: flex;
     gap: 10px;
 }
-.shine{
+
+.shine {
     width: 250px;
     height: 370px;
     overflow: hidden;
 }
-.shine-effect{
+
+.shine-effect {
     position: absolute;
     background-color: white;
     width: 250px;
@@ -146,10 +160,12 @@
     opacity: 0%;
     transition: .3s;
 }
-.shine-effect:hover{
+
+.shine-effect:hover {
     opacity: 100%;
 }
-.team-icons p{
+
+.team-icons p {
     width: 90%;
     font-style: normal;
     text-align: center;
@@ -157,7 +173,8 @@
     font-size: 16px;
     font-style: italic;
 }
-.team-icons{
+
+.team-icons {
     width: 100%;
     height: 100%;
     display: flex;
@@ -165,12 +182,12 @@
     align-items: center;
     gap: 10px;
     opacity: 100%;
-    
-   
+
+
 }
 
 
-.head-position{
+.head-position {
     width: 100px;
     height: 50px;
     background-color: #1F3154;
@@ -182,12 +199,14 @@
     font-size: 18px;
     font-weight: 500;
 }
-.vision{
+
+.vision {
     color: orange;
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
-.head-box{
+
+.head-box {
     width: 90%;
     display: flex;
     justify-content: space-around;
@@ -195,7 +214,8 @@
     align-items: center;
     gap: 100px;
 }
-.our-mission{
+
+.our-mission {
     display: flex;
     align-items: center;
     padding: 40px;
@@ -203,40 +223,49 @@
     box-shadow: 0 0 20px lightgray;
     border-radius: 1rem;
 }
-.our-mission-con{
+
+.our-mission-con {
     padding: 0px;
     text-align: left;
 }
-.our-mission h1{
+
+.our-mission h1 {
     margin-bottom: 1rem;
-    
+
 }
-.our-mission p{
+
+.our-mission p {
     color: gray;
 }
-.our-mission img{
+
+.our-mission img {
     border-radius: 1rem;
     width: 30rem;
 }
-.our-mission1{
+
+.our-mission1 {
     display: flex;
     align-items: center;
     gap: 5rem;
     box-shadow: 0 0 10px gainsboro;
     border-radius: 1rem;
 }
-.our-mission1 h1{
+
+.our-mission1 h1 {
     color: #265AA2;
 }
-.our-mission1 p{
+
+.our-mission1 p {
     font-weight: 500;
     color: gray;
 }
-.our-mission1 img{
+
+.our-mission1 img {
     border-radius: 10px;
     width: 30rem;
 }
-.our-images{
+
+.our-images {
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -244,62 +273,75 @@
     align-items: center;
 }
 
-@media (max-width:1124px){
-    
-    .our-mission img{
+@media (max-width:1124px) {
+
+    .our-mission img {
         width: 20rem;
     }
-    .our-mission1 img{
+
+    .our-mission1 img {
         width: 20rem;
     }
 }
 
 @media (max-width:768px) {
-    .our-mission{
+    .our-mission {
         flex-direction: column;
         text-align: center;
         width: 90%;
     }
-    .our-mission2{
+
+    .our-mission2 {
         flex-direction: column-reverse;
     }
-    .our-mission h1{
-        
+
+    .our-mission h1 {
+
         text-align: center;
     }
-    .our-mission1{
+
+    .our-mission1 {
         flex-direction: column;
         gap: 3rem;
     }
-    .our-mission1 img{
+
+    .our-mission1 img {
         width: 20rem;
     }
-    .head-box{
+
+    .head-box {
         flex-direction: column;
     }
-    .head1-con{
+
+    .head1-con {
         width: 90%;
     }
-    .team-headline h1{
+
+    .team-headline h1 {
         text-align: center;
         font-size: 30px;
     }
-    .head-left h1{
+
+    .head-left h1 {
         font-size: 30px;
     }
-    .our-team-con{
+
+    .our-team-con {
         padding-top: 10rem;
     }
-    .our-team-con{
+
+    .our-team-con {
         padding-top: 15rem;
     }
 }
+
 @media (max-width:470px) {
-    .our-team-con{
+    .our-team-con {
         padding-top: 5rem;
-        
+
     }
-    .our-mission{
+
+    .our-mission {
         padding-inline: 20px;
         width: 100%;
     }

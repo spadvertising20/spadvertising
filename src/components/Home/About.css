@@ -41,15 +41,16 @@
 .home-about-con img {
     width: 40rem;
     max-width: 1300px;
-box-shadow: 8px 8px #00254e;
+    box-shadow: 8px 8px #00254e;
     border-radius: 30px;
     transition: all 0.1s ease-in-out;
-   
+
 }
+
 .home-about-con img:active {
-    
-box-shadow: 0px 0px #00254e;
-transform: translate(3px, 3px);
+
+    box-shadow: 0px 0px #00254e;
+    transform: translate(3px, 3px);
 }
 
 .home-content {
@@ -73,8 +74,9 @@ transform: translate(3px, 3px);
     color: white;
     font-size: 18px;
 }
+
 .shadow-about button {
-    
+
     background-color: #007bff;
     color: white;
     padding: 12px 24px;

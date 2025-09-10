@@ -1,9 +1,6 @@
 import React from "react";
 import "./OurTeam.css";
 
-import vision from "../../assets/OurTeam/vision.jpg";
-import promise from "../../assets/OurTeam/promise.png";
-
 function OurTeam() {
   return (
     <div className="our-team-con">

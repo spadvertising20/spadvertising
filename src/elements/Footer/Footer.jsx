@@ -1,10 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import facebook from "../../assets/Footer/facebook.png";
-import instagram from "../../assets/Footer/instagram.png";
-import linkedin from "../../assets/Footer/linkedin.png";
-import youtube from "../../assets/Footer/youtube.png";
-import logo from "../../assets/Footer/logo-footer.png";
 import { Link } from "react-router-dom";
 
 function Footer() {

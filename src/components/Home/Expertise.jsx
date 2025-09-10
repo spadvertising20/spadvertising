@@ -3,19 +3,6 @@ import "./Expertise.css";
 
 // Import images
 import outdoor_ad1 from "../../assets/WhatWeDo/outdoor_ad1.png";
-import digital_marketing from "../../assets/WhatWeDo/bullhorn.png";
-import design_thinking from "../../assets/WhatWeDo/design-thinking.png";
-import print_media from "../../assets/WhatWeDo/flyer.png";
-import analysis from "../../assets/WhatWeDo/analysis.png";
-import audio_visual from "../../assets/WhatWeDo/audio-visual.png";
-
-// Import tick icons
-import blue_tick from "../../assets/WhatWeDo/approved.png";
-import red_tick from "../../assets/WhatWeDo/approved-red.png";
-import yellow_tick from "../../assets/WhatWeDo/approved-yellow.png";
-import orange_tick from "../../assets/WhatWeDo/approved-orange.png";
-import purple_tick from "../../assets/WhatWeDo/approved-purple.png";
-import lightblue_tick from "../../assets/WhatWeDo/approved-light-blue.png";
 
 const services = [
   {

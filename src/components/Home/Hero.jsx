@@ -1,14 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Hero.css";
 
-import img_bg from "../../assets/Home/bg.png";
-import hero_bg from "../../assets/Home/hero_bg.png";
-import hero_outdoor from "../../assets/Home/hero_outdoor.png";
-import hero_digital from "../../assets/Home/hero_digital.png";
-import hero_design from "../../assets/Home/hero_design.png";
-import hero_event from "../../assets/Home/hero_event.png";
-import right_arrow from "../../assets/Home/right-arrow.png";
 
 export default function AnimationHero() {
   return (

@@ -1,7 +1,5 @@
 import React from "react";
 import "./About.css";
-import about_team from "../../assets/AboutMe/about-imge1.jpg";
-import { Link } from "react-router-dom";
 
 export default function HomeAbout() {
   return (

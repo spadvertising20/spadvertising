@@ -173,7 +173,7 @@ export const BlogPage = () => {
   return (
     <div className="post-container-main">
       <div className="post-container">
-      <Link to="/blogs" className="back-link">
+      <Link to={-1} className="back-link">
         ← Back
       </Link>
 

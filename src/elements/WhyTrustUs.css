@@ -1,98 +1,104 @@
 .trust-section {
-    background-color: #0b1441;
-    color: white;
-    
-    margin-block: 3rem;
-    font-family: Arial, sans-serif;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .trust-section-con{
-    max-width: 1200px;
-    padding-block: 2rem;
-  }
-  .benefit img{
-    width: 1rem;
-  }
-  
-  .trust-header {
-    
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .trust-header-con .sub-title {
-    color: #00b7ff;
-    font-weight: 500;
-    font-size: 1.5rem;
-  }
-  .trust-header-con h1 {
-   position: relative;
-   bottom: 8px;
-    font-size: 2.5rem;
-    font-weight: 500;
-  }
-  .shadow-digital-marketing button {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 24px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 5px 5px 0 #ffff;
-    transition: all 0.1s ease-in-out;
+  background-color: #0b1441;
+  color: white;
+
+  margin-block: 3rem;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trust-section-con {
+  max-width: 1200px;
+  padding-block: 2rem;
+}
+
+.benefit img {
+  width: 1rem;
+}
+
+.trust-header {
+
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trust-header-con .sub-title {
+  color: #00b7ff;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.trust-header-con h1 {
+  position: relative;
+  bottom: 8px;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.shadow-digital-marketing button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 #ffff;
+  transition: all 0.1s ease-in-out;
 }
 
 .shadow-digital-marketing button:active {
-    box-shadow: 0 0px 0px #0f6fff;
-    transform: translateY(3px);
+  box-shadow: 0 0px 0px #0f6fff;
+  transform: translateY(3px);
 }
-  
-  .trust-content {
-    display: flex;
-    margin-top: 2rem;
-    gap: 2rem;
-    justify-content: center;
-  }
-  
-  .trust-image img {
-    max-width: 100%;
-    border-radius: 10px;
-    height: auto;
-  }
-  
-  .trust-benefits {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
-    gap: 1.5rem;
-  }
-  
-  .benefit {
-    background-color: #131c4b;
-    padding: 1rem;
-    border-radius: 12px;
-    
-  }
-  .benefit p{
-    
-    font-size: 16px;
-  }
 
-  
-  .icon img{
-    
-    margin-bottom: 0.5rem;
-    width: 4rem;
-    border-radius: 10px;
-  }
-.marquee-container{
+.trust-content {
+  display: flex;
+  margin-top: 2rem;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.trust-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.trust-benefits {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  gap: 1.5rem;
+}
+
+.benefit {
+  background-color: #131c4b;
+  padding: 1rem;
+  border-radius: 12px;
+
+}
+
+.benefit p {
+
+  font-size: 16px;
+}
+
+
+.icon img {
+
+  margin-bottom: 0.5rem;
+  width: 4rem;
+  border-radius: 10px;
+}
+
+.marquee-container {
   width: 100%;
   overflow: hidden;
   background-image: linear-gradient(to right, #005eda, #00c2f3, #005eda);
@@ -101,46 +107,51 @@
   font-weight: 500;
 }
 
-.benefit h4{
- 
+.benefit h4 {
+
   color: #00c2f3;
 }
-  
 
-  @media (max-width:768px) {
-    .trust-content{
-      flex-direction: column;
-    }
-    .trust-section-con {
-     max-width: 300px;
-     
-    }
-    .trust-header {
-      flex-direction: column;
-    }
-    .trust-header-con h1 {
-   
-      font-size: 2rem;
-     text-align: center;
-    }
-    .marquee-container{
-     
-      font-size: 14px;
-      font-weight: 500;
-    }
-    .benefit h4{
-      text-align: center;
-      
-    }
-    
-    .icon{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+
+@media (max-width:768px) {
+  .trust-content {
+    flex-direction: column;
   }
 
-  /* @media (max-width:1024px) {
+  .trust-section-con {
+    max-width: 300px;
+
+  }
+
+  .trust-header {
+    flex-direction: column;
+  }
+
+  .trust-header-con h1 {
+
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .marquee-container {
+
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .benefit h4 {
+    text-align: center;
+
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* @media (max-width:1024px) {
    
     .trust-content {
      flex-direction: column;

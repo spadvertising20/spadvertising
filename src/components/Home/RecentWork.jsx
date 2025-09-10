@@ -1,16 +1,9 @@
 import React from "react";
 import "./RecentWork.css";
-import showcase1 from "../../assets/Showcase/showcase1.webp";
-import showcase2 from "../../assets/Showcase/showcase2.webp";
-import showcase3 from "../../assets/Showcase/showcase3.webp";
-import showcase4 from "../../assets/Showcase/showcase4.webp";
-import showcase5 from "../../assets/Showcase/showcase5.webp";
-import showcase6 from "../../assets/Showcase/Showcase6.webp";
 import "react-slideshow-image/dist/styles.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
 
 const Showcase = () => {
   function SampleNextArrow(props) {

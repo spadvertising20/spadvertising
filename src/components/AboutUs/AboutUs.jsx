@@ -2,10 +2,6 @@ import React from "react";
 import "./AboutUs.css";
 import { Helmet } from "react-helmet";
 import OurTeam from "./OurTeam";
-import team_img1 from "../../assets/AboutMe/about-imge1.jpg";
-import team_img2 from "../../assets/AboutMe/about-imge2.jpg";
-import team_img3 from "../../assets/AboutMe/about-imge3.jpg";
-import NeedHelp from "../Needhelp/NeedHelp";
 import OurValues from "./OurValues";
 
 function AboutMe() {

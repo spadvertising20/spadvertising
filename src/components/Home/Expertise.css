@@ -1,4 +1,4 @@
-.whatwedo{
+.whatwedo {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -10,26 +10,29 @@
 
 
 
-.our-expertise{
+.our-expertise {
     line-height: 0;
     font-family: sans-serif;
-    
+
 }
-.our-expertise p{
+
+.our-expertise p {
     color: #00aeff;
     font-size: 28px;
     font-weight: 700;
     text-align: center;
-    
-}   
-.our-expertise h1{
+
+}
+
+.our-expertise h1 {
     color: #e7e7e7;
     font-size: 60px;
     margin-bottom: 3rem;
     margin-top: 3rem;
-    
+
 }
-.service-heading{
+
+.service-heading {
     width: 50%;
     text-align: center;
     display: flex;
@@ -38,44 +41,48 @@
     align-items: center;
     margin-bottom: 2rem;
 }
-.service-heading p{
+
+.service-heading p {
     width: 75%;
     text-align: center;
     font-family: 'poppins';
     font-size: 16px;
     font-weight: 400;
-    
+
 }
 
 
-.whatwedo-con{
+.whatwedo-con {
     width: 100%;
     max-width: 1400px;
-    
+
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-.whatwedo-box{
+
+.whatwedo-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 50px;
     width: 90%;
     gap: 50px;
-    
+
 }
-.heading{
+
+.heading {
     width: 100%;
     height: 50px;
     background-color: #265AA5;
     color: white;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
-.wwd-box{
+
+.wwd-box {
     width: 18rem;
     display: flex;
     flex-direction: column;
@@ -84,14 +91,15 @@
     border: solid 1px #00254e;
     padding: 20px;
     border-radius: 25px;
-    
+
 }
 
-.banner{
+.banner {
     width: 20rem;
     height: 15rem;
 }
-.points{
+
+.points {
     padding-top: 10px;
     padding-bottom: 10px;
     width: 18rem;
@@ -101,26 +109,29 @@
     font-family: sans-serif;
 }
 
-.heading h1{
+.heading h1 {
     color: white;
 }
-.points-box{
+
+.points-box {
     display: flex;
     gap: 10px;
     align-items: start;
-    
+
 }
-.points-box p{
-   font-weight: 500;
-  font-size: 18px;
-  font-style: normal;
+
+.points-box p {
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
 }
-.points-box img{
+
+.points-box img {
     width: 2rem;
     height: 2rem;
 }
 
-.outdoor-image{
+.outdoor-image {
     width: 50px;
     background-color: rgba(0, 0, 255, 0.123);
     padding: 10px;
@@ -128,52 +139,58 @@
     border-radius: 10px;
 }
 
-.wwd-box h3{
+.wwd-box h3 {
     font-size: 25px;
 }
 
-.wwd-box .desc1{
+.wwd-box .desc1 {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-weight: 400;
     text-align: left;
 }
-.desc1 a{
+
+.desc1 a {
     color: #265AA5;
 }
 
 @media (max-width:768px) {
-    
-    .whatwedo{
+
+    .whatwedo {
         padding-top: 2rem;
     }
-    .whatwedo h1{
+
+    .whatwedo h1 {
         font-size: 30px;
         padding-bottom: 1rem;
     }
-    .service-heading{
+
+    .service-heading {
         width: 100%;
         text-align: center;
     }
-    .service-heading h2{
+
+    .service-heading h2 {
         width: 90%;
     }
-    .service-heading p{
+
+    .service-heading p {
         width: 100%;
     }
 }
 
 @media (max-width:850px) {
-    
-    .our-expertise h1{
+
+    .our-expertise h1 {
         font-size: 40px;
     }
-    .our-expertise p{
+
+    .our-expertise p {
         font-size: 20px;
-             
+
     }
-    .points-box p{
+
+    .points-box p {
         text-align: left;
     }
 }
-

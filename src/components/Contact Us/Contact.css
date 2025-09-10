@@ -18,7 +18,7 @@
 .contact-content {
     display: flex;
     flex-wrap: wrap;
-    background:#D6E4FF;
+    background: #D6E4FF;
     border-radius: 40px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -57,7 +57,7 @@
 .contact-form-container {
     flex: 1;
     padding: 40px;
-    background:#D6E4FF;
+    background: #D6E4FF;
 }
 
 .form-title {
@@ -67,7 +67,8 @@
     text-align: center;
     color: black;
 }
-.contact-info h2{
+
+.contact-info h2 {
     color: white;
 }
 
@@ -83,23 +84,24 @@
   .form-select,
   .form-textarea */
 
-  .form-input, .form-textarea{
-    
-    padding: 12px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-  }  
+.form-input,
+.form-textarea {
 
-  .form-input{
-    
     padding: 12px;
     font-size: 16px;
     border: 2px solid #ccc;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
-  }  
+}
+
+.form-input {
+
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
 
 .form-select {
     width: 100%;
@@ -172,7 +174,8 @@
     .form-button {
         font-size: 16px;
     }
-    .contact-section{
+
+    .contact-section {
         padding-top: 5rem;
     }
 }

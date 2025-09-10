@@ -1,8 +1,9 @@
-.career-container{
-    padding-top: 4rem;
-    padding-bottom: 8rem;
-    
+.career-container {
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+
 }
+
 .career-form {
   max-width: 500px;
   margin: auto;
@@ -12,7 +13,7 @@
 
   background-color: #fff;
   font-family: Arial, sans-serif;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 .career-form h2 {
@@ -96,57 +97,62 @@
 .status-message:empty {
   display: none;
 }
-.career-section{
+
+.career-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(to left, #00c2f3, #005eda);
-   margin-bottom: 4rem;
+  margin-bottom: 4rem;
   padding-block: 3rem;
-  
+
 }
-.career-section-con{
+
+.career-section-con {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   gap: 10px;
   width: 100%;
-    max-width: 1200px;
+  max-width: 1200px;
   color: white;
 }
 
-.career-section-con p{
+.career-section-con p {
   text-align: center;
   width: 50vw;
 }
 
-  .career-section-con button {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 24px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 5px 5px 0 #00254e;
-    transition: all 0.1s ease-in-out;
+.career-section-con button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 #00254e;
+  transition: all 0.1s ease-in-out;
 }
 
 .career-section-con button:active {
-    box-shadow: 0 0px 0px #0f6fff;
-    transform: translateY(3px);
-   
+  box-shadow: 0 0px 0px #0f6fff;
+  transform: translateY(3px);
+
 }
-.career-section-con img{
+
+.career-section-con img {
   width: 32rem;
 }
-.job-recruitment{
+
+.job-recruitment {
   font-size: 20px;
 }
-.career-section-con h1{
+
+.career-section-con h1 {
   color: #00254e;
   font-size: 40px;
 }
@@ -157,15 +163,18 @@
     padding: 20px 16px;
     margin: 20px 12px;
   }
-  .career-section-con img{
-  width: 20rem;
-}
-.career-section-con h1{
-  color: #00254e;
-  font-size: 30px;
-}
-.career-section-con p{
-  text-align: center;
-  width: 90%;
-}
+
+  .career-section-con img {
+    width: 20rem;
+  }
+
+  .career-section-con h1 {
+    color: #00254e;
+    font-size: 30px;
+  }
+
+  .career-section-con p {
+    text-align: center;
+    width: 90%;
+  }
 }

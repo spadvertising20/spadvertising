@@ -22,13 +22,16 @@
     min-height: 48px;
     padding: 10px 16px;
     border-radius: 10px;
-    border: none; /* Removed hidden, as it's not needed */
+    border: none;
+    /* Removed hidden, as it's not needed */
     background-color: #0864ae;
     color: white;
     font-size: 18px;
     line-height: 1.5;
-    margin: 18px 8px 8px 8px; /* top, right, bottom, left */
-    cursor: pointer; /* For better UX */
+    margin: 18px 8px 8px 8px;
+    /* top, right, bottom, left */
+    cursor: pointer;
+    /* For better UX */
 }
 
 .home-clients-con-p {
@@ -70,9 +73,10 @@
 .home-clients-images .img {
     width: 130px;
     padding: 20px;
-    
+
 }
-.img-visible{
+
+.img-visible {
     background: #000;
     border-radius: 10px;
 }
