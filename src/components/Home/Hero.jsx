@@ -29,20 +29,16 @@ export default function AnimationHero() {
             <button className="hero-btn">
               Get Services
               <div className="btn-hover">
-                <img src={right_arrow} alt="Digital Marketing in Raipur" />
+                <img src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757415832/right-arrow_tvq8vr.png"} alt="Digital Marketing in Raipur" />
               </div>
             </button>
           </a>
         </div>
 
         <div className="hero-anim-bg">
+       
           <img
-            src={img_bg}
-            alt="Advertising in Raipur"
-            className="services-con"
-          />
-          <img
-            src={hero_bg}
+            src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757415833/hero_bg_bohbsv.png"}
             alt="Creatives Designing Services in Raipur"
             className="hero-anim-img"
           />
@@ -54,14 +50,14 @@ export default function AnimationHero() {
               <div className="round-ele1">
                 <div className="hero-box">
                   <img
-                    src={hero_outdoor}
+                    src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757415836/hero_outdoor_dwhwaz.webp"}
                     alt="Advertising agency near me"
                     className="img-rotate1"
                   />
                 </div>
                 <div className="hero-box">
                   <img
-                    src={hero_digital}
+                    src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757415834/hero_digital_awn9ce.webp"}
                     alt="Advertising agency jobs"
                     className="img-rotate2"
                   />
@@ -71,14 +67,14 @@ export default function AnimationHero() {
               <div className="round-ele2">
                 <div className="hero-box">
                   <img
-                    src={hero_design}
+                    src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757415833/hero_design_v92til.webp"}
                     alt="Top Advertising agency in Raipur"
                     className="img-rotate3"
                   />
                 </div>
                 <div className="hero-box">
                   <img
-                    src={hero_event}
+                    src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757415834/hero_event_wayqdl.webp"}
                     alt="Advertising agency in Raipur"
                     className="img-rotate4"
                   />

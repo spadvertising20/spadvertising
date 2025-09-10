@@ -49,7 +49,7 @@ function EventPromotion() {
           </div>
           <div className="service-right">
             <ImageLoader src={loading}
-              data-src={event}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487806/event_njd4ms.png"}
               alt="Event Promotion in Raipur"
               data-aos="zoom-in"
             />
@@ -61,7 +61,7 @@ function EventPromotion() {
         <div className="ul">
           <div className="topic-align1">
             <ImageLoader src={loading}
-              data-src={Corporate_Event}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487800/Corporate-Event_jmypiy.jpg"}
               alt="Corporate Event in Raipur"
               data-aos="zoom-in"
             />
@@ -96,7 +96,7 @@ function EventPromotion() {
             </div>
 
             <ImageLoader src={loading}
-              data-src={mall}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487795/mall_nkokh1.png"}
               alt="Mall Activation in Raipur"
               data-aos="zoom-in"
             />

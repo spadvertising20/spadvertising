@@ -4,13 +4,12 @@ import trust_image from "../assets/elements/team.jpg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import affordable from "../assets/elements/affordable.gif";
-import team from "../assets/elements/team.gif";
-import exprience from "../assets/elements/exprience.gif";
-import fast_delivery from "../assets/elements/fast-delivery.gif";
+// import affordable from "../assets/elements/affordable.gif";
+// import team from "../assets/elements/team.gif";
+// import exprience from "../assets/elements/exprience.gif";
+// import fast_delivery from "../assets/elements/fast-delivery.gif";
 
 const WhyTrustUs = ({services}) => {
-  
   
   const settings1 = {
     infinite: true,
@@ -59,13 +58,13 @@ const WhyTrustUs = ({services}) => {
 
         <div className="trust-content">
           <div className="trust-image">
-            <img src={trust_image} alt="Team discussing project" />
+            <img src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757415922/team_i6bc4s.jpg"} alt="Team discussing project" />
           </div>
 
           <div className="trust-benefits">
             <div className="benefit">
               <div className="icon">
-                <img src={affordable} alt="" />
+                <img src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757415923/affordable_hqkhhe.gif"} alt="" />
               </div>
               <h4>Affordable Price</h4>
               <p>
@@ -74,7 +73,7 @@ const WhyTrustUs = ({services}) => {
             </div>
             <div className="benefit">
               <div className="icon">
-                <img src={team} alt="" />
+                <img src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757415922/team_kdleeh.gif"} alt="" />
               </div>
               <h4>Professional Team</h4>
               <p>
@@ -84,7 +83,7 @@ const WhyTrustUs = ({services}) => {
             </div>
             <div className="benefit">
               <div className="icon">
-                <img src={exprience} alt="" />
+                <img src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757415924/exprience_zoyaxw.gif"} alt="" />
               </div>
               <h4>Experience</h4>
               <p>
@@ -94,7 +93,7 @@ const WhyTrustUs = ({services}) => {
             </div>
             <div className="benefit">
               <div className="icon">
-                <img src={fast_delivery} alt="" />
+                <img src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757415923/fast-delivery_sm9noz.gif"} alt="" />
               </div>
               <h4>Fast Delivery</h4>
               <p>

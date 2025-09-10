@@ -234,25 +234,25 @@ function Navbar() {
               ].map(({ to, text, icon, items }, index) => (
                 <div key={index}>
                   {to ? (
-                    <Link to={to} onClick={menuslider} title={text}>
+                    <a href={to} onClick={menuslider} title={text}>
                       <p>
                         {icon} {text}
                       </p>
-                    </Link>
+                    </a>
                   ) : (
                     <div className="dropdown">
                       <p onClick={toggleServicesDropdown}>
-                        <div className="">
+                     
                           {icon} {text}{" "}
-                        </div>
+                
                       </p>
                       {servicesDropdown && (
                         <ul className="dropdown-menu">
                           {items.map((item, idx) => (
                             <li key={idx}>
-                              <Link onClick={menuslider} to={item.to}>
+                              <a onClick={menuslider} href={item.to}>
                                 {item.text}
-                              </Link>
+                              </a>
                             </li>
                           ))}
                         </ul>

@@ -66,7 +66,11 @@ export const BlogPage = () => {
     fetchBySlugAndRefresh();
   }, [slug]);
 
-  if (loading) return <p className="loading">Loading...</p>;
+  if (loading) return <div id="preloading">
+  <img class="logo" src="/favicon.png" alt="SP Advertising Logo" />
+  <img class="loader" src="/circle.gif" alt="SP Advertising Loading Animation" />
+</div>
+;
   if (!post) return <p className="loading">Post not found...</p>;
 
   const isLiked = Array.isArray(post.likes)
@@ -167,8 +171,9 @@ export const BlogPage = () => {
   };
 
   return (
-    <div className="post-container">
-      <Link to="/" className="back-link">
+    <div className="post-container-main">
+      <div className="post-container">
+      <Link to="/blogs" className="back-link">
         ← Back
       </Link>
 
@@ -267,6 +272,7 @@ export const BlogPage = () => {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -22,7 +22,7 @@ function OurTeam() {
           </div>
           <img
             
-            src={vision}
+            src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483907/vision_ycw1kj.jpg"}
             alt="Branding & Stradegy in Raipur"
             data-aos="fade-up"
           />
@@ -31,7 +31,7 @@ function OurTeam() {
         <div className="our-mission ">
           <img
             
-            src={promise}
+            src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483904/promise_losrqw.png"}
             alt="Print Media in Raipur"
             data-aos="fade-up"
           />

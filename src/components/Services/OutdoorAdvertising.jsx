@@ -53,7 +53,7 @@ function OutdoorAdvertising() {
           <div className="service-right">
             <ImageLoader
               src={loading}
-              data-src={outdoor_img1}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757484085/outdoor-img1_bwvc5f.png"}
               alt="Outdoor Advertising in Raipur"
               data-aos="zoom-in"
             />
@@ -112,7 +112,7 @@ function OutdoorAdvertising() {
 
             <ImageLoader
               src={loading}
-              data-src={showcase1}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757484088/showcase1_ibken4.webp"}
               alt="BOutdoor advertising services"
               data-aos="zoom-in"
             />
@@ -121,7 +121,7 @@ function OutdoorAdvertising() {
           <div className="topic-align1" data-aos="fade-right">
             <ImageLoader
               src={loading}
-              data-src={outdoor_img2}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757484064/outdoor-advertising5_xnxegi.jpg"}
               alt="Outdoor advertising near me"
               data-aos="zoom-in"
             />
@@ -226,7 +226,7 @@ function OutdoorAdvertising() {
 
             <ImageLoader
               src={loading}
-              data-src={gantry}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757484053/gantry_lkz78t.jpg"}
               alt="Billboard advertising solutions"
               data-aos="zoom-in"
             />
@@ -235,7 +235,7 @@ function OutdoorAdvertising() {
           <div className="topic-align1">
             <ImageLoader
               src={loading}
-              data-src={showcase2}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757484049/showcase2_dobyet.jpg"}
               alt="Outdoor Advertising agency"
               data-aos="zoom-in"
             />

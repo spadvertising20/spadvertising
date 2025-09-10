@@ -62,7 +62,7 @@ function SocietyBranding() {
           </div>
           <div className="service-right">
             <ImageLoader src={loading}
-              data-src={outdoor_img1}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757484085/outdoor-img1_bwvc5f.png"}
               alt="society branding"
               data-aos="zoom-in"
             />
@@ -121,7 +121,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <ImageLoader src={loading}
-                  data-src={SocietyBrandingImg1}
+                  data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757485343/SHRISHTI_PLAZO_xxhupd.jpg"}
                   alt="society branding in raipur"
                   data-aos="zoom-in"
                 />
@@ -186,7 +186,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <ImageLoader src={loading}
-                  data-src={SocietyBrandingImg2}
+                  data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757485298/ASHOKA_HEIGHTS_ezwipy.jpg"}
                   alt="society branding company in raipur"
                   data-aos="zoom-in"
                 />
@@ -254,7 +254,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <ImageLoader src={loading}
-                  data-src={SocietyBrandingImg3}
+                  data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757485328/GT_NATURA_pqqdby.jpg"}
                   alt="society branding company in raipur"
                   data-aos="zoom-in"
                 />
@@ -322,7 +322,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <ImageLoader src={loading}
-                  data-src={SocietyBrandingImg4}
+                  data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757485302/CG_HEIGHTS_t5uyh1.jpg"}
                   alt="outdoor company in chhattisgarh"
                   data-aos="zoom-in"
                 />
@@ -389,7 +389,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <ImageLoader src={loading}
-                  data-src={SocietyBrandingImg5}
+                  data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757485306/DIAMOND_TREE_1_i22klh.jpg"}
                   alt="society advertising in raipur"
                   data-aos="zoom-in"
                 />
@@ -453,7 +453,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <ImageLoader src={loading}
-                  data-src={SocietyBrandingImg6}
+                  data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757485294/AASTHA_GREEN_2_wuk03m.jpg"}
                   alt="society promotion in raipur"
                   data-aos="zoom-in"
                 />
@@ -517,7 +517,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <ImageLoader src={loading}
-                  data-src={SocietyBrandingImg7}
+                  data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757485333/OM_SHREE_y49anc.jpg"}
                   alt="society advertising"
                   data-aos="zoom-in"
                 />
@@ -584,7 +584,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <ImageLoader src={loading}
-                  data-src={SocietyBrandingImg8}
+                  data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757485338/RAJAT_PRIME_m70ftk.jpg"}
                   alt="society promotion company in raipur"
                   data-aos="zoom-in"
                 />
@@ -652,7 +652,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <ImageLoader src={loading}
-                  data-src={SocietyBrandingImg9}
+                  data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757485289/VIP_KARISHMA_3_ocp7zu.jpg"}
                   alt="society advertising agency in raipur"
                   data-aos="zoom-in"
                 />
@@ -717,7 +717,7 @@ function SocietyBranding() {
               </div>
               <div className="society-con">
                 <ImageLoader src={loading}
-                  data-src={SocietyBrandingImg10}
+                  data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757485324/GREEN_MEADOWS_islpxm.jpg"}
                   alt="society hoarding in raipur"
                   data-aos="zoom-in"
                 />

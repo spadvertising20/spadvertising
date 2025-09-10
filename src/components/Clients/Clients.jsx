@@ -102,72 +102,41 @@
           <div className="client-logo">
             <h2>Our Clients</h2>
             <Slider {...settings} className="logo-slider">
-              <div>
-                <img loading="lazy" src={client1} alt="" />
-              </div>
-              <div>
-                <img loading="lazy" src={client2} alt="" />
-              </div>
-              <div>
-                <img loading="lazy" src={client3} alt="" />
-              </div>
-              <div>
-                <img loading="lazy" src={client4} alt="" />
-              </div>
-              <div>
-                <img loading="lazy" src={client5} alt="" />
-              </div>
-              <div>
-                <img
-                  loading="lazy"
-                  className="img-visible"
-                  src={client6}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  loading="lazy"
-                  className="img-visible"
-                  src={client7}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img loading="lazy" src={client8} alt="" />
-              </div>
-              <div>
-                <img loading="lazy" src={client9} alt="" />
-              </div>
-              <div>
-                <img loading="lazy" src={client10} alt="" />
-              </div>
-              <div>
-                <img loading="lazy" src={client11} alt="" />
-              </div>
-              <div>
-                <img loading="lazy" src={client12} alt="" />
-              </div>
-              <div>
-                <img loading="lazy" src={client13} alt="" />
-              </div>
-              <div>
-                <img loading="lazy" src={client14} alt="" />
-              </div>
-              <div>
-                <img
-                  loading="lazy"
-                  className="img-visible"
-                  src={client15}
-                  alt=""
-                />
-              </div>
-              <div>
-                <img loading="lazy" src={client16} alt="" />
-              </div>
-              <div>
-                <img loading="lazy" src={client17} alt="" />
-              </div>
+                 <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482869/client1_eperoe.png"} alt="outdoor advertising companies" />
+
+          <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482870/client2_dgj1fr.png"} alt="social media marketing agency near me" />
+
+          <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482872/client3_jvsa0m.jpg"} alt="digital marketing ads" />
+
+          <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482873/client4_rjmawq.png"} alt="digital marketing advertising" />
+          <img loading="lazy"
+            className="img-visible"
+            src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482879/client7_yaipke.png"}
+            alt="billboard advertising companies"
+          />
+          <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482875/client5_kujipr.svg"} alt="best advertising" />
+          <img loading="lazy" className="img-visible" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482877/client6_djuwum.webp"} alt="ad makers" />
+
+          <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482880/client8_migh3c.jpg"} alt="outdoor billboard companies" />
+
+          <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482883/client9_ci5bbw.png"} alt="advertising and marketing companies" />
+
+          <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482853/client10_n1xmxs.svg"} alt="advertising on billboards" />
+
+          <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482884/client11_f335i2.png"} alt="top ad agencies" />
+
+          <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482887/client12_ntduvd.jpg"} alt="advertising firms near me" />
+
+          <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482889/client13_d5gb6q.png"} alt="construction advertisement" />
+
+          <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482890/client14_xrxfr1.png"} alt="ad marketing agency" />
+
+          <img loading="lazy" className="img-visible" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482893/client15_kokywc.webp"} alt="agency google ads" />
+
+          <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482895/client16_nahaov.jpg"} alt="brand advertising" />
+
+          <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482868/client17_cukctw.webp"} alt="linkedin ads management" />
+     
             </Slider>
           </div>
         </div>

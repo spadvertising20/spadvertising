@@ -41,10 +41,10 @@ const services = [
       "Pole Kiosk",
       "Society Branding",
     ],
-    tick: blue_tick,
+    tick: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482398/blue-tick_upnauo.svg",
   },
   {
-    img: digital_marketing,
+    img: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482373/bullhorn_cvjwfw.png",
     title: "Digital Marketing",
     desc: (
       <>
@@ -65,10 +65,10 @@ const services = [
       "Social Media Marketing",
       "Application Development",
     ],
-    tick: purple_tick,
+    tick: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482360/approved-purple_rqkhwy.png",
   },
   {
-    img: design_thinking,
+    img: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482373/design-thinking_eca0oe.png",
     title: "Designing Services",
     desc: (
       <>
@@ -84,10 +84,10 @@ const services = [
     ),
     link: "https://spadvertising.in/Designing-Services-in-Raipur",
     points: ["Packaging", "Creative Concepts", "Design & Artwork"],
-    tick: yellow_tick,
+    tick: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482364/approved-yellow_cdmhca.png",
   },
   {
-    img: audio_visual,
+    img: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482371/audio-visual_rkbpde.png",
     title: "Audio Visual",
     desc: (
       <>
@@ -108,10 +108,10 @@ const services = [
       "Radio & TV Commercials",
       "Photography & Videography",
     ],
-    tick: lightblue_tick,
+    tick: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482353/approved-light-blue_duuxzi.png",
   },
   {
-    img: analysis,
+    img: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482351/analysis_str2jj.png",
     title: "Branding & Strategy",
     desc: (
       <>
@@ -132,10 +132,10 @@ const services = [
       "Creative 360 Campaigns",
       "Corporate and Brand Identity",
     ],
-    tick: orange_tick,
+    tick: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482354/approved-orange_vywzif.png",
   },
   {
-    img: print_media,
+    img: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482377/flyer_ecj9ug.png",
     title: "Print Media",
     desc: (
       <>
@@ -151,7 +151,7 @@ const services = [
     ),
     link: "https://spadvertising.in/Event-Promotion-in-Raipur",
     points: ["News Paper Ads", "Brochure", "Pamphlet", "In-Shop Branding"],
-    tick: red_tick,
+    tick: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482363/approved-red_fjm5l5.png",
   },
 ];
 

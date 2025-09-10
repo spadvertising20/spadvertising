@@ -51,7 +51,7 @@ function DesigningServices() {
           <div className="service-right">
             <div className="image-loading">
               <ImageLoader
-                data-src={design}
+                data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757486696/design_c7x7ps.png"}
                 src={loading}
                 alt="creative logo design"
               />
@@ -76,7 +76,7 @@ function DesigningServices() {
 
             <div className="image-loading">
               <ImageLoader
-                data-src={packaging_img}
+                data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757486709/packaging-img_hb7c03.jpg"}
                 src={loading}
                 alt="creative web design"
               />
@@ -86,7 +86,7 @@ function DesigningServices() {
           <div className="topic-align1">
             <div className="image-loading">
               <ImageLoader
-                data-src={packaging_img1}
+                data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757486671/creative-design8_rcyoqf.jpg"}
                 src={loading}
                 alt="creative flyer design"
               />
@@ -117,7 +117,7 @@ function DesigningServices() {
 
             <div className="image-loading">
               <ImageLoader
-                data-src={packaging_img2}
+                data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757486647/creative-design3_n3gwfu.jpg"}
                 src={loading}
                 alt="creative brochure design"
               />

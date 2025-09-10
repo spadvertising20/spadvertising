@@ -96,42 +96,42 @@ const Showcase = () => {
       <Slider {...settings} className="slide-con">
         <div>
           <img
-            src={showcase1}
+            src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483302/showcase1_n7a94c.webp"}
             alt="Advertising agency in India"
             loading="lazy"
           />
         </div>
         <div>
           <img
-            src={showcase2}
+            src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483303/showcase2_ul3xzk.jpg"}
             alt="Advertising agency near raipur chhattisgarh"
             loading="lazy"
           />
         </div>
         <div>
           <img
-            src={showcase3}
+            src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483296/showcase3_jdvz3y.webp"}
             alt="advertising and marketing agency in raipur"
             loading="lazy"
           />
         </div>
         <div>
           <img
-            src={showcase4}
+            src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483297/showcase4_od4rxg.webp"}
             alt="social media marketing agency"
             loading="lazy"
           />
         </div>
         <div>
           <img
-            src={showcase5}
+            src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483298/showcase5_ayvbkv.webp"}
             alt="digital marketing agencies"
             loading="lazy"
           />
         </div>
         <div>
           <img
-            src={showcase6}
+            src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483300/Showcase6_ytg0i7.webp"}
             alt="digital marketing agency near me"
             loading="lazy"
           />

@@ -9,28 +9,28 @@ export default function OurValues() {
   const valuecards = [
     {
       id: 1,
-      image: execution,
+      image: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483846/execution_jpfqeq.png",
       title: "Execution",
       description:
         "We focus on delivering results with precision, ensuring timely, high-quality execution that meets client needs and expectations.",
     },
     {
       id: 2,
-      image: accountability,
+      image: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483843/accountability_y2232s.png",
       title: "Accountability",
       description:
         "We embrace responsibility for our actions, maintaining transparency and trust, and ensuring high ethical standards in all our endeavors.",
     },
     {
       id: 3,
-      image: growth,
+      image: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483849/growth_jo8vsg.png",
       title: "Growth",
       description:
         "We value continuous learning, fostering innovation and development to help individuals and the organization reach their full potential.",
     },
     {
       id: 4,
-      image: teamwork,
+      image: "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483843/teamwork_kyzk5w.png",
       title: "Teamwork",
       description:
         "We prioritize collaboration, leveraging diverse strengths and perspectives to achieve common goals and foster a supportive work environment.",

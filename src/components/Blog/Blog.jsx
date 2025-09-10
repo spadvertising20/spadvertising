@@ -94,7 +94,7 @@ const Blog = () => {
             </div>
 
             <div className="update-image">
-              <img src={update_image} alt="Digital Marketing Blog" />
+              <img src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757484730/digital-marketing-img_ssfn0j.png"} alt="Digital Marketing Blog" />
             </div>
           </div>
         </div>

@@ -52,7 +52,7 @@ function BrandingStrategy() {
           </div>
           <div className="service-right">
             <ImageLoader src={loading}
-              data-src={brand}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487345/brand_oopzef.png"}
               alt="Branding Strategy in Raipur"
               data-aos="zoom-in"
               
@@ -64,7 +64,7 @@ function BrandingStrategy() {
         <div className="ul">
           <div className="topic-align1">
             <ImageLoader src={loading}
-              data-src={Communications_Strategy}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487350/Communications-Strategy_ckb54z.jpg"}
               alt="Communications Strategy in Raipur"
               data-aos="zoom-in"
               
@@ -100,7 +100,7 @@ function BrandingStrategy() {
             </div>
 
             <ImageLoader src={loading}
-              data-src={Creative_Campaigns}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487360/Creative_Campaigns_qgmt14.jpg"}
               alt="Creative 360 Campaigns in Raipur"
               data-aos="zoom-in"
               
@@ -109,7 +109,7 @@ function BrandingStrategy() {
 
           <div className="topic-align1">
             <ImageLoader src={loading}
-              data-src={Corporate}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487355/Corporate_jpeuht.jpg"}
               alt="Corporate and Brand Identity in Raipur"
               
             />

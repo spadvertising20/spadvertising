@@ -51,7 +51,7 @@ function PrintMedia() {
           </div>
           <div className="service-right">
             <ImageLoader src={loading}
-              data-src={print}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487949/print_r4sojb.png"}
               alt="Print Media in in Raipur"
               data-aos="zoom-in"
             />
@@ -75,7 +75,7 @@ function PrintMedia() {
             </div>
 
             <ImageLoader src={loading}
-              data-src={Newspaper_Ads}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487965/Newspaper-Ads_yyx1dg.jpg"}
               alt="Newspaper Ads in Raipur"
               data-aos="zoom-in"
             />
@@ -83,7 +83,7 @@ function PrintMedia() {
 
           <div className="topic-align1">
             <ImageLoader src={loading}
-              data-src={print_img2}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487993/prini-img2_cioi9u.jpg"}
               alt="Brochure in Raipur"
               data-aos="zoom-in"
             />
@@ -118,7 +118,7 @@ function PrintMedia() {
             </div>
 
             <ImageLoader src={loading}
-              data-src={Pamphlet}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487971/Pamphlet_ltrkjx.jpg"}
               alt="Pamphlet in Raipur"
               data-aos="zoom-in"
             />
@@ -126,7 +126,7 @@ function PrintMedia() {
 
           <div className="topic-align1">
             <ImageLoader src={loading}
-              data-src={inshop3}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487375/inshop3_lk940f.jpg"}
               alt="In-Shop Branding in Raipur"
               data-aos="zoom-in"
             />

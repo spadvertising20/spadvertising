@@ -46,19 +46,19 @@ function AboutMe() {
               <img
                 
                 className="team-1"
-                src={team_img1}
+                src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482122/about-imge1_op3akq.jpg"}
                 alt="Digital marketing in Raipur"
               />
               <img
                 
                 className="team-2"
-                src={team_img2}
+                src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482122/about-imge2_ouwz6w.jpg"}
                 alt="Outdoor Advertising in Raipur"
               />
               <img
                 
                 className="team-3"
-                src={team_img3}
+                src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482122/about-imge3_ihpxyh.jpg"}
                 alt="Creative advertising agency"
               />
             </div>

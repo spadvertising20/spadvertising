@@ -13,7 +13,7 @@ function Footer() {
       <div className="footer-con">
         <div className="footer-box">
           <div className="best-line">
-            <img loading="lazy" src={logo} alt="outdoor advertising agency" />
+            <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483445/logo-footer_bjqiwk.png"} alt="outdoor advertising agency" />
             <p>
               SP Advertising is a 360-degree marketing and branding agency
               dedicated to delivering exceptional results. Our team of experts
@@ -89,25 +89,25 @@ function Footer() {
                   href="https://www.facebook.com/spadvertisingraipur"
                   aria-label="Visit our Facebook page"
                 >
-                  <img loading="lazy" src={facebook} alt="Facebook Icon" />
+                  <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483454/facebook_m8yrc2.png"} alt="Facebook Icon" />
                 </a>
                 <a
                   href="https://www.instagram.com/spadvertisingrpr/"
                   aria-label="Visit our Instagram page"
                 >
-                  <img loading="lazy" src={instagram} alt="Instagram Icon" />
+                  <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483440/instagram_w0sawu.png"} alt="Instagram Icon" />
                 </a>
                 <a
                   href="https://www.linkedin.com/company/sp-advertising20/posts/?feedView=all"
                   aria-label="Visit our LinkedIn page"
                 >
-                  <img loading="lazy" src={linkedin} alt="LinkedIn Icon" />
+                  <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483441/linkedin_ratmms.png"} alt="LinkedIn Icon" />
                 </a>
                 <a
                   href="https://www.youtube.com/@spadvertising530"
                   aria-label="Visit our YouTube channel"
                 >
-                  <img loading="lazy" src={youtube} alt="YouTube Icon" />
+                  <img loading="lazy" src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757483449/youtube_gsttu5.png"} alt="YouTube Icon" />
                 </a>
               </div>
             </div>

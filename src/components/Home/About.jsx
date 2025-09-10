@@ -26,7 +26,7 @@ export default function HomeAbout() {
           </div>
         </div>
 
-        <img src={about_team} alt="media marketing agency" loading="lazy" />
+        <img src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757482122/about-imge1_op3akq.jpg"} alt="media marketing agency" loading="lazy" />
       </div>
     </div>
   );

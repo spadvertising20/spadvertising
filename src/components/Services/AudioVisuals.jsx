@@ -55,7 +55,7 @@ export default function AudioVisuals() {
           </div>
           <div className="service-right">
             <ImageLoader
-              data-src={outdoor_img1}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487140/AudioVisuals_zpnh0z.png"}
               src={loading}
               alt="Audio "
               data-aos="zoom-in"
@@ -81,7 +81,7 @@ export default function AudioVisuals() {
               </p>
             </div>{" "}
             <ImageLoader
-              data-src={showcase1}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487131/AudioVisuals3_swb3vi.jpg"}
               src={loading}
               alt="Audio "
               data-aos="zoom-in"
@@ -90,7 +90,7 @@ export default function AudioVisuals() {
           </div>
           <div className="topic-align1">
             <ImageLoader
-              data-src={outdoor_img2}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487145/AudioVisuals1_zacdzw.jpg"}
               src={loading}
               alt="Hoardings in Raipur "
               data-aos="zoom-in"
@@ -126,7 +126,7 @@ export default function AudioVisuals() {
               </p>
             </div>
             <ImageLoader
-              data-src={gantry}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487128/AudioVisuals2_c7ls65.jpg"}
               src={loading}
               alt=""
               data-aos="zoom-in"
@@ -136,7 +136,7 @@ export default function AudioVisuals() {
 
           <div className="topic-align1">
             <ImageLoader
-              data-src={showcase2}
+              data-src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757487135/AudioVisuals4_qsd3du.jpg"}
               src={loading}
               alt=""
               data-aos="zoom-in"
