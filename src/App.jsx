@@ -43,6 +43,7 @@ import LoadScrollTop from "./elements/LoadScrollTop.jsx";
 import SocialMediaMarketing from "./components/Blog/Blogs/SocialMediaMarketing.jsx";
 import SocietyBranding from "./components/Services/SocietyBranding.jsx";
 import BenefitsOutdoorAdvertising from "./components/Blog/Blogs/BenefitsOutdoorAdvertising.jsx";
+import Sp_ad from "./components/Services/AIServices.jsx/Sp_ad.jsx";
 const Homepage = lazy(() => import("./components/Home/Homepage.jsx"));
 const Whatsapp = lazy(() => import("./elements/Whatsapp.jsx"));
 const NeedHelp = lazy(() => import("./components/Needhelp/NeedHelp.jsx"));
@@ -190,6 +191,7 @@ function App() {
               path="/Society-Branding-in-Raipur"
               element={<SocietyBranding />}
             />
+            <Route path="/ai-powered-marketing-services" element={<Sp_ad />}></Route>
 
             {/* Blogs */}
             <Route path="/Blog" element={<Blog />} />

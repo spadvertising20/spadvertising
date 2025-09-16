@@ -1,0 +1,291 @@
+/* ================= Overlay ================= */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* ================= Popup box ================= */
+.popup-box {
+  display: flex;
+  width: 90%;
+  max-width: 900px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transform: translateY(-30px);
+  opacity: 0;
+  flex-direction: row;
+}
+
+/* Animation */
+.animate-popup {
+  animation: fadeSlide 0.5s ease forwards;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================= Left side ================= */
+.popup-left {
+  flex: 1;
+  background: #0f223a;
+  color: white;
+  padding: 15px;
+  padding-left: -10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-content {
+  width: 100%;
+  max-width: 300px;
+}
+
+.left-content h1 {
+  color: #FFD700;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.left-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  margin-left: -40px;
+  opacity: 0.9;
+}
+
+.left-content ul {
+  text-align: left;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.left-content li {
+  margin-bottom: 10px;
+}
+
+.top-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
+  border-radius: 20px;
+}
+
+/* ================= Right side ================= */
+.popup-right {
+  flex: 1;
+  background: white;
+  padding: 40px 30px;
+  position: relative;
+  width: 100%;
+}
+
+.popup-right h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.form-group textarea {
+  resize: none;
+  padding-top: 12px;
+  min-height: 80px;
+}
+
+.form-group label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 0.95rem;
+  pointer-events: none;
+  background: white;
+  padding: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 0.75rem;
+}
+
+.popup-right input:focus,
+.popup-right textarea:focus {
+  outline: none;
+  border-color: #ccc;
+  box-shadow: none;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  background: #007acc;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #005fa3;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #f3f3f3;
+  border: none;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.close-btn:hover {
+  background: #e5e5e5;
+  color: black;
+}
+
+/* ===/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .popup-box { max-width: 900px; }
+  .left-content h1 { font-size: 2rem; }
+}
+
+/* Ultra Large (2560px+) */
+@media (min-width: 2560px) {
+  .popup-box { max-width: 1200px; }
+  .left-content h1 { font-size: 5rem; }
+}
+
+/* Laptops / Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .popup-box { width: 85%; }
+  .left-content h1 { font-size: 1.6rem; }
+  .left-content p{
+    margin-left: -10px;
+  }
+  .popup-right h2 { font-size: 1.3rem; }
+}
+
+/* Tablets (768px – 1024px) → side by side */
+@media (max-width: 768px) and (min-width: 501px) {
+  .popup-box { 
+    flex-direction: row; 
+    width: 95%; 
+    margin: 0 40px; 
+  }
+  .popup-left { flex: 0.6; padding: 5px; }
+  .popup-right { flex: 0.6; padding: 25px 15px; }
+  .top-image { max-width: 180px; }
+  .left-content h1 { font-size: 1.4rem; }
+  .left-content p { margin-left: -10px !important; }
+  .popup-right h2 { font-size: 1.2rem; }
+}
+
+
+/* Small Mobiles (401px – 500px) */
+@media (max-width: 500px) and (min-width: 401px) {
+  .popup-box { flex-direction: column; width: 95%; margin: 0 30px;
+  margin-right: 50px;
+ }
+  .popup-left { display: none; }
+  .popup-right { padding: 20px 15px; }
+  .popup-right input,
+  .popup-right textarea,
+  .submit-btn { font-size: 0.85rem; height: 40px; width:85%; }
+  .popup-right h2 { font-size: 1.1rem; }
+  .popup-right .close-btn{
+    margin-right: 20px;
+  }
+}
+
+/* Extra Small (376px – 400px) */
+@media (max-width: 400px) and (min-width: 375px) {
+  .popup-box { width: 90%; margin-right: -10px;  margin-left: -10px;}
+  .popup-left { display: none;}
+  .popup-right { padding: 18px 12px; }
+  .popup-right input,
+  .popup-right textarea,
+  .submit-btn { width: 100%; font-size: 0.85rem; }
+  .popup-right h2 { font-size: 1.05rem; }
+}
+
+/* Very Small (321px – 375px) */
+@media (max-width: 370px) and (min-width: 321px) {
+  .popup-box { width: 90%; margin-right: 20px; }
+  .popup-left { display: none !important; }
+  .popup-right { padding: 15px 10px; }
+  .popup-right input,
+  .popup-right textarea,
+  .submit-btn { width: 100%; font-size: 0.8rem; }
+  .popup-right h2 { font-size: 1rem; }
+}
+
+/* Ultra Small (0px – 320px) */
+@media (max-width: 320px) {
+  .popup-box { width: 95%; margin: 0 auto; }
+  .popup-left { display: none; }
+  .popup-right { padding: 10px 8px; }
+  .popup-right h2 { font-size: 0.95rem; }
+  .popup-right input,
+  .popup-right textarea,
+  .submit-btn { width: 100%; font-size: 0.75rem; }
+}

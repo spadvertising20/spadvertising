@@ -1,0 +1,464 @@
+html {
+  scroll-behavior: smooth;
+}
+/* 🌐 Global (default large screens >1440) */
+.hero-section {
+  padding: 100px 20px;   /* Top/Bottom 100px, left/right 20px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(-135deg, #00c2f3, #005eda);
+  color: white;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+.pill-btn {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 8px 20px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  margin: 40px 0 20px 0;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hero-title {
+  font-size: 72px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.hero-title span {
+  color: #8ae8ff;
+}
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #e5e7eb;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.hero-buttons .btn {
+  background: white;
+  color: black;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 5px 5px #000000;
+  transition: all 0.3s ease;
+}
+.hero-buttons .btn.secondary {
+  background: white;
+  box-shadow: 5px 5px #000000;
+}
+
+/* 📺 ≤1440px (Large desktop/laptop) */
+@media (max-width: 1440px) {
+  .hero-title { font-size: 64px; }
+  .hero-subtitle { font-size: 1.2rem; }
+}
+
+/* 💻 ≤1024px (Laptop) */
+@media (max-width: 1024px) {
+  .hero-title { font-size: 56px; }
+  .hero-subtitle { font-size: 1.1rem; }
+  .pill-btn { font-size: 0.9rem; padding: 6px 16px; }
+}
+
+/* 📱 ≤768px (Tablet) */
+@media (max-width: 768px) {
+  .hero-title { font-size: 46px; }
+  .hero-subtitle { font-size: 1rem; }
+  .hero-buttons .btn { padding: 10px 22px; font-size: 0.95rem; }
+  .hero-content { padding: 0 15px; }
+}
+
+/* 📱 ≤500px (Mobile portrait) */
+@media (max-width: 500px) {
+  .hero-title { font-size: 36px; }
+  .hero-subtitle { font-size: 0.95rem; line-height: 1.5; }
+  .pill-btn { font-size: 0.8rem; padding: 5px 12px; }
+  .hero-buttons { gap: 10px; }
+  .hero-buttons .btn { font-size: 0.9rem; padding: 8px 18px; }
+}
+
+/* 📱 ≤425px */
+@media (max-width: 425px) and (min-width:360px) {
+  .hero-title { font-size: 32px; }
+  .hero-subtitle { font-size: 0.9rem; }
+  .hero-content{
+    margin-right: 40px;
+  }
+  .pill-btn { font-size: 0.75rem; }
+  .hero-buttons .btn { font-size: 0.85rem; padding: 7px 16px; }
+}
+
+/* 📱 ≤375px */
+/* 375px tak sab par apply hoga (<=375) */
+@media (max-width: 375px) {
+  .hero-title { font-size: 28px; margin-left: 20px; }
+  .hero-content { margin-left: 20px; margin-right: 0; }
+  .hero-subtitle { font-size: 0.85rem; }
+  .hero-buttons { flex-direction: column; gap: 12px; }
+  .hero-buttons .btn { width: 100%; max-width: 220px; }
+}
+
+
+/* 📱 ≤320px */
+@media (min-width: 320px) and (max-width: 374px) {
+  .hero-title { font-size: 29px; }
+  .hero-content{
+    margin-right:100px;
+  }
+  .hero-subtitle { font-size: 0.8rem; line-height: 1.4; }
+  .pill-btn { font-size: 0.7rem; padding: 4px 10px; }
+  .hero-buttons .btn { font-size: 0.8rem; padding: 6px 14px; }
+}
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  /* margin-top: 20px; */
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;  
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: white; /* transparent navbar */
+}
+
+.navbar-logo img {
+  height: 50px;       
+  width: auto;       
+  /* object-fit: contain; */
+  margin-left: 130px;         
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin-left: 200px;
+  flex: 1;
+  margin-top: 20px;
+}
+
+.navbar-links li:last-child {
+  margin-left: 320px;
+  margin-right: 50px;
+  /* margin-top: 0 !important;  */
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  font-size: 18px;
+  color:black;       /* white text for gradient bg */
+  font-weight: bold;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-links li a:hover {
+  color: #facc15;  /* hover yellow jaisa screenshot me hai */
+}
+
+/* Contact as a button (only desktop) */
+.navbar-links li .contact-btn {
+  background: #007bff;            
+  color: white !important;
+  padding: 10px 20px;           
+  border-radius: 12px;            
+  font-weight: 600;
+  transition: all 0.3s ease;
+  /* border: 2px solid #0056b3; */
+  box-shadow: 5px 5px #000000; 
+  margin-top: -20px; 
+}
+
+.navbar-links li .contact-btn:hover {
+  background: #0c6bd1;          
+  transform: scale(1.05);         
+  /* box-shadow: 5px 2px #888888; */
+}
+
+/* Hide icons on desktop */
+.mobile-icon {
+  display: none;
+  font-size: 16px;
+}
+
+/* ===== BURGER MENU ===== */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  width: 30px;
+  height: 3px;
+  background: #333;
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
+/* ===== LARGE DESKTOP (≤1440px) ===== */
+@media (max-width: 1440px) {
+  .navbar-logo img {
+    margin-left: 80px;   /* logo thoda andar */
+    height: 70px;        /* thoda chhota */
+  }
+
+  .navbar-links {
+    gap: 30px;           /* links gap kam */
+    margin-left: 120px;
+  }
+  .navbar-links li a{
+    font-size: 22px;
+  }
+
+  .navbar-links li:last-child {
+    margin-left: auto;   /* Contact button ko right side */
+    margin-right: 150px;
+    margin-top: 10px;
+  }
+}
+
+/* ===== LAPTOP (≤1024px) ===== */
+@media (max-width: 1024px) {
+  .navbar-logo img {
+    margin-left: 40px;   /* aur thoda andar */
+    height: 55px;
+    width: auto;
+  }
+
+  .navbar-links {
+    gap: 25px;
+    margin-left: 60px;
+  }
+
+  .navbar-links li a {
+    font-size: 16px;     /* text thoda chhota */
+  }
+
+  .navbar-links li:last-child {
+    margin-left: auto;
+    margin-right: 100px;
+    margin-top: 10px;
+  }
+
+  .navbar-links li .contact-btn {
+    padding: 8px 16px;   /* button chhota */
+    font-size: 15px;
+    border-radius: 10px;
+  }
+}
+
+
+/* ===== TABLET VIEW ===== */
+@media (max-width: 768px) and (min-width:600px) {
+  .navbar {
+    /* padding: 8px 15px; */
+  }
+
+  .navbar-logo img {
+    height: 70px !important;   /* thoda chhota logo */
+    width: 180px !important;    /* aspect ratio maintain */
+    margin-right: 550px; /* shift hata diya */
+  }
+
+
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: white;
+    width: 200px;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 999;
+    border-radius: 8px;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+    /* margin-right: 70px; */
+    margin-top: 10px;
+    margin-right: 100px;
+    margin-left: 80px;
+  }
+
+.navbar-links li .contact-btn {
+    background: white;
+    color: black !important;
+    border: none;
+    padding: 8px 0;
+    border-radius: 0;
+    font-weight: bold;
+    margin: 0; /* reset all margins */
+    box-shadow: none;
+    display: block; /* ensure it takes full width */
+  }
+
+  .navbar-links li:last-child {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -10px;
+  }
+
+
+  /* Show icons on mobile */
+  .mobile-icon {
+    display: inline-block;
+  }
+}
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 500px)  and (min-width:360px){
+  .navbar {
+    padding: 8px 15px;
+  }
+
+  .navbar-logo img {
+    height: 70px !important;   /* thoda chhota logo */
+    width: 180px !important;    /* aspect ratio maintain */
+    margin-left: -40px; /* shift hata diya */
+    margin-right: 40px;
+  }
+
+
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: white;
+    width: 200px;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 999;
+    border-radius: 8px;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+    margin-left: 110px;
+    margin-top: 10px;
+  }
+
+.navbar-links li .contact-btn {
+    background: white;
+    color: black !important;
+    border: none;
+    padding: 8px 0;
+    border-radius: 0;
+    font-weight: bold;
+    margin: 0; /* reset all margins */
+    box-shadow: none;
+    display: block; /* ensure it takes full width */
+  }
+
+  .navbar-links li:last-child {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -10px;
+  }
+
+
+  /* Show icons on mobile */
+  .mobile-icon {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 320px){
+  .navbar {
+    padding: 8px 15px;
+  }
+
+  .navbar-logo img {
+    height: 70px !important;   /* thoda chhota logo */
+    width: 150px !important;    /* aspect ratio maintain */
+    margin-left: -40px; /* shift hata diya */
+    margin-right: 80px;
+  }
+
+
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: white;
+    width: 200px;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 999;
+    border-radius: 8px;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+    margin-right: 0px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+.navbar-links li .contact-btn {
+    background: white;
+    color: black !important;
+    border: none;
+    padding: 8px 0;
+    border-radius: 0;
+    font-weight: bold;
+    margin: 0; /* reset all margins */
+    box-shadow: none;
+    display: block; /* ensure it takes full width */
+  }
+
+  .navbar-links li:last-child {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -10px;
+  }
+
+
+  /* Show icons on mobile */
+  .mobile-icon {
+    display: inline-block;
+  }
+}
