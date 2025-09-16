@@ -12,11 +12,7 @@ export default function Test() {
 
   return (
     <div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      
       <input type="text" ref={inputRef} />
       <button onClick={focus}>click</button>
     </div>
