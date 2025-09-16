@@ -1,71 +1,24 @@
-import React, { useEffect, useState } from "react";
-import "./Test.css"; // Link to CSS file
+import React, { useEffect, useRef, useState } from "react";
 
-export default function BlogPage() {
-  const [blogs, setBlogs] = useState([]);
+export default function Test() {
+  const inputRef = useRef(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch(
-          "http://localhost:1337/api/spadvertising-blogs/?populate=coverImage"
-        );
-        const json = await res.json();
-        setBlogs(json.data);
-      } catch (err) {
-        console.error("Error fetching blogs:", err);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-   const renderContent = (content) => {
-    return content.map((block, index) => {
-      switch (block.type) {
-        case "heading":
-          const level = block.level || 2;
-          const HeadingTag = `h${level}`;
-          return <HeadingTag key={index}>{block.children[0]?.text}</HeadingTag>;
-        case "paragraph":
-          return <p key={index}>{block.children.map((child, i) => child.text)}</p>;
-        case "list":
-          return (
-            <ul key={index}>
-              {block.children.map((item, i) => (
-                <li key={i}>{item.children.map((child, j) => child.text)}</li>
-              ))}
-            </ul>
-          );
-        default:
-          return null;
-      }
+  const focus = () => {
+    window.scrollTo({
+      top: 5000,
+      behavior: "smooth",
     });
   };
 
   return (
-    <div className="blog-container">
-      
-      {blogs.map((blog) => {
-        const { blogTitle, publishedDate, coverImage } = blog;
-
-        return (
-          <div className="blog-post" key={blog.id}>
-            <p className="blog-date">{publishedDate}</p>
-            <h1 className="blog-title">{blogTitle}</h1>
-
-            <img
-              className="featured-image"
-              src={`http://localhost:1337${coverImage.url}`}
-              alt="Featured"
-            />
-            <div className="blog-content">
-              <p>  {blog.blogContent ? renderContent(blog.blogContent) : <p>No content available.</p>}
-        </p>
-            </div>
-          </div>
-        );
-      })}
+    <div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <input type="text" ref={inputRef} />
+      <button onClick={focus}>click</button>
     </div>
   );
 }

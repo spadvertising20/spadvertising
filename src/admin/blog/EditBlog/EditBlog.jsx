@@ -294,7 +294,7 @@ export const EditBlog = () => {
       if (!res.ok) throw new Error("Failed to submit blog");
 
       setSuccess(`Blog ${id ? 'updated' : 'created'} successfully! Redirecting...`);
-      setTimeout(() => navigate("/blogs"), 2000);
+      setTimeout(() => navigate("/admin"), 2000);
     } catch (err) {
       setError("Failed to submit blog. Please check your connection and try again.");
     } finally {
@@ -382,7 +382,7 @@ export const EditBlog = () => {
               </h2>
               <div className="image-upload-content">
                 {id && (
-                  <div className="image-upload-group">
+                  <div className="image-upload-group1">
                     <img
                       src={`${API_BASE_URL}/blog/author-image/${id}?t=${Date.now()}`}
                       alt="Current author"
@@ -478,7 +478,7 @@ export const EditBlog = () => {
           </div>
 
           <div className="card form-actions">
-            <button type="button" onClick={() => navigate("/blogs")} className="action-button cancel-button">
+            <button type="button" onClick={() => navigate("/admin")} className="action-button cancel-button">
               <FaTimes />
               <span>Cancel</span>
             </button>

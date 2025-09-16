@@ -144,9 +144,9 @@ const Blog = () => {
                 <div className="featured-text">
                   <div className="featured-badges">
                     <span className="featured-badge">⭐ Featured</span>
-                    <span className="read-time-badge">
+                    {/* <span className="read-time-badge">
                       <BiTime /> 5 min read
-                    </span>
+                    </span> */}
                   </div>
                   <h2 className="featured-title">{blogs[0].title}</h2>
                   <p

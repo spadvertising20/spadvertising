@@ -11,11 +11,21 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 const AboutMe = lazy(() => import("./components/AboutUs/AboutUs.jsx"));
 const Contact = lazy(() => import("./components/Contact Us/Contact.jsx"));
 const Footer = lazy(() => import("./elements/Footer/Footer.jsx"));
-const BrandingStrategy = lazy(() => import("./components/Services/BrandingStrategy.jsx"));
-const DigitalMarketing = lazy(() => import("./components/Services/DigitalMarketing.jsx"));
-const DesigningServices = lazy(() => import("./components/Services/DesigningServices.jsx"));
-const EventPromotion = lazy(() => import("./components/Services/EventPromotion.jsx"));
-const OutdoorAdvertising = lazy(() => import("./components/Services/OutdoorAdvertising.jsx"));
+const BrandingStrategy = lazy(() =>
+  import("./components/Services/BrandingStrategy.jsx")
+);
+const DigitalMarketing = lazy(() =>
+  import("./components/Services/DigitalMarketing.jsx")
+);
+const DesigningServices = lazy(() =>
+  import("./components/Services/DesigningServices.jsx")
+);
+const EventPromotion = lazy(() =>
+  import("./components/Services/EventPromotion.jsx")
+);
+const OutdoorAdvertising = lazy(() =>
+  import("./components/Services/OutdoorAdvertising.jsx")
+);
 const PrintMedia = lazy(() => import("./components/Services/PrintMedia.jsx"));
 const RecentWork = lazy(() => import("./components/Home/RecentWork.jsx"));
 const WhatWeDo = lazy(() => import("./components/Home/Expertise.jsx"));
@@ -36,17 +46,39 @@ import BenefitsOutdoorAdvertising from "./components/Blog/Blogs/BenefitsOutdoorA
 const Homepage = lazy(() => import("./components/Home/Homepage.jsx"));
 const Whatsapp = lazy(() => import("./elements/Whatsapp.jsx"));
 const NeedHelp = lazy(() => import("./components/Needhelp/NeedHelp.jsx"));
-const ConsultingPopup = lazy(() => import("./components/Home/ConsultingPopup.jsx"));
-const AudioVisuals = lazy(() => import("./components/Services/AudioVisuals.jsx"));
-const KeywordResearch = lazy(() => import("./components/Blog/Blogs/KeywordResearch.jsx"));
+const ConsultingPopup = lazy(() =>
+  import("./components/Home/ConsultingPopup.jsx")
+);
+const AudioVisuals = lazy(() =>
+  import("./components/Services/AudioVisuals.jsx")
+);
+const KeywordResearch = lazy(() =>
+  import("./components/Blog/Blogs/KeywordResearch.jsx")
+);
 const UnderWorking = lazy(() => import("./elements/UnderWorking.jsx"));
 const Blog = lazy(() => import("./components/Blog/Blog.jsx"));
 const Career = lazy(() => import("./components/Career/Career.jsx"));
 const Test = lazy(() => import("./components/Test.jsx"));
-const AllBlogs = lazy(() => import("./admin/blog/AllBlogs/AllBlogs.jsx").then(m => ({ default: m.AllBlogs })));
-const CreateBlog = lazy(() => import("./admin/blog/CreateBlog/CreateBlog.jsx").then(m => ({ default: m.CreateBlog })));
-const BlogPage = lazy(() => import("./admin/blog/BlogPage/BlogPage.jsx").then(m => ({ default: m.BlogPage })));
-const EditBlog = lazy(() => import("./admin/blog/EditBlog/EditBlog.jsx").then(m => ({ default: m.EditBlog })));
+const AllBlogs = lazy(() =>
+  import("./admin/blog/AllBlogs/AllBlogs.jsx").then((m) => ({
+    default: m.AllBlogs,
+  }))
+);
+const CreateBlog = lazy(() =>
+  import("./admin/blog/CreateBlog/CreateBlog.jsx").then((m) => ({
+    default: m.CreateBlog,
+  }))
+);
+const BlogPage = lazy(() =>
+  import("./admin/blog/BlogPage/BlogPage.jsx").then((m) => ({
+    default: m.BlogPage,
+  }))
+);
+const EditBlog = lazy(() =>
+  import("./admin/blog/EditBlog/EditBlog.jsx").then((m) => ({
+    default: m.EditBlog,
+  }))
+);
 const Dashboard = lazy(() => import("./admin/auth/Dashboard.jsx"));
 const SignIn = lazy(() => import("./admin/auth/SignIn.jsx"));
 const ResetPassword = lazy(() => import("./admin/auth/ResetPassword.jsx"));
@@ -79,42 +111,41 @@ function App() {
       <Router>
         <CanonicalLink />
 
-    <Suspense
-  fallback={
-    <div
-      id="preloading"
-      style={{
-        width: "100%",
-        height: "100vh",
-        position: "fixed",
-        zIndex: 101,
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        background: "#fff", // optional: clean background
-      }}
-    >
-      <img
-        style={{
-          width: "100px",
-          height: "100px",
-          position: "relative",
-          top: "50px",
-          left: "10px",
-        }}
-        src="/favicon.png"
-        alt="SP Advertising Logo"
-      />
-      <img
-        style={{ width: "150px", height: "150px" }}
-        src="/circle.gif"
-        alt="SP Advertising Loading Animation"
-      />
-    </div>
-  }
->
-
+        <Suspense
+          fallback={
+            <div
+              id="preloading"
+              style={{
+                width: "100%",
+                height: "100vh",
+                position: "fixed",
+                zIndex: 101,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                background: "#fff", // optional: clean background
+              }}
+            >
+              <img
+                style={{
+                  width: "100px",
+                  height: "100px",
+                  position: "relative",
+                  top: "50px",
+                  left: "10px",
+                }}
+                src="/favicon.png"
+                alt="SP Advertising Logo"
+              />
+              <img
+                style={{ width: "150px", height: "150px" }}
+                src="/circle.gif"
+                alt="SP Advertising Loading Animation"
+              />
+            </div>
+          }
+        >
           <LoadScrollTop />
           <ScrollToTop />
           <Whatsapp />
@@ -129,29 +160,80 @@ function App() {
 
             {/* Services */}
             <Route path="/Services" element={<WhatWeDo />} />
-            <Route path="/Outdoor-Advertising-in-Raipur" element={<OutdoorAdvertising />} />
-            <Route path="/Outdoor-Advertising" element={<OutdoorAdvertising />} />
-            <Route path="/Digital-Marketing-Agency-in-Raipur" element={<DigitalMarketing />} />
-            <Route path="/Designing-Services-in-Raipur" element={<DesigningServices />} />
+            <Route
+              path="/Outdoor-Advertising-in-Raipur"
+              element={<OutdoorAdvertising />}
+            />
+            <Route
+              path="/Outdoor-Advertising"
+              element={<OutdoorAdvertising />}
+            />
+            <Route
+              path="/Digital-Marketing-Agency-in-Raipur"
+              element={<DigitalMarketing />}
+            />
+            <Route
+              path="/Designing-Services-in-Raipur"
+              element={<DesigningServices />}
+            />
             <Route path="/Print-Media-in-Raipur" element={<PrintMedia />} />
-            <Route path="/Branding-Strategy-in-Raipur" element={<BrandingStrategy />} />
-            <Route path="/Event-Promotion-in-Raipur" element={<EventPromotion />} />
+            <Route
+              path="/Branding-Strategy-in-Raipur"
+              element={<BrandingStrategy />}
+            />
+            <Route
+              path="/Event-Promotion-in-Raipur"
+              element={<EventPromotion />}
+            />
             <Route path="/Audio-Visuals-in-Raipur" element={<AudioVisuals />} />
-            <Route path="/Society-Branding-in-Raipur" element={<SocietyBranding />} />
+            <Route
+              path="/Society-Branding-in-Raipur"
+              element={<SocietyBranding />}
+            />
 
             {/* Blogs */}
             <Route path="/Blog" element={<Blog />} />
             <Route path="/Blog/2" element={<Blog2 />} />
-            <Route path="/Blog/Keyword-Research" element={<KeywordResearch />} />
-            <Route path="/Blog/SEO-Optimization" element={<SeoOptimization />} />
-            <Route path="/Blog/High-Quality-Content" element={<HighQualityContent />} />
-            <Route path="/Blog/Businesses-Prepare-for-Emerging-Trends" element={<BusinessesPrepare />} />
-            <Route path="/Blog/Holiday-Sales-Strategies" element={<HolidaySalesStrategies />} />
-            <Route path="/Blog/Advertising-Tools-and-Techniques" element={<ImproveOnlineAdvertising />} />
-            <Route path="/Blog/What-is-Digital-Marketing" element={<WhatIsDigitalMarketing />} />
-            <Route path="/Blog/Influencer-Marketing" element={<InfluencerMarketing />} />
-            <Route path="/Blog/Social-Media-Marketing" element={<SocialMediaMarketing />} />
-            <Route path="/Blog/Benefits-of-Outdoor-Advertising" element={<BenefitsOutdoorAdvertising />} />
+            <Route
+              path="/Blog/Keyword-Research"
+              element={<KeywordResearch />}
+            />
+            <Route
+              path="/Blog/SEO-Optimization"
+              element={<SeoOptimization />}
+            />
+            <Route
+              path="/Blog/High-Quality-Content"
+              element={<HighQualityContent />}
+            />
+            <Route
+              path="/Blog/Businesses-Prepare-for-Emerging-Trends"
+              element={<BusinessesPrepare />}
+            />
+            <Route
+              path="/Blog/Holiday-Sales-Strategies"
+              element={<HolidaySalesStrategies />}
+            />
+            <Route
+              path="/Blog/Advertising-Tools-and-Techniques"
+              element={<ImproveOnlineAdvertising />}
+            />
+            <Route
+              path="/Blog/What-is-Digital-Marketing"
+              element={<WhatIsDigitalMarketing />}
+            />
+            <Route
+              path="/Blog/Influencer-Marketing"
+              element={<InfluencerMarketing />}
+            />
+            <Route
+              path="/Blog/Social-Media-Marketing"
+              element={<SocialMediaMarketing />}
+            />
+            <Route
+              path="/Blog/Benefits-of-Outdoor-Advertising"
+              element={<BenefitsOutdoorAdvertising />}
+            />
 
             {/* Others */}
             <Route path="/Portfolio" element={<Portfolio />} />
@@ -161,7 +243,7 @@ function App() {
 
             {/* Admin */}
             <Route
-              path="/blogs"
+              path="/admin"
               element={
                 <ProtectedRoute>
                   <AllBlogs />
@@ -176,14 +258,7 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route
-              path="/blog/:slug"
-              element={
-                <ProtectedRoute>
-                  <BlogPage />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/blog/:slug" element={<BlogPage />} />
             <Route
               path="/edit/:id"
               element={
@@ -192,7 +267,7 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route path="/signin" element={<SignIn />} />
+            <Route path="/admin" element={<SignIn />} />
             {/* <Route path="/signup" element={<SignUp />} /> */}
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/reset-password" element={<ResetPassword />} />

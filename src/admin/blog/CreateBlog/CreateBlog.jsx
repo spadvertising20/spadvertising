@@ -146,7 +146,7 @@ export const CreateBlog = () => {
 
   const handleTagsChange = (e) => {
     const tags = e.target.value
-      .split(",")
+      .split(" ")
       .map((tag) => tag.trim())
       .filter((tag) => tag);
     setBlog({ ...blog, tags });
@@ -256,7 +256,7 @@ export const CreateBlog = () => {
       if (!res.ok) throw new Error("Failed to create blog");
 
       setSuccess("Blog created successfully! Redirecting...");
-      setTimeout(() => navigate("/blogs"), 2000);
+      setTimeout(() => navigate("/admin"), 2000);
     } catch (err) {
       setError("Failed to create blog. Please check your connection and try again.");
     } finally {
@@ -309,6 +309,7 @@ export const CreateBlog = () => {
                 type="file"
                 accept="image/*"
                 onChange={(e) => handleFileChange(e, setNewImage, setImagePreview)}
+                className="form-group-input"
               />
             </div>
             {imagePreview && (
@@ -513,7 +514,7 @@ export const CreateBlog = () => {
           <div className="card form-actions">
             <button
               type="button"
-              onClick={() => navigate("/blogs")}
+              onClick={() => navigate("/admin")}
               className="action-button cancel-button"
             >
               <FaTimes />

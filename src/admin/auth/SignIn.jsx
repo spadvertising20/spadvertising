@@ -20,7 +20,7 @@ export default function SignIn() {
       );
       localStorage.setItem("token", res.data.token);
       setMessage("Login successful!");
-      setTimeout(() => navigate("/blogs"), 1000); // redirect after login
+      setTimeout(() => navigate("/admin"), 1000); // redirect after login
     } catch (err) {
       setMessage(err.response?.data?.error || "Error occurred");
     }

@@ -43,27 +43,27 @@ function Navbar() {
         <div className="menu">
           <ul className={`navbar-menu ${menubtn ? "active" : ""}`}>
             <li>
-              <Link
-                to="/"
+              <a
+                href="/"
                 className={menu === "Home" ? "active" : "deactive"}
                 title="Home"
               >
                 <p className="menu-hover-con">
                   Home <span className="menu-hover"></span>
                 </p>
-              </Link>
+              </a>
             </li>
 
             <li>
-              <Link
-                to="/About"
+              <a
+                href="/About"
                 className={menu === "About" ? "active" : "deactive"}
                 title="About Us"
               >
                 <p className="menu-hover-con">
                   About <span className="menu-hover"></span>
                 </p>
-              </Link>
+              </a>
             </li>
 
             <li className="services">
@@ -98,48 +98,48 @@ function Navbar() {
                   { to: "/Print-Media-in-Raipur", text: "Print Media" },
                 ].map(({ to, text }) => (
                   <li key={to}>
-                    <Link to={to} title={text}>
+                    <a href={to} title={text}>
                       {text}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>
             </li>
 
             <li>
-              <Link
-                to="/Clients"
+              <a
+                href="/Clients"
                 className={menu === "Client" ? "active" : "deactive"}
                 title="Our Clients"
               >
                 <p className="menu-hover-con">
                   Clients <span className="menu-hover"></span>
                 </p>
-              </Link>
+              </a>
             </li>
 
             <li>
-              <Link
-                to="/Portfolio"
+              <a
+                href="/Portfolio"
                 className={menu === "Portfolio" ? "active" : "deactive"}
                 title="Our Portfolio"
               >
                 <p className="menu-hover-con">
                   Portfolio <span className="menu-hover"></span>
                 </p>
-              </Link>
+              </a>
             </li>
 
             <li>
-              <Link
-                to="/Blog"
+              <a
+                href="/Blog"
                 className={menu === "Blog" ? "active" : "deactive"}
                 title="Read Our Blog"
               >
                 <p className="menu-hover-con">
                   Blog <span className="menu-hover"></span>
                 </p>
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
