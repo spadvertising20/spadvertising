@@ -6,6 +6,7 @@ import HomeAbout from "./About";
 import AnimationHero from "./Hero";
 import HomeBlog from "./Blog";
 import HomeClients from "./Clients";
+import PopUp from "../Services/AIServices.jsx/Sp_popup"
 import './Homepage.css';
 import FAQ from "./FAQ";
 import WhyTrustUs from "../../elements/WhyTrustUs";
@@ -23,7 +24,8 @@ function Homepage() {
   ];
 
   return (
-    <div className="homepage-con">      
+    <div className="homepage-con">
+      <PopUp/>      
       <AnimationHero />
       <HomeAbout />
       <WhatWeDo />

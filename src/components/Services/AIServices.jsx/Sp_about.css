@@ -5,6 +5,7 @@
   justify-content: space-between;
   padding: 40px 80px;
   gap: 40px;
+  /* margin-top: 40px; */
 }
 
 .about-ai-content {
@@ -18,15 +19,16 @@
 
 .about-ai-content p {
   font-size: 1rem;
-  margin-bottom: 15px;
+  /* margin-bottom: 20px; */
 }
 
 .about-ai-closing {
   font-size: 1.1rem;
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-.get-quote-btn {
+.get-quote-btn12 {
   font-size: 1rem;
   padding: 10px 20px;
   border: none;
@@ -34,6 +36,10 @@
   color: #fff;
   border-radius: 8px;
   cursor: pointer;
+  margin-top: 20px !important;
+  transition: all 0.3s ease;
+ 
+  box-shadow: 5px 5px #000000; 
 }
 
 .about-ai-image {
@@ -44,8 +50,19 @@
 .about-ai-image img {
   max-width: 100%;
   height: auto;
+  animation: floatAnimation 4s ease-in-out infinite;
 }
-
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px); /* upar jaayega */
+  }
+  100% {
+    transform: translateY(0px); /* wapas neeche */
+  }
+}
 /* ------------------ Responsive ------------------ */
 
 /* ≤1440px (Large laptops) */
@@ -61,7 +78,7 @@
   .about-ai-section { padding: 30px 60px; gap: 30px; }
   .about-ai-content h2 { font-size: 1.8rem; }
   .about-ai-content p { font-size: 0.9rem; }
-  .get-quote-btn { font-size: 0.95rem; padding: 8px 18px; }
+  .get-quote-btn12 { font-size: 0.95rem; padding: 8px 18px; }
 }
 
 /* ≤768px (Tablets Portrait) */
@@ -81,26 +98,26 @@
   .about-ai-section { padding: 15px 20px; gap: 20px; }
   .about-ai-content h2 { font-size: 1.5rem; }
   .about-ai-content p { font-size: 0.8rem; }
-  .get-quote-btn { font-size: 0.85rem; padding: 6px 14px; }
-  .about-ai-image img { height: 160px; }
+  .get-quote-btn12 { font-size: 0.85rem; padding: 6px 14px; }
+  .about-ai-image img { height: 160px; } 
 }
 
 /* ≤375px (iPhone SE, small devices) */
-@media (max-width: 375px) {
+@media (max-width: 375px) and (min-width: 350px) {
   .about-ai-section { gap: 15px; }
   .about-ai-content h2 { font-size: 1.3rem; }
   .about-ai-content p { font-size: 0.78rem; }
   .about-ai-closing { font-size: 0.85rem; }
-  .get-quote-btn { font-size: 0.8rem; padding: 6px 12px; }
+  .get-quote-btn12 { font-size: 0.8rem; padding: 6px 12px; }
   .about-ai-image img { height: 140px; margin: 0 auto; display: block; }
 }
 
 /* ≤320px (Extra small phones) */
-@media (max-width: 320px) {
+/* @media (max-width: 340px) {
   .about-ai-section { gap: 10px; padding: 10px 15px; }
   .about-ai-content h2 { font-size: 1.1rem; margin: 0 2px; }
   .about-ai-content p { font-size: 0.7rem; margin: 0 5px; }
   .about-ai-closing { font-size: 0.75rem; }
-  .get-quote-btn { font-size: 0.75rem; padding: 5px 10px; }
+  .get-quote-btn12 { font-size: 0.75rem; padding: 0px 10px; height: 50px !important; }
   .about-ai-image img { height: 120px; }
-}
+} */

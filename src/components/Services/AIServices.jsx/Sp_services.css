@@ -1,11 +1,11 @@
-.Services-main{
+.Services-main {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
-
 }
+
 .Services {
   padding: 40px 20px;
   text-align: center;
@@ -23,7 +23,7 @@
   color: #222;
 }
 
-.services-title span {
+.Services-title span {
   color: #0077ff;
 }
 
@@ -47,18 +47,20 @@
 }
 
 /* Card */
-/* .service-card {
-  
+.Service-card {
   flex: 0 0 300px; 
   background: #fff;
-  min-height: 180px;
+  min-height: 220px;
   border-radius: 12px;
   padding: 25px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-  text-align: left;
+  text-align: center;
   scroll-snap-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-} */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .Service-card:hover {
   transform: translateY(-6px);
@@ -66,9 +68,16 @@
 }
 
 .Service-icon {
-  font-size: 30px;   
-  color: #0077ff;    
+  font-size: 30px;
+  color: #0077ff;
   margin-bottom: 15px;
+}
+
+.Service-icon img {
+  width: 200px;
+  height: 150px;
+  border-radius: 12px;
+  margin-bottom: 0px;
 }
 
 .Service-card h3 {
@@ -89,29 +98,7 @@
   color: #333;
 }
 
-.Service-card {
-  flex: 0 0 300px; 
-  background: #fff;
-  min-height: 220px;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-  text-align: center;  /* Center all content */
-  scroll-snap-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;  /* Center image and button horizontally */
-}
-
-/* Image */
-.Service-icon img {
-  width: 200px;
-  height: 150px;
-  /* object-fit: cen==; */
-  border-radius: 12px;
-  margin-bottom: 0px;
-}
+/* Buttons inside cards */
 .Service-btn {
   margin-top: 15px;
   width: 40px;
@@ -134,15 +121,13 @@
   background-color: #005fcc;
 }
 
-/* Existing CSS remains same */
-
 /* Wrapper */
 .get-quote-wrapper {
   margin-top: 40px;
   text-align: center;
 }
 
-/* Get Quote button styled same as navbar contact-btn */
+/* Get Quote button */
 .get-quote-btn {
   background: #007bff;
   color: white !important;
@@ -161,21 +146,60 @@
   transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-  .Services-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
+/* -------- Responsive -------- */
+
+/* Large screens ≥1024px */
+@media (min-width: 1024px) {
+  .Services-slider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch; /* ✅ Cards ki height equal hogi */
+    gap: 20px;
   }
 
   .Service-card {
-    flex: 0 0 100%;   
-    min-height: 100px !important;
-    max-width: 1200px;
-    margin: 0 auto; 
+    flex: 1 1 calc(25% - 20px);  /* 4 cards ek row me */
+    max-width: calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;        /* ✅ equal height maintain */
+    min-height: 470px;   /* 👈 base height taaki design consistent ho */
   }
+}
+
+/* Extra large screens ≥1440px */
+@media (min-width: 1440px) {
+  .Service-card {
+    min-height: 400px;   /* thoda aur bada base height */
+  }
+}
+
+
+/* Tablets ≤768px */
+@media (max-width: 768px) and (min-width:450px) {
+  .Services-slider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;   /* 👈 cards ki height equal karne ke liye */
+    gap: 15px;
+  }
+
+  .Service-card {
+    flex: 0 0 calc(50% - 20px);   /* Half width */
+    max-width: calc(40% - 20px);
+    display: flex;                /* 👇 content ko vertical align karne ke liye */
+    flex-direction: column;
+    justify-content: space-between; 
+    min-height: 150px;            /* 👈 ek base height set kardo */
+    margin: 0;
+  }
+
   .Service-icon img {
-    width: 70px;
-    height: 70px;
+    width: 120px;
+    height: 100px;
   }
 
   .Service-btn {
@@ -185,16 +209,16 @@
   }
 }
 
-@media (max-width: 500px) {
+
+
+@media (max-width: 450px) {
   .Services-title {
     font-size: 1.6rem;
     margin-bottom: 25px;
   }
 
   .Service-card {
-    flex: 0 0 90%;   /* almost full width */
-    min-height: 100px !important;
-    margin: 0 auto;  /* center horizontally */
+    flex: 0 0 90%;
     padding: 20px;
   }
 
@@ -202,17 +226,98 @@
     font-size: 1.1rem;
   }
 
-  .Service-card .value {
+  .Service-card .description {
     font-size: 0.85rem;
   }
-   .Service-icon img {
-    width: 200px;
-    height: 150px;
+
+  .Service-icon img {
+    width: 160px;
+    height: 120px;
   }
 
   .Service-btn {
-    width: 30px;
-    height: 30px;
-    font-size: 0.9rem;
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+}
+/* Mobile ≤425px (covers 400px + 375px) */
+@media (max-width: 405px) {
+  .Services-title {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+
+  .Service-card {
+    flex: 0 0 90%;
+    padding: 20px;
+  }
+
+  .Service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .Service-card .description {
+    font-size: 0.85rem;
+  }
+
+  .Service-icon img {
+    width: 160px;
+    height: 120px;
+  }
+
+  .Service-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+  .get-quote-btn {
+    width: 150px;
+    height: 44px;
+    font-size: 1rem;
+
+    /* ✅ Fix: center text properly */
+    display: flex;
+    justify-content: center;
+    margin-left: 90px;
+    align-items: center;
+    line-height: normal; /* reset line height */
+  }
+}
+/* Extra small phones ≤320px */
+@media (max-width: 320px) {
+  .Services-title {
+    font-size: 1.3rem;
+  }
+
+  .Service-card {
+    flex: 0 0 90%;
+    padding: 15px;
+  }
+
+  .Service-card h3 {
+    font-size: 1rem;
+  }
+
+  .Service-card .description {
+    font-size: 0.8rem;
+  }
+
+  .Service-icon img {
+    width: 120px;
+    height: 100px;
+  }
+
+  .get-quote-btn {
+    width: 130px;
+    height: 34px;
+    font-size: 0.8rem;
+
+    /* ✅ Fix: center text properly */
+    display: flex;
+    justify-content: center;
+    margin-left: 70px;
+    align-items: center;
+    line-height: normal; /* reset line height */
   }
 }

@@ -14,6 +14,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  flex-direction: row; /* side by side by default */
 }
 
 /* Left Gradient Section */
@@ -56,7 +57,7 @@
 
 .contact-info .info-item {
   display: flex;
-  align-items: center;
+  align-items: start;
   margin-bottom: 15px;
   font-weight: 500;
   color: #000;
@@ -66,6 +67,9 @@
   margin-right: 12px;
   font-size: 20px;
   color: #4f46e5;
+}
+.contact-info .location{
+  font-size: 40px;
 }
 
 /* Right Form Section *//* Form Section */
@@ -110,7 +114,6 @@
   padding-top: 14px;
 }
 
-/* Labels */
 .form-group label {
   position: absolute;
   left: 20px;
@@ -124,14 +127,17 @@
   padding: 0 5px;
 }
 
-/* Move label up on focus or filled input */
+/* ✅ Focused ya filled hone par label niche jaye */
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label,
 .form-group textarea:focus + label,
 .form-group textarea:not(:placeholder-shown) + label {
-  top: -8px;
-  font-size: 0.85rem;
+  top: 100%;              /* niche shift */
+  left: 20px;             /* thoda left adjust */
+  transform: translateY(0);
+  font-size: 14px;
   color: #4f46e5;
+  padding: 0;
 }
 
 /* Focus state */
@@ -155,69 +161,144 @@
   transition: 0.3s all;
 }
 
-.submit-btn:hover {
+.submit-btn1:hover {
   background-color: #3b36b0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .form-section {
-    width: 100%;
-    padding: 30px;
-  }
-}
-
-
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width:500px) {
   .grid {
-    flex-direction: column;
-    align-items: center;   /* center me lane ke liye */
+    display: flex;
+    flex-direction: row;     /* force row */
+    flex-wrap: nowrap;       /* prevent wrapping */
+    gap: 20px;               /* spacing between */
   }
 
   .gradient-section,
   .form-section {
-    width: auto;       /* poore screen ki width */
-    max-width: 100%;
+    flex: 1 1 50%;           /* half-half */
+    max-width: 50%;          /* prevent exceeding */
+    min-width: auto;         /* ❌ remove 300px restriction */
   }
-
 
   .contact-title {
     position: static;
     margin-bottom: 20px;
-    text-align: center;  /* mobile pe heading center */
+    text-align: center;
   }
 
   .contact-info-box {
     margin-top: 20px;
-    width:auto;          /* white box bhi full width */
+    width: 80%;
     max-width: 100%;
-    margin-left: 10px;
   }
 }
 
-@media (max-width:450px) {
+@media (max-width: 430px) {
   .grid {
     flex-direction: column;
-    align-items: center;   /* center me lane ke liye */
+    align-items: center;
+    gap: 20px;
   }
 
+  .contact-section{
+    margin-top: -50px;
+  }
   .gradient-section,
   .form-section {
-    width: auto;       /* poore screen ki width */
-    max-width: 100%;
+    width: 90% !important;        /* dono same width */
+    max-width: 90% !important;
+    margin: 0 auto;               /* center align */
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+
+  .contact-info-box {
+    width: 80% !important;       /* parent ke andar full */
+    max-width: 80% !important;
+    margin: 20px auto 0 auto;     /* center ho jaye */
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 50px;
   }
 
 
   .contact-title {
-    position: static;
-    margin-bottom: 20px;
-    text-align: center;  /* mobile pe heading center */
+    font-size: 28px;
+  }
+
+  .form-section {
+    padding: 25px;
+  }
+}
+
+
+
+/* ≤375px screens */
+@media (max-width: 375px)  and (min-width: 350px) {
+  .contact-section {
+    padding: 50px 12px;
+  }
+
+  .contact-title {
+    font-size: 24px;
   }
 
   .contact-info-box {
-    margin-top: 20px;
-    width:auto;          /* white box bhi full width */
-    max-width: 100%;
-    margin-left: 10px;
+    padding: 18px;
+    font-size: 0.85rem;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .submit-btn1 {
+    font-size: 15px;
+    height: 42px;
+  }
+}
+
+/* ≤320px screens */
+@media (max-width: 320px) {
+  .contact-section {
+    padding: 100px 10px;
+  }
+
+  .contact-title {
+    font-size: 20px;
+  }
+
+
+
+  .contact-info-box {
+    padding: 15px;
+    font-size: 0.8rem;
+  }
+
+  .form-section {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .submit-btn1 {
+    font-size: 14px;
+    height: 40px;
+
+    /* ✅ Center text fix */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: normal;
   }
 }

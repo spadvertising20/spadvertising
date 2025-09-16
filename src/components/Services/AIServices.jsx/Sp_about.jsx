@@ -36,7 +36,7 @@ export default function AboutAI() {
           AI isn’t just shaping the future of branding — it <b>is the future</b>
           .
         </p>
-        <a href="https://spadvertising.in/contact" className="get-quote-btn">
+        <a href="https://spadvertising.in/contact" className="get-quote-btn12">
           Contact Us
         </a>
       </div>

@@ -62,6 +62,13 @@ html {
   background: white;
   box-shadow: 5px 5px #000000;
 }
+.hero-buttons .btn:hover {
+  background: #1787ff; /* Darker blue on hover */
+  color: white;        /* Keep text white */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 7px 7px #000000; /* Enhance shadow on hover */
+  border: 2px solid black;
+}
 
 /* 📺 ≤1440px (Large desktop/laptop) */
 @media (max-width: 1440px) {
@@ -94,7 +101,7 @@ html {
 }
 
 /* 📱 ≤425px */
-@media (max-width: 425px) and (min-width:360px) {
+@media (max-width: 425px) and (min-width:380px) {
   .hero-title { font-size: 32px; }
   .hero-subtitle { font-size: 0.9rem; }
   .hero-content{
@@ -119,10 +126,10 @@ html {
 @media (min-width: 320px) and (max-width: 374px) {
   .hero-title { font-size: 29px; }
   .hero-content{
-    margin-right:100px;
+    margin-right:30px;
   }
   .hero-subtitle { font-size: 0.8rem; line-height: 1.4; }
-  .pill-btn { font-size: 0.7rem; padding: 4px 10px; }
+  .pill-btn { font-size: 0.7rem; padding: 4px 10px; margin-left: 20px; }
   .hero-buttons .btn { font-size: 0.8rem; padding: 6px 14px; }
 }
 

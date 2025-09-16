@@ -29,8 +29,8 @@ function Sp_ad() {
 
       {/* Navbar */}
 
-      <Sp_popup message="Welcome to SP Advertising!" duration={0} />
-      <Sp_nav />
+      {/* <Sp_popup message="Welcome to SP Advertising!" duration={0} /> */}
+      {/* <Sp_nav /> */}
 
       <div className="hero-section" id="home">
         <div className="hero-content">
@@ -52,7 +52,7 @@ function Sp_ad() {
               <button className="btn primary">Get Started</button>
             </a>
             <a href="https://wa.me/918085354646">
-              <button className="btn secondary">Know More</button>
+              <button className="btn secondary">Contact Us</button>
             </a>
             
           </div>
@@ -71,7 +71,7 @@ function Sp_ad() {
         <Sp_contact />
       </div>
 
-      <Sp_footer />
+      {/* <Sp_footer /> */}
     </div>
   );
 }

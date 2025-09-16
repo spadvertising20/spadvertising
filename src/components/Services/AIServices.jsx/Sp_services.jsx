@@ -8,6 +8,7 @@ import img5 from "../../../assets/AIServices/aicontent.jpg";
 import img6 from "../../../assets/AIServices/promo.jpg";
 import img7 from "../../../assets/AIServices/neuro.jpg";
 import img8 from "../../../assets/AIServices/influence.jpg";
+import img9 from "../../../assets/AIServices/aichat.png";
 
 const services = [
   {
@@ -57,6 +58,12 @@ const services = [
     description:
       "Match with the right influencers using AI-driven audience and engagement analysis. Boost brand reach, trust, and conversions through precise collaborations.",
     icon: <img src={img8} />,
+  },
+  {
+    title: "AI Chatbot Assistant",
+    description:
+      "Experience AI-powered conversations that simplify interactions and resolve queries instantly.With 24/7 support, engagement improves and services grow efficiently.",
+    icon: <img src={img9} />,
   },
 ];
 
