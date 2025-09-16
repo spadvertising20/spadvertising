@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-
+import about_img1 from "../../assets/AIServices/ai2.png"
 
 export default function AnimationHero() {
   return (
@@ -28,7 +28,7 @@ export default function AnimationHero() {
         </div>
 
         <div className="hero-anim-bg">
-       
+
           <img
             src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757415833/hero_bg_bohbsv.png"}
             alt="Creatives Designing Services in Raipur"
@@ -59,7 +59,7 @@ export default function AnimationHero() {
               <div className="round-ele2">
                 <div className="hero-box">
                   <img
-                    src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757415833/hero_design_v92til.webp"}
+                    src={about_img1}
                     alt="Top Advertising agency in Raipur"
                     className="img-rotate3"
                   />

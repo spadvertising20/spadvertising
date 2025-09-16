@@ -72,7 +72,10 @@ function Navbar() {
                 <img src={up_down} alt="Toggle Services Menu" />
               </div>
               <ul>
-                {[
+                {[{
+                    to: "/ai-powered-marketing-services",
+                    text: "AI-Powered Marketing Services",
+                  },
                   {
                     to: "/Outdoor-Advertising-in-Raipur",
                     text: "Outdoor Advertising",
