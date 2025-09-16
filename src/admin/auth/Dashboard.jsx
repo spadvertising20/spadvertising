@@ -17,7 +17,7 @@ export default function Dashboard() {
         setMessage(res.data.message);
       } catch {
         localStorage.removeItem("token");
-        navigate("/signin");
+        navigate("/admin");
       }
     };
     fetchDashboard();
@@ -25,7 +25,7 @@ export default function Dashboard() {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/signin");
+    navigate("/admin");
   };
 
   return (

@@ -245,7 +245,7 @@ function App() {
 
             {/* Admin */}
             <Route
-              path="/admin"
+              path="/blogs"
               element={
                 <ProtectedRoute>
                   <AllBlogs />
