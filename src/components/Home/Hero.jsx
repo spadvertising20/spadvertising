@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import about_img1 from "../../assets/AIServices/ai2.png"
+// import about_img1 from "../../assets/AIServices/ai2.png"
 
 export default function AnimationHero() {
   return (
@@ -59,7 +59,7 @@ export default function AnimationHero() {
               <div className="round-ele2">
                 <div className="hero-box">
                   <img
-                    src={about_img1}
+                    src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1758024526/ai2_yrn9uc.png"}
                     alt="Top Advertising agency in Raipur"
                     className="img-rotate3"
                   />

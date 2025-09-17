@@ -2,12 +2,23 @@ import React from "react";
 import "./Sp_ad.css";
 import Sp_about from "./Sp_about";
 import Sp_services from "./Sp_services";
-import Sp_nav from "./Sp_nav";
 import Sp_contact from "./Sp_contact";
-import Sp_footer from "./Sp_footer";
-import Sp_popup from "./Sp_popup.jsx";
+import { jsPDF } from "jspdf";
 
 function Sp_ad() {
+
+const downloadPDF = () => {
+  const pdfPath = "/SP Advertising.pdf"; // PDF directly public folder me
+
+  const link = document.createElement("a");
+  link.href = pdfPath;
+  link.setAttribute("download", "SP_Advertising.pdf"); // download ke liye filename
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
+
   return (
     <div className="app-wrapper">
       {/* Minimal internal CSS to fix horizontal scroll */}
@@ -48,13 +59,12 @@ function Sp_ad() {
 
           {/* Buttons */}
           <div className="hero-buttons">
-            <a href="#contact">
-              <button className="btn primary">Get Started</button>
-            </a>
+            <button className="btn primary" onClick={downloadPDF}>
+              Get Quote
+            </button>
             <a href="https://wa.me/918085354646">
               <button className="btn secondary">Contact Us</button>
             </a>
-            
           </div>
         </div>
       </div>

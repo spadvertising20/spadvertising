@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Sp_popup.css";
-import popup_img from "../../../assets/AIServices/aitemp.png";
 
 const Popup = ({ onClose }) => {
   const [open, setOpen] = useState(true);
@@ -13,7 +12,7 @@ const Popup = ({ onClose }) => {
         
         <div className="popup-left">
           <div className="left-content">
-            <img src={popup_img} alt="AI Icon" className="top-image" />
+            <img src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1758024528/aitemp_gowxrf.png"} alt="AI Icon" className="top-image" />
 
             <h1>FREE AI BRAND AUDIT</h1>
             <p>Uncover AI Opportunities for Your Branding and Marketing</p>

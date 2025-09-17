@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Sp_ad.css";
 import "animate.css";
-import logo from "../../../assets/AIServices/logo14.png"
+import logo from "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1758024528/logo14_zd1rhw.webp"
 import { FaHome, FaInfoCircle, FaCogs, FaPhone } from "react-icons/fa"; // Icons
 
 const Navbar = () => {

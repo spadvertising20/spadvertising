@@ -40,6 +40,7 @@
     "hydrate": "^1.0.0",
     "ignore-styles": "^5.0.1",
     "init": "^0.1.2",
+    "jspdf": "^3.0.2",
     "lucide-react": "^0.474.0",
     "markdown-to-jsx": "^7.7.4",
     "mime-types": "^3.0.1",

@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #f5f7fa;
 }
 
 .Services {
@@ -21,11 +21,24 @@
   margin-bottom: 40px;
   font-weight: bold;
   color: #222;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
 }
 
-.Services-title span {
+.Services-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Services-title .first-line {
   color: #0077ff;
 }
+.animate__animated.animate__fadeInUp {
+  --animate-duration: 1.2s;  /* duration */
+  --animate-delay: 0.3s;     /* delay */
+}
+
 
 /* Slider */
 .Services-slider {
@@ -37,6 +50,7 @@
   overflow-x: auto;
   flex-wrap: wrap;
   gap: 20px;
+  background-color: f5f7fa;
   scroll-snap-type: x mandatory;
   padding: 10px;
   scrollbar-width: none; /* Firefox */
@@ -61,6 +75,34 @@
   flex-direction: column;
   align-items: center;
 }
+/* 
+.Service-card.chatbot-card {
+  min-height: auto !important;
+  height: auto !important;
+  padding-top: 15px; 
+}
+.Service-card.chatbot-card h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+.Service-card.chatbot-card p {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.Service-card.video-card {
+  min-height: auto !important;
+  height: auto !important;
+  padding-top: 15px; 
+}
+.Service-card.video-card h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+.Service-card.video-card p {
+  margin-top: 0;
+  margin-bottom: 30px;
+} */
 
 .Service-card:hover {
   transform: translateY(-6px);
@@ -149,30 +191,39 @@
 /* -------- Responsive -------- */
 
 /* Large screens ≥1024px */
+/* Large screens ≥1024px */
 @media (min-width: 1024px) {
   .Services-slider {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch; /* ✅ Cards ki height equal hogi */
+    align-items: stretch;
     gap: 20px;
   }
 
   .Service-card {
-    flex: 1 1 calc(25% - 20px);  /* 4 cards ek row me */
+    flex: 1 1 calc(25% - 20px);
     max-width: calc(25% - 20px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;        /* ✅ equal height maintain */
-    min-height: 470px;   /* 👈 base height taaki design consistent ho */
+    height: 100%;        
+    min-height: 400px;   /* 👈 sab cards ke liye */
   }
+
+  /* ✅ Sirf AI Chatbot card ke liye override */
+  .Service-card .chatbot-card {
+    min-height: auto !important;
+    height: auto !important;
+  }
+  
 }
+
 
 /* Extra large screens ≥1440px */
 @media (min-width: 1440px) {
   .Service-card {
-    min-height: 400px;   /* thoda aur bada base height */
+    min-height: 300px;   /* thoda aur bada base height */
   }
 }
 
