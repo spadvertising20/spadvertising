@@ -3,6 +3,7 @@ import "./Expertise.css";
 
 // Import images
 import outdoor_ad1 from "../../assets/WhatWeDo/outdoor_ad1.png";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -159,8 +160,45 @@ function WhatWeDo() {
           </p>
         </div>
         <div className="whatwedo-box">
+          <div className="ai-service-main">
+            <div className="ai-service-body">
+              <div className="ai-service-con">
+                <img
+                  src="https://res.cloudinary.com/dxzxvhrhy/image/upload/v1758024526/ai2_yrn9uc.png"
+                  alt="AI Marketing Services"
+                />
+                <div className="content">
+                  <h1>AI Powered Marketing Services</h1>
+                  <p>
+                    Maximize ROI and unlock business potential with{" "}
+                    <strong>SP Advertising</strong>. Harness cutting-edge AI
+                    technology to create personalized campaigns that drive
+                    growth and lasting impact.
+                  </p>
+                  <div className="content-services">
+                    <ul>
+                      <li>AI Chatbot</li>
+                      <li>Predictive Analytics</li>
+                      <li>Smart Targeting</li>
+                    </ul>
+                    <ul>
+                      <li>Automated Content</li>
+                      <li>Sentiment Analysis</li>
+                      <li>Campaign Optimization</li>
+                    </ul>
+                    <ul>
+                      <li>Automated Content</li>
+                      <li>Sentiment Analysis</li>
+                      <li>Campaign Optimization</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {services.map((service, index) => (
-            <div key={index} className="wwd-box" data-aos="fade-up">
+            <a href={service.link} key={index} className="wwd-box" data-aos="fade-up">
               <img
                 loading="lazy"
                 src={service.img}
@@ -177,7 +215,7 @@ function WhatWeDo() {
                   </div>
                 ))}
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
