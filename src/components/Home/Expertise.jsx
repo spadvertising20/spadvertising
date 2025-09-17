@@ -161,7 +161,7 @@ function WhatWeDo() {
         </div>
         <div className="whatwedo-box">
           <div className="ai-service-main">
-            <div className="ai-service-body">
+            <a href="https://spadvertising.in/ai-powered-marketing-services" className="ai-service-body">
               <div className="ai-service-con">
                 <img
                   src="https://res.cloudinary.com/dxzxvhrhy/image/upload/v1758024526/ai2_yrn9uc.png"
@@ -194,7 +194,7 @@ function WhatWeDo() {
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
 
           {services.map((service, index) => (
