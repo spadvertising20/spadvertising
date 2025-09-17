@@ -39,7 +39,6 @@ const ContactForm = () => {
 
             <form
               className="contact-form"
-              action="https://fabform.io/f/xxxxx"
               method="post"
             >
               <div className="form-group">

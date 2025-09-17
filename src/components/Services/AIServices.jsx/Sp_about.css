@@ -1,16 +1,18 @@
-/* Base Styles (Desktop First) */
 .about-ai-section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;  /* center align */
   padding: 40px 80px;
   gap: 40px;
-  /* margin-top: 40px; */
+  flex-wrap: nowrap;        /* hamesha side-by-side rakhega */
+  max-width: 1200px;        /* overall width limit */
+  margin: 0 auto;           /* center align on page */
 }
 
+/* 
 .about-ai-content {
   flex: 1;
-}
+} */
 
 .about-ai-content h2 {
   font-size: 2.2rem;
@@ -43,15 +45,21 @@
 }
 
 .about-ai-image {
-  flex: 1;
+  flex: 1 1 0;              /* shrink & grow equally */
   text-align: center;
 }
 
 .about-ai-image img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 500px;         /* image ki max size */
   height: auto;
   animation: floatAnimation 4s ease-in-out infinite;
 }
+.about-ai-content {
+  flex: 1 1 0;       /* content bhi shrink/expand karega */
+}
+
+
 @keyframes floatAnimation {
   0% {
     transform: translateY(0px);

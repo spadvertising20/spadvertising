@@ -57,17 +57,33 @@ html {
   cursor: pointer;
   box-shadow: 5px 5px #000000;
   transition: all 0.3s ease;
+  
 }
 .hero-buttons .btn.secondary {
-  background: white;
+  /* background: white; */
+  
   box-shadow: 5px 5px #000000;
+  border: 1px solid black;
 }
-.hero-buttons .btn:hover {
-  background: #1787ff; /* Darker blue on hover */
+.hero-buttons .btn.primary {
+  background: #005eda;
+  color: white;
+  box-shadow: 5px 5px #000000;
+  border: 1px solid black;
+}
+.hero-buttons .btn.btn.secondary:hover {
+  background: #005eda; /* Darker blue on hover */
   color: white;        /* Keep text white */
   transform: translateY(-2px); /* Slight lift effect */
   box-shadow: 7px 7px #000000; /* Enhance shadow on hover */
-  border: 2px solid black;
+  border: 1px solid black;
+}
+.hero-buttons .btn.btn.primary:hover {
+  background: white; /* Darker blue on hover */
+  color: black;        /* Keep text white */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 7px 7px #000000; /* Enhance shadow on hover */
+  border: 1px solid black;
 }
 
 /* 📺 ≤1440px (Large desktop/laptop) */

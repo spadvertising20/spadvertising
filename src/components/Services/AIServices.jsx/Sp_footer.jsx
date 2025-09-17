@@ -1,7 +1,7 @@
 import React from "react";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import "./Sp_footer.css";
-import logo_footer from "../../../assets/AIServices/logo-footer.png"
+import logo_footer from "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1758024529/logo-footer_cphufe.png"
 
 function Sp_footer() {
   return (

@@ -1,13 +1,13 @@
 import React from "react";
 import "./Sp_about.css";
 import Sp_services from "./Sp_services";
-import about_img1 from "../../../assets/AIServices/ai2.png"
+
 
 export default function AboutAI() {
   return (
     <div className="about-ai-section">
       <div className="about-ai-image">
-        <img src={about_img1} alt="AI Illustration" />
+        <img src={"https://res.cloudinary.com/dxzxvhrhy/image/upload/v1758024526/ai2_yrn9uc.png"} alt="AI Illustration" />
       </div>
 
       <div className="about-ai-content">
