@@ -191,7 +191,10 @@ function App() {
               path="/Society-Branding-in-Raipur"
               element={<SocietyBranding />}
             />
-            <Route path="/ai-powered-marketing-services" element={<Sp_ad />}></Route>
+            <Route
+              path="/ai-powered-marketing-services-raipur"
+              element={<Sp_ad />}
+            ></Route>
 
             {/* Blogs */}
             <Route path="/Blog" element={<Blog />} />

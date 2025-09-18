@@ -27,7 +27,7 @@ function Footer() {
                 <Link to={"/About"}>
                   <p>About</p>
                 </Link>
-                <Link to={"/Welcome-page"}>
+                <Link to={"/Clients"}>
                   <p>Clients</p>
                 </Link>
                 <Link to={"/Contact"}>

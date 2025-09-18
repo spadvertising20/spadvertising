@@ -1,36 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Services.css";
 import { Link } from "react-router-dom";
-import digital_marketing_img from "../../assets/Services/DigitalMarketing/digital-marketing-img.jpg";
-import digital_marketing_img1 from "../../assets/Services/DigitalMarketing/digital-marketing-img1.jpg";
-import digital_marketing_img2 from "../../assets/Services/DigitalMarketing/digital-marketing-img2.jpg";
-import digital_marketing_img3 from "../../assets/Services/DigitalMarketing/digital-marketing-img3.jpg";
-import digital_marketing_img4 from "../../assets/Services/DigitalMarketing/digital-marketing-img4.jpg";
-import digital_marketing_img11 from "../../assets/Services/DigitalMarketing/digital-marketing-img11.jpg";
-
 import loading from "../../assets/components/loading-image.png";
 import ImageLoader from "../../elements/ImageLoader";
-// Import images
-import outdoor_ad1 from "../../assets/WhatWeDo/outdoor_ad1.png";
-import digital_marketing from "../../assets/WhatWeDo/bullhorn.png";
-import design_thinking from "../../assets/WhatWeDo/design-thinking.png";
-import print_media from "../../assets/WhatWeDo/flyer.png";
-import analysis from "../../assets/WhatWeDo/analysis.png";
-import audio_visual from "../../assets/WhatWeDo/audio-visual.png";
-
-// Import tick icons
-import blue_tick from "../../assets/WhatWeDo/approved.png";
-import red_tick from "../../assets/WhatWeDo/approved-red.png";
-import yellow_tick from "../../assets/WhatWeDo/approved-yellow.png";
-import orange_tick from "../../assets/WhatWeDo/approved-orange.png";
-import purple_tick from "../../assets/WhatWeDo/approved-purple.png";
-import lightblue_tick from "../../assets/WhatWeDo/approved-light-blue.png";
 import WhyTrustUs from "../../elements/WhyTrustUs";
 
-import web_development_icon from "../../assets/Services/DigitalMarketing/web_development_icon.png";
-import sem_icon from "../../assets/Services/DigitalMarketing/sem_icon.png";
-import socialmedia_marketing_icon from "../../assets/Services/DigitalMarketing/socialmedia_marketing_icon.png";
-import mobile_app_development_icon from "../../assets/Services/DigitalMarketing/mobile_app_development_icon.png";
+
 
 const services = [
   {

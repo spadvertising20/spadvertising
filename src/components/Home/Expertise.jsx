@@ -161,7 +161,10 @@ function WhatWeDo() {
         </div>
         <div className="whatwedo-box">
           <div className="ai-service-main">
-            <a href="https://spadvertising.in/ai-powered-marketing-services" className="ai-service-body">
+            <a
+              href="https://spadvertising.in/ai-powered-marketing-services-raipur"
+              className="ai-service-body"
+            >
               <div className="ai-service-con">
                 <img
                   src="https://res.cloudinary.com/dxzxvhrhy/image/upload/v1758024526/ai2_yrn9uc.png"
@@ -198,7 +201,12 @@ function WhatWeDo() {
           </div>
 
           {services.map((service, index) => (
-            <a href={service.link} key={index} className="wwd-box" data-aos="fade-up">
+            <a
+              href={service.link}
+              key={index}
+              className="wwd-box"
+              data-aos="fade-up"
+            >
               <img
                 loading="lazy"
                 src={service.img}

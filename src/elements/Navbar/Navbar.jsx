@@ -72,8 +72,9 @@ function Navbar() {
                 <img src={up_down} alt="Toggle Services Menu" />
               </div>
               <ul>
-                {[{
-                    to: "/ai-powered-marketing-services",
+                {[
+                  {
+                    to: "/ai-powered-marketing-services-raipur",
                     text: "AI-Powered Marketing Services",
                   },
                   {
@@ -244,9 +245,7 @@ function Navbar() {
                   ) : (
                     <div className="dropdown">
                       <p onClick={toggleServicesDropdown}>
-                     
-                          {icon} {text}{" "}
-                
+                        {icon} {text}{" "}
                       </p>
                       {servicesDropdown && (
                         <ul className="dropdown-menu">

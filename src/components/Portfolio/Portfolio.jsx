@@ -356,6 +356,15 @@ function Portfolio() {
               alt=""
             />
           </div>
+           <div>
+            <ImageLoader
+              src={loading}
+              data-src={
+                "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757484781/digital-marketing-img13_pwiggj.jpg"
+              }
+              alt="Digital Marketing in Raipur"
+            />
+          </div>
         </Slider>
       </div>
       <div className="port-slider">
@@ -433,11 +442,12 @@ function Portfolio() {
             <ImageLoader
               src={loading}
               data-src={
-                "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1757484781/digital-marketing-img13_pwiggj.jpg"
+                "https://res.cloudinary.com/dxzxvhrhy/image/upload/v1758110263/N1-01_o3peyk.jpg"
               }
               alt="Digital Marketing in Raipur"
             />
           </div>
+         
         </Slider>
       </div>
       <div className="port-slider">
